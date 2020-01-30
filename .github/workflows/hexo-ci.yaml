@@ -3,7 +3,7 @@ name: hexo-deploy-actions-ghpages-branch
 on:
   push:
     branches:
-      - source
+      - master
 
 jobs:
   build-and-deploy:
