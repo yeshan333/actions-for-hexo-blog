@@ -1,0 +1,16 @@
+# hexo robots.txt
+User-agent: * 
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+Sitemap: https://yeshan333.github.io/sitemap.xml
+Sitemap: https://yeshan333.github.io/baidusitemap.xml
+Sitemap: https://shansan.top/sitemap.xml
+Sitemap: https://www.shansan.top/sitemap.xml

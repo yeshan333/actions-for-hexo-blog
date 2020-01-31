@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>标准库容器 | Shan San</title>
+  
+  <meta name="keywords" content="ShanSan">
+  
+  
+  <meta name="description" content="个人休憩小站">
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://img.vim-cn.com/bb/db444be0b7fda59c69d5c64167f9668b0b66bd.png">
+  
+
+  
+    <link rel="stylesheet" href="./style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='./' >
+        
+          Shan San
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="./"
+                  
+                  
+                  id=".">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./"
+                  
+                  
+                  id=".">
+									<i class='fas fa-rss fa-fw'></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./archives/"
+                  
+                  
+                  id=".archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://github.com/yeshan333"
+                  
+                  
+                  id="https:github.comyeshan333">
+									<i class='fab fa-github-square fa-fw'></i>&nbsp;Github
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./about/"
+                  
+                  
+                  id=".about">
+									<i class='fas fa-user fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./friends/"
+                  
+                  
+                  id=".friends">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://slide.shan333.cn"
+                  
+                  
+                  id="https:slide.shan333.cn">
+									<i class='fab fa-slideshare fa-fw'></i>&nbsp;slides
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./PyChina/"
+                  
+                  
+                  id=".PyChina">
+									<i class='fab fa-python fa-fw'></i>&nbsp;中国蟒
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="./"
+                
+                
+                id=".">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./archives/"
+                
+                  rel="nofollow"
+                
+                
+                id=".archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://github.com/yeshan333"
+                
+                
+                id="https:github.comyeshan333">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;Github
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./friends/"
+                
+                  rel="nofollow"
+                
+                
+                id=".friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:xaoxuu.comwikimaterial-x">
+								<i class='fas fa-book fa-fw'></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./about/"
+                
+                  rel="nofollow"
+                
+                
+                id=".about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./Statement/"
+                
+                  rel="nofollow"
+                
+                
+                id=".Statement">
+								<i class='fas fa-bullhorn fa-fw'></i>&nbsp;声明
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="./2018/12/01/标准库容器/">
+        标准库容器
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="http://yoursite.com" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png">
+      
+      <p>Shan San</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-12-01</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='./categories/CPP/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>CPP</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p><img src="https://i.imgur.com/T0WbcwD.png" alt></p>
+<a id="more"></a>
+<blockquote>
+<p>标准库容器是模板类型，用来保存给定类型的对象。一个容器就是一些特定类型对象的集合。</p>
+</blockquote>
+<h1 id="顺序容器"><a href="#顺序容器" class="headerlink" title="顺序容器"></a>顺序容器</h1><ul>
+<li>顺序容器我们提供了控制元素存储和访问顺序的能力。这种顺序不依赖于元素的值，而是与元素加入容器时的位置对应。</li>
+<li>一般来说，每个容器都定义在一个都文件中</li>
+<li>顺序元素几乎可以保存任意类型的元素</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">顺序容器类型</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">vector</td>
+<td style="text-align:center">可变大小数组。支持快速随机访问。在尾部之外的位置插入或删除元素可能很慢</td>
+</tr>
+<tr>
+<td style="text-align:center">array</td>
+<td style="text-align:center">固定大小数组，支持快速随机访问，不能添加或删除元素</td>
+</tr>
+<tr>
+<td style="text-align:center">string</td>
+<td style="text-align:center">与vector相似的容器，但专门用于保存字符。随机访问块。在尾部插入或删除快</td>
+</tr>
+<tr>
+<td style="text-align:center">deque</td>
+<td style="text-align:center">双端队列。支持快速随机访问。在头尾位置插入或删除速度很快</td>
+</tr>
+<tr>
+<td style="text-align:center">list</td>
+<td style="text-align:center">双向链表。只支持双向顺序访问，在list中任何位置进行插入或删除操作的速度都很快</td>
+</tr>
+<tr>
+<td style="text-align:center">forward_list</td>
+<td style="text-align:center">单向链表。只支持单向顺序访问，在链表的任何位置进行插入或删除操作的速度都很快</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>forward_list、array是新C++标准增加的类型<br>与内置数组相比，array是一种更安全、更容易使用的数组类型。<br>array对象的大小不是固定的，因此，他支持插入和删除元素以及改变容器大小的操作</p>
+<h2 id="容器类型成员"><a href="#容器类型成员" class="headerlink" title="容器类型成员"></a>容器类型成员</h2><p>每个容器都定义了多个类型</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型别名</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">iterator</td>
+<td style="text-align:center">容器的迭代器类型成员</td>
+</tr>
+<tr>
+<td style="text-align:center">const_iterator</td>
+<td style="text-align:center">可以读取元素，但不能修改元素的迭代器类型</td>
+</tr>
+<tr>
+<td style="text-align:center">size_type</td>
+<td style="text-align:center">无符号整数类型，足够保存此种容器类型最大可能容器的大小</td>
+</tr>
+<tr>
+<td style="text-align:center">differrnce_type</td>
+<td style="text-align:center">带符号整数类型，足够保存两个迭代器之间的距离</td>
+</tr>
+<tr>
+<td style="text-align:center">value_type</td>
+<td style="text-align:center">元素类型</td>
+</tr>
+<tr>
+<td style="text-align:center">reference_type</td>
+<td style="text-align:center">元素左值类型，与value_type&amp;含义相同</td>
+</tr>
+<tr>
+<td style="text-align:center">const_reference</td>
+<td style="text-align:center">元素的const左值类型，(即const value_type&amp;)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong> 通过类型别名，我们可以在不了解容器中元素类型的情况下使用它 </strong></p>
+<p>为了使用这些类型，我们必须显示的使用其类型名<br>    vector<int>::iterator iter;//iter是通过vector<int>定义的迭代器类型</int></int></p>
+<blockquote>
+<p>容器的begin成员和end成员<br>begin成员生成一个指向容器中第一个元素位置的迭代器<br>end成员生成指向尾元素之后的位置的迭代器</p>
+</blockquote>
+<h2 id="容器定义和初始化"><a href="#容器定义和初始化" class="headerlink" title="容器定义和初始化"></a>容器定义和初始化</h2><ul>
+<li>每个容器都定义了一个默认的构造函数。容器的默认的构造函数都会创建一个指定类型的空容器，他们都可以接受指定容器大小和元素初始值的参数</li>
+<li>由于array是固定大小的数组。定义一个array时，除了制定元素类型外，还要指定容器的大小</li>
+<li>创建一个容器为另一个容器的拷贝时，两个容器的类型以及元素的类型必须相同</li>
+<li>当传递迭代器参数来拷贝一个范围时，不要求容器的类型必须相同，且新容器和原容器的元素类型也可以不同，只要能将要拷贝的元素的类型转换为要初始化的容器的元素类型即可</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">定义&amp;初始化方式</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C a</td>
+<td style="text-align:center">默认构造函数，如果C是一个array，则a中元素按默认方式初始化，否则a为空</td>
+</tr>
+<tr>
+<td style="text-align:center">C a(b)<br>C a=b</td>
+<td style="text-align:center">a初始化为b的拷贝。<strong>a和b必须是相同的类型(它们必须是相同的容器类型，且保存的是相同的元素类型)</strong>，对于array我们还要定义它的大小</td>
+</tr>
+<tr>
+<td style="text-align:center">C a{b,c,d,e,f,…}<br>C a={b,c,d,e,f,…}</td>
+<td style="text-align:center">a初始化为初始化列表中元素的拷贝。列表中的元素类型必须与a的元素类型相容。对于array来说，列表元素的数目必须小于或等于array的大小，任何遗漏的元素直接进行值初始化</td>
+</tr>
+<tr>
+<td style="text-align:center">C a(b_iterator,c_iterator)</td>
+<td style="text-align:center">a初始化为迭代器b_iterator和c_iterator指定范围中元素的拷贝，范围中元素的类型必须与a的元素类型相容</td>
+</tr>
+<tr>
+<td style="text-align:center">C a(n)</td>
+<td style="text-align:center">a包含n个元素，这些元素进行了值初始化，此构造函数explicit的，string和array不适用</td>
+</tr>
+<tr>
+<td style="text-align:center">C a(n,value)</td>
+<td style="text-align:center">a包含n个初始化为值value的元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;forward_list&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="built_in">list</span>&lt;<span class="built_in">string</span>&gt; <span class="title">svec</span><span class="params">(<span class="number">10</span>,<span class="string">"shan"</span>)</span></span>;</span><br><span class="line">	 </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i:svec)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//vector&lt;string&gt; vec = svec;//#错误，容器类型不匹配  </span></span><br><span class="line">	</span><br><span class="line">	<span class="function">forward_list&lt;<span class="built_in">string</span>&gt; <span class="title">fvec</span><span class="params">(svec.<span class="built_in">begin</span>(),svec.<span class="built_in">end</span>())</span></span>;<span class="comment">//使用迭代器范围进行拷贝初始化 </span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:fvec)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="标准库array的使用"><a href="#标准库array的使用" class="headerlink" title="标准库array的使用"></a>标准库array的使用</h3><ul>
+<li>定义一个array时，我们要指定元素的类型，还要指定容器的大小</li>
+<li>由于大小是array类型的一部分，array不支持不同容器类型的构造函数</li>
+<li>对array进行列表初始化的时候，初始值的数目必须等于或小于array的大小</li>
+<li>array要求初始值的类型必须要与创建的容器类型相一致</li>
+<li>虽然我们不能对内置的数组进行拷贝或对象赋值操作，但是array并无此限制</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;array&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">array</span>&lt;<span class="keyword">int</span> ,10&gt; num_1;<span class="comment">//定义了一个保存10个int的数组 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i:num_1)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">array</span>&lt;<span class="keyword">int</span> ,10&gt; num_2=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i:num_2)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;	</span><br><span class="line">    <span class="keyword">int</span> d[<span class="number">5</span>]=&#123;<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">15</span>&#125;;</span><br><span class="line">	<span class="comment">//int b[5]=d; 这是错误的，内置数组不支持拷贝和赋值</span></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">array</span>&lt;<span class="keyword">int</span> ,6&gt; try_1=&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line">	<span class="built_in">array</span>&lt;<span class="keyword">int</span> ,6&gt; try_2=try_1;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:try_2)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>; </span><br><span class="line">		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/IiUtXSK.png" alt></p>
+<h2 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h2><h3 id="swap和assign"><a href="#swap和assign" class="headerlink" title="swap和assign"></a>swap和assign</h3><ul>
+<li><strong>a.swap(b)</strong>:用于交换两个容器中的元素，两个容器必须具有相同的类型</li>
+<li><strong>swap(a,b)</strong>:用于交换两个相同类型的容器中的元素</li>
+<li><strong>a.assign(1_iterator,2_iterator)</strong>:将a中的元素替换为迭代器1_iterator和2_iterator范围中的元素，迭代器不能指向a中的元素</li>
+<li><strong>a.assign(value_list)</strong>: 将a中的元素初始化为初始化列表value_list中的元素</li>
+<li><strong>a.assign(n,value)</strong>:将a中的元素替换为n个值为value的元素</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; b;</span><br><span class="line">	b.assign(&#123;<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>&#125;);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:b)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	b.assign(a.<span class="built_in">begin</span>(),a.<span class="built_in">end</span>()); </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:b)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* swap操作交换两个相同类型容器的内容</span></span><br><span class="line"><span class="comment">	* assing操作用参数所指定的元素(即拷贝)替换左边容器中的所有元素。</span></span><br><span class="line"><span class="comment">	* assign允许我们从不同但相容的类型赋值，或者从一个容器的子序列赋值</span></span><br><span class="line"><span class="comment">	* 除了string外，指向容器的迭代器、引用和指针在swap操作后都不会失效 </span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp=&#123;<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>,<span class="number">77</span>,<span class="number">88</span>&#125;;</span><br><span class="line">	b.swap(temp);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"temp: "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"size-"</span>&lt;&lt;temp.<span class="built_in">size</span>()&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i=temp.<span class="built_in">begin</span>();i != temp.<span class="built_in">end</span>();i++)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;*i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"b: "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"size-"</span>&lt;&lt;b.<span class="built_in">size</span>()&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> j=b.<span class="built_in">begin</span>();j != b.<span class="built_in">end</span>();j++)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;*j&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/DltXOoC.png" alt></p>
+<h3 id="向容器中添加元素（array不支持这些操作）"><a href="#向容器中添加元素（array不支持这些操作）" class="headerlink" title="向容器中添加元素（array不支持这些操作）"></a>向容器中添加元素（array不支持这些操作）</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&ensp;</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C.push_back(t)<br>C.emplace_back(args)</td>
+<td style="text-align:center">在C的尾部创建一个值为t或由args创建的元素。返回void类型</td>
+</tr>
+<tr>
+<td style="text-align:center">C.push_front(t)<br>C.emplace_front(args)</td>
+<td style="text-align:center">在C的头部创建一个值为t或由args创建的元素，返回指向新添加的元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align:center">C.insert(p_iterator,t)<br>C.emplace(p_iterator,args)</td>
+<td style="text-align:center">在迭代器p_iterator之前插入一个值为t或由args创建的元素，返回指向新添加的元素的迭代器</td>
+</tr>
+<tr>
+<td style="text-align:center">C.insert(p_iterator,n,t)</td>
+<td style="text-align:center">在迭代器p_iterator指向的元素之前插入n个值为t的元素，返回指向新插入的第一个元素的迭代器，若n为0，则返回p_iterator</td>
+</tr>
+<tr>
+<td style="text-align:center">C.insert(p_iterator,a_iterator,b_iterator)</td>
+<td style="text-align:center">将迭代器a_iterator和b_iterator指定的范围内的元素插入到迭代器p_iterator指向的元素之前，迭代器范围不能指向C中的元素。返回指向第一个新添加的元素的迭代器，若范围为空，则返回p_iterator</td>
+</tr>
+<tr>
+<td style="text-align:center">C.insert(p_iterator,li)</td>
+<td style="text-align:center">将由花括号括起来的元素值列表li插入待迭代器p_iterator所指的元素之前。返回新添加的第一个元素的迭代器，若列表为空，则返回p_iterator</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>向一个vector、string或deque中插入元素会使所有指向容器的迭代器、引用和指针失效</li>
+<li>记住，insert函数将元素插入到迭代器所指定的位置之前</li>
+<li>当我们用一个对象来初始化容器时，或将一个对象插入到容器中的时，实际上放入到容器中的是对象的值的拷贝，而不是对象本身</li>
+<li>vector、list、deque、string都支持insert成员，forward_list提供了特殊版本的insert成员</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">operated_1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; ss&#123;<span class="string">"shansan"</span>,<span class="string">"wocao"</span>,<span class="string">"yeshan"</span>&#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i:ss)</span><br><span class="line">	    v.push_back(i);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:v)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">operated_2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt; ls;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> num=<span class="number">3</span>;num&gt;=<span class="number">0</span>;num--)</span><br><span class="line">        ls.push_front(num);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">5</span>;i&lt;<span class="number">8</span>;i++)</span><br><span class="line">        ls.push_back(i);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i=ls.<span class="built_in">begin</span>();i != ls.<span class="built_in">end</span>(); i++)</span><br><span class="line">	   <span class="built_in">cout</span>&lt;&lt;*i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">operated_3</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v_1&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v_2&#123;<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">	</span><br><span class="line">	v_1.insert(v_1.<span class="built_in">begin</span>(),<span class="number">66</span>);<span class="comment">//在迭代器v_1.begin()所指的元素之前插入一个元素66 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp: v_1)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	v_1.insert(v_1.<span class="built_in">begin</span>(),v_2.<span class="built_in">begin</span>(),v_2.<span class="built_in">end</span>());</span><br><span class="line">	<span class="comment">//在迭代器v_1.begin()所指的元素之前，插入迭代器v_2.begin()到v_2.end()指顶范围内的元素 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> temp:v_1)</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    operated_1();</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    operated_2();</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    operated_3();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2018/11/30/Fm5CWt.md.png" alt="Fm5CWt.md.png"></p>
+<h4 id="emplace操作"><a href="#emplace操作" class="headerlink" title="emplace操作"></a>emplace操作</h4><blockquote>
+<p>当调用一个insert或push成员函数时，我们将元素类型的对象传递给它们，这些对象被拷贝到容器中<br>当调用一个emplace函数时，则是将参数传递给元素类型的构造函数。emplace成员直接使用这些参数在容器管理的内存空间中直接构造函数</p>
+</blockquote>
+<font color="red">emplace函数在容器中直接构造函数。传递给emplace函数的参数必须与元素类型的构造函数相匹配</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		student(<span class="built_in">string</span> str,<span class="keyword">int</span> a):name(str),age(a)&#123;&#125;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">print_1</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"name: "</span>&lt;&lt;<span class="keyword">this</span>-&gt;name&lt;&lt;<span class="string">","</span>&lt;&lt;<span class="string">"Age: "</span>&lt;&lt;<span class="keyword">this</span>-&gt;age&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="keyword">int</span> age;</span><br><span class="line">		<span class="built_in">string</span> name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;student&gt; s;<span class="comment">//我们将student存到了vector中</span></span><br><span class="line">	 </span><br><span class="line">	s.emplace_back(<span class="string">"shansan"</span>,<span class="number">18</span>);<span class="comment">//使用student对象的构造函数 </span></span><br><span class="line">    <span class="keyword">auto</span> temp=s.<span class="built_in">begin</span>();</span><br><span class="line">    (*temp).print_1();</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//s.push_back("try",66);//error：没有接受两个参数的push_back版本 </span></span><br><span class="line">    </span><br><span class="line">	s.push_back(student(<span class="string">"try"</span>,<span class="number">66</span>));<span class="comment">//创建一个临时的student对象传递给push_back </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> i:s)</span><br><span class="line">        i.print_1(); </span><br><span class="line">    </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2018/11/30/Fmo5dg.png" alt="Fmo5dg.png"></p>
+<h3 id="访问容器中的元素"><a href="#访问容器中的元素" class="headerlink" title="访问容器中的元素"></a>访问容器中的元素</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">访问操作</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">c.back()</td>
+<td style="text-align:center">返回c中尾元素的引用。若c为空，函数行为未定义</td>
+</tr>
+<tr>
+<td style="text-align:center">c.front()</td>
+<td style="text-align:center">返回c中首元素的引用。若c为空，函数行为未定义</td>
+</tr>
+<tr>
+<td style="text-align:center">c[n]</td>
+<td style="text-align:center">返回c中下标为n的元素的引用，n是一个无符号整数。若n&gt;=c.size()，则函数行为未定义</td>
+</tr>
+<tr>
+<td style="text-align:center">c.at(n)</td>
+<td style="text-align:center">返回下标为n的元素的引用。如果下标越界，则抛出一个out_of_range异常</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	* 不要对一个空的容器使用front和back操作</span></span><br><span class="line"><span class="comment">	* at和下标操作只适用于string、vector、deque和array</span></span><br><span class="line"><span class="comment">	* back不适用于forward_list </span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v&#123;<span class="number">1</span>,<span class="number">6</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> a = v.front();</span><br><span class="line">	a=<span class="number">33</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"v[0]="</span>&lt;&lt;v[<span class="number">0</span>]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> &amp;refer = v.front();</span><br><span class="line">	refer =<span class="number">33</span>;<span class="comment">//改变了v[0]的值 </span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"v[0]="</span>&lt;&lt;v[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于访问成员函数的返回值是引用类型，如果是非const的，我们可以使用它来改变元素的值</p>
+<h3 id="删除容器中的元素"><a href="#删除容器中的元素" class="headerlink" title="删除容器中的元素"></a>删除容器中的元素</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">删除操纵</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">c.pop_back()</td>
+<td style="text-align:center">删除c的尾元素，如果c是空的，则函数行为未定义。函数返回void</td>
+</tr>
+<tr>
+<td style="text-align:center">c.pop_front()</td>
+<td style="text-align:center">删除c的首元素，如果c是空的，则函数行为未定义。函数返回void</td>
+</tr>
+<tr>
+<td style="text-align:center">c.erase(p_iterator)</td>
+<td style="text-align:center">删除迭代器p_iterator所指定的元素，返回一个指向被删除的元素之后元素的迭代器，若p_iterator指向尾元素，则返回尾后迭代器，若p_iterator是尾后迭代器，则函数行为未定义</td>
+</tr>
+<tr>
+<td style="text-align:center">c.erase(a_iterator,b_iterator)</td>
+<td style="text-align:center">删除迭代器a_iterator和b_iterator所指定范围内的元素，返回一个指向最后一个被删元素之后元素的迭代器，若b_iterator本身就是尾后迭代器，则返回尾后迭代器</td>
+</tr>
+<tr>
+<td style="text-align:center">c.clear()</td>
+<td style="text-align:center">删除c中所有的元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>删除deque中除首尾位置之外的任何元素都会使迭代器、引用和指针失效。指向vector或string中删除点位置之后的迭代器、引用和指针都会失效</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; str&#123;<span class="string">"shansan"</span>,<span class="string">"wocao"</span>,<span class="string">"555"</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:str)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	str.pop_back();</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:str)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	str.erase(str.<span class="built_in">begin</span>(),str.<span class="built_in">end</span>());</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:str)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	    </span><br><span class="line">    <span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt; lst=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">    <span class="keyword">auto</span> it = lst.<span class="built_in">begin</span>();</span><br><span class="line">    <span class="keyword">while</span>(it != lst.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="keyword">if</span>(*it%<span class="number">2</span>) </span><br><span class="line">    	    it = lst.erase(it);<span class="comment">//删除奇数元素,返回指向被删除元素的下一个元素的迭代器 </span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            it++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> temp:lst)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;temp&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/QmwV39Y.png" alt></p>
+<h3 id="改变容器大小"><a href="#改变容器大小" class="headerlink" title="改变容器大小"></a>改变容器大小</h3><blockquote>
+<ul>
+<li><strong>c.resize(n)</strong>:调整c的大小为n个元素。若n&lt;c.size()，则多出的元素被丢弃；若必须添加新元素，对新元素进行值初始化</li>
+<li><strong>c.resize(n,t)</strong>:调整c的大小为n个元素，任何新添加的元素都初始化为值t</li>
+</ul>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v&#123;<span class="number">22</span>,<span class="number">33</span>,<span class="number">3</span>&#125;;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"v capacity:"</span>&lt;&lt;v.capacity()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	v.resize(<span class="number">6</span>,<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"v size:"</span>&lt;&lt;v.<span class="built_in">size</span>()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"v capacity:"</span>&lt;&lt;v.capacity()&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i:v)</span><br><span class="line">	    <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	- 使用reserve操作通知容器应该为我们预留多少空间</span></span><br><span class="line"><span class="comment">	- resize成员函数只改变容器中成员函数的数目，不改变容器的容量</span></span><br><span class="line"><span class="comment">	- 容器的size操作指的是它已经保存的元素的数目</span></span><br><span class="line"><span class="comment">	- capacity则是在不不分配新的内存空间的前提下知道它最多可以保存多少个元素 </span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	v.reserve(<span class="number">100</span>);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>&lt;&lt;<span class="string">"v capacity:"</span>&lt;&lt;v.capacity()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"v size:"</span>&lt;&lt;v.<span class="built_in">size</span>()&lt;&lt;<span class="built_in">endl</span>;	</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/foIu4wG.png" alt></p>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-27T21:32:24+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年6月27日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="./tags/CPP/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>CPP</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/01/标准库容器/&title=标准库容器 | Shan San&pics=https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2018/12/01/标准库容器/&title=标准库容器 | Shan San&pics=https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/01/标准库容器/&title=标准库容器 | Shan San&pics=https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="./2018/12/03/biu一下GDB/" rel="prev" title="Biu一下GDB">
+                                  
+                                      Biu一下GDB
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="./tags/GDB/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>GDB</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="./2018/11/27/Keep-on-moving-！/" rel="prev" title="Keep on moving ！">
+                                    
+                                        Keep on moving ！
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="./tags/随笔/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>随笔</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '标准库容器',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://shansan.top/img/002.jpg'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Shan San</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:1329441308@qq.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/yeshan333?tab=repositories"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/my/m/music/playlist?id=2617691792"
+              class="social fas fa-music flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/si-kong-ji-54/activities"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://yeshan333.github.io/sitemap.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#顺序容器"><span class="toc-text">顺序容器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#容器类型成员"><span class="toc-text">容器类型成员</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器定义和初始化"><span class="toc-text">容器定义和初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标准库array的使用"><span class="toc-text">标准库array的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器操作"><span class="toc-text">容器操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#swap和assign"><span class="toc-text">swap和assign</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向容器中添加元素（array不支持这些操作）"><span class="toc-text">向容器中添加元素（array不支持这些操作）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#emplace操作"><span class="toc-text">emplace操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问容器中的元素"><span class="toc-text">访问容器中的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除容器中的元素"><span class="toc-text">删除容器中的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改变容器大小"><span class="toc-text">改变容器大小</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+    href="./I_want_to_tell_me/"
+    title="I_want_to_tell_me/">
+    <i class="fas fa-quran fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="./" href="./"
+          
+          
+          id=".">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="./archives/" href="./archives/"
+          
+            rel="nofollow"
+          
+          
+          id=".archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="https://github.com/yeshan333" href="https://github.com/yeshan333"
+          
+          
+          id="https:github.comyeshan333">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          Github
+        </a></li>
+      
+        <li><a class="flat-box" title="./friends/" href="./friends/"
+          
+            rel="nofollow"
+          
+          
+          id=".friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="./about/" href="./about/"
+          
+            rel="nofollow"
+          
+          
+          id=".about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="./categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="./categories/ACM/" href="./categories/ACM/"><div class='name'>ACM</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Algorithm/" href="./categories/Algorithm/"><div class='name'>Algorithm</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/C/" href="./categories/C/"><div class='name'>C</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/CPP/" href="./categories/CPP/"><div class='name'>CPP</div><div class='badge'>(21)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/CSS/" href="./categories/CSS/"><div class='name'>CSS</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Flask/" href="./categories/Flask/"><div class='name'>Flask</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Git/" href="./categories/Git/"><div class='name'>Git</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/HTML/" href="./categories/HTML/"><div class='name'>HTML</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Linux/" href="./categories/Linux/"><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Memory/" href="./categories/Memory/"><div class='name'>Memory</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Proxy/" href="./categories/Proxy/"><div class='name'>Proxy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Python/" href="./categories/Python/"><div class='name'>Python</div><div class='badge'>(19)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/React/" href="./categories/React/"><div class='name'>React</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Scrapy/" href="./categories/Scrapy/"><div class='name'>Scrapy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/blog/" href="./categories/blog/"><div class='name'>blog</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/docker/" href="./categories/docker/"><div class='name'>docker</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/markdown/" href="./categories/markdown/"><div class='name'>markdown</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/math/" href="./categories/math/"><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/memory/" href="./categories/memory/"><div class='name'>memory</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/函数式编程/" href="./categories/函数式编程/"><div class='name'>函数式编程</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/数据结构/" href="./categories/数据结构/"><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/随笔/" href="./categories/随笔/"><div class='name'>随笔</div><div class='badge'>(6)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="./tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="./tags/ACM/" style="font-size: 14px; color: #999">ACM</a> <a href="./tags/Algorithm/" style="font-size: 15.25px; color: #919191">Algorithm</a> <a href="./tags/Astronomy/" style="font-size: 15.25px; color: #919191">Astronomy</a> <a href="./tags/BeautifulSoup/" style="font-size: 14px; color: #999">BeautifulSoup</a> <a href="./tags/C/" style="font-size: 16.5px; color: #888">C</a> <a href="./tags/CPP/" style="font-size: 24px; color: #555">CPP</a> <a href="./tags/CSS/" style="font-size: 14px; color: #999">CSS</a> <a href="./tags/Flask/" style="font-size: 17.75px; color: #808080">Flask</a> <a href="./tags/GDB/" style="font-size: 14px; color: #999">GDB</a> <a href="./tags/Git/" style="font-size: 16.5px; color: #888">Git</a> <a href="./tags/HTML/" style="font-size: 15.25px; color: #919191">HTML</a> <a href="./tags/Json/" style="font-size: 14px; color: #999">Json</a> <a href="./tags/Jupyter/" style="font-size: 14px; color: #999">Jupyter</a> <a href="./tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="./tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="./tags/MATLAB/" style="font-size: 14px; color: #999">MATLAB</a> <a href="./tags/Memory/" style="font-size: 14px; color: #999">Memory</a> <a href="./tags/Proxy/" style="font-size: 14px; color: #999">Proxy</a> <a href="./tags/Python/" style="font-size: 22.75px; color: #5e5e5e">Python</a> <a href="./tags/React/" style="font-size: 14px; color: #999">React</a> <a href="./tags/Requests/" style="font-size: 15.25px; color: #919191">Requests</a> <a href="./tags/Scrapy/" style="font-size: 14px; color: #999">Scrapy</a> <a href="./tags/blog/" style="font-size: 19px; color: #777">blog</a> <a href="./tags/debug/" style="font-size: 14px; color: #999">debug</a> <a href="./tags/docker/" style="font-size: 14px; color: #999">docker</a> <a href="./tags/hexo/" style="font-size: 17.75px; color: #808080">hexo</a> <a href="./tags/markdown/" style="font-size: 17.75px; color: #808080">markdown</a> <a href="./tags/memory/" style="font-size: 14px; color: #999">memory</a> <a href="./tags/上下文/" style="font-size: 14px; color: #999">上下文</a> <a href="./tags/信息标记/" style="font-size: 14px; color: #999">信息标记</a> <a href="./tags/函数式编程/" style="font-size: 14px; color: #999">函数式编程</a> <a href="./tags/协程/" style="font-size: 14px; color: #999">协程</a> <a href="./tags/数据结构/" style="font-size: 15.25px; color: #919191">数据结构</a> <a href="./tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="./tags/爬虫/" style="font-size: 20.25px; color: #6f6f6f">爬虫</a> <a href="./tags/环境管理/" style="font-size: 14px; color: #999">环境管理</a> <a href="./tags/随笔/" style="font-size: 21.5px; color: #666">随笔</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget related_posts'>
+    
+<header class='pure'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\09\C++-面向对象-3\" title="C++面向对象-3" rel="bookmark">C++面向对象-3</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\11\05\C++-11特性-1\" title="C++11特性-1" rel="bookmark">C++11特性-1</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\02\ACM入门\" title="ACM入门（占个位）" rel="bookmark">ACM入门（占个位）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\04\C++-入坑记-3\" title="C++入坑记(3)" rel="bookmark">C++入坑记(3)</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\02\C++-入坑记\" title="C++入坑记" rel="bookmark">C++入坑记</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\11\05\C++-标准库类型\" title="C++标准库类型" rel="bookmark">C++标准库类型</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\11\C++-面向对象-4\" title="C++面向对象-4" rel="bookmark">C++面向对象-4</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\06\C++-面向对象-2\" title="C++面向对象-2" rel="bookmark">C++面向对象-2</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\16\C++-面向对象-7\" title="C++面向对象-7" rel="bookmark">C++面向对象-7</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\12\C++-面向对象-5\" title="C++面向对象-5" rel="bookmark">C++面向对象-5</a></h3></div></li></ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=63035382"
+    title="https://music.163.com/#/user/home?id=63035382">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2617691792"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget list'>
+  
+<header class='pure'>
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选链接</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Material X
+          </div>
+          
+            <div class='badge'>(Hexo博客主题)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./about/" href="./about/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;关于我 / 留言板
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./Collect/" href="./Collect/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fab fa-delicious fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Collect
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://img.shan333.cn" href="https://img.shan333.cn"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-images fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;shan_pic
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://apod.nasa.gov/apod/astropix.html" href="https://apod.nasa.gov/apod/astropix.html"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://apod.nasa.gov/favicon.ico" id="round">
+            
+            &nbsp;&nbsp;每日天文一图
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://carbon.now.sh" href="https://carbon.now.sh"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/76/a8416146154b60cbaa432ad3cf3b919190e1d8" id="round">
+            
+            &nbsp;&nbsp;Carbon
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://www.zhujiboke.com/" href="https://www.zhujiboke.com/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://s2.ax1x.com/2019/01/09/FL3ESf.png" id="round">
+            
+            &nbsp;&nbsp;雨落无声
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://shan333.cn" href="https://shan333.cn"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/8f/e4fa12e70f63550b3779d901103c67cefabfca.jpg" id="round">
+            
+            &nbsp;&nbsp;shansan
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://whoer.net/zh" href="https://whoer.net/zh"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/1b/f5cfbccb67f161973528bed7d372173cb4fb8c" id="round">
+            
+            &nbsp;&nbsp;Whoer
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5" href="https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://s2.ax1x.com/2019/06/19/VXJMPx.jpg" id="round">
+            
+            &nbsp;&nbsp;cppreference
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./thumbnail/" href="./thumbnail/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-camera fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;网站缩略图生成
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./trytobaidu/" href="./trytobaidu/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;让我帮你百度
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget list'>
+  
+<header class='pure'>
+  <div><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;我的关注</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://python-web-guide.readthedocs.io/zh/latest/" href="https://python-web-guide.readthedocs.io/zh/latest/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://python-web-guide.readthedocs.io/zh/latest/_static/favicon.ico" id="round">
+            
+            &nbsp;&nbsp;Python Web入坑指南
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://www.sqlsec.com/" href="https://www.sqlsec.com/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://image.3001.net/images/20190329/15538458216510.png" id="round">
+            
+            &nbsp;&nbsp;国光
+          </div>
+          
+            <div class='badge'>(Web安全)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://woaielf.github.io/" href="https://woaielf.github.io/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/e9/5fce67298509e2df8594df95e10e957bc3fc09.png" id="round">
+            
+            &nbsp;&nbsp;数据科学思维导图笔记
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://docs.python.org/zh-cn/3/glossary.html" href="https://docs.python.org/zh-cn/3/glossary.html"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif" id="round">
+            
+            &nbsp;&nbsp;Python术语对照表
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://docs.python.org/zh-cn/3/library/python.html" href="https://docs.python.org/zh-cn/3/library/python.html"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif" id="round">
+            
+            &nbsp;&nbsp;Python运行时服务
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+    
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:1329441308@qq.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/yeshan333?tab=repositories"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/my/m/music/playlist?id=2617691792"
+            class="social fas fa-music flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/si-kong-ji-54/activities"
+            class="social fab fa-zhihu flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://yeshan333.github.io/sitemap.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+
+  <!-- 操作 -->
+  
+    <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+    <script type = "text/javascript" >
+    // 鼠标点击特效
+    var mouseSum = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+            var $i = $("<span/>").text(a[mouseSum]);
+            mouseSum = (mouseSum + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 9999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#FF0000"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    });
+    </script>
+
+<!-- 彩带背景 -->
+
+  <script src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" type="text/javascript"></script>
+
+<a href="http://www.beian.miit.gov.cn/">桂ICP备19000444号</a>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "./"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="./js/volantis.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'false' == true;
+  var verify = 'false' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "S687AsCjGJKTPIvUJ8aPNX49-gzGzoHsz",
+    appKey: "bCwg3QuIfGytbeYw58L7ofRq",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  <script src="./js/app.js"></script>
+
+
+  <script src="./js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
