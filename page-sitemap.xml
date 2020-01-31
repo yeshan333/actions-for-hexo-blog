@@ -2,77 +2,77 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://yoursite.com</loc>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/friends/</loc>
-        <lastmod>2020-01-25T07:13:44.366Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/about/</loc>
+        <lastmod>2020-01-31T08:10:56.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/</loc>
-        <lastmod>2019-12-25T05:12:56.374Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/categories/</loc>
+        <lastmod>2020-01-31T08:10:56.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/PyChina/</loc>
-        <lastmod>2019-08-07T12:55:16.742Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/friends/</loc>
+        <lastmod>2020-01-31T08:10:56.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/I_want_to_tell_me/</loc>
-        <lastmod>2019-07-02T08:54:20.358Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/tags/</loc>
+        <lastmod>2020-01-31T08:10:56.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/categories/</loc>
-        <lastmod>2019-06-30T06:52:19.600Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog//404.html</loc>
+        <lastmod>2020-01-31T08:10:56.812Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/tags/</loc>
-        <lastmod>2019-06-30T06:51:15.163Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/Astronomy/</loc>
+        <lastmod>2020-01-31T08:10:56.812Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/Statement/</loc>
-        <lastmod>2019-04-25T03:10:09.485Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/Collect/</loc>
+        <lastmod>2020-01-31T08:10:56.812Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com//404.html</loc>
-        <lastmod>2019-03-21T18:04:19.936Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/I_want_to_tell_me/</loc>
+        <lastmod>2020-01-31T08:10:56.812Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/Collect/</loc>
-        <lastmod>2019-01-08T15:24:14.700Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/PyChina/</loc>
+        <lastmod>2020-01-31T08:10:56.812Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/Astronomy/</loc>
-        <lastmod>2018-10-12T07:55:18.222Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/Statement/</loc>
+        <lastmod>2020-01-31T08:10:56.812Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

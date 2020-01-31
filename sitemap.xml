@@ -3,13 +3,13 @@
 
 
     <sitemap>
-        <loc>http://yoursite.com/post-sitemap.xml</loc>
-        <lastmod>2020-01-30T14:04:56.538Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/post-sitemap.xml</loc>
+        <lastmod>2020-01-31T08:10:56.820Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite.com/page-sitemap.xml</loc>
-        <lastmod>2020-01-25T07:13:44.366Z</lastmod>
+        <loc>https://yeshan333.github.io/actions-for-hexo-blog/page-sitemap.xml</loc>
+        <lastmod>2020-01-31T08:10:56.820Z</lastmod>
     </sitemap>
 
 </sitemapindex>
