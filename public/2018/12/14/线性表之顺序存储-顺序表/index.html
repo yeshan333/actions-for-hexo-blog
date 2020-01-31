@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>线性表之顺序存储-顺序表 | Shan San</title>
+  
+  <meta name="keywords" content="ShanSan">
+  
+  
+  <meta name="description" content="个人休憩小站">
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://img.vim-cn.com/bb/db444be0b7fda59c69d5c64167f9668b0b66bd.png">
+  
+
+  
+    <link rel="stylesheet" href="./style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='./' >
+        
+          Shan San
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="./"
+                  
+                  
+                  id=".">
+									<i class='fas fa-home fa-fw'></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./"
+                  
+                  
+                  id=".">
+									<i class='fas fa-rss fa-fw'></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./archives/"
+                  
+                  
+                  id=".archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://github.com/yeshan333"
+                  
+                  
+                  id="https:github.comyeshan333">
+									<i class='fab fa-github-square fa-fw'></i>&nbsp;Github
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./about/"
+                  
+                  
+                  id=".about">
+									<i class='fas fa-user fa-fw'></i>&nbsp;关于
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./friends/"
+                  
+                  
+                  id=".friends">
+									<i class='fas fa-users fa-fw'></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="https://slide.shan333.cn"
+                  
+                  
+                  id="https:slide.shan333.cn">
+									<i class='fab fa-slideshare fa-fw'></i>&nbsp;slides
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="./PyChina/"
+                  
+                  
+                  id=".PyChina">
+									<i class='fab fa-python fa-fw'></i>&nbsp;中国蟒
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="./"
+                
+                
+                id=".">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./archives/"
+                
+                  rel="nofollow"
+                
+                
+                id=".archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://github.com/yeshan333"
+                
+                
+                id="https:github.comyeshan333">
+								<i class='fas fa-code-branch fa-fw'></i>&nbsp;Github
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./friends/"
+                
+                  rel="nofollow"
+                
+                
+                id=".friends">
+								<i class='fas fa-link fa-fw'></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:xaoxuu.comwikimaterial-x">
+								<i class='fas fa-book fa-fw'></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./about/"
+                
+                  rel="nofollow"
+                
+                
+                id=".about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="./Statement/"
+                
+                  rel="nofollow"
+                
+                
+                id=".Statement">
+								<i class='fas fa-bullhorn fa-fw'></i>&nbsp;声明
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="./2018/12/14/线性表之顺序存储-顺序表/">
+        线性表之顺序存储-顺序表
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="http://yoursite.com" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png">
+      
+      <p>Shan San</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-12-14</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='./categories/数据结构/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>数据结构</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <h1 id="顺序表的操作"><a href="#顺序表的操作" class="headerlink" title="顺序表的操作"></a>顺序表的操作</h1><ul>
+<li><input type="checkbox" checked disable> 向有序顺序表插入一个元素</li>
+<li><input type="checkbox" checked disable> 顺序表的冒泡排序</li>
+<li><input type="checkbox" checked disable> 顺序表的删除操作</li>
+<li><input type="checkbox" checked disable> 顺序表中元素的查找</li>
+<li><input type="checkbox" checked disable> 顺序表的逆置</li>
+<li><input type="checkbox" checked disable> 删除顺序表中的相同元素</li>
+<li><input type="checkbox" checked disable> 向顺序表的指定位置插入元素</li>
+<li><input type="checkbox" checked disable> 打印顺序表</li>
+</ul>
+<a id="more"></a>
+<h2 id="顺序表的存储结构"><a href="#顺序表的存储结构" class="headerlink" title="顺序表的存储结构"></a>顺序表的存储结构</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxsize 100        <span class="comment">//存储空间的分配量 </span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义顺序表数据类型 </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data[maxsize];</span><br><span class="line">	<span class="keyword">int</span> last;              <span class="comment">//存放表中最后一个元素的下标 </span></span><br><span class="line">&#125;sequenlist;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序表的冒泡排序"><a href="#顺序表的冒泡排序" class="headerlink" title="顺序表的冒泡排序"></a>顺序表的冒泡排序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list_bubble_sort</span><span class="params">(sequenlist *p)</span><span class="comment">//max to min</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt; p-&gt;last; i++)<span class="comment">//attention</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt; p-&gt;last-i; j++)</span><br><span class="line">		&#123;</span><br><span class="line">		    <span class="keyword">if</span>(p-&gt;data[j] &lt; p-&gt;data[j+<span class="number">1</span>])</span><br><span class="line">	        &#123;</span><br><span class="line">	            temp = p-&gt;data[j];</span><br><span class="line">				p-&gt;data[j] = p-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">				p-&gt;data[j+<span class="number">1</span>] = temp;	</span><br><span class="line">			&#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序表的删除操作"><a href="#顺序表的删除操作" class="headerlink" title="顺序表的删除操作"></a>顺序表的删除操作</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">nt <span class="title">delete_1</span><span class="params">(sequenlist *s,<span class="keyword">int</span> del)</span> <span class="comment">//删除函数 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt;= s-&gt;last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(del == s-&gt;data[i])</span><br><span class="line">		&#123;</span><br><span class="line">			temp = i;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;s-&gt;last; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				s-&gt;data[j] = s-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			s-&gt;last = s-&gt;last - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//删除第一个与del相同的元素，函数结束 </span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//要删的那个元素不在表中 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"the element you want to delete is not in the sequenlist!\n"</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序表中元素的查找"><a href="#顺序表中元素的查找" class="headerlink" title="顺序表中元素的查找"></a>顺序表中元素的查找</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(sequenlist *s,<span class="keyword">int</span> key)</span>    <span class="comment">//查找函数 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;= s-&gt;last; i++)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="keyword">if</span>(key == s-&gt;data[i])</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="built_in">printf</span>(<span class="string">"exist !\n"</span>);</span><br><span class="line">    		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"not found !\n"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="顺序表的逆置"><a href="#顺序表的逆置" class="headerlink" title="顺序表的逆置"></a>顺序表的逆置</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(sequenlist *s)</span><span class="comment">//逆置函数 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> last_temp = s-&gt;last;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;= s-&gt;last/<span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		temp = s-&gt;data[i];</span><br><span class="line">        s-&gt;data[i] = s-&gt;data[last_temp];</span><br><span class="line">		s-&gt;data[last_temp] = temp;        </span><br><span class="line">	    last_temp--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="删除顺序表中的相同元素"><a href="#删除顺序表中的相同元素" class="headerlink" title="删除顺序表中的相同元素"></a>删除顺序表中的相同元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete_same</span><span class="params">(sequenlist *s)</span><span class="comment">//删除表中相同的元素 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=s-&gt;last; i++)</span><br><span class="line">	&#123; </span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;=s-&gt;last; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(s-&gt;data[j] == s-&gt;data[i])<span class="comment">//元素相同 </span></span><br><span class="line">			&#123;</span><br><span class="line">			    <span class="keyword">for</span>(<span class="keyword">int</span> k=j; k&lt;s-&gt;last; k++)</span><br><span class="line">				&#123;</span><br><span class="line">					s-&gt;data[k] = s-&gt;data[k+<span class="number">1</span>];</span><br><span class="line">				&#125;</span><br><span class="line">				s-&gt;last = s-&gt;last - <span class="number">1</span>; </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="向顺序表的指定位置插入元素"><a href="#向顺序表的指定位置插入元素" class="headerlink" title="向顺序表的指定位置插入元素"></a>向顺序表的指定位置插入元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(sequenlist *L,<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span> <span class="comment">//指定位置,插入 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(((*L).last) &gt;= maxsize<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"the list is overflow!\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>((i&lt;<span class="number">1</span>)||(i&gt;(*L).last+<span class="number">2</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"position is not correct!\n"</span>);</span><br><span class="line">			<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(j=(*L).last;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">			&#123;</span><br><span class="line">				(*L).data[j+<span class="number">1</span>]=(*L).data[j];				 </span><br><span class="line">			&#125;</span><br><span class="line">			(*L).last=(*L).last+<span class="number">1</span>;              </span><br><span class="line">			(*L).data[i<span class="number">-1</span>]=x;</span><br><span class="line">			<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="向顺序表的指定位置插入元素-1"><a href="#向顺序表的指定位置插入元素-1" class="headerlink" title="向顺序表的指定位置插入元素"></a>向顺序表的指定位置插入元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(sequenlist *L,<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span> <span class="comment">//指定位置,插入 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(((*L).last) &gt;= maxsize<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"the list is overflow!\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>((i&lt;<span class="number">1</span>)||(i&gt;(*L).last+<span class="number">2</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"position is not correct!\n"</span>);</span><br><span class="line">			<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(j=(*L).last;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">			&#123;</span><br><span class="line">				(*L).data[j+<span class="number">1</span>]=(*L).data[j];				 </span><br><span class="line">			&#125;</span><br><span class="line">			(*L).last=(*L).last+<span class="number">1</span>;              </span><br><span class="line">			(*L).data[i<span class="number">-1</span>]=x;</span><br><span class="line">			<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="打印顺序表"><a href="#打印顺序表" class="headerlink" title="打印顺序表"></a>打印顺序表</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_list</span><span class="params">(sequenlist *s)</span>   <span class="comment">//打印顺序表 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=s-&gt;last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%3d"</span>,s-&gt;data[i]);</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="试着煲下汤"><a href="#试着煲下汤" class="headerlink" title="试着煲下汤"></a>试着煲下汤</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* author: shansan.top</span></span><br><span class="line"><span class="comment">* date: 2018/12/12</span></span><br><span class="line"><span class="comment">* version: 1.0 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxsize 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义顺序表数据类型 </span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> data[maxsize];</span><br><span class="line">	<span class="keyword">int</span> last;</span><br><span class="line">&#125;sequenlist;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(sequenlist *s,<span class="keyword">int</span> key)</span>    <span class="comment">//查找函数 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;= s-&gt;last; i++)</span><br><span class="line">    &#123;</span><br><span class="line">    	<span class="keyword">if</span>(key == s-&gt;data[i])</span><br><span class="line">    	&#123;</span><br><span class="line">    		<span class="built_in">printf</span>(<span class="string">"exist !\n"</span>);</span><br><span class="line">    		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"not found !\n"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete_1</span><span class="params">(sequenlist *s,<span class="keyword">int</span> del)</span> <span class="comment">//删除函数 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt;= s-&gt;last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(del == s-&gt;data[i])</span><br><span class="line">		&#123;</span><br><span class="line">			temp = i;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;s-&gt;last; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				s-&gt;data[j] = s-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			s-&gt;last = s-&gt;last - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//删除第一个与del相同的元素，函数结束  </span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//要删的那个元素不在表中 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"the element you want to delete is not in the sequenlist!\n"</span>); </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_list</span><span class="params">(sequenlist *s)</span>   <span class="comment">//打印顺序表 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=s-&gt;last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%3d"</span>,s-&gt;data[i]);</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(sequenlist *s)</span><span class="comment">//逆置函数 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> last_temp = s-&gt;last;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;= s-&gt;last/<span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		temp = s-&gt;data[i];</span><br><span class="line">        s-&gt;data[i] = s-&gt;data[last_temp];</span><br><span class="line">		s-&gt;data[last_temp] = temp;        </span><br><span class="line">	    last_temp--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list_bubble_sort</span><span class="params">(sequenlist *p)</span><span class="comment">//max to min</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt; p-&gt;last; i++)<span class="comment">//attention</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>; j&lt; p-&gt;last-i; j++)</span><br><span class="line">		&#123;</span><br><span class="line">		    <span class="keyword">if</span>(p-&gt;data[j] &lt; p-&gt;data[j+<span class="number">1</span>])</span><br><span class="line">	        &#123;</span><br><span class="line">	            temp = p-&gt;data[j];</span><br><span class="line">				p-&gt;data[j] = p-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">				p-&gt;data[j+<span class="number">1</span>] = temp;	</span><br><span class="line">			&#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert_in_order_list</span><span class="params">(sequenlist *s,<span class="keyword">int</span> value)</span><span class="comment">//有序表中插入元素 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">//int temp = s-&gt;last+1;</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=s-&gt;last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		count++;</span><br><span class="line">		<span class="keyword">if</span>( value &lt;= s-&gt;data[i])</span><br><span class="line">		&#123;</span><br><span class="line">			s-&gt;last = s-&gt;last + <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span>(j=s-&gt;last; j&gt;i; j--)</span><br><span class="line">			&#123;</span><br><span class="line">				s-&gt;data[j] = s-&gt;data[j<span class="number">-1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			s-&gt;data[i] = value;</span><br><span class="line">			<span class="keyword">return</span> ;<span class="comment">//结束函数 </span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf("i=%d",i);</span></span><br><span class="line">	<span class="comment">//printf("s-&gt;last=%d\n",s-&gt;last);</span></span><br><span class="line">	<span class="keyword">if</span>(i &gt; s-&gt;last<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		s-&gt;last = s-&gt;last + <span class="number">1</span>;</span><br><span class="line">		s-&gt;data[s-&gt;last] = value;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(sequenlist *L,<span class="keyword">int</span> i,<span class="keyword">int</span> x)</span> <span class="comment">//指定位置,插入 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(((*L).last) &gt;= maxsize<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"the list is overflow!\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>((i&lt;<span class="number">1</span>)||(i&gt;(*L).last+<span class="number">2</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"position is not correct!\n"</span>);</span><br><span class="line">			<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(j=(*L).last;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">			&#123;</span><br><span class="line">				(*L).data[j+<span class="number">1</span>]=(*L).data[j];				 </span><br><span class="line">			&#125;</span><br><span class="line">			(*L).last=(*L).last+<span class="number">1</span>;              </span><br><span class="line">			(*L).data[i<span class="number">-1</span>]=x;</span><br><span class="line">			<span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete_same</span><span class="params">(sequenlist *s)</span><span class="comment">//删除表中相同的元素 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=s-&gt;last; i++)</span><br><span class="line">	&#123; </span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;=s-&gt;last; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(s-&gt;data[j] == s-&gt;data[i])<span class="comment">//元素相同 </span></span><br><span class="line">			&#123;</span><br><span class="line">			    <span class="keyword">for</span>(<span class="keyword">int</span> k=j; k&lt;s-&gt;last; k++)</span><br><span class="line">				&#123;</span><br><span class="line">					s-&gt;data[k] = s-&gt;data[k+<span class="number">1</span>];</span><br><span class="line">				&#125;</span><br><span class="line">				s-&gt;last = s-&gt;last - <span class="number">1</span>; </span><br><span class="line">			&#125;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	sequenlist p=&#123;&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">8</span>&#125;,<span class="number">8</span>&#125;;</span><br><span class="line">	<span class="comment">//这里有9个数，但数组下表是从0开始的，所以 p.last = 8 </span></span><br><span class="line">	print_list(&amp;p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//查找</span></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"please input a value which you want: "</span>);</span><br><span class="line">	<span class="keyword">int</span> value;<span class="comment">//C++语法可以临时定义一个变量,C语言不可以（需放在开头）。 </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;value); </span><br><span class="line">	<span class="comment">//search(&amp;p,10);</span></span><br><span class="line">	search(&amp;p,value);</span><br><span class="line">	print_list(&amp;p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n\n"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//删除表中的指定元素 </span></span><br><span class="line">	delete_1(&amp;p,<span class="number">8</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"after delete:\n"</span>); </span><br><span class="line">	print_list(&amp;p);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//逆置顺序表 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n\nafter reverse:\n"</span>);</span><br><span class="line">	reverse(&amp;p);</span><br><span class="line">	print_list(&amp;p);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//冒泡排序 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\nafter sort:\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//list_bubble_sort(&amp;try_1);</span></span><br><span class="line">	list_bubble_sort(&amp;p);</span><br><span class="line">	print_list(&amp;p); </span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//往有序顺序表中插入一个元素</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n\n"</span>);</span><br><span class="line">    sequenlist try_1 = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;,<span class="number">5</span>&#125;;</span><br><span class="line">    print_list(&amp;try_1);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"please input the value that you wan to insert into the sequenlist: "</span>);</span><br><span class="line">	<span class="keyword">int</span> data;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;data);</span><br><span class="line">	insert_in_order_list(&amp;try_1,data);</span><br><span class="line">	<span class="comment">//insert_in_order_list(&amp;try_1,9);</span></span><br><span class="line">	print_list(&amp;try_1);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//删除表中相同的元素</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n\n"</span>);</span><br><span class="line">	sequenlist try_2= &#123;&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>&#125;,<span class="number">7</span>&#125;;</span><br><span class="line">	print_list(&amp;try_2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\ndelete the same element:\n"</span>);</span><br><span class="line">	delete_same(&amp;try_2);</span><br><span class="line">	print_list(&amp;try_2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//另一种玩法</span></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\nplease input the number of elements: "</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"please input %d values:\n"</span>,n); </span><br><span class="line">	sequenlist try_3;</span><br><span class="line">	try_3.last = n<span class="number">-1</span>;<span class="comment">//注意，数组的小标从0开始 </span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=try_3.last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;try_3.data[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	print_list(&amp;try_3);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n\n"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//在指定位置插入 </span></span><br><span class="line">	insert(&amp;try_3,<span class="number">1</span>,<span class="number">22</span>);</span><br><span class="line">	print_list(&amp;try_3);</span><br><span class="line">	  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="程序运行结果"><a href="#程序运行结果" class="headerlink" title="程序运行结果"></a>程序运行结果</h2><p><img src="https://i.imgur.com/5kOE2oq.png" alt></p>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-06-26T19:52:40+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>最后更新于 2019年6月26日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="./tags/C/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>C</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="./tags/数据结构/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>数据结构</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/14/线性表之顺序存储-顺序表/&title=线性表之顺序存储-顺序表 | Shan San&pics=https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png&summary=顺序表的操作
+ 向有序顺序表插入一个元素
+ 顺序表的冒泡排序
+ 顺序表的删除操作
+ 顺序表中元素的查找
+ 顺序表的逆置
+ 删除顺序表中的相同元素
+ 向顺序表的指定位置插入元素
+ 打印顺序表
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2018/12/14/线性表之顺序存储-顺序表/&title=线性表之顺序存储-顺序表 | Shan San&pics=https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png&summary=顺序表的操作
+ 向有序顺序表插入一个元素
+ 顺序表的冒泡排序
+ 顺序表的删除操作
+ 顺序表中元素的查找
+ 顺序表的逆置
+ 删除顺序表中的相同元素
+ 向顺序表的指定位置插入元素
+ 打印顺序表
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/14/线性表之顺序存储-顺序表/&title=线性表之顺序存储-顺序表 | Shan San&pics=https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20200117230653.png&summary=顺序表的操作
+ 向有序顺序表插入一个元素
+ 顺序表的冒泡排序
+ 顺序表的删除操作
+ 顺序表中元素的查找
+ 顺序表的逆置
+ 删除顺序表中的相同元素
+ 向顺序表的指定位置插入元素
+ 打印顺序表
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="./2018/12/15/线性表的链式存储-单链表/" rel="prev" title="线性表的链式存储-单链表">
+                                  
+                                      线性表的链式存储-单链表
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="./tags/C/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>C</a> <a class="tag" href="./tags/数据结构/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据结构</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="./2018/12/13/勿忘国耻，吾辈自强！/" rel="prev" title="勿忘国耻，吾辈自强！">
+                                    
+                                        勿忘国耻，吾辈自强！
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="./tags/Memory/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Memory</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '线性表之顺序存储-顺序表',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='https://shansan.top/img/002.jpg'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Shan San</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:1329441308@qq.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/yeshan333?tab=repositories"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/my/m/music/playlist?id=2617691792"
+              class="social fas fa-music flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://www.zhihu.com/people/si-kong-ji-54/activities"
+              class="social fab fa-zhihu flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://yeshan333.github.io/sitemap.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#顺序表的操作"><span class="toc-text">顺序表的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序表的存储结构"><span class="toc-text">顺序表的存储结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序表的冒泡排序"><span class="toc-text">顺序表的冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序表的删除操作"><span class="toc-text">顺序表的删除操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序表中元素的查找"><span class="toc-text">顺序表中元素的查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序表的逆置"><span class="toc-text">顺序表的逆置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除顺序表中的相同元素"><span class="toc-text">删除顺序表中的相同元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向顺序表的指定位置插入元素"><span class="toc-text">向顺序表的指定位置插入元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向顺序表的指定位置插入元素-1"><span class="toc-text">向顺序表的指定位置插入元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#打印顺序表"><span class="toc-text">打印顺序表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#试着煲下汤"><span class="toc-text">试着煲下汤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序运行结果"><span class="toc-text">程序运行结果</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+    href="./I_want_to_tell_me/"
+    title="I_want_to_tell_me/">
+    <i class="fas fa-quran fa-fw"></i></a>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="./" href="./"
+          
+          
+          id=".">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="./archives/" href="./archives/"
+          
+            rel="nofollow"
+          
+          
+          id=".archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="https://github.com/yeshan333" href="https://github.com/yeshan333"
+          
+          
+          id="https:github.comyeshan333">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          Github
+        </a></li>
+      
+        <li><a class="flat-box" title="./friends/" href="./friends/"
+          
+            rel="nofollow"
+          
+          
+          id=".friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="./about/" href="./about/"
+          
+            rel="nofollow"
+          
+          
+          id=".about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="./categories/"
+    title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="./categories/ACM/" href="./categories/ACM/"><div class='name'>ACM</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Algorithm/" href="./categories/Algorithm/"><div class='name'>Algorithm</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/C/" href="./categories/C/"><div class='name'>C</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/CPP/" href="./categories/CPP/"><div class='name'>CPP</div><div class='badge'>(21)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/CSS/" href="./categories/CSS/"><div class='name'>CSS</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Flask/" href="./categories/Flask/"><div class='name'>Flask</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Git/" href="./categories/Git/"><div class='name'>Git</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/HTML/" href="./categories/HTML/"><div class='name'>HTML</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Linux/" href="./categories/Linux/"><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Memory/" href="./categories/Memory/"><div class='name'>Memory</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Proxy/" href="./categories/Proxy/"><div class='name'>Proxy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Python/" href="./categories/Python/"><div class='name'>Python</div><div class='badge'>(19)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/React/" href="./categories/React/"><div class='name'>React</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/Scrapy/" href="./categories/Scrapy/"><div class='name'>Scrapy</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/blog/" href="./categories/blog/"><div class='name'>blog</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/docker/" href="./categories/docker/"><div class='name'>docker</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/markdown/" href="./categories/markdown/"><div class='name'>markdown</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/math/" href="./categories/math/"><div class='name'>math</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/memory/" href="./categories/memory/"><div class='name'>memory</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/函数式编程/" href="./categories/函数式编程/"><div class='name'>函数式编程</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/数据结构/" href="./categories/数据结构/"><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="./categories/随笔/" href="./categories/随笔/"><div class='name'>随笔</div><div class='badge'>(6)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="./tags/"
+    title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="./tags/ACM/" style="font-size: 14px; color: #999">ACM</a> <a href="./tags/Algorithm/" style="font-size: 15.25px; color: #919191">Algorithm</a> <a href="./tags/Astronomy/" style="font-size: 15.25px; color: #919191">Astronomy</a> <a href="./tags/BeautifulSoup/" style="font-size: 14px; color: #999">BeautifulSoup</a> <a href="./tags/C/" style="font-size: 16.5px; color: #888">C</a> <a href="./tags/CPP/" style="font-size: 24px; color: #555">CPP</a> <a href="./tags/CSS/" style="font-size: 14px; color: #999">CSS</a> <a href="./tags/Flask/" style="font-size: 17.75px; color: #808080">Flask</a> <a href="./tags/GDB/" style="font-size: 14px; color: #999">GDB</a> <a href="./tags/Git/" style="font-size: 16.5px; color: #888">Git</a> <a href="./tags/HTML/" style="font-size: 15.25px; color: #919191">HTML</a> <a href="./tags/Json/" style="font-size: 14px; color: #999">Json</a> <a href="./tags/Jupyter/" style="font-size: 14px; color: #999">Jupyter</a> <a href="./tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="./tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="./tags/MATLAB/" style="font-size: 14px; color: #999">MATLAB</a> <a href="./tags/Memory/" style="font-size: 14px; color: #999">Memory</a> <a href="./tags/Proxy/" style="font-size: 14px; color: #999">Proxy</a> <a href="./tags/Python/" style="font-size: 22.75px; color: #5e5e5e">Python</a> <a href="./tags/React/" style="font-size: 14px; color: #999">React</a> <a href="./tags/Requests/" style="font-size: 15.25px; color: #919191">Requests</a> <a href="./tags/Scrapy/" style="font-size: 14px; color: #999">Scrapy</a> <a href="./tags/blog/" style="font-size: 19px; color: #777">blog</a> <a href="./tags/debug/" style="font-size: 14px; color: #999">debug</a> <a href="./tags/docker/" style="font-size: 14px; color: #999">docker</a> <a href="./tags/hexo/" style="font-size: 17.75px; color: #808080">hexo</a> <a href="./tags/markdown/" style="font-size: 17.75px; color: #808080">markdown</a> <a href="./tags/memory/" style="font-size: 14px; color: #999">memory</a> <a href="./tags/上下文/" style="font-size: 14px; color: #999">上下文</a> <a href="./tags/信息标记/" style="font-size: 14px; color: #999">信息标记</a> <a href="./tags/函数式编程/" style="font-size: 14px; color: #999">函数式编程</a> <a href="./tags/协程/" style="font-size: 14px; color: #999">协程</a> <a href="./tags/数据结构/" style="font-size: 15.25px; color: #919191">数据结构</a> <a href="./tags/正则表达式/" style="font-size: 14px; color: #999">正则表达式</a> <a href="./tags/爬虫/" style="font-size: 20.25px; color: #6f6f6f">爬虫</a> <a href="./tags/环境管理/" style="font-size: 14px; color: #999">环境管理</a> <a href="./tags/随笔/" style="font-size: 21.5px; color: #666">随笔</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget related_posts'>
+    
+<header class='pure'>
+  <div><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;相关文章</div>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\12\15\线性表的链式存储-单链表\" title="线性表的链式存储-单链表" rel="bookmark">线性表的链式存储-单链表</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="2018\10\24\竖式问题\" title="竖式问题" rel="bookmark">竖式问题</a></h3></div></li></ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class='widget music'>
+    
+<header class='pure'>
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn"
+    
+      rel="external nofollow noopener noreferrer"
+    
+    
+      target="_blank"
+    
+    href="https://music.163.com/#/user/home?id=63035382"
+    title="https://music.163.com/#/user/home?id=63035382">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer"
+    data-theme="#1BCDFC"
+    
+    
+    data-mode="circulation"
+    data-server="netease"
+    data-type="playlist"
+    data-id="2617691792"
+    data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget list'>
+  
+<header class='pure'>
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选链接</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-cube fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Material X
+          </div>
+          
+            <div class='badge'>(Hexo博客主题)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./about/" href="./about/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;关于我 / 留言板
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./Collect/" href="./Collect/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fab fa-delicious fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Collect
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://img.shan333.cn" href="https://img.shan333.cn"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-images fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;shan_pic
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://apod.nasa.gov/apod/astropix.html" href="https://apod.nasa.gov/apod/astropix.html"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://apod.nasa.gov/favicon.ico" id="round">
+            
+            &nbsp;&nbsp;每日天文一图
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://carbon.now.sh" href="https://carbon.now.sh"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/76/a8416146154b60cbaa432ad3cf3b919190e1d8" id="round">
+            
+            &nbsp;&nbsp;Carbon
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://www.zhujiboke.com/" href="https://www.zhujiboke.com/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://s2.ax1x.com/2019/01/09/FL3ESf.png" id="round">
+            
+            &nbsp;&nbsp;雨落无声
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://shan333.cn" href="https://shan333.cn"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/8f/e4fa12e70f63550b3779d901103c67cefabfca.jpg" id="round">
+            
+            &nbsp;&nbsp;shansan
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://whoer.net/zh" href="https://whoer.net/zh"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/1b/f5cfbccb67f161973528bed7d372173cb4fb8c" id="round">
+            
+            &nbsp;&nbsp;Whoer
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5" href="https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://s2.ax1x.com/2019/06/19/VXJMPx.jpg" id="round">
+            
+            &nbsp;&nbsp;cppreference
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./thumbnail/" href="./thumbnail/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-camera fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;网站缩略图生成
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="./trytobaidu/" href="./trytobaidu/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;让我帮你百度
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget list'>
+  
+<header class='pure'>
+  <div><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;我的关注</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://python-web-guide.readthedocs.io/zh/latest/" href="https://python-web-guide.readthedocs.io/zh/latest/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://python-web-guide.readthedocs.io/zh/latest/_static/favicon.ico" id="round">
+            
+            &nbsp;&nbsp;Python Web入坑指南
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://www.sqlsec.com/" href="https://www.sqlsec.com/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://image.3001.net/images/20190329/15538458216510.png" id="round">
+            
+            &nbsp;&nbsp;国光
+          </div>
+          
+            <div class='badge'>(Web安全)</div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://woaielf.github.io/" href="https://woaielf.github.io/"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/e9/5fce67298509e2df8594df95e10e957bc3fc09.png" id="round">
+            
+            &nbsp;&nbsp;数据科学思维导图笔记
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://docs.python.org/zh-cn/3/glossary.html" href="https://docs.python.org/zh-cn/3/glossary.html"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif" id="round">
+            
+            &nbsp;&nbsp;Python术语对照表
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://docs.python.org/zh-cn/3/library/python.html" href="https://docs.python.org/zh-cn/3/library/python.html"
+          
+          
+          >
+          <div class='name'>
+            
+              <img src="https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif" id="round">
+            
+            &nbsp;&nbsp;Python运行时服务
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+    
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:1329441308@qq.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/yeshan333?tab=repositories"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/my/m/music/playlist?id=2617691792"
+            class="social fas fa-music flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/si-kong-ji-54/activities"
+            class="social fab fa-zhihu flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://yeshan333.github.io/sitemap.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+
+  <!-- 操作 -->
+  
+    <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+    <script type = "text/javascript" >
+    // 鼠标点击特效
+    var mouseSum = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+            var $i = $("<span/>").text(a[mouseSum]);
+            mouseSum = (mouseSum + 1) % a.length;
+            var x = e.pageX,
+            y = e.pageY;
+            $i.css({
+                "z-index": 9999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#FF0000"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+            1500,
+            function() {
+                $i.remove();
+            });
+        });
+    });
+    </script>
+
+<!-- 彩带背景 -->
+
+  <script src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" type="text/javascript"></script>
+
+<a href="http://www.beian.miit.gov.cn/">桂ICP备19000444号</a>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "./"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="./js/volantis.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'false' == true;
+  var verify = 'false' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "S687AsCjGJKTPIvUJ8aPNX49-gzGzoHsz",
+    appKey: "bCwg3QuIfGytbeYw58L7ofRq",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  <script src="./js/app.js"></script>
+
+
+  <script src="./js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
