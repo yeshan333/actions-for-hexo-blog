@@ -38,7 +38,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://yeshan333.github.io/actions-for-hexo-blog
-root: ./
+root: /actions-for-hexo-blog/ # ./
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
