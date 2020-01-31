@@ -2,76 +2,76 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://yoursite.com</loc>
+        <loc>https://yeshan333.github.io</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/friends/</loc>
+        <loc>https://yeshan333.github.io/friends/</loc>
         <lastmod>2020-01-25T07:13:44.366Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/</loc>
+        <loc>https://yeshan333.github.io/about/</loc>
         <lastmod>2019-12-25T05:12:56.374Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/PyChina/</loc>
+        <loc>https://yeshan333.github.io/PyChina/</loc>
         <lastmod>2019-08-07T12:55:16.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/I_want_to_tell_me/</loc>
+        <loc>https://yeshan333.github.io/I_want_to_tell_me/</loc>
         <lastmod>2019-07-02T08:54:20.358Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/categories/</loc>
+        <loc>https://yeshan333.github.io/categories/</loc>
         <lastmod>2019-06-30T06:52:19.600Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/tags/</loc>
+        <loc>https://yeshan333.github.io/tags/</loc>
         <lastmod>2019-06-30T06:51:15.163Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/Statement/</loc>
+        <loc>https://yeshan333.github.io/Statement/</loc>
         <lastmod>2019-04-25T03:10:09.485Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com//404.html</loc>
+        <loc>https://yeshan333.github.io//404.html</loc>
         <lastmod>2019-03-21T18:04:19.936Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/Collect/</loc>
+        <loc>https://yeshan333.github.io/Collect/</loc>
         <lastmod>2019-01-08T15:24:14.700Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://yoursite.com/Astronomy/</loc>
+        <loc>https://yeshan333.github.io/Astronomy/</loc>
         <lastmod>2018-10-12T07:55:18.222Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

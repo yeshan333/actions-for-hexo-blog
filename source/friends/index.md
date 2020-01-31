@@ -177,6 +177,13 @@ links:
       backgroundColor: '#3E74C9'
       tags:
       - Web前端
+    - name: HONGWEI
+      avatar: https://www.zhwei.cn/favicon.ico
+      url:  https://www.zhwei.cn/
+      textColor: '#fff'
+      backgroundColor: '#3E74C9'
+      tags:
+      - 测试工程师
   - group: 失踪的dalao
     icon: fas fa-lock
     items:
