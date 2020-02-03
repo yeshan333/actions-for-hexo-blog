@@ -234,10 +234,13 @@ committer root <root@DESKTOP-CQ9JEC7.localdomain> 1580651827 +0800
 
 问题来了，Git是如何组织这些object的❓令人兴奋的是Git在提供给我们这些顶层API去愉快使用的同时还提供了一些较为底层的API让我们能够更深入的了解它。接下来我们将通过部分底层的API来重现本次commit log的创建过程。主要用到的底层API如下：
 
-- git update-index：对暂存区进行操作
-- git write-tree：根据当前暂存区（index）状态创建一个tree object
+- [git hash-object](https://git-scm.com/docs/git-hash-object#Documentation/git-hash-object.txt--w)：生成blob
+- [git update-index](https://git-scm.com/docs/git-update-index)：对暂存区进行操作
+- [git write-tree](https://git-scm.com/docs/git-write-tree)：根据当前暂存区（index）状态创建一个tree object
+- [git read-tree](https://git-scm.com/docs/git-read-tree)：将tree object读入暂存区
+- [git commit-tree](https://git-scm.com/docs/git-commit-tree#_synopsis)：创建commit object
 
-重现步骤如下：
+**重现步骤如下：**
 
 1、先初始化版本库，再为内容分别为`test`的test.txt、`Hello`的hello.txt创建两个blob，blob不存储文件名
 
