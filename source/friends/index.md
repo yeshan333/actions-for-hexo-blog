@@ -129,7 +129,7 @@ links:
       - Linux
     - name: 半叶子
       avatar: https://secure.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=64&r=G&d=
-      url: https://www.ccode.fun/
+      url: https://blog.mebyz.cn/
       backgroundColor: '#3E74C9'
       textColor: '#fff'
       tags:
