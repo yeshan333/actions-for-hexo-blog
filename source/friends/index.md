@@ -71,6 +71,14 @@ links:
       textColor: '#fff'
       tags:
       - Springboot
+    - name: 一去二三遥
+      avatar: https://img.vim-cn.com/9b/f49b155fb62df9c626d83cef17afb2d0ccbb29.png
+      url: https://www.moonster.life
+      backgroundColor: '#3E74C9'
+      textColor: '#fff'
+      tags:
+      - Java
+      - 摄影
     - name: Rinvay.H
       avatar: https://gravatar.o0o.fun/avatar/0e17d3ec8d6fbbfce870d97b943ceef3?s=101&r=G&d=mm
       url: https://www.rinvay.cc/
@@ -187,14 +195,6 @@ links:
   - group: 失踪的dalao
     icon: fas fa-lock
     items:
-    - name: 一去二三遥
-      avatar: https://img.vim-cn.com/9b/f49b155fb62df9c626d83cef17afb2d0ccbb29.png
-      url: https://www.moonster.top/
-      backgroundColor: '#3E74C9'
-      textColor: '#fff'
-      tags:
-      - Java
-      - 摄影
     - name: 搅拌糖°
       avatar: https://s1.ax1x.com/2018/12/20/FDgJr6.png
       url: https://blog.treelo.xin/
