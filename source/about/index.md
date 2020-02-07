@@ -1,5 +1,5 @@
 ---
-title: About me
+title: About
 date: 2018-09-20 13:37:03
 declare: true
 toc: false
@@ -11,17 +11,16 @@ music:
 ---
 
 - 聊一聊我是谁
-  - 在校kubi大三本科生，数学专业
-  - 目前在学习Web开发
-  - 我叫啥，请看下面
-
-![ZJbWp4.png](https://s2.ax1x.com/2019/07/02/ZJbWp4.png)
+  - 在校 kubi 大三本科生，数学专业
+  - 目前在学习 Web 开发
+  - Pythonista、Rustacean
 
 - 关于博客
-  - 2018年9月19日，本博诞生
-  - 初生博客是使用[Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是[yilia](https://github.com/litten/hexo-theme-yilia)
-  - 现在博客使用的hexo主题是[xaoxuxu](https://xaoxuu.com/blog/)大佬写的[Material-x](https://xaoxuu.com/wiki/material-x/)
-  - 搭建这个博客的目的是为了记录部分自己平时的学习笔记
+  - 2018年9月19日，博客诞生
+  - 博客是使用 [Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是[yilia](https://github.com/litten/hexo-theme-yilia)
+  - 现在博客使用的 Hexo 主题是 [xaoxuxu](https://xaoxuu.com/blog/) 大佬写的[Material-x](https://xaoxuu.com/wiki/material-x/)
+  - 2020 年 1 月 30 日，使用 [GitHub Actions](https://github.com/features/actions) 持续集成 Hexo [博客](https://github.com/yeshan333/actions-for-hexo-blog)，放弃单独备份，使用 Git 做 version control
+  - 搭建这个博客的目的是为了放一些自己平时的学习笔记
   - 我发现我搭个博客学了很多花里胡哨的东西😂
   - emmm。。。有些话想到再说。
 
