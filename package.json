@@ -6,7 +6,8 @@
     "version": "3.9.0"
   },
   "dependencies": {
-    "hexo": "^3.8.0",
+    "core-js": "^3.6.4",
+    "hexo": "^3.9.0",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-blog-encrypt": "^2.0.10",
     "hexo-deployer-git": "^1.0.0",
@@ -25,5 +26,8 @@
     "hexo-renderer-mathjax": "^0.6.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }
