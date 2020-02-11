@@ -192,6 +192,14 @@ links:
       backgroundColor: '#3E74C9'
       tags:
       - 测试工程师
+    - name: 洛尘曦
+      avatar: https://cdn.jsdelivr.net/gh/SGYZ0910/CDN@1.1.7/images/lcx.jpg
+      url:  https://www.sgyzyun.club/
+      textColor: '#fff'
+      backgroundColor: '#3E74C9'
+      tags:
+      - Java
+      - Python
   - group: 失踪的dalao
     icon: fas fa-lock
     items:
