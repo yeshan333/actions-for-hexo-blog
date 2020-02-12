@@ -263,6 +263,8 @@ sidebar:
       - name: Python运行时服务
         avatar: https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif
         url: https://docs.python.org/zh-cn/3/library/python.html
+      - name: draw.io
+        url: https://www.draw.io/
 
 # 社交信息
 social:

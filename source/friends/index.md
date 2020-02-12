@@ -200,6 +200,14 @@ links:
       tags:
       - Java
       - Python
+    - name: 辣椒の酱
+      avatar: https://removeif.github.io/images/avatar.jpg
+      url:  https://removeif.github.io/
+      textColor: '#fff'
+      backgroundColor: '#3E74C9'
+      tags:
+      - Java
+      -
   - group: 失踪的dalao
     icon: fas fa-lock
     items:

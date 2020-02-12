@@ -16,8 +16,8 @@ music:
   - Pythonista、Rustacean
 
 - 关于博客
-  - 2018年9月19日，博客诞生
-  - 博客是使用 [Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是[yilia](https://github.com/litten/hexo-theme-yilia)
+  - 2018 年 9 月 19 日，博客诞生
+  - 博客是使用 [Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是 [yilia](https://github.com/litten/hexo-theme-yilia)
   - 现在博客使用的 Hexo 主题是 [xaoxuxu](https://xaoxuu.com/blog/) 大佬写的[Material-x](https://xaoxuu.com/wiki/material-x/)
   - 2020 年 1 月 30 日，使用 [GitHub Actions](https://github.com/features/actions) 持续集成 Hexo [博客](https://github.com/yeshan333/actions-for-hexo-blog)，放弃单独备份，使用 Git 做 version control
   - 搭建这个博客的目的是为了放一些自己平时的学习笔记
