@@ -120,3 +120,5 @@ baidu_push: true
 # 文章锁
 encrypt:
   enable: true
+
+# https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
