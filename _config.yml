@@ -23,11 +23,11 @@ leancloud:
 ##############################
 
 # Site
-title: Shan San
+title: ShanSan
 subtitle: 个人博客
 description: 个人休憩小站
 keywords: ShanSan
-author: Shan San
+author: ShanSan
 language:
   - zh-CN
   - en
