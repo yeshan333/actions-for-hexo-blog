@@ -214,24 +214,31 @@ links:
       backgroundColor: '#3E74C9'
       tags:
       - 向阳生长，触碰流云
+    - name: MrGo123
+      avatar: https://zy68.top
+      url: https://cdn.jsdelivr.net/gh/MrGo123/asset@2020-1-2-1.0/headPortrait/mybloghp.jpg
+      textColor: '#fff'
+      backgroundColor: '#3E74C9'
+      tags:
+      - 后端攻城狮
   - group: 失踪的dalao
     icon: fas fa-lock
     items:
     - name: 搅拌糖°
       avatar: https://s1.ax1x.com/2018/12/20/FDgJr6.png
       url: https://jiaobantang.github.io/
-      backgroundColor: '#3E74C9'
+      backgroundColor: '#0ab44b'
       textColor: '#fff'
       tags:
       - 技术不宅
       - Web开发
 ---
 
-<!-- {% raw %}
+{% raw %}
 <a href="https://www.foreverblog.cn/"><img src="https://img.vim-cn.com/28/1b6143e016a95a7560a29f4e444a1a4c03434c.png"></a>
-{% endraw %} -->
+{% endraw %}
 
-<!-- ![我爱我国](https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20190804211620.jpg) -->
+![我爱我国](https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20190804211620.jpg)
 
 
 
