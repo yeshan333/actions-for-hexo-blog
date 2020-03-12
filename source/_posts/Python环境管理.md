@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-09-02 13:07:13
 tags: [Python, 环境管理]
 categories: Python

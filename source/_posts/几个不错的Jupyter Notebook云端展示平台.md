@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-08-07 09:27:50
 tags: [Python, Jupyter]
 categories: Python
@@ -56,7 +53,7 @@ categories: Python
 
 ![](https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20190807103836.png)
 
-结合Github的示例用法：https://colab.research.google.com/github/ + 用户名/ + 存放ipynb文件的仓库名/ + blob/ + 分支名 + 要展示的ipynb文件路径 
+结合Github的示例用法：https://colab.research.google.com/github/ + 用户名/ + 存放ipynb文件的仓库名/ + blob/ + 分支名 + 要展示的ipynb文件路径
 
 示例：https://colab.research.google.com/github/yeshan333/JupyterNotebook-Show-sample/blob/master/demo.ipynb
 

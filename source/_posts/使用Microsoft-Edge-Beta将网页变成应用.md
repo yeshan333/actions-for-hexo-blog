@@ -6,9 +6,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 tags: 随笔
 categories: 随笔
 ---

@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-06-18 15:05:57
 tags: Latex
 categories: math
@@ -261,13 +258,13 @@ $$\begin{Bmatrix}
 
 ```latex
 % 极限运算
-$$\lim\limits_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$ 
-$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$ 
+$$\lim\limits_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
+$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
 ```
 
-$$\lim\limits_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$ 
+$$\lim\limits_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
 
-$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$ 
+$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
 
 ```latex
 $$ \left[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}\right] $$

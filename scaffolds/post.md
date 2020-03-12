@@ -3,15 +3,14 @@ title: {{ title }}
 date: {{ date }}
 tags:
 categories:
-updated: # 更新日期
 toc: true # 目录
 comments: true # 评论功能
-popular_posts: true # 显示推荐文章
+popular_posts: false # 显示推荐文章
 mathjax: true # 公式渲染
 top: false #文章置顶
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
-password: false
+password:
 music:
   enable: false      # true（文章内和文章列表都显示） internal（只在文章内显示）
   server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）

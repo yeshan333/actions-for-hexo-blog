@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-08-08 17:29:19
 tags: docker
 categories: docker
@@ -48,7 +45,7 @@ docker image pull ubuntu:latest
 
 ```bash
 # 例如：使用当前目录的 Dockerfile 创建镜像，标签为 runoob/ubuntu:v1。
-docker build -t yeshan333/ubuntu:latest . 
+docker build -t yeshan333/ubuntu:latest .
 ```
 
 - 7、`docker image history`：用于查看镜像构建的相关信息
@@ -83,7 +80,7 @@ docker container run -it ubuntu:latest /bin/bash
 ```bash
 # 例如：
 docker container exec -t <container-name or container-id> bash
-# 该命令会将docker主机中的shell连接到一个运行中的容器，在容器内部启动一个新的bash shell进程 
+# 该命令会将docker主机中的shell连接到一个运行中的容器，在容器内部启动一个新的bash shell进程
 ```
 - 6、`docker container start`：用于重启处于停止(Exited)状态的容器，start后跟container name或container id
 
@@ -144,7 +141,7 @@ ENTRYPOINT ["node", "./app.js"]
   - `EXPOSE 8080`对外提供一个web服务端口
   - `ENTRYPOINT ["node", "./app.js"]`指定了当前镜像的入口程序，container运行时就会运行
 
-### 构建镜像 
+### 构建镜像
 使用docker image build根据Dockerfile制作镜像，示例：
 ```
 # -t用于指定制作好的镜像的名字及标签，通常 name:tag 或者 name

@@ -1,0 +1,223 @@
+<%- js(theme.plugins.jquery) %>
+<% if (theme.search && theme.search.enable) { %>
+  <script>
+    <% if(theme.search.service === 'baidu') { %>
+      var BAIDU_API_ID = "<%- theme.search.baidu.apiId %>";
+    <%} else if(theme.search.service === 'algolia') { %>
+      var ALGOLIA_API_KEY = "<%- theme.search.algolia.apiKey %>";
+      var ALGOLIA_APP_ID = "<%- theme.search.algolia.applicationID %>";
+      var ALGOLIA_INDEX_NAME = "<%- theme.search.algolia.indexName %>";
+    <%} else if(theme.search.service === 'azure') { %>
+      var AZURE_QUERY_KEY = "<%- theme.search.azure.queryKey %>";
+      var AZURE_INDEX_NAME = "<%- theme.search.azure.indexName %>";
+      var AZURE_SERVICE_NAME = "<%- theme.search.azure.serviceName %>";
+    <%} else if(theme.search.service === 'google') { %>
+      var GOOGLE_CUSTOM_SEARCH_API_KEY = "<%- theme.search.google.apiKey %>";
+      var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "<%- theme.search.google.engineId %>";
+    <%}%>
+    var SEARCH_SERVICE = "<%- theme.search.service %>" || "hexo";
+    var ROOT = "<%- config.root %>" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+<% } %>
+<% if (theme.plugins.instant_page) { %>
+  <script async src="<%- theme.plugins.instant_page %>" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<% } %>
+<% if (theme.plugins.scrollreveal) { %>
+  <script src="<%- theme.plugins.scrollreveal %>"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+<% } %>
+<% if (theme.plugins.nodewaves && theme.plugins.nodewaves.js) { %>
+  <%- js({src: theme.plugins.nodewaves.js, async: true }) %>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+<% } %>
+<% if (theme.plugins.busuanzi) { %>
+  <script async src="<%- theme.plugins.busuanzi %>"></script>
+<% } %>
+
+<% if (theme.plugins.backstretch && theme.plugins.backstretch.enable && (theme.plugins.backstretch.images || page.images)) { %>
+  <% var imgs = theme.plugins.backstretch.images || page.images; %>
+  <% var posi = null;
+  if (theme.plugins.backstretch.position == 'cover') {
+    posi = '.cover';
+  }
+   %>
+  <% if (imgs != undefined && theme.plugins.backstretch.position != undefined){ %>
+    <%- js(theme.plugins.backstretch.js) %>
+    <script type="text/javascript">
+      $(function(){
+        if ('<%- posi %>') {
+          $('<%- posi %>').backstretch(
+          <%- '["' + imgs.join('", "') + '"]' %>,
+          {
+            duration: "<%- theme.plugins.backstretch.duration %>",
+            fade: "<%- theme.plugins.backstretch.fade %>"
+          });
+        } else {
+          $.backstretch(
+          <%- '["' + imgs.join('", "') + '"]' %>,
+          {
+            duration: "<%- theme.plugins.backstretch.duration %>",
+            fade: "<%- theme.plugins.backstretch.fade %>"
+          });
+        }
+      });
+    </script>
+  <% } %>
+<% } %>
+
+<% if (theme.plugins.aplayer && theme.plugins.aplayer.enable && theme.plugins.aplayer.js) { %>
+  <% (theme.plugins.aplayer.js||[]).forEach(function(item){ %>
+    <%- js({src:item,async:true}) %>
+  <% }) %>
+<% } %>
+
+<%
+  var enableDisqus = false;
+  var enableLivere = false;
+  var enableGitalk = false;
+  var enableValine = false;
+  if (theme.comments && page && page.comments == true) {
+    if (theme.comments.disqus && theme.comments.disqus.shortname) {
+      enableDisqus = true;
+    }
+    if (theme.comments.livere && theme.comments.livere.uid) {
+      enableLivere = true;
+    }
+    if (theme.comments.gitalk && theme.comments.gitalk.clientID) {
+      enableGitalk = true;
+    }
+    if (theme.comments.valine && theme.comments.valine.appId) {
+      enableValine = true;
+    }
+  }
+%>
+<% if (enableDisqus){ %>
+  <script>
+    var disqus_shortname = '<%= theme.comments.disqus.shortname %>';
+    <% if (page.permalink){ %>
+      var disqus_url = '<%= page.permalink %>';
+    <% } %>
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+<% } %>
+<% if (enableLivere){ %>
+  <script type="text/javascript">
+    (function(d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+<% } %>
+<% if (enableGitalk) { %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: "<%- theme.comments.gitalk.clientID %>",
+      clientSecret: "<%- theme.comments.gitalk.clientSecret %>",
+      repo: "<%- theme.comments.gitalk.repo %>",
+      owner: "<%- theme.comments.gitalk.owner %>",
+      admin: "<%- theme.comments.gitalk.admin %>",
+      <% if(page.gitalk && page.gitalk.id) { %>
+        id: "<%= page.gitalk.id %>",
+      <% } else { %>
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+      <% } %>
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+    gitalk.render('gitalk-container');
+  </script>
+<% } %>
+
+<% if (enableValine){ %>
+  <% if (theme.comments.valine.js) { %>
+    <%- js(theme.comments.valine.js) %>
+  <% } else { %>
+    <%- js(['js/valine.js']) %>
+  <% } %>
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = '<%= theme.comments.valine.meta %>'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = '<%= theme.comments.valine.notify %>' == true;
+  var verify = '<%= theme.comments.valine.verify %>' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    <% if (page.valine && page.valine.path) { %>
+      path: "<%= page.valine.path %>",
+    <% } else if (theme.comments.valine.path) { %>
+      path: "<%= theme.comments.valine.path %>",
+    <% } %>
+    appId: "<%= theme.comments.valine.appId %>",
+    appKey: "<%= theme.comments.valine.appKey %>",
+    placeholder: "<%= (page.valine && page.valine.placeholder) ? page.valine.placeholder : theme.comments.valine.placeholder %>",
+    pageSize:'<%= theme.comments.valine.pageSize %>',
+    avatar:'<%= theme.comments.valine.avatar %>',
+    lang:'<%= theme.comments.valine.lang %>',
+    visitor: '<%- theme.comments.valine.visitor %>',
+    highlight:'<%= theme.comments.valine.highlight %>'
+  })
+  </script>
+<% } %>
+
+<% if (config.use_cdn && theme.info && theme.info.cdn && theme.info.cdn.js) { %>
+  <%- js(theme.info.cdn.js) %>
+<% } else { %>
+  <%- js(['js/app.js']) %>
+<% } %>
+<% if (theme.search && theme.search.enable && theme.search.js) { %>
+  <%- js(theme.search.js) %>
+<% } %>
+<% if (theme.plugins.comment_typing) { %>
+  <%- js(theme.plugins.comment_typing) %>
+<%}%>
+
+<!-- 复制 -->
+<% if (theme.plugins.clipboard) { %>
+  <%- partial('_third-party/clipboard') %>
+<% } %>
+
+
+<!-- fancybox -->
+<% if (theme.plugins.fancybox) { %>
+  <%- partial('_third-party/fancybox') %>
+<% } %>
+
+
+<% if (config.import && config.import.script){ %>
+<% (config.import.script||[]).forEach(function(item){ %>
+<%- item %><% }) %>
+<% } %>

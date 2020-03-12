@@ -18,8 +18,10 @@ music:
 - 关于博客
   - 2018 年 9 月 19 日，博客诞生
   - 博客是使用 [Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是 [yilia](https://github.com/litten/hexo-theme-yilia)
+  - 某年某月某日启动备用域名：[shan333.cn](https://shan333.cn/)
   - 现在博客使用的 Hexo 主题是 [xaoxuxu](https://xaoxuu.com/blog/) 大佬写的[Material-x](https://xaoxuu.com/wiki/material-x/)
-  - 2020 年 1 月 30 日，使用 [GitHub Actions](https://github.com/features/actions) 持续集成 Hexo [博客](https://github.com/yeshan333/actions-for-hexo-blog)，放弃单独备份，使用Git做 version control
+  - 2020 年 1 月 30 日，使用 [GitHub Actions](https://github.com/features/actions) 持续集成 Hexo [博客](https://github.com/yeshan333/actions-for-hexo-blog)，放弃单独备份，使用Git做版本控制（回忆）
+  - 2020年3月11日，主题升级至[volantis@2.0.2](https://volantis.js.org/)(原material-x主题改名了)，紧跟dalao更新步伐
   - 搭建这个博客的目的是为了放一些自己平时的学习笔记
   - 我发现我搭个博客学了很多花里胡哨的东西😂
   - emmm。。。有些话想到再说。

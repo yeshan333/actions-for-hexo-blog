@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-07-28 15:55:48
 tags: [debug, Python]
 categories: Python
@@ -70,7 +67,7 @@ print(a + b + c)
 def memoize(f):
     memo = {}
     def helper(x):
-        if x not in memo:            
+        if x not in memo:
             memo[x] = f(x)
         return memo[x]
     return helper

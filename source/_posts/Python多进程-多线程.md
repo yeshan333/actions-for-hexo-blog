@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: false
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 music:
   enable: false
   server: netease
@@ -92,7 +89,7 @@ def main():
 
     t1.join()
     t2.join()
-    
+
     end = time()
 
     print("下载总共耗时 %.3f 秒" % (end-start))
@@ -119,7 +116,7 @@ class DownLoadTask(Thread):
     def __init__(self, filename):
         super().__init__() #初始化父类的构造函数
         self._filename = filename # 私有的
-    
+
     def run(self):
         print("开始下载 %s ..." % self._filename)
         download_time = randint(1,10)
@@ -225,7 +222,7 @@ class Student(object):
     @property
     def score(self):
         return self._score
-    
+
     # setter把一个方法变成一个可控属性用于赋值
     @score.setter
     def score(self, value):

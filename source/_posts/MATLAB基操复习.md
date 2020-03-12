@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-06-17 19:51:57
 tags: MATLAB
 categories: math
@@ -16,7 +13,7 @@ updated:
 
 # MATLAB基本操作
 
-**1. 对象定义** 
+**1. 对象定义**
 使用sym定义单个对象、使用syms定义多个对象
 
 **2. 使用`limit`求极限**
@@ -27,10 +24,10 @@ $$ \lim_{v \rightarrow a} f(x) $$
     limit(f,v,a) % 使用limit(f,v,a,'left')可求左极限
 ```
 
-**3. 导数** 
+**3. 导数**
 使用`diff(f,v,n)`对$ f(v)=v^{t-1} $求 $ n $ 阶导 $ \frac{d^nf}{d^nv} $，n缺省时，默认为1，diff(f)默认求一阶导数。
 
-**4. 定积分和不定积分** 
+**4. 定积分和不定积分**
 使用`int(f,v)`求f对变量v的不定积分，使用`int(f,v,a,b)`求f对变量v的定积分,a、b为积分上下标。$ \int{f(v)dv} $、$ \int^{a}_{b}{f(v)dv} $。
 
 <!-- more -->
@@ -44,8 +41,8 @@ function [输出形参列表] = 函数名（输入形参列表）
 
 ```matlab
 function spir_len = spirallength(d, n, lcolor)
-% SPIRALLENGTH plot a circle of radius as r in the provided color and calculate its area 
-% 输入参数： 
+% SPIRALLENGTH plot a circle of radius as r in the provided color and calculate its area
+% 输入参数：
 %   d: 螺旋的旋距
 %   n: 螺旋的圈数
 %   lcolor：画图线的颜色
@@ -56,30 +53,30 @@ function spir_len = spirallength(d, n, lcolor)
 %   spirallength(d,n,lcolor):以参数d,n,lcolor画螺旋线
 %   spir_len = spirallength(d,n):计算螺旋线的周长，并以蓝色填充螺旋线
 %   spir_len = spirallength(d,n,lcolor):计算螺旋线的周长，并以lcolor颜色填充螺旋线
- 
+
 % 版本号V1.0，编写于1999年9月9号，修改于1999年9月10号，作者：亚索
- 
+
 if nargin > 3
     error('输入变量过多！');
 elseif nargin == 2
     lcolor = 'b'; % 默认情况下为蓝色
 end
- 
-j = sqrt(-1); 
-phi = 0 : pi/1000 : n*2*pi; 
-amp = 0 : d/2000 : n*d; 
-spir = amp .* exp(j*phi); 
- 
+
+j = sqrt(-1);
+phi = 0 : pi/1000 : n*2*pi;
+amp = 0 : d/2000 : n*d;
+spir = amp .* exp(j*phi);
+
 if nargout == 1
-    spir_len = sum(abs(diff(spir))); 
-    fill(real(spir), imag(spir), lcolor); 
+    spir_len = sum(abs(diff(spir)));
+    fill(real(spir), imag(spir), lcolor);
 elseif nargout == 0
-    plot(spir, lcolor); 
+    plot(spir, lcolor);
 else
-    error('输出变量过多！'); 
+    error('输出变量过多！');
 end
- 
-axis('square'); 
+
+axis('square');
 ```
 
 **6. matlab程序设计语句**
@@ -220,9 +217,9 @@ fval
 常见问题（linprog默认求最小值）
 $$ minz=cX $$
 
-$$ s.t. \begin{cases} 
-AX\leq{b}\\ 
-Aeq\cdot{X}=beq\\ 
+$$ s.t. \begin{cases}
+AX\leq{b}\\
+Aeq\cdot{X}=beq\\
 VLB\leq{X}\leq{VUB}
 \end{cases}$$
 
@@ -237,7 +234,7 @@ $$ min z=13x_1+9x_2+10x_3+11x_4+12x_5+8x_6 $$
 
 $$ s.t.\left\{
 \begin{aligned}
-& x_1+x_2=400\\  
+& x_1+x_2=400\\
 & x_2+x_5=600\\
 & x_3+x_6=500\\
 & 0.4x_1+1.1x_2+x_3\leq{800}\\
@@ -266,9 +263,9 @@ vub=[];
 
 $$ minz=cX $$
 
-$$ s.t. \begin{cases} 
-AX\leq{b}\\ 
-Aeq\cdot{X}=beq\\ 
+$$ s.t. \begin{cases}
+AX\leq{b}\\
+Aeq\cdot{X}=beq\\
 X为0-1变量
 \end{cases}$$
 
@@ -301,7 +298,7 @@ beq = [];
 [x,fval] = bintprog(z,A,b,Aeq,beq)
 ```
 
-# 数据插值与拟合  
+# 数据插值与拟合
 
 ## 数据插值，使用interpl进行一维插值
 
@@ -313,9 +310,9 @@ yi = interpl(X,Y,xi,method)
 该命令用指定的算法找出一个一元函数，然后以该函数给出xi处的值。其中x=[x1,x2,…,xn]’和 y=[y1,y2,…,yn]’两个向量分别为给定的一组自变量和函数值，用来表示已知样本点数据；**xi为待求插值点处横坐标，可以是一个标量，也可以是一个向量**，是向量时，必须单调；yi得到返回的对应纵坐标。
 
 - method可以选取以下方法之一：
-  - ‘nearest’：最近邻点插值，直接完成计算；          
+  - ‘nearest’：最近邻点插值，直接完成计算；
   - ‘spline’：三次样条函数插值；
-  - ‘linear’：线性插值（缺省方式），直接完成计算；    
+  - ‘linear’：线性插值（缺省方式），直接完成计算；
   - ‘cubic’：三次函数插值；
 
 
@@ -340,7 +337,7 @@ plot(x,y,'ro',xx,yy,'b')    %作图
 ### 拟合函数polyfit
 
 ```matlab
-p=polyfit(x,y,n) 
+p=polyfit(x,y,n)
 [p,s]= polyfit(x,y,n)
 ```
 说明：x,y为数据点，n为多项式阶数，返回p为幂次从高到低的多项式系数向量p。p是n+1维参数向量p(1)，p(2)….那么拟合后对应的多项式即为：
@@ -351,8 +348,8 @@ x必须是单调的。矩阵s用于生成预测值的误差估计
 ### 多项式求值函数polyval
 
 ```matlab
-y=polyval(p,x) 
-[y,DELTA]=polyval(p,x,s) 
+y=polyval(p,x)
+[y,DELTA]=polyval(p,x,s)
 ```
 说明：y=polyval(p,x)为返回对应自变量x在给定系数p的多项式的值；
 [y,DELTA]=polyval(p,x,s) 使用polyfit函数的选项输出s得出误差估计DELTA。它假设polyfit函数数据输入的误差是独立正态的，并且方差为常数。则DELTA将至少包含50%的预测值。

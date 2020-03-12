@@ -5,11 +5,8 @@ comments: true
 popular_posts: true
 mathjax: true
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 date: 2019-07-19 14:58:48
-tags: [Python, 协程] 
+tags: [Python, 协程]
 categories: Python
 updated:
 ---
@@ -54,9 +51,9 @@ async def main():
 
 if __name__ == "__main__":
     start = time.perf_counter()
-    
+
     asyncio.run(main())
-    
+
     print('花费 {} s'.format(time.perf_counter() - start))
 ```
 
@@ -97,9 +94,9 @@ async def main():
 
 if __name__ == "__main__":
     start = time.perf_counter()
-    
+
     asyncio.run(main())
-    
+
     print('花费 {} s'.format(time.perf_counter() - start))
 ```
 
@@ -196,18 +193,18 @@ async def producer(queue, id):
 
 async def main():
     queue = asyncio.Queue()
-    
+
     consumer_1 = asyncio.create_task(consumer(queue, 'consumer_1'))
     consumer_2 = asyncio.create_task(consumer(queue, 'consumer_2'))
 
     producer_1 = asyncio.create_task(producer(queue, 'producer_1'))
     producer_2 = asyncio.create_task(producer(queue, 'producer_2'))
-    
+
     await asyncio.sleep(10)
     # cancel掉执行之间过长的consumer_1、consumer_2,while True
     consumer_1.cancel()
     consumer_2.cancel()
-    
+
     # return_exceptions 设为True，不让异常throw到执行层，影响后续任务的执行
     await asyncio.gather(consumer_1, consumer_2, producer_1, producer_2, return_exceptions=True)
 

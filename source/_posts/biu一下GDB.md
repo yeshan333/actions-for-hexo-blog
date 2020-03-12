@@ -7,7 +7,6 @@ tags: GDB
 categories: CPP
 declare:
 toc: true
-password: false
 updated:
 ---
 
@@ -28,7 +27,7 @@ updated:
 ```c
 /*
 file_name: swap.c
-*/ 
+*/
 
 #include<stdio.h>
 void swap(int a, int b)
@@ -44,7 +43,7 @@ int main()
     int a=3, b=4;
 	swap(a,b);
 	printf("%d %d",a,b);
-	return 0;	
+	return 0;
 }
 ```
 
@@ -94,7 +93,7 @@ int main(){
     int a=3, b=4;
 	swap(a,b);
 	printf("%d %d",a,b);
-	return 0;	
+	return 0;
 }
 ```
 

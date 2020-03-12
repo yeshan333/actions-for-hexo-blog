@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: false
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 music:
   enable: false
   server: netease
@@ -34,7 +31,7 @@ $ git push origin --delete <branch> # 删除远程分支
 
 $ git tag -n # 列出所有本地标签以及相关信息
 $ git tag <tagname> # 基于最新提交创建标签
-& git tag <tagname> -m "备注信息" # 基于最新提交创建含备注信息的标签 
+& git tag <tagname> -m "备注信息" # 基于最新提交创建含备注信息的标签
 $ git tag -d <tagname> # 删除标签
 $ git push orign <tagname> # 将指定信息推送到远程仓库
 $ git push --tags # 推送所有标签到远程仓库

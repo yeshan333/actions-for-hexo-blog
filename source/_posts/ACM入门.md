@@ -1,8 +1,8 @@
 ---
 title: ACM入门（占个位）
 date: 2018-10-02 22:48:28
-tags: [CPP, ACM]
-categories: ACM
+tags: [CPP, Algorithm]
+categories: Algorithm
 declare: true
 toc: true
 updated:
@@ -109,7 +109,7 @@ int main()
 {
 	int n;
 	while(cin>>n)
-	{	
+	{
 		if(n==0)return 0;
 		int x,sum=0;
 		while(n--)
@@ -150,7 +150,7 @@ int main()
 		cin>>n;
 		while(n--)
 		{
-			cin>>x; 
+			cin>>x;
 			sum += x;
 		}
 		cout<<sum<<endl;
@@ -178,7 +178,7 @@ int main()
 	int n;
 	int x,sum=0;
 	while(cin>>n)
-	{	
+	{
 		while(n--)
 		{
 			cin>>x;
@@ -243,14 +243,14 @@ int main()
 		while(n--)
 		{
 			cin>>x;
-			sum +=x; 
-		} 
+			sum +=x;
+		}
 		cout<<sum<<endl;
 		cout<<endl;
 		sum=0;
 	}
 	return 0;
-} 
+}
 ```
 
 ---

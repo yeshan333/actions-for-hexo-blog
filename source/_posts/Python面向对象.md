@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: false
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 music:
   enable: false
   server: netease
@@ -39,7 +36,7 @@ class Person(object):
     def __init__(self,name,sex):
         self.name = name
         self.sex = sex
-        
+
     def print_title(self):
         if self.sex == "male":
             print("man")
@@ -52,7 +49,7 @@ class Child(Person):                # Child 继承 Person
             print("boy")
         elif self.sex == "female":
             print("girl")
-        
+
 May = Child("May","female")
 Peter = Person("Peter","male")
 
@@ -106,7 +103,7 @@ Peter.print_title()
 class Person:
     def __init__(self,name):
         print("我叫{}".format(name))
-    
+
 class Student(Person):
     def __init__(self,name):
         # 使用super函数调用父类构造函数

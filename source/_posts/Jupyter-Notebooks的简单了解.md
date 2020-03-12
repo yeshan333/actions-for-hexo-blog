@@ -5,9 +5,6 @@ comments: true
 popular_posts: true
 mathjax: false
 top: false
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
-password: false
 music:
   enable: false
   server: netease
@@ -68,7 +65,7 @@ excerpt: 撸一手Jupyter
 ![VCPpA1.md.png](https://s2.ax1x.com/2019/05/22/VCPpA1.md.png)
 
 
---- 
+---
 emmm可以划水了。。。。
 
 了解更多：
