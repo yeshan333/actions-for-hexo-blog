@@ -375,6 +375,7 @@ widget:
         icon: fas fa-search
         url: trytobaidu/
       - name: 心声
+        desc: 自言自语
         icon: fas fa-quran
         url: I_want_to_tell_me/
   custom_nav:
@@ -417,8 +418,8 @@ widget:
         avatar: https://python-web-guide.readthedocs.io/zh/latest/_static/favicon.ico
         url: https://python-web-guide.readthedocs.io/zh/latest/
       - name: 国光
-        avatar: https://image.3001.net/images/20190329/15538458216510.png
-        desc: Web安全
+        avatar: https://i.loli.net/2020/03/14/DsAaP2hFqeuNOEo.png
+        desc: 跟着混 Web 安全
         url: https://www.sqlsec.com/
       - name: 数据科学思维导图笔记
         url: https://woaielf.github.io/
@@ -430,7 +431,9 @@ widget:
         avatar: https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif
         url: https://docs.python.org/zh-cn/3/library/python.html
       - name: draw.io
+        avatar: https://i.loli.net/2020/03/14/LyEWzxKN4BfvFMh.png
         url: https://www.draw.io/
+        desc: diagram
 
 
 

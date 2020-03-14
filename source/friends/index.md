@@ -215,8 +215,8 @@ links:
       tags:
       - 向阳生长，触碰流云
     - name: MrGo123
-      avatar: https://zy68.top
-      url: https://cdn.jsdelivr.net/gh/MrGo123/asset@2020-1-2-1.0/headPortrait/mybloghp.jpg
+      avatar: https://cdn.jsdelivr.net/gh/MrGo123/asset@2020-1-2-1.0/headPortrait/mybloghp.jpg
+      url: https://zy68.top
       textColor: '#fff'
       backgroundColor: '#3E74C9'
       tags:
