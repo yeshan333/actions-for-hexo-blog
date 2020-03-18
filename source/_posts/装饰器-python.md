@@ -1,21 +1,16 @@
 ---
 title: 装饰器--python
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
 date: 2019-01-03 18:39:32
 tags: Python
 categories: Python
-declare:
 toc: true
-password:
-updated:
 ---
 
 # python装饰器回顾
 
 ## 返回函数
 
-![](https://i.imgur.com/3Nea67a.png)
+![返回函数](https://i.loli.net/2020/03/18/8MoeVXiUTxZzBEc.png)
 
 
 <!-- more -->
@@ -38,7 +33,7 @@ updated:
 - 使用一个函数作为参数
 - 它返回一个函数
 '''
-def a_new_decorator(a_func):	
+def a_new_decorator(a_func):
     def wrapTheFunction():
 	    print("I am doing some boring work before executing a_func()")
 	    a_func()
@@ -46,48 +41,49 @@ def a_new_decorator(a_func):
     return wrapTheFunction
 
 
-'''
+''''''
 - 使用a_new_decorator装饰a_function_requiring_decoration
 - @a_new_decorator 等价于 a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
-'''
+''''''
 @a_new_decorator
 def a_function_requiring_decoration():
-	
+
 	print("I am the function which needs some decoration remove my foul smell")
 
 a_function_requiring_decoration()
 ```
 
 运行结果
-![FIyq7F.png](https://s2.ax1x.com/2019/01/02/FIyq7F.png)
+![运行结果](https://s2.ax1x.com/2019/01/02/FIyq7F.png)
 
 <font color="red">@a_new_decorator 等价于 a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)</font>
 
 
-** 下面这段程序和上面那段等价 **
+**下面这段程序和上面那段等价**
+
 ```python
 # -*- coding: utf-8 -*-
 
 def a_new_decorator(a_func):
- 
+
     def wrapTheFunction():
         print("I am doing some boring work before executing a_func()")
- 
+
         a_func()
- 
+
         print("I am doing some boring work after executing a_func()")
- 
+
     return wrapTheFunction
- 
+
 def a_function_requiring_decoration():
     print("I am the function which needs some decoration to remove my foul smell")
- 
+
 #a_function_requiring_decoration()
 #outputs: "I am the function which needs some decoration to remove my foul smell"
 
 a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
 #now a_function_requiring_decoration is wrapped by wrapTheFunction()
- 
+
 a_function_requiring_decoration()
 #outputs:I am doing some boring work before executing a_func()
 #        I am the function which needs some decoration to remove my foul smell
@@ -96,10 +92,9 @@ a_function_requiring_decoration()
 
 ### 应用：日志打印
 
-![](https://i.imgur.com/rNQ8oB4.png)
+![日志打印](https://i.loli.net/2020/03/18/3glkurdZaIXUVWS.png)
 
-在wrap函数内，首先打印日志，再调用原始函数
-\*args表示任何多个无名参数，它是一个tuple；**kwargs表示关键字参数，它是一个dict
+在wrap函数内，首先打印日志，再调用原始函数*args表示任何多个无名参数，它是一个tuple；**kwargs表示关键字参数，它是一个dict
 
 ## PS
 
@@ -117,7 +112,7 @@ a_function_requiring_decoration()
 
 上面的demo应该这样写
 
-![](https://i.imgur.com/j1PoOhL.png)
+![demo改写](https://i.loli.net/2020/03/18/GjVxNM2FoZn17DH.png)
 
 ## 参考
 

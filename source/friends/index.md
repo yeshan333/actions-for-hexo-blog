@@ -221,6 +221,13 @@ links:
       backgroundColor: '#3E74C9'
       tags:
       - 后端攻城狮
+    - name: Nykee
+      avatar: https://image.nykee.cn/nykee.png
+      url: https://www.nykee.cn/
+      textColor: '#fff'
+      backgroundColor: '#3E74C9'
+      tags:
+      - 前端打杂狮/公路骑游党
   - group: 失踪的dalao
     icon: fas fa-lock
     items:
