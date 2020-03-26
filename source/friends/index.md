@@ -241,11 +241,11 @@ links:
       - Web开发
 ---
 
-{% raw %}
+<!-- {% raw %}
 <a href="https://www.foreverblog.cn/"><img src="https://img.vim-cn.com/28/1b6143e016a95a7560a29f4e444a1a4c03434c.png"></a>
 {% endraw %}
 
-![我爱我国](https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20190804211620.jpg)
+![我爱我国](https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20190804211620.jpg) -->
 
 
 

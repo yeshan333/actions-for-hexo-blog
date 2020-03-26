@@ -455,7 +455,7 @@ footer:
   copyright: '[Copyright © 2018-2020 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   # br: '<br>'
-  beian: '[桂ICP备19000444号](http://www.beian.miit.gov.cn/)'
+  # beian: '[桂ICP备19000444号](http://www.beian.miit.gov.cn/)'
 
 
 ############################### SEO ###############################
