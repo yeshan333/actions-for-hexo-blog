@@ -63,31 +63,26 @@ style:
 cover:
   scheme: docs # docs, blog
   display:
-    home: false
-    archive: false
+    home: true
+    archive: true
     others: false # can be written in front-matter 'cover: true'
   logo: # https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/256/google_logo.png
-  title: <red>Shan</red><green>San</green>
-  subtitle: '迷途者的港湾,<blue>寻我所想</blue>'
+  title: '<red>迷途者的港湾</red>，<blue>寻我所想</blue>' # <red>S</red><green>h</green><blue>a</blue><yellow>n</yellow><red>S</red><green>h</green><blue>a</blue><yellow>n</yellow>
+  subtitle: 'created by <yellow>ShanSan</yellow>'
   search: 寻你所想 # search bar placeholder
   features:
-    - name: 文档
-      icon: fas fa-book
-      url: https://volantis.js.org/getting-started/
-    - name: 博文
+    - title: RSS
       icon: fas fa-rss
-      url: https://volantis.js.org/archives/
-    - name: 示例
-      icon: fas fa-play-circle
-      url: https://volantis.js.org/examples/
-    - name: 源码
-      icon: fas fa-file-code
-      url: https://github.com/xaoxuu/hexo-theme-volantis/
-      rel: external nofollow noopener noreferrer
-      target: _blank
-    - name: 鸣谢
-      icon: fas fa-handshake
-      url: https://volantis.js.org/contributors/
+      url: https://shansan.top/post-sitemap.xml
+    - name: 博文
+      icon: fas fa-book
+      url: /
+    - name: 友链
+      icon: fas fa-link
+      url: friends/
+    - name: 关于我
+      icon: fas fa-info-circle
+      url: about/
 
 
 # Navigation Bar
@@ -95,7 +90,7 @@ navbar:
   logo: # choose [img] or [icon + title]
     img:
     icon:
-    title: <green>Shan San</green>
+    title: <red>S</red><green>h</green><blue>a</blue><yellow>n</yellow><red>S</red><green>h</green><blue>a</blue><yellow>n</yellow>
   menu:
     # The following can be written in `blog/source/_data/menu.yml`
     # This menu will be displayed on the laptop or desktop.
@@ -517,9 +512,11 @@ plugins:
     position: cover       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     duration: 20000       # Duration (ms)
     fade: 1500            # fade duration (ms) (Not more than 1500)
-    white_text: #true     # Whether the picture is dark (adjust the text to white)
+    white_text: true     # Whether the picture is dark (adjust the text to white)
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
-      - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg
+      - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper@1.0.0/landscape/10A0FCE5-36A1-4AD0-8CF0-019259A89E03.jpeg
+      # - https://shansan.top/knowledge-base/_media/background.gif
+      # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg
       # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg
       # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg
       # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg

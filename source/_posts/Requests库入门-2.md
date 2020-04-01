@@ -7,7 +7,9 @@ declare: true
 updated:
 toc: true
 ---
+
 # requests库入门实操
+
 * 京东商品页面爬取
 * 亚马逊商品页面的爬取
 * 百度/360搜索关键字提交
@@ -15,6 +17,7 @@ toc: true
 * 网络图片的爬取和储存
 
 <!-- more -->
+
 ## 1.京东商品页面的爬取
 
 [华为nova3](https://item.jd.com/30185690434.html)
@@ -33,13 +36,17 @@ if __name__ == '__main__':
     url = "https://item.jd.com/30185690434.html"
     print(GetHTMLText(url))
 ```
-![](https://i.imgur.com/O7iGEFC.png)
+
+![输出](https://i.loli.net/2020/04/01/jEGhayRogB56b37.png)
 
 ## 2.亚马孙商品页面的爬取
+
 某些网站可能有反爬机制。通常的反爬策略有:
+
 1. 通过Headers反爬虫
 2. 基于用户行为反爬虫
 3. 动态页面的反爬虫
+
 [参考](https://www.cnblogs.com/sishuinianhua/p/5501883.html)
 
 ```python
@@ -62,7 +69,9 @@ if __name__ == '__main__':
 ```
 
 ## 3.百度/360搜索关键字提交
+
 使用params参数,利用接口keyword
+
 ```python
 #百度搜索引擎关键词提交接口: http://www.baidu.com/s?wd=keyword
 #360搜索引擎关键词提交接口: http://www.so.com/s?q=keyword
@@ -88,9 +97,11 @@ if __name__ == '__main__':
     #print(Get(url))
     print(len(Get(url)))
 ```
-![](https://i.imgur.com/jp8Zd7Y.png)
+
+![输出](https://i.loli.net/2020/04/01/HqX9RTdiLbB6Uok.png)
 
 ## 4.IP地址归属地查询
+
 使用IP138的API接口
 [http://m.ip138.com/ip.asp?ip=ipaddress](http://m.ip138.com/ip.asp?ip=ipaddress)
 
@@ -109,7 +120,8 @@ try:
 except:
     print("failed")
 ```
-![](http://pflr7ix8q.bkt.clouddn.com/GIF.gif)
+
+![demo](http://pflr7ix8q.bkt.clouddn.com/GIF.gif)
 
 ## 5.网络图片的爬取和储存
 
@@ -139,7 +151,9 @@ try:
 except:
     print("spider fail")
 ```
-![](http://pflr7ix8q.bkt.clouddn.com/122.gif)
 
-![](http://pflr7ix8q.bkt.clouddn.com/1923-fyscsmv9949374.jpg)
+![demo](http://pflr7ix8q.bkt.clouddn.com/122.gif)
+
+![demo1](http://pflr7ix8q.bkt.clouddn.com/1923-fyscsmv9949374.jpg)
+
 ---

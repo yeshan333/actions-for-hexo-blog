@@ -9,6 +9,8 @@ toc: true
 ---
 # Markdown编辑器使用-MarkdownPad2
 
+>imgur已被GFW干掉
+
 ## 快捷键
 
 |     |     |
@@ -25,20 +27,21 @@ toc: true
 |时间戳|ctrl+T|
 |撤销|ctrl+Z|
 |重做|ctrl+Y|
+
 <!-- more -->
+
 ## 插入图片时间可使用MarkdownPad2默认的图床
 
-![](http://pflr7ix8q.bkt.clouddn.com/qIWhafe.gif)
+![demo](http://pflr7ix8q.bkt.clouddn.com/qIWhafe.gif)
 
 MarkdownPad2使用的默认图床是[imgur](https://imgur.com/)
 
-![](http://pflr7ix8q.bkt.clouddn.com/tSexzok.gif)
+![图片演示](http://pflr7ix8q.bkt.clouddn.com/tSexzok.gif)
 
 ## 插入视频演示
 
 [戳这里](https://imgur.com/Uuabq5B)
 
-![](http://pflr7ix8q.bkt.clouddn.com/wocao.gif)
+![gif演示](http://pflr7ix8q.bkt.clouddn.com/wocao.gif)
 
 
- 

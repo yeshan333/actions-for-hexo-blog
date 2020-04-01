@@ -7,9 +7,11 @@ declare: true
 toc: true
 updated:
 ---
+
 # A+B for Input-Output Practice(using C++)
 
 ## 1.
+
 |Problem Description|
 |:--|
 |Your task is to Calculate a + b. Too easy?! Of course! I specially designed the problem for acm beginners. You must have found that some problems have the same titles with this one, yes, all these problems were designed for the same aim|
@@ -21,7 +23,9 @@ updated:
 |1 6<br>1 20|
 |Sample Output|
 |7<br>21|
+
 <!-- more -->
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -36,6 +40,7 @@ int main()
 }
 ```
 ## 2.
+
 |Problem Description|
 |:--|
 |The first line integer means the number of input integer a and b. Your task is to Calculate a + b.|
@@ -47,6 +52,7 @@ int main()
 |2<br>10 20<br>22 36|
 |Sample Output|
 |30<br>58|
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -63,7 +69,9 @@ int main()
 	return 0;
 }
 ```
+
 ## 3.
+
 |Problem Description|
 |:--|
 |Your task is to Calculate a + b.|
@@ -75,6 +83,7 @@ int main()
 |1 5<br>10 20<br>0 0|
 |Sample Output|
 |6<br>30|
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -90,7 +99,9 @@ int main()
 	return 0;
 }
 ```
+
 ## 4.
+
 |Problem Description|
 |:--|
 |Your task is to Calculate the sum of some integers.|
@@ -102,6 +113,7 @@ int main()
 |4 1 2 3 4<br>5 1 2 3 4 5<br>0|
 |Sample Output|
 |10<br>15|
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -122,7 +134,9 @@ int main()
 	return 0;
 }
 ```
+
 ## 5.
+
 |Problem Description|
 |:--|
 |Your task is to calculate the sum of some integers.|
@@ -134,6 +148,7 @@ int main()
 |2<br>4 1 2 3 4<br>5 1 2 3 4 5|
 |Sample Output|
 |10<br>15|
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -158,7 +173,9 @@ int main()
 	return 0;
 }
 ```
+
 ## 6.
+
 |Problem Description|
 |:--|
 |Your task is to calculate the sum of some integers.|
@@ -170,6 +187,7 @@ int main()
 |4 1 2 3 4 5<br>5 1 2 3 4 5|
 |Sample Output|
 |10<br>15|
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -190,7 +208,9 @@ int main()
 	return 0;
 }
 ```
+
 ## 7.
+
 |Problem Description|
 |:--|
 |Your task is to Calculate a + b.|
@@ -202,6 +222,7 @@ int main()
 |1 5<br>10 20|
 |Sample Output|
 |6<br><br>30|
+
 ```c++
 #include<iostream>
 using namespace std;
@@ -216,7 +237,9 @@ int main()
 	return 0;
 }
 ```
+
 ## 8.
+
 |Problem Description|
 |:--|
 |Your task is to calculate the sum of some integers|
@@ -228,6 +251,7 @@ int main()
 |3<br>4 1 2 3 4<br>5 1 2 3 4 5<br>6 1 2 3 4 5 6|
 |Sample Output|
 |10<br><br>15<br><br>21|
+
 ```c++
 #include<iostream>
 using namespace std;
