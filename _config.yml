@@ -3,7 +3,7 @@ favicon: https://img.vim-cn.com/bb/db444be0b7fda59c69d5c64167f9668b0b66bd.png # 
 
 import:
   link:
-    - <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@master/grey.css'>
+    # - <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@master/grey.css'>
   script:
     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" />
     # - <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js" />
