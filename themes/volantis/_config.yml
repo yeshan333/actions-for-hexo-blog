@@ -561,7 +561,7 @@ comments:
   valine:
     appId: S687AsCjGJKTPIvUJ8aPNX49-gzGzoHsz # your appId
     appKey: bCwg3QuIfGytbeYw58L7ofRq # your appKey
-    js: https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@0.1/volantis.js # https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0.2.4/js/valine.js
+    js: https://unpkg.com/valine/dist/Valine.min.js # https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@0.1/volantis.js
     path: # All pages use the same path (share the same comments data)
     meta: nick,mail,link #valine comment header info
     placeholder: 快来评论吧~ # valine comment input placeholder(like: Please leave your footprints )
