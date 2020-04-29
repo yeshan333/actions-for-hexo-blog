@@ -1,6 +1,7 @@
 ---
 title: Collect
 date: 2019-01-08 22:39:26
+layout: page
 ---
 
 # Tools小记

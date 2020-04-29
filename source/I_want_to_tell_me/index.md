@@ -6,6 +6,7 @@ music:
   server: netease
   type: song
   id: 26664345
+layout: page
 ---
 
 {% raw %}

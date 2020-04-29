@@ -2,6 +2,7 @@
 title: Astronomy
 date: 2018-10-09 13:26:08
 declare: true
+layout: page
 ---
 
 # [北京天文馆每日天文一图](http://www.bjp.org.cn/col/col89/index.html)
