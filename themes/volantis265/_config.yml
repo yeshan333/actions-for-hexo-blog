@@ -127,8 +127,8 @@ navbar:
     title: <red>S</red><green>h</green><blue>a</blue><yellow>n</yellow><red>S</red><green>h</green><blue>a</blue><yellow>n</yellow>
   menu:
     # The following can be written in `blog/source/_data/menu.yml`
-    - name: 博客
-      icon: fas fa-rss
+    - name: 首页
+      icon: fas fa-home
       url: /
     - name: 分类
       icon: fas fa-folder-open
@@ -136,18 +136,24 @@ navbar:
     - name: 归档
       icon: fas fa-archive
       url: archives/
-    - name: Github
-      icon: fab fa-github-square
-      url: https://github.com/yeshan333
     - name: 友链
       icon: fas fa-link
       url: friends/
     - name: 关于
       icon: fas fa-info-circle
       url: about/
-    - name: slides
-      icon: fab fa-slideshare
-      url: https://slide.shan333.cn
+    - name: 与我相关
+      icon: fas fa-ellipsis-v
+      rows:
+        - name: Github
+          icon: fab fa-github-square
+          url: https://github.com/yeshan333
+        - name: slides
+          icon: fab fa-slideshare
+          url: https://slide.shan333.cn
+        - name: notes
+          icon: far fa-sticky-note
+          url: https://shansan.top/knowledge-base/
     - name: 中国蟒
       icon: fab fa-python
       url: PyChina/
@@ -164,7 +170,7 @@ layout:
     # 列表类页面的侧边栏
     sidebar: [blogger, category, tagcloud, qrcode, wonderful_link, my_follow]
     # read more button
-    readmore: Read More <i class="fas fa-chevron-right"></i>
+    readmore: 阅读全文 <i class="fas fa-chevron-right"></i>
   # 页面布局
   on_page:
     # 文章页面主体元素，你也可以在页面的Front-matter中设置
@@ -173,7 +179,7 @@ layout:
     # 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示
     # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
     meta:
-      header: [title, author, category, date, counter, top]
+      header: [title, author, category, date, top]
       footer: [updated, tags, btns, share]
     # 文章页面的侧边栏
     sidebar: [qrcode, toc]
