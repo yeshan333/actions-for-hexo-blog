@@ -42,6 +42,8 @@ thumbnail: https://mypic-1258313760.cos.ap-guangzhou.myqcloud.com/img/2020051923
 
 ![基于 UDP 协议的 Socket 程序函数调用过程图](https://mypic-1258313760.cos.ap-guangzhou.myqcloud.com/img/20200519164642.png)
 
+>一般情况下，服务端需要管理多个客户端连接（处理并发连接），而 recvfrom 只能监视单个 Socket。上图的阻塞式 I/O 模型表示的是一对一沟通的情形，使用多线程/进程 + 阻塞式 I/O 我们可以管理多个 Socket ，实现一对多服务。
+
 ### 非阻塞式 I/O 模型
 
 在类 Unix 系统下，可以把一个 Socket 设置成非阻塞的。这意味着内核在数据报没有准备好时不会阻塞应用进程（睡眠态），而是返回一个错误。
@@ -54,11 +56,7 @@ thumbnail: https://mypic-1258313760.cos.ap-guangzhou.myqcloud.com/img/2020051923
 
 关于阻塞的原理，这篇文章有简单介绍[✔🔗](https://zhuanlan.zhihu.com/p/63179839)。
 
-tql，后来出现的 select、poll机制，
-
 ### I/O 多路复用模型
-
-一般情况下，服务端需要管理多个客户端连接，而 recvfrom 只能监视单个 Socket。使用多进程/线程 + 阻塞式I/O 的方式我们也可以管理多个 Socket。
 
 什么是多路复用？多路指的是多个通道，一般就是多个网络连接的 I/O；复用指的是多个通道复用在一个复用器上。
 

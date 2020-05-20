@@ -105,7 +105,7 @@ cover:
   subtitle: 'created by ShanSan'
   search: 寻你所想 # search bar placeholder
   features:
-    - title: RSS
+    - name: RSS
       icon: fas fa-rss
       url: https://shansan.top/post-sitemap.xml
     - name: 博文
