@@ -1,16 +1,13 @@
 ---
-title: memory
+title: 基于Typecho搭建个人博客
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2018-12-31 12:40:34
 tags: blog
 categories: blog
-declare:
-toc:
-password:
-updated:
 ---
 
+**本页图片已挂，需跨越 G-F?W **
 
 # 搭建依托于我的个人服务器的博客
 
@@ -26,31 +23,31 @@ emmm。。。 2018年12月24日0点10分，忽然觉得无聊，打开某云，�
 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.sh && sh install.sh
 ```
 
-![](https://i.imgur.com/7k0eFLi.png)
+![示例](https://i.imgur.com/7k0eFLi.png)
 
-![](https://i.imgur.com/MLaYQzB.png)
+![示例](https://i.imgur.com/MLaYQzB.png)
 
 
 # 网站搭建
 
 点击添加，创建网站
 
-![](https://i.imgur.com/rPTqZ0n.png)
+![示例](https://i.imgur.com/rPTqZ0n.png)
 
-![](https://i.imgur.com/dcCn02Y.png)
+![示例](https://i.imgur.com/dcCn02Y.png)
 
 嗯，接下来访问自己域名（公网ip地址），看看是否创建成功
 
-![](https://i.imgur.com/iNutNVu.png)
+![示例](https://i.imgur.com/iNutNVu.png)
 
 接下来配置伪静态规则
 
-![](https://i.imgur.com/oDZ2Kti.png)
+![示例](https://i.imgur.com/oDZ2Kti.png)
 
 
 # 嗯，接下来搭建博客，~~这里使用宝塔后台无脑安装~~(不好意思，我太菜),还是用命令行操作吧
 
-![](https://i.imgur.com/M4TkXvL.png)
+![示例](https://i.imgur.com/M4TkXvL.png)
 
 记得填写常用邮箱、管理员名和密码
 
@@ -58,16 +55,16 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 嗯，接下来访问自己的域名就ok了
 
-![](https://i.imgur.com/60Pwc6P.png)
+![示例](https://i.imgur.com/60Pwc6P.png)
 
 
 emm，是不是少了什么，SSL证书没有，少了小绿锁
 
 那就去申请吧
 
-![](https://i.imgur.com/VxD0APt.png)
+![示例](https://i.imgur.com/VxD0APt.png)
 站点管理，设置
 
 因为我的web服务器是nigix
 
-![](https://i.imgur.com/W2Ld2PJ.png)
+![示例](https://i.imgur.com/W2Ld2PJ.png)
