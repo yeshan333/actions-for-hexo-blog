@@ -6,8 +6,8 @@ import:
     # - <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@master/grey.css'>
   script:
     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" />
-    # - <script language="javascript" type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js" />
-    # - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/attatkmouse.js" />
+    - <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js" />
+    - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/attatkmouse.js" />
 
 hexinjiazhiguan: true
 
