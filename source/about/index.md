@@ -13,6 +13,7 @@ music:
 - 聊一聊我是谁
   - 在校 kubi 大三本科生，数学专业
   - 目前在学习 Web 开发
+  - 深入云原生，感受“云”的魅力
   - Pythonista、Rustacean
 
 - 关于博客
