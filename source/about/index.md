@@ -11,11 +11,10 @@ music:
 ---
 
 - 聊一聊我是谁
-  - 在校 kubi 大三本科生，数学专业
-  - 目前在学习 Web 开发
+  - 在校 kubi 大三学生，数学专业「信息与计算科学」
+  - 业余前端开发、不怎么业余后端开发
   - 深入云原生，感受“云”的魅力
-  - Pythonista、Rustacean
-
+  - Pythonista、Rustacean、Gopher
 - 关于博客
   - 2018 年 9 月 19 日，博客诞生
   - 博客是使用 [Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是 [yilia](https://github.com/litten/hexo-theme-yilia)
