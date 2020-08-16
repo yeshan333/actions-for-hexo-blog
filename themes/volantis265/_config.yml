@@ -157,6 +157,9 @@ navbar:
     - name: 中国蟒
       icon: fab fa-python
       url: PyChina/
+    - name: 云原生
+      icon: fas fa-cloud
+      url: cloud-native/
   search: 寻你所想   # Search bar placeholder
 
 
