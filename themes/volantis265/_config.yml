@@ -101,7 +101,7 @@ cover:
     archive: true
     others: false # can be written in front-matter 'cover: true'
   logo: # https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/256/google_logo.png
-  title: '追寻思考的“过程”，<blue>寻我所想</blue>' # <red>S</red><green>h</green><blue>a</blue><yellow>n</yellow><red>S</red><green>h</green><blue>a</blue><yellow>n</yellow>
+  title: '"Take it easy"，<blue>寻我所想</blue>' # <red>S</red><green>h</green><blue>a</blue><yellow>n</yellow><red>S</red><green>h</green><blue>a</blue><yellow>n</yellow>
   subtitle: 'created by ShanSan'
   search: 寻你所想 # search bar placeholder
   features:
