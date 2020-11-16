@@ -228,6 +228,14 @@ links:
       backgroundColor: '#3E74C9'
       tags:
       - 前端打杂狮/公路骑游党
+    - name: Nykee
+      avatar: https://s3.ax1x.com/2020/11/16/DEa9gA.png
+      url: https://blog.imyan.ren/
+      textColor: '#fff'
+      backgroundColor: '#3E74C9'
+      tags:
+      - Kolin
+      - Android
   - group: 失踪的dalao
     icon: fas fa-lock
     items:
