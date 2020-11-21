@@ -28,15 +28,28 @@ music:
   - 我发现我搭个博客学了很多花里胡哨的东西😂
   - emmm。。。有些话想到再说。
 
-# 听歌可以戳下面，猛戳，别客气o(*≧▽≦)ツ┏━┓
-
+<!-- # 听歌可以戳下面，猛戳，别客气o(*≧▽≦)ツ┏━┓
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=2506295921&auto=1&height=430">
 </iframe>
+-->
 
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
 
 {% raw %}
 <div class="github-card" data-github="yeshan333" data-width="100%" data-height="150" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<!-- Hotjar Tracking Code for shansan.top -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:2003338,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 {% endraw %}
+
+
 
