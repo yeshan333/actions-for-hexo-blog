@@ -10,29 +10,27 @@ tags: Latex
 categories: math
 ---
 
+> 备注：当前博客使用的 latex 渲染引擎有点问题，本篇文章更好的阅读体验：https://blog.csdn.net/qq_41022329/article/details/92798759
+
 # 公式插入方式
 
 1. 行内公式可用`\(...\)`或`$...$`
+
 - 例如`$ f(x)=x^2 $`,显示为$ f(x)=x^2 $
 
 2. 独立公式（单独另起一行,公式会居中），使用`$$...$$`或`\[...\]`
-- 例如：`$$ \limit{f(x)dx} $$`或
-$$ \int_a^b{f(x)dx} $$
 
-```md
-1. 行内公式可用`\(...\)`或`$...$`
-- 例如`$ f(x)=x^2 $`,显示为$ f(x)=x^2 $
+- 例如：`$$ \int{f(x)dx} $$`或 `$$ \int_a^b{f(x)dx} $$`，显示为:
 
-2. 独立公式（单独另起一行,公式会居中），使用`$$...$$`或`\[...\]`
-- 例如：`$$ \limit{f(x)dx} $$`或
+$$ \int{f(x)dx} $$
+
 $$ \int_a^b{f(x)dx} $$
-```
 
 <!-- more -->
 
 # 大括号的使用
 
-```latex
+```
 方法一：
 $$ f(x)=\left\{
 \begin{aligned}
@@ -59,6 +57,7 @@ $$f(x)=
 ```
 
 方法一：
+
 $$ f(x)=\left\{
 \begin{aligned}
 x & = & \cos(t) \\
@@ -67,7 +66,9 @@ z & = & \frac xy
 \end{aligned}
 \right.
 $$
+
 方法二：
+
 $$ F^{HLLC}=\left\{
 \begin{array}{rcl}
 F_L       &      & {0      <      S_L}\\
@@ -75,7 +76,9 @@ F^*_L     &      & {S_L \leq 0 < S_M}\\
 F^*_R     &      & {S_M \leq 0 < S_R}\\
 F_R       &      & {S_R \leq 0}
 \end{array} \right. $$
+
 方法三:
+
 $$f(x)=
 \begin{cases}
 0& \text{x=0}\\
