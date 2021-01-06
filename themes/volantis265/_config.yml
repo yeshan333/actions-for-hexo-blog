@@ -486,7 +486,7 @@ footer:
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     - icon: fas fa-rss
       url: https://yeshan333.github.io/sitemap.xml
-  copyright: '[Copyright © 2018-2020 ShanSan](https://shansan.top)'
+  copyright: '[Copyright © 2018-2021 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
   beian: '[桂ICP备19000444号](http://www.beian.miit.gov.cn/)'
