@@ -149,9 +149,9 @@ links:
       textColor: '#fff'
       tags:
       - 一个爱吃土豆的程序员
-    - name: Sublime’s NoteBook
-      avatar: https://cdn.jsdelivr.net/gh/cwxyr/mycdn/1567644988054.jpg
-      url: https://sublimerui.top
+    - name: 果子酱
+      avatar: https://cdn2.sublimerui.top/2021/01/03/5db7a51e823a6.ico
+      url: https://cwxyr.me
       backgroundColor: '#3E74C9'
       textColor: '#fff'
       tags:
@@ -165,7 +165,7 @@ links:
       tags:
       - 以有涯随无涯
     - name: 云宝地
-      avatar: https://blog.yunbaodi.com/resource/images/favicon.ico
+      avatar: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210115123907.jpg
       url: https://blog.yunbaodi.com
       backgroundColor: '#3E74C9'
       textColor: '#fff'
