@@ -47,6 +47,7 @@ jobs:
           git config --global user.email "1329441308@qq.com"
           git config --global user.name "yeshan333"
           git clone git@github.com:yeshan333/yeshan333.github.io.git .deploy_git
+          chmod 755 -R .deploy_git
           hexo clean
           hexo generate
           hexo deploy
