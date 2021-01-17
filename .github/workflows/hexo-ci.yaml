@@ -60,3 +60,4 @@ jobs:
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           source_path: ./.deploy_git/*
           destination_path: ~/shan333.cn
+          rsync-args: --exclude="./.deploy_git/.git/*"
