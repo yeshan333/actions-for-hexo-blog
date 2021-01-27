@@ -2,19 +2,18 @@ name: Site CI
 
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # check it to your workflow can access it
       # from: https://github.com/actions/checkout
-      - name: Checkout Repository master branch
-        uses: actions/checkout@master
+      - name: Checkout Repository main branch
+        uses: actions/checkout@main
 
       # from: https://github.com/actions/setup-node
       - name: Setup Node.js 12.x
@@ -22,11 +21,12 @@ jobs:
         with:
           node-version: "12.x"
 
-      - name: Setup Dependencies
+      - name: Setup Hexo Blog Dependencies
         run: |
           npm install hexo-cli -g
           npm install
-      - name: Add key to allow access to repository
+
+      - name: Add SSH private key to allow access to repository
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
@@ -39,10 +39,8 @@ jobs:
           HostName github.com
           IdentityFile ~/.ssh/id_rsa
           EOT
-      - name: Release to GitHub Pages
-        env:
-          USE_SSH: true
-          GIT_USER: git
+
+      - name: Release GitHub Pages
         run: |
           git config --global user.email "1329441308@qq.com"
           git config --global user.name "yeshan333"
@@ -51,7 +49,9 @@ jobs:
           hexo clean
           hexo generate
           hexo deploy
-      - name: Push to tencentyun CVM
+
+      # from https://github.com/yeshan333/rsync-deploy-action
+      - name: Push blog to tencentyun CVM
         uses: yeshan333/rsync-deploy-action@v1.0.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
