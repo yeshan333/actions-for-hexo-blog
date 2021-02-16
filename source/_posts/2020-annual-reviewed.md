@@ -4,7 +4,6 @@ toc: true
 comments: true
 popular_posts: false
 mathjax: true
-top: true
 music:
   enable: true
   server: netease
