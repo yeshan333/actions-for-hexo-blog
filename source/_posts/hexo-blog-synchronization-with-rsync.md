@@ -4,7 +4,7 @@ toc: true
 comments: true
 popular_posts: false
 mathjax: true
-thumbnail: https://s3.ax1x.com/2021/01/20/sfyNy4.png
+headimg: https://s3.ax1x.com/2021/01/20/sfyNy4.png
 date: 2021-01-19 20:02:51
 tags: [Github Actions, DevOps, Nginx]
 categories: DevOps

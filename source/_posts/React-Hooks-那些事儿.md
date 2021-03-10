@@ -70,9 +70,9 @@ export default App;
 
 {% iframe https://codesandbox.io/embed/nice-sea-zo2c2?fontsize=14&hidenavigation=1&theme=dark 100% 500 %}
 
-{% fancybox %}
+{% gallery %}
 ![效果](https://s1.ax1x.com/2020/07/08/UZXngK.gif)
-{% endfancybox %}
+{% endgallery %}
 
 [https://zo2c2.csb.app/](https://zo2c2.csb.app/)，可以很方便的从调试控制台看到，异步请求一直在发，陷入了死循环之中。这是为什么？因为 useEffect 会在组件 Mounting 和 Updating 阶段执行。每次 request 请求成功，我们都会设置一次组件的 state -> data，所以组件会更新，useEffect 会再次执行，循环往复，造成了无限重复请求问题。那么，如何解决这个问题？之前我忽略了 useEffect 第二个参数的存在，使用 useEffect 的第二个参数可以解决这个问题。一般情况下，我们希望组件只在 mounting 阶段异步获取数据，所以，我们可以这么设置 useEffect 的第二个参数，让它具有和 componentDidMount 生命周期函数类似的行为（组件第一次 mount 后执行）：
 
@@ -139,9 +139,9 @@ export default function App() {
 
 {% iframe https://codesandbox.io/embed/condescending-minsky-jnzcc?fontsize=14&hidenavigation=1&theme=dark 100% 500 %}
 
-{% fancybox %}
+{% gallery %}
 ![effect 卸载组件做点事儿](https://s1.ax1x.com/2020/07/09/UmgGaF.gif)
-{% endfancybox %}
+{% endgallery %}
 
 ## 参考
 

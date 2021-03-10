@@ -11,21 +11,21 @@ categories: Git
 
 最近一波重装系统啥都没了，最常用的 Git 配置肯定得安排回来的。记得之前给 git 的 commit 加了个签名，回想下为什么要给 commit 做下签名？因为它能让 GitHub 的 commit 历史更帅？看下加签名之前是怎么样的：
 
-{% fancybox %}
+{% gallery %}
 
 ![对commit进行签名前](https://s1.ax1x.com/2020/06/26/NstacQ.png)
 
-{% endfancybox %}
+{% endgallery %}
 
 <!-- more -->
 
 再看下对 commit 签名后是怎么样的：
 
-{% fancybox %}
+{% gallery %}
 
 ![对commit进行签名后](https://s1.ax1x.com/2020/06/26/Nstg9U.png)
 
-{% endfancybox %}
+{% endgallery %}
 
 这么一对比，是更帅了！但我好像不是因为这的才做的。我是为了更好的去混**开源项目**做的，这个绿标能更好的证明我的身份！！！（假装我很专业，2333~）。使用过 Git 的同学应该都晓得，我们的提交作者信息是可以自己设置的（这意味着我们可以使用他人身份信息），如下：
 
@@ -34,9 +34,9 @@ $ git config user.name "tester"
 $ git config user.email "gg@qq.com"
 ```
 
-{% fancybox %}
+{% gallery %}
 ![冒用作者信息](https://s1.ax1x.com/2020/06/26/NsOPv6.png)
-{% endfancybox %}
+{% endgallery %}
 
 我们可以看到，是可以 push 到 GitHub 的[没有小绿标而已]。这看起来就不太好，得让 GitHub 证明下自己得身份才行，从官方文档可以看到， GitHub 提供了一种使用 GPG 的方式可以让我们的 commit “戴”上小绿标。
 

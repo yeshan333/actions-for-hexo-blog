@@ -1,0 +1,194 @@
+- group: 朋友们 # 分组标题
+  description:  # 分组描述
+  items:
+    # - title: shan # 名称
+    #   avatar: https://shansan.top.png # 头像
+    #   url: https://shansan.top # 链接
+    #   screenshot: # 截图
+    #   keywords: # 关键词
+    #   description: # 描述
+    - title: 雨帆
+      avatar: https://img.vim-cn.com/13/a200df1e771666c7b4982ca5293c505640242a.png #https://cat.yufan.me/asserts/spectre/images/avatar.jpg
+      url: https://yufan.me/
+      description:
+      - Java
+      - C#
+    - title: xaoxuxu
+      avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+      url: https://xaoxuu.com/blog
+      description:
+      - IOS
+    - title: Don Lex
+      avatar: https://donlex.cn/images/avatar.png
+      url: https://donlex.cn/
+      description:
+      - Java
+      - Python
+    - title: Mashiro
+      avatar: https://view.moezx.cc/images/2018/03/27/avatar.th.jpg
+      url: https://2heng.xin/
+      description:
+      - Web前端
+    - title: TRHX
+      avatar: https://www.itrhx.com/images/trhx.png
+      url: https://www.itrhx.com/
+      description:
+      - Python
+    - title: 嗜血星空earth
+      avatar: https://sxxkearth.github.io/img/avatar.svg
+      url: https://sxxkearth.github.io/
+      description:
+      - BIM学习者
+    - title: Librarius's Blog
+      avatar: https://gravatar.loli.net/avatar/f450e1597958dfb8b1eb52b4bb3d5c80?d=mp&v=1.3.6
+      url: https://lloyar.github.io/
+      description:
+      - C#
+      - HLSL
+    - title: hojun
+      avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+      url: https://www.hojun.cn/
+      description:
+      - Web开发
+    - title: 悲伤的橘子树
+      avatar: https://img.vim-cn.com/71/96b29464a6b5ee3df28ddae5b22efc9a9137b3.png
+      url: http://sasuke.club/
+      description:
+      - Springboot
+    - title: 一去二三遥
+      avatar: https://img.vim-cn.com/9b/f49b155fb62df9c626d83cef17afb2d0ccbb29.png
+      url: https://www.moonster.life
+      description:
+      - Java
+      - 摄影
+    - title: Rinvay.H
+      avatar: https://gravatar.o0o.fun/avatar/0e17d3ec8d6fbbfce870d97b943ceef3?s=101&r=G&d=mm
+      url: https://www.rinvay.cc/
+      description:
+      - 运维大佬
+    - title: 教书先生
+      avatar: https://secure.gravatar.com/avatar/b00b9da424a3ce9d9930576a04a31377?s=100&r=G&d=https://ww1.sinaimg.cn/large/005BYqpgly1fqttrevsfnj30hs0hswfp.jpg
+      url: http://blog.oioweb.cn
+      description:
+      - Web开发
+    - title: Bert Liu's Blog
+      avatar: https://gravatar.loli.net/avatar/94d4496e69d67ea9dcb4266a258ba29b?d=mp&v=1.3.4
+      url: https://liubo.design/
+      description:
+      - 室内设计
+    - title: Hawk
+      url: https://hawkinchina.github.io/
+      avatar: https://hawkinchina.github.io/images/jack.jpg
+      description:
+      - C++
+    - title: 情小北
+      avatar: https://p2.music.126.net/756LNzvUvOZr6GzkMMOGWQ==/109951163731450100.jpg?param=180y180
+      url: https://blog.happysec.cn/
+      description:
+      - Web安全
+    - title: Hoe's Notes
+      avatar: https://cdn.v2ex.com/gravatar/dc1187890e4cc4ca1a41a83f4f7eb559?s=80&r=G
+      url: https://www.hoehub.com
+      description:
+      - 后端开发
+    - title: 清秋
+      avatar: https://gravatar.loli.net/avatar/42db5e79d207c65b331f6261a834874f?d=mp&v=1.3.4
+      url: https://sandsea.vip/
+      description:
+      - Python
+    - title: 江陵博客
+      avatar: https://catl07.github.io/medias/logo.jpg
+      url: https://catl07.github.io/
+      description:
+      - Linux
+    - title: 半叶子
+      avatar: https://secure.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=64&r=G&d=
+      url: https://blog.mebyz.cn/
+      description:
+      - C
+    - title: 我爱吃土豆
+      avatar: https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20191028172335.png
+      url: https://itudo.cn/
+      description:
+      - 一个爱吃土豆的程序员
+    - title: 果子酱
+      avatar: https://cdn2.sublimerui.top/2021/01/03/5db7a51e823a6.ico
+      url: https://cwxyr.me
+      description:
+      - Web
+      - 嵌入式
+    - title: 楓の街
+      avatar: https://www.mapletown.xyz/pic.jpg
+      url: https://www.mapletown.xyz/
+      description:
+      - 以有涯随无涯
+    - title: 云宝地
+      avatar: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210115123907.jpg
+      url: https://blog.yunbaodi.com
+      description:
+      - Java
+    - title: 残梦
+      avatar: https://cdn.jsdelivr.net/gh/2662419405/CDN@1.0/sh.jpg
+      url: https://sunhang.top/
+      description:
+      - 前端、JS
+    - title: lvlv's blog
+      avatar: https://www.lvshaomei.club/images/banner/labia.jpeg
+      url: https://www.lvshaomei.club/
+      description:
+      - Web前端
+    - title: HONGWEI
+      avatar: https://www.zhwei.cn/favicon.ico
+      url:  https://www.zhwei.cn/
+      description:
+      - 测试工程师
+    - title: 洛尘曦
+      avatar: https://cdn.jsdelivr.net/gh/SGYZ0910/CDN@1.1.7/images/lcx.jpg
+      url:  https://www.sgyzyun.club/
+      description:
+      - Java
+      - Python
+    - title: 辣椒の酱
+      avatar: https://removeif.github.io/images/avatar.jpg
+      url:  https://removeif.github.io/
+      description:
+      - Java
+    - title: 张雄
+      avatar: https://img.vim-cn.com/e0/aea27ce2dc27f3685d3fe662d1497a44cec231.jpg
+      url:  https://www.zhangxiong.net/
+      description:
+      - 向阳生长，触碰流云
+    - title: MrGo123
+      avatar: https://cdn.jsdelivr.net/gh/MrGo123/asset@2020-1-2-1.0/headPortrait/mybloghp.jpg
+      url: https://zy68.top
+      description:
+      - 后端攻城狮
+    - title: Nykee
+      avatar: https://image.nykee.cn/nykee.png
+      url: https://www.nykee.cn/
+      description:
+      - 前端打杂狮/公路骑游党
+    - title: Nykee
+      avatar: https://s3.ax1x.com/2020/11/16/DEa9gA.png
+      url: https://blog.imyan.ren/
+      description:
+      - Kolin
+      - Android
+    - title: Tanger
+      avatar: https://avatars.githubusercontent.com/u/57751257?s=460&u=634fb3d9085fd46aead74e7d0db0ae3d1d933f3f&v=4
+      url: https://redhat123456.github.io/
+      description: 加油加油
+
+- group: 失踪的dalao
+  icon: fas fa-lock
+  items:
+  - title: 搅拌糖°
+    avatar: https://s1.ax1x.com/2018/12/20/FDgJr6.png
+    url: https://jiaobantang.github.io/
+    description:
+    - 技术不宅
+    - Web开发
+
+
+
+

@@ -162,13 +162,13 @@ docker-compose up -d
 docker exec -i  flask_backend flask create-database
 ```
 
-{% fancybox %}
+{% gallery %}
 ![开始编排容器](https://s1.ax1x.com/2020/06/28/NRJe8x.png)
 
 ![创建的网络与卷](https://s1.ax1x.com/2020/06/28/NRJxdH.png)
 
 ![效果](https://s1.ax1x.com/2020/06/28/NRJaM8.png)
-{% endfancybox %}
+{% endgallery %}
 
 收工，下一步就是做下服务抽离，部署到云原生的操作系统上-Kubernetes！🚩
 

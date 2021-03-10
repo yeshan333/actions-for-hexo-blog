@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-thumbnail: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20201115174718.png
+headimg: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20201115174718.png
 date: 2020-11-15 15:52:13
 tags: [计算机网路, TCP, tcpdump, Wireshark]
 categories: 计算机网络

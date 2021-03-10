@@ -2,6 +2,7 @@
 title: About
 date: 2018-09-20 13:37:03
 declare: true
+comments: true
 toc: false
 music:
   enable: true      # true（文章内和文章列表都显示） internal（只在文章内显示）
@@ -24,6 +25,7 @@ music:
   - 2020 年 1 月 30 日，使用 [GitHub Actions](https://github.com/features/actions) 持续集成 Hexo [博客](https://github.com/yeshan333/actions-for-hexo-blog)，放弃单独备份，使用Git做版本控制（回忆）
   - 2020年3月11日，主题升级至[volantis@2.0.2](https://volantis.js.org/)(原material-x主题改名了)，紧跟dalao更新步伐
   - 2020年4月29日，volantis@2.0.2 -> volantis@2.6.5
+  - 2021年3月10日，volantis@2.6.5 -> volantis@4.3.1，hexo@4.0.0 -> hexo@5.4.0
   - 搭建这个博客的目的是为了放一些自己平时的学习笔记
   - 我发现我搭个博客学了很多花里胡哨的东西😂
   - emmm。。。有些话想到再说。

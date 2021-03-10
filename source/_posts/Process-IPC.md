@@ -15,9 +15,9 @@ thumbnail: https://s1.ax1x.com/2020/07/23/UOX79J.png
 
 ## 总览
 
-{% fancybox %}
+{% gallery %}
 ![IPC](https://s1.ax1x.com/2020/08/02/atGjjf.png)
-{% endfancybox %}
+{% endgallery %}
 
 <!-- more -->
 
@@ -35,9 +35,9 @@ thumbnail: https://s1.ax1x.com/2020/07/23/UOX79J.png
 
 #### 互斥设计
 
-{% fancybox %}
+{% gallery %}
 ![互斥设计](https://s1.ax1x.com/2020/08/02/atJSHg.png)
-{% endfancybox %}
+{% endgallery %}
 
 ## 参考
 

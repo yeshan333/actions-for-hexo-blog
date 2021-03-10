@@ -2,7 +2,7 @@
 -----
 
 使用 `Hexo`_ 博客框架搭建的个人博客，所使用的 Hexo 主题为
-`volantis@2.0.2`_\ 。
+`volantis@4.3.1`_\ 。
 
 -  博客域名：
 
@@ -18,4 +18,4 @@
    -  曾写过的PPT：\ https://slide.shan333.cn/
 
 .. _Hexo: https://hexo.io/docs/
-.. _volantis@2.0.2: https://volantis.js.org/
+.. _volantis@4.3.1: https://volantis.js.org/

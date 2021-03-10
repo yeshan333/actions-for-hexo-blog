@@ -38,9 +38,9 @@ categories: blog
 
 谈到学习，这一年看得书不算多，但是感觉还挺硬核。我汲取知识的方式不仅有读书 & 文档 & 博客，还会看一些 dalao 在极客时间开的技术专栏，略微看下我的[极客时间 2020 年终报告](https://promo.geekbang.org/activity/report-2020/3EBF3AE4863D57)：
 
-{% fancybox %}
+{% gallery %}
 ![极客时间 2020 年终报告](https://s3.ax1x.com/2021/01/06/sVT2Z9.jpg)
-{% endfancybox %}
+{% endgallery %}
 
 “有一天肝得太晚了，不得，以后好好摸鱼呀，啊 sir。”
 
@@ -77,15 +77,15 @@ categories: blog
 
 到了，Coding 相关的，不得不提 GitHub，作为“资深 GitHub 打卡混子”，除了 Gitee 上为了感受下 DevOps 做的 AI 相关的入门级项目的代码，今年写的大部分代码都以放到了 GitHub 个人公有仓或者私有仓上。看看我的 [GitHub 年度报告](https://report.mdnice.com/)，可以大致了解下我的 Coding 情况：
 
-{% fancybox %}
+{% gallery %}
 ![2020 GitHub annual report](https://s3.ax1x.com/2021/01/06/sZSA2j.jpg)
-{% endfancybox %}
+{% endgallery %}
 
 再看看小绿点，这一年过得还算“充实”。
 
-{% fancybox %}
+{% gallery %}
 ![GitHub Card](https://s3.ax1x.com/2021/01/06/sZSRdf.png)
-{% endfancybox %}
+{% endgallery %}
 
 ### 诸多的第一次
 
@@ -95,9 +95,9 @@ categories: blog
 
 2020 年的 21 届暑假实习春招，我最终接了一家杭州互联网大厂的 offer，大老远的从桂林跑去杭州实习。这还是我第一次一个人跑这么远，大学入学时还有父母陪同，这真的是第一次跑到杭州这么远的地方。哪个厂？看下图😀「学院社团，瞒天过海，嘿嘿嘿~(*^_^*)，对不住-对不住」：
 
-{% fancybox %}
+{% gallery %}
 ![HangZhou Netease](https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210106231223.jpg)
-{% endfancybox %}
+{% endgallery %}
 
 顺带一提，第一次白天坐“灰机”，见识了下祖国的大好河山「东南丘陵、江浙平原」。
 
@@ -113,33 +113,33 @@ categories: blog
 
 再次顺带一提，20 年凑（“白嫖”）了几个厂的小物件。
 
-{% fancybox %}
+{% gallery %}
 ![Gift](https://s3.ax1x.com/2021/01/07/selsFU.jpg)
-{% endfancybox %}
+{% endgallery %}
 
 #### 第一次支持杰哥的演唱会
 
 作为杰哥将近八年的歌迷，今年听了场网易云音乐的线上演唱会，2333~，终于支持了波杰哥，希望 2021 年有机会线下听一场杰哥的巡回演唱会。
 
-{% fancybox %}
+{% gallery %}
 ![WE LIVE 生日演唱会](https://s3.ax1x.com/2021/01/06/sZlajI.jpg)
-{% endfancybox %}
+{% endgallery %}
 
 #### 第一次把自己的笔记本“干掉了”
 
 2020 年，安奈不住心中的“冲动”，把自己的渣渣笔记本电脑“解剖”了，「特别想换一下，奈何没资本，跑个 IDEA 真费劲，等我入职第一个月 salary 到手，反手“屠”了它」。
 
-{% fancybox %}
+{% gallery %}
 ![个人笔记本配置](https://s3.ax1x.com/2021/01/06/sZlwut.jpg)
-{% endfancybox %}
+{% endgallery %}
 
 ## 展望 2021
 
 一波操作水下来，发现 2020 年过得还凑合。2021 年希望活得更精彩、更快乐。一波面试和实习下来，发现自己各方面的能力还是不行啊，希望今年能学好冰山上层的同时好好提升下冰山下层的能力。
 
-{% fancybox %}
+{% gallery %}
 ![网图-冰山模型](https://s3.ax1x.com/2021/01/06/sZlXK1.png)
-{% endfancybox %}
+{% endgallery %}
 
 2020 年的开源技术社区参与程度还是不行，2021 年继续努力。2020 年末，有幸受赵老师邀请给上 Linux 课的学弟学妹做了次 Linux 相关的分享，特地回顾了下之前学到的东西，太多纰漏（“虽然我在吹水，而且我也没讲多少 Linux，对不住，哈哈哈，还白嫖了个小米手环~哈哈哈！”）。[Slides](https://slide.shan333.cn/slides/20201112/) 「Tip：下图可以拨动哦(*^_^*)」
 

@@ -46,9 +46,9 @@ console.log('script end');
 
 - 浏览器的内核-多线程的渲染进程：**页面的渲染、js 的执行、事件的循环**都在渲染进程中进行。渲染进程主要包含以下几个线程：
 
-{% fancybox %}
+{% gallery %}
 ![JS内核中的线程](https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20200822183240.png)
-{% endfancybox %}
+{% endgallery %}
 
 - Task：Task 有 MicroTask 和 MacroTask 之分，MicroTask 在 Promise 出现之后引入。MacroTask 和 MicroTask 分别在以下几种场景形成：
   - MacroTask：主代码块、setTimeout、setInterval、IO 事件等。

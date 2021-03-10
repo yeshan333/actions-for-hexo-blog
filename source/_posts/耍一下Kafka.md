@@ -130,15 +130,15 @@ services:
 
 Kafka 和 Zookeeper 容器启动后，配合 IDEA 的两个插件 `Kafkalytic` 和 `Zoolytic` ，我们可以很方便的观察集群的情况：
 
-{% fancybox %}
+{% gallery %}
 ![Cluster Management](https://s3.ax1x.com/2020/12/14/rmg9W6.png)
-{% endfancybox %}
+{% endgallery %}
 
 通过 vscode 插件我们可以方便的对启动的容器进行管理（日志追踪、shell attach等）：
 
-{% fancybox %}
+{% gallery %}
 ![vscode docker plugin](https://s3.ax1x.com/2020/12/14/rnTN0P.png)
-{% endfancybox %}
+{% endgallery %}
 
 通过 Kafka 自带的命令行工具可以查看 Topic：（先连接到 Kafka 容器：`docker exec -it kafka-one bash`）
 
@@ -261,9 +261,9 @@ go run kafka_consumer.go
 go run kafka_producer.go
 ```
 
-{% fancybox %}
+{% gallery %}
 ![run result](https://s3.ax1x.com/2020/12/14/rmcYRK.png)
-{% endfancybox %}
+{% endgallery %}
 
 收工，其他东西后续慢慢啃。本文源文件：[https://github.com/yeshan333/go-kafka-demo](https://github.com/yeshan333/go-kafka-demo)
 
