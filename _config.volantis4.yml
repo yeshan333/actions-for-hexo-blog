@@ -61,12 +61,13 @@ navbar:
         - name: notes
           icon: far fa-sticky-note
           url: https://shansan.top/knowledge-base/
+    - name: 云原生
+      icon: fas fa-cloud
+      url: cloud-native/
     # - name: 中国蟒
     #   icon: fab fa-python
     #   url: PyChina/
-    # - name: 云原生
-    #   icon: fas fa-cloud
-    #   url: cloud-native/
+
   search: 寻你所想   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
@@ -173,7 +174,7 @@ cover:
     archive: true
     others: false # can be written in front-matter 'cover: true'
   # background: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture
-  background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
+  background: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210310142425.png # https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: '花点时间多做点想做的事'
   subtitle: 'created by yeshan333'
@@ -281,7 +282,7 @@ sidebar:
       header:
         icon: fas fa-folder-open
         title: 文章分类
-        url: /blog/categories/
+        url: categories/
     # ---------------------------------------
     # tagcloud widget
     tagcloud:
@@ -290,7 +291,7 @@ sidebar:
       header:
         icon: fas fa-tags
         title: 热门标签
-        url: /blog/tags/
+        url: tags/
       min_font: 14
       max_font: 24
       color: true
