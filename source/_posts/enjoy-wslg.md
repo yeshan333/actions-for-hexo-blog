@@ -28,7 +28,7 @@ references:
     url: https://github.com/microsoft/wslg
 ---
 
-2021 年 4 月 21 日，微软在 Developer Blogs 发布了 Windows 预览版 WSL（Windows Linux 子系统） 对 Linux GUI App 的支持的[公告](The Initial Preview of GUI app support is now available for the Windows Subsystem for Linux)，碰巧😀我最近重装了波电脑，系统换成了 Windows Insiders（Dev），正好可以感受波 Linux GUI App 的支持。
+2021 年 4 月 21 日，微软在 Developer Blogs 发布了 Windows 预览版 WSL（Windows Linux 子系统） 对 Linux GUI App 的支持的[The Initial Preview of GUI app support is now available for the Windows Subsystem for Linux](https://devblogs.microsoft.com/commandline/the-initial-preview-of-gui-app-support-is-now-available-for-the-windows-subsystem-for-linux-2)，碰巧😀我最近重装了波电脑，系统换成了 Windows Insiders（Dev），正好可以感受波 Linux GUI App 的支持。
 
 WSL 居然支持跑 Linux 图形应用了，真香（😎，虽然上一年 WSL 的 [Roadmap](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/#wsl-gui) 中有说过要支持，但我没关注，老二手知识党了）。Quickstart ->
 
@@ -70,6 +70,7 @@ OK，可以操作了，之前我已经安装过 WSL，且切换到了 v2 版本�
 # 1、重启下 WSL
 wsl --shutdown
 # 2、Update
+wsl --update
 ```
 
 {% gallery %}
