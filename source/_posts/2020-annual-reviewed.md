@@ -8,7 +8,7 @@ music:
   enable: true
   server: netease
   type: song
-  id: 1376142151
+  id: 574919767
   autoplay: true
 thumbnail: https://s3.ax1x.com/2021/01/06/sVkPKJ.png
 date: 2021-01-06 16:29:08
