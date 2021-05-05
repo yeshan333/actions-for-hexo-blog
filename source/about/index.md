@@ -14,21 +14,51 @@ music:
 - 小 target 🚩：一个月至少一篇文章📌
 - 聊一聊我是谁
   - 在校 kubi 大四学生，专业：「信息与计算科学」
-  - 业余前端开发、不怎么业余后端开发『老实说，啥都想接触』
-  - Cloud Native 技术爱好者
+  - 业余前端开发、不怎么业余研究后端开发『啥也不是🤨』
+  - 目前在关注研究 Cloud Native、DevOps
   - Pythonista、Rustacean、Gopher
-- 关于博客
-  - 2018 年 9 月 19 日，博客诞生
-  - 博客是使用 [Hexo](https://hexo.io/zh-cn/docs/index.html) + [Github Pages](https://help.github.com/cn#github-pages-basics) 搭建的，使用的主题是 [yilia](https://github.com/litten/hexo-theme-yilia)
-  - 某年某月某日启动备用域名：[shan333.cn](https://shan333.cn/)
-  - 现在博客使用的 Hexo 主题是 [xaoxuxu](https://xaoxuu.com/blog/) 大佬写的[Material-x](https://xaoxuu.com/wiki/material-x/)
-  - 2020 年 1 月 30 日，使用 [GitHub Actions](https://github.com/features/actions) 持续集成 Hexo [博客](https://github.com/yeshan333/actions-for-hexo-blog)，放弃单独备份，使用Git做版本控制（回忆）
-  - 2020年3月11日，主题升级至[volantis@2.0.2](https://volantis.js.org/)(原material-x主题改名了)，紧跟dalao更新步伐
-  - 2020年4月29日，volantis@2.0.2 -> volantis@2.6.5
-  - 2021年3月10日，volantis@2.6.5 -> volantis@4.3.1，hexo@4.0.0 -> hexo@5.4.0
-  - 搭建这个博客的目的是为了放一些自己平时的学习笔记
-  - 我发现我搭个博客学了很多花里胡哨的东西😂
-  - emmm。。。有些话想到再说。
+
+## 关于博客
+
+博客的搭建和维护学了许多花里胡哨的东西😂，主要用来写写自己想写的东西（虽然现在大多是技术文章），emmm。。。有些话想到再说。
+
+{% timeline %}
+
+{% timenode 2018-09-19 博客诞生 %}
+- 1、其实具体日子我也不记得了，当初不熟悉 Git，Commit History 被我摧毁了很多次，难以追溯具体日期🤣🤦‍♂️
+- 2、基于 [Hexo](https://hexo.io/zh-cn/docs/index.html) 搭建的静态博客，最初使用的博客主题为 [yilia](https://github.com/litten/hexo-theme-yilia)，使用 [Github Pages](https://help.github.com/cn#github-pages-basics) 托管
+- 3、也曾玩过 [WordPress](https://wordpress.org/support/)、[Typecho](https://github.com/typecho/typecho)（曾剁手买了个主题-[handsome](https://www.ihewro.com/archives/489/)）
+- 4、现在博客使用的 Hexo 博客主题是 [xaoxuxu](https://xaoxuu.com/blog/) 大佬写的 [volantis](https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1)，曾经叫 Material-x 就开始用了
+{% endtimenode %}
+
+{% timenode 2018-09-29 使用顶级域名 [shansan.top](https://shansan.top)，CNAME 解析到 GitHub Pages %}
+{% endtimenode %}
+
+{% timenode 2018-12-24 启用备用域名 [shan333.cn](https://shan333.cn) %}
+将博客部署到腾讯云 CVM 服务器；Web 服务器使用到了 Nginx；使用宝塔面板进行 Ops；通过 Linux 定时任务同步博客到云服务器
+{% endtimenode %}
+
+{% timenode 2020-01-30 引入 GitHub Actions %}
+
+使用 [GitHub Actions](https://github.com/features/actions) 持续集成/部署 Hexo 博客到 GitHub Pages [“workflow.yml🔗”](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.github/workflows/hexo-ci.yaml)，放弃云盘单独备份，使用 Git 做版本控制（回忆）
+
+{% endtimenode %}
+
+{% timenode 2020-03-11 Hexo 主题升级 %}
+主题升级至[volantis@2.0.2](https://volantis.js.org/)(原material-x主题改名了)，紧跟dalao更新步伐
+{% endtimenode %}
+
+{% timenode 2020-04-29 volantis@2.0.2 -> volantis@2.6.5 %}
+{% endtimenode %}
+
+{% timenode 2021-01-18 云服务器博客同步引入 CI/CD %}
+写了个基于 rsync 协议的 GitHub Action 用于 CD 博客到 CVM 服务器，博文👉[使用 rsync-deploy-action 同步 Hexo 博客到个人服务器](https://shan333.cn/2021/01/19/hexo-blog-synchronization-with-rsync/)
+{% endtimenode %}
+
+{% timenode 2021-03-10 volantis@2.6.5 -> volantis@4.3.1，hexo@4.0.0 -> hexo@5.4.0 %}
+{% endtimenode %}
+
+{% endtimeline %}
 
 <!-- # 听歌可以戳下面，猛戳，别客气o(*≧▽≦)ツ┏━┓
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=2506295921&auto=1&height=430">
