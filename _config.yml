@@ -26,7 +26,7 @@ language:
   - zh-CN
   - en
   - zh-TW
-timezone:
+# timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -103,9 +103,9 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+# include:
+# exclude:
+# ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -123,8 +123,8 @@ deploy:
 
 # https://github.com/huiwang/hexo-baidu-url-submit
 baidu_url_submit:
-  count: 100 # 提交最新的一个链接
-  host: https://shansan.top # 在百度站长平台中注册的域名
+  count: 10 # 提交最新的 10 链接
+  host: yeshan333.github.io # 在百度站长平台中注册的域名
   token: Z3H2nzCjpaxA9Ssm # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
 
