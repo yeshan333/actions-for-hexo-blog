@@ -212,7 +212,7 @@ workflow 中名为 Push to tencentyun CVM 的 [step](https://docs.github.com/en/
 # root 用户下执行，github 目录下的所有文件 755 权限
 chmod -R 755 /home/github
 # 将 www 用户添加到 github user group
-usermod www -G -a www
+usermod www -G -a github
 ```
 
 ## 参考
