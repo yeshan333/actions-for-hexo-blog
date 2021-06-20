@@ -141,3 +141,17 @@ sitemap:
   path: sitemap.xml
   tag: false
   category: false
+
+feed:
+  enable: true
+  type: rss2
+  path: rss2.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: https://img.vim-cn.com/bb/db444be0b7fda59c69d5c64167f9668b0b66bd.png
+  autodiscovery: true
+  template:
