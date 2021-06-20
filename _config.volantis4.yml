@@ -207,7 +207,7 @@ site_footer:
     - icon: fab fa-zhihu
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     - icon: fas fa-rss
-      url: https://yeshan333.github.io/sitemap.xml
+      url: https://yeshan333.github.io/rss2.xml
   copyright: '[Copyright © 2018-2021 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
