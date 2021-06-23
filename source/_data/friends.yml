@@ -200,6 +200,12 @@
       screenshot: https://avatars.githubusercontent.com/u/57751257?s=460&u=634fb3d9085fd46aead74e7d0db0ae3d1d933f3f&v=4
       url: https://redhat123456.github.io/
       description: 加油加油
+    - title: 子翔
+      url: https://www.weizixiang.com/
+      avatar: https://www.weizixiang.com/image/logo.jpg
+      screenshot: https://www.weizixiang.com/image/logo.jpg
+      description:
+        - 一个努力学技术的小白（中学生）
 
 - group: 失踪的dalao
   items:
@@ -216,9 +222,3 @@
       screenshot: https://hawkinchina.github.io/images/jack.jpg
       description:
         - C++
-    - title: 子翔
-      url: https://www.weizixiang.com/
-      avatar: https://www.weizixiang.com/image/logo.jpg
-      screenshot: https://www.weizixiang.com/image/logo.jpg
-      description:
-        - 一个努力学技术的小白（中学生）
