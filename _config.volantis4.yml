@@ -7,7 +7,7 @@ pages:
 comments:
   title: <i class='fas fa-comments'></i> 评论
   subtitle:
-  service: valine # valine, twikoo, waline, minivaline, disqus, disqusjs, gitalk, vssue, livere, isso, hashover
+  service: waline # valine, twikoo, waline, minivaline, disqus, disqusjs, gitalk, vssue, livere, isso, hashover
   # Valine
   # https://valine.js.org/
   valine:
@@ -18,7 +18,7 @@ comments:
     appId: S687AsCjGJKTPIvUJ8aPNX49-gzGzoHsz # your appId
     appKey: bCwg3QuIfGytbeYw58L7ofRq # your appKey
     meta: [nick,mail,link] # valine comment header info
-    requiredFields: [nick,mail]
+    requiredFields: [nick, mail]
     enableQQ: true # Unstable avatar link
     recordIP: false # Record commenter IP
     avatar: robohash # gravatar style https://valine.js.org/avatar
@@ -26,6 +26,13 @@ comments:
     lang: zh-cn
     highlight: true
     mathJax: false
+  waline:
+      js: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+      path: # 全局评论地址 目前设置全局评论地址后visitor失效,这是waline的问题
+      placeholder: 快来评论吧~  # 评论占位提示
+      imageHosting: https://7bu.top/api/upload # 图床api（默认使用去不图床）
+      # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder uploadImage] 选项
+      serverURL: https://yeshan333-waline.vercel.app # Waline 的服务端地址（必填） 测试用地址: https://waline-ruddy.vercel.app
 ############################### Comments ############################### > end
 
 ############################### Navigation Bar ############################### > start
