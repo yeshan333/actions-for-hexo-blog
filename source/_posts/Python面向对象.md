@@ -14,6 +14,7 @@ date: 2019-05-24 12:54:40
 tags: Python
 categories: Python
 updated: 2019-05-31 12:54:40
+keywords: "python, OOP"
 ---
 
 - 对象：一个自包含的实体，用一组可识别的特性和行为来标识

@@ -12,6 +12,7 @@ music:
 date: 2020-03-06 11:29:17
 tags: [Python, 静态类型检查]
 categories: Python
+keywords: "mypy, type_check"
 ---
 
 ## 前言

@@ -15,6 +15,7 @@ tags: Python
 categories: Python
 updated:
 excerpt: 撸一手Jupyter
+keywords: "jupyter, python"
 ---
 
 >玩Python这么久了，连Jupyter都不会，有点捞，今天补一补这方面的操作。。。。

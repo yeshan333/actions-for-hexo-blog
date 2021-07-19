@@ -4,6 +4,7 @@ date: 2018-09-28 16:49:47
 tags: markdown
 categories:
 toc: true
+keywords: "markdown"
 ---
 
 # Markdown浅尝
@@ -62,7 +63,7 @@ toc: true
 	* 解析几何
 		* 离散数学
 		* 数学分析
-			* 实变函数   
+			* 实变函数
 
 
 
@@ -142,7 +143,7 @@ for i in range(4):
 瞬间发现没什么区别
 
 ---
-更新于2018/10/1 11:05:19 
+更新于2018/10/1 11:05:19
 ---
 
 ## 上下标,使用`<sup>、<sub>`

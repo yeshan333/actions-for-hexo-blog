@@ -9,6 +9,7 @@ categories: Flask
 declare:
 password:
 updated:
+keywords: "sql, sqlalchemy, schema"
 ---
 
 # 常见关系：
@@ -76,7 +77,7 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), index=True)
     writer_id = db.Column(db.Integer, db.ForeignKey('writer.id'))
-    
+
     writer = db.relationship('Writer', back_populates='books')
 
     def __repr__(self):
@@ -123,7 +124,7 @@ class Capital(db.Model):
 # 多对多双向关系（老师和学生）
 
 - 多对多关系的建立需要使用关联表（association table）。关联表不存储数据，只用来存储关系两侧模型的外键对应关系
-- 定义关系两侧的关系函数时，需要添加一个**secondary**参数，值设为关联表的名称 
+- 定义关系两侧的关系函数时，需要添加一个**secondary**参数，值设为关联表的名称
 - 关联表由使用db.Table类定义，传入的第一个参数为关联表的名称
 - 我们在关联表中将多对多的关系分化成了两个一对多的关系
 

@@ -13,6 +13,7 @@ music:
 date: 2019-05-11 21:40:32
 tags: Python
 categories: Python
+keywords: "python process, python thread"
 ---
 
 # 进程 && 线程

@@ -6,7 +6,6 @@ popular_posts: false
 mathjax: true
 pin: false
 headimg: https://z3.ax1x.com/2021/07/11/W9bniR.png
-keywords: "gpg, checksums, md5"
 date: 2021-07-10 18:23:57
 tags: [MD5, GPG]
 categories: Cryptography
@@ -21,6 +20,7 @@ references:
     url: https://www.gnupg.org/gph/en/manual/x334.html
   - title: commit signature verification - GitHub
     url: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification
+keywords: "gpg, md5, checksums"
 ---
 
 ## 前言

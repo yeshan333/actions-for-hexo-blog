@@ -15,6 +15,7 @@ tags:
 categories:
 updated:
 excerpt: HTTPie
+keywords: "HTTP tool, HTTPie, python"
 ---
 
 >HTTPie（发音为aitch-tee-tee-pie）是一个命令行HTTP客户端。其目标是使与Web服务的CLI交互尽可能人性化。它提供了一个简单的http命令，允许使用简单自然的语法发送任意HTTP请求，并显示彩色输出。HTTPie可用于测试，调试以及通常与HTTP服务器交互。

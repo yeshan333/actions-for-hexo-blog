@@ -8,6 +8,7 @@ top: false
 date: 2020-06-28 11:39:55
 tags: [docker, 服务编排, DevOps]
 categories: docker
+keywords: "docker, github, flask, DevOps"
 ---
 
 几个月过去了，是时候把当初的 [🚩](https://github.com/yeshan333/Flask-React-ToDoList#%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92) 干掉了。

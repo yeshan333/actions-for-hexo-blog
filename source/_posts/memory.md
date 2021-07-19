@@ -5,6 +5,7 @@ message: 'Welcome to my blog, enter password to read.'
 date: 2018-12-31 12:40:34
 tags: blog
 categories: blog
+keywords: "Typecho, blog, server"
 ---
 
 **本页图片已挂，需跨越 G-F?W **

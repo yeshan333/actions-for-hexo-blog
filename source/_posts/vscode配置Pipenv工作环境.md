@@ -9,6 +9,7 @@ declare:
 toc:
 password:
 updated:
+keywords: "vscode, python, vitual environment"
 ---
 
 # 让vscode使用Pipenv工作环境

@@ -6,6 +6,7 @@ categories: CPP
 declare: true
 toc: true
 updated:
+keywords: "c++, OOP"
 ---
 # 类 & 对象
 

@@ -4,6 +4,7 @@ date: 2018-09-26 23:24:26
 tags: markdown
 categories: markdown
 toc: true
+keywords: "markup language, markdown"
 ---
 
 <font size="5" color="green">兴奋于搭建了我的博客，兴奋于认识了markdown，终于可以甩开花里胡哨的word了，233333！！！</font>

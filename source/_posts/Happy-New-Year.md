@@ -9,6 +9,7 @@ declare:
 toc:
 password:
 updated:
+keywords: "2019 new year"
 ---
 
 ```
@@ -23,7 +24,7 @@ JavaScript: alert("Happy New Year")
 VBScript:MsgBox "Happy New Year"
 JavaScript: document.write("Happy New Year")
 JavaScript: console.log(' Happy New Year');
-xml <TextView android:text="Happy New Year! " /> 
+xml <TextView android:text="Happy New Year! " />
 Delphi: ShowMessage('Happy New Year！');
 VB: Msg("Happy New Year！")
 VC: MessageBox("Happy New Year！");
@@ -37,8 +38,8 @@ COBOL:DISPLAY 'Happy New Year!'
 Python:print("Happy New Year！")
 aswing:JOptionPane.showMessageDialog("happy","Happy New Year！")
 flex:Alert.show("Happy New Year！");
-Clojure: (println "Happy New Year") 
-verilog/systemverilog/e $display("Happy New Year") 
+Clojure: (println "Happy New Year")
+verilog/systemverilog/e $display("Happy New Year")
 as:trace("Happy New Year！");
 ```
 

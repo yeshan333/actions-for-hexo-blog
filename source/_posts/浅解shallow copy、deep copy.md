@@ -15,6 +15,7 @@ tags: [深拷贝与浅拷贝]
 categories:
   - [Python]
   - [JavaScript]
+keywords: "shallow copy, deep copy, python, javascript"
 ---
 
 “回👋掏”。最近做东西，有点儿玩不转复杂数据类型，写篇博文再回顾下深、浅拷贝相关知识。深、浅的区分主要在对复杂数据类型进行操作的时候。

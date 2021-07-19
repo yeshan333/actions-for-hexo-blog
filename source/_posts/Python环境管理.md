@@ -8,6 +8,7 @@ top: false
 date: 2019-09-02 13:07:13
 tags: [Python, 环境管理]
 categories: Python
+keywords: "python virtualenv"
 ---
 
 >个人简单记录下

@@ -25,6 +25,7 @@ references:
     url: https://earthly.dev/blog/monorepo-vs-polyrepo/
   - title: Dealing With The Polyrepo Concept
     url: https://isacikgoz.me/2019/01/21/polyrepo/
+keywords: "monorepo, polyrepo"
 ---
 
 

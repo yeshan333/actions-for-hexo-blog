@@ -14,6 +14,7 @@ headimg: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20201115174718.png
 date: 2020-11-15 15:52:13
 tags: [计算机网路, TCP, tcpdump, Wireshark]
 categories: 计算机网络
+keywords: "tcpdump, wireshark"
 ---
 
 tcpdump 和 Wireshark 是最常用的网络抓包和分析工具，作为经常和网络打交道的划水选手，怎么能不了解下呢？补篇博文回顾下相关操作。这里以 example.com 的一次 GET 请求为例，先使用 tcpdump 抓个包，再使用 Wireshark 看下 TCP 的握手。

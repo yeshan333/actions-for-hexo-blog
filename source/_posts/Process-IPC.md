@@ -9,6 +9,7 @@ date: 2020-08-02 14:53:41
 tags: 进程通信
 categories: 操作系统
 thumbnail: https://s1.ax1x.com/2020/07/23/UOX79J.png
+keywords: "IPC, process, operatiing system"
 ---
 
 >进程间通信（IPC，Inter-Process Communication），指至少两个进程或线程间传送数据或信号的一些技术或方法。

@@ -10,6 +10,7 @@ popular_posts: true
 declare:
 password:
 updated:
+keywords: "python, flask, hooks"
 ---
 
 # 请求钩子(Hook)

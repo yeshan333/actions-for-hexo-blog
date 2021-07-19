@@ -9,6 +9,7 @@ date: 2019-07-19 14:58:48
 tags: [Python, 协程]
 categories: Python
 updated:
+keywords: "python, async io"
 ---
 
 >看到吐血 _(´ཀ`」 ∠)_

@@ -11,6 +11,7 @@ categories:
   - [计算机网络]
   - [操作系统]
 thumbnail: https://mypic-1258313760.cos.ap-guangzhou.myqcloud.com/img/20200519233557.png
+keywords: "computer network, operating system, NIO, BIO"
 ---
 
 最近读了波网络 I/O 相关的文章，做下总结、摘录。（未完）

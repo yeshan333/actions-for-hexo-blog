@@ -9,6 +9,7 @@ date: 2020-07-08 14:33:31
 tags: React
 categories: React
 thumbnail: https://tse1-mm.cn.bing.net/th/id/OIP.MLcusJS0vVfueb6QjVFVdQHaDt?w=321&h=174&c=7&o=5&dpr=1.5&pid=1.7
+keywords: "react, react hooks"
 ---
 
 翻了波之前写的文章还有笔记，发现关于前端的文章并不多（好歹也划水做过点前端开发）。巧了，最近没什么好话题可写，做下 React Hooks 学习笔记吧。

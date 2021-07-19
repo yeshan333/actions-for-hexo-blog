@@ -9,6 +9,7 @@ thumbnail: https://s3.ax1x.com/2020/12/14/rmcxoR.jpg
 date: 2020-12-13 20:30:14
 tags: [Kafka, 消息引擎系统, 流处理平台]
 categories: [中间件, Kafka]
+keywords: "kafka, middleware, golang"
 ---
 
 > 趁着毕设初期，还能摸会儿🐟，了解波 Kafka。

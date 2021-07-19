@@ -6,6 +6,7 @@ categories: CPP
 declare: true
 toc: true
 updated:
+keywords: "c++, standard libarary"
 ---
 # 标准库类型string
 
@@ -36,16 +37,16 @@ int main()
 	string s1;
 	cout<<s1<<endl;
 	cout<<"1"<<endl;
-	
+
 	string s2 = "shansan";
 	cout<<s2<<endl;
-	
+
 	string s3(s2);
 	cout<<s3<<endl;
-	
+
 	string s4(6,'s');
 	cout<<s4<<endl;
-	
+
 	return 0;
 }
 ```
@@ -65,23 +66,23 @@ using namespace std;
 int main()
 {
 	string s;
-	
+
 	cin>>s;
 	//* 读取时string对象会默认忽略掉开头的空白（即空格符、换行符、制表符等）
-	//* 从第一个真正的字符开始读起，直到遇见下一处空白为止 
+	//* 从第一个真正的字符开始读起，直到遇见下一处空白为止
 	cout<<s<<endl;
 	cout<<s.size()<<endl;
-	
+
 	if(!s.empty())//如果string对象非空
 	{
-		cout<<"the string is not empty !"<<endl; 
+		cout<<"the string is not empty !"<<endl;
 	}
-	
+
 	string line;
 	//每次读取一整行，遇到换行符结束
 	while(getline(cin,line))
 	    cout<<line<<endl;
-	
+
 	return 0;
 }
 ```
@@ -121,28 +122,28 @@ using namespace std;
 int main()
 {
 	vector<int> s={1,2,3,4,5};;//列表初始化vector对象s
-	//- 可使用下标访问vector对象  
+	//- 可使用下标访问vector对象
 	cout<<s[0]<<endl;
-	
+
 	vector<int> a(8,1);
 	for(auto i:a)
 	{
 		cout<<i<<" ";
 	}
 	cout<<endl;
-	
+
 	string word;
 	vector<string> text;
-	while(cin>>word)  
+	while(cin>>word)
 	{
 		text.push_back(word);//push_back()
 	}
 	for(auto str:text)
 	{
-	    cout<<str<<" ";	
+	    cout<<str<<" ";
 	}
-	return 0; 
-} 
+	return 0;
+}
 ```
 
 ![](https://i.imgur.com/GWogUU7.gif)
@@ -158,23 +159,23 @@ int main()
 {
 	int num;
     vector<int> v;
-	
-	while(cin>>num)//获取元素值 
+
+	while(cin>>num)//获取元素值
 	{
 		v.push_back(num);
 	}
-	
-	for(auto &i:v)//求元素值的平方 
+
+	for(auto &i:v)//求元素值的平方
 	{
 		i = i*i;
 	}
-	
-	for(auto temp:v)//输出v中每一个元素 
+
+	for(auto temp:v)//输出v中每一个元素
 	{
 		cout<<temp<<" ";
 	}
-	return 0; 
-} 
+	return 0;
+}
 ```
 
 ![](https://i.imgur.com/UGVxERa.png)
@@ -189,16 +190,16 @@ using namespace std;
 
 int main()
 {
-	vector<int> v;//空的vector对象 
-	for(decltype(v.size()) i =0;i!=6;i++) 
+	vector<int> v;//空的vector对象
+	for(decltype(v.size()) i =0;i!=6;i++)
 	{
 		v[i] = i;
 	}
 	// -v是一个空的vector，不存在任何元素，不能通过下标去访问
-	// -应该使用vector对象的成员函数push_back()为vector对象添加元素较为安全 
-	cout<<v[0]<<endl; 
-	return 0; 
-} 
+	// -应该使用vector对象的成员函数push_back()为vector对象添加元素较为安全
+	cout<<v[0]<<endl;
+	return 0;
+}
 ```
 ![](https://i.imgur.com/wnFCgYu.png)
 
@@ -209,16 +210,16 @@ int main()
 ```c++
 #include<iostream>
 using namespace std;
-//库函数begin和end，以数组名作为参数 
+//库函数begin和end，以数组名作为参数
 int main()
 {
 	int sums[]={1,2,3,4,5,6,7,8,9,10};
-	int *beg = begin(sums);        //指向sums首元素的指针 
-	int *last = end(sums);         //指向sums尾元素的下一位置的指针 
+	int *beg = begin(sums);        //指向sums首元素的指针
+	int *last = end(sums);         //指向sums尾元素的下一位置的指针
 	int *temp;
 	for(temp = beg;temp != last;temp++)
 	{
-	    cout<<*temp<<" ";	
+	    cout<<*temp<<" ";
 	}
 	return 0;
 }
@@ -241,32 +242,32 @@ int main()
 {
 	string s="shan san";//s("shan san");
 	cout<<s<<endl;
-	//首字母改成大写形式 
+	//首字母改成大写形式
 	if(s.begin() != s.end())
 	{
-		auto it = s.begin();//令it指向s的第一个元素 
+		auto it = s.begin();//令it指向s的第一个元素
 		*it = toupper(*it);
 	}
 	cout<<s<<endl;
-	
+
 	//全部字母改成大写形式,&& !isspace(*temp)
-	//temp是个迭代器，通过 * 运算符解引用迭代器获得迭代器所指的对象 
+	//temp是个迭代器，通过 * 运算符解引用迭代器获得迭代器所指的对象
 	for(auto temp=s.begin();temp != s.end() ; temp++)
 	{
 		*temp = toupper(*temp);
 	}
 	cout<<s<<endl;
-	
+
 	const int a=8;
 	//a=0;
 	cout<<a<<endl;
-	
+
 	char c[10]="123456789";
 	char b[10];
 	strcpy(b,c);
 	cout<<b[1]<<endl;
-	
-	
+
+
 	return 0;
 }
 ```

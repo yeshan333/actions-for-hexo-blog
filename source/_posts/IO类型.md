@@ -6,6 +6,7 @@ categories: CPP
 declare: true
 toc: true
 updated:
+keywords: "c++, I/O stream"
 ---
 # IO库
 
@@ -48,8 +49,8 @@ istream& read_print(istream &s)
 	while(s>>score)
 	{
 		cout<<score<<endl;
-	} 
-    s.clear();//流复位，清楚所有错误标志位 
+	}
+    s.clear();//流复位，清楚所有错误标志位
     return s;
 }
 
@@ -102,7 +103,7 @@ int main()
 ```c
 #include<iostream>
 #include<fstream>
-#include<vector> 
+#include<vector>
 using namespace std;
 
 void write()
@@ -110,8 +111,8 @@ void write()
 	ofstream file;
 	file.open("shansan.txt");
     //等价于fstream file("shanshan.txt");
-	
-	//像文件写入数据	
+
+	//像文件写入数据
 	file<<"shansan"<<endl;
 	file<<"shansan.top"<<endl;
 	file<<"yeshan333.github.io"<<endl;
@@ -123,16 +124,16 @@ void read_print()
 	string buffer;
     ifstream read_file("shansan.txt");
 	vector<string> v;
-	while(getline(read_file,buffer))//每次从read_file读取一行给buffer 
-	    v.push_back(buffer);//将buffer存到vector对象v中 
-	
+	while(getline(read_file,buffer))//每次从read_file读取一行给buffer
+	    v.push_back(buffer);//将buffer存到vector对象v中
+
 	for(auto temp:v)
-	    cout<<temp<<endl;	
-} 
+	    cout<<temp<<endl;
+}
 
 int main()
 {
-	write(); 
+	write();
 	read_print();
 	return 0;
 }

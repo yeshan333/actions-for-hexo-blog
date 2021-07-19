@@ -6,6 +6,7 @@ categories:
 declare: false
 toc: false
 updated:
+keywords: "keep going"
 ---
 ![](https://i.imgur.com/P1TgIck.jpg)
 

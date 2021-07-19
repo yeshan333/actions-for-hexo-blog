@@ -8,6 +8,7 @@ top: false
 date: 2019-07-26 16:30:46
 tags: [Python, 上下文]
 categories: Python
+keywords: "python, context"
 ---
 
 # 上下文管理器
@@ -40,12 +41,12 @@ class Filemanager:
         self.name = name
         self.mode = mode
         self.file = None
-    
+
     def __enter__(self):
         print('caling __enter__ method')
         self.file = open(self.name, self.mode)
         return self.file
-    
+
     def __exit__(self, exc_type, exc_val, exc_tb):
         print('caling __exit__ method')
         if self.file:
@@ -53,7 +54,7 @@ class Filemanager:
 
 
 # Filemanager为上下文管理器
-# with Filemanager('test.txt', 'w') as f 是上下文表达式，f为资源对象 
+# with Filemanager('test.txt', 'w') as f 是上下文表达式，f为资源对象
 with Filemanager('test.txt', 'w') as f:
     print('ready to write to file')
     f.write('Hello World')
@@ -73,12 +74,12 @@ with Filemanager('test.txt', 'w') as f:
 ```python
 class Foo:
     def __init__(self):
-        print('__init__ called')        
+        print('__init__ called')
 
     def __enter__(self):
         print('__enter__ called')
         return self
-    
+
     def __exit__(self, exc_type, exc_value, exc_tb):
         print('__exit__ called')
         if exc_type:
@@ -87,7 +88,7 @@ class Foo:
             print(f'exc_traceback: {exc_tb}')
             print('exception handled')
         return True
-    
+
 with Foo() as obj:
     raise Exception('exception raised').with_traceback(None)
 ```
@@ -136,7 +137,7 @@ def file_manager(name, mode):
         yield f
     finally:
         f.close()
-        
+
 with file_manager('test.txt', 'w') as f:
     f.write('hello world')
 

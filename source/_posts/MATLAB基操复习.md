@@ -8,6 +8,7 @@ top: false
 date: 2019-06-17 19:51:57
 tags: MATLAB
 categories: math
+keywords: "matlab, matlab syntax, math"
 ---
 
 # MATLAB基本操作

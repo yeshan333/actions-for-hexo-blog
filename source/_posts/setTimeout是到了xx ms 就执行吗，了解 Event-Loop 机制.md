@@ -9,6 +9,7 @@ thumbnail: https://s1.ax1x.com/2020/08/22/ddnTQH.jpg
 date: 2020-08-22 13:42:41
 tags: [Event-Loop, JavaScript]
 categories: JavaScript
+keywords: "browser internal, eveny loop"
 ---
 
 > 要想 JavaScript 玩得溜，还得了解波 JavaScript 执行机制/(ㄒoㄒ)/~~。

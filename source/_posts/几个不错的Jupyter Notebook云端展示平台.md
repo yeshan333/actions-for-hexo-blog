@@ -8,6 +8,7 @@ top: false
 date: 2019-08-07 09:27:50
 tags: [Python, Jupyter]
 categories: Python
+keywords: "python, jupter notebook, colar"
 ---
 
 # jupyter nbviewer

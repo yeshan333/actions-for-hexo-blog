@@ -8,6 +8,7 @@ headimg: https://s3.ax1x.com/2021/01/20/sfyNy4.png
 date: 2021-01-19 20:02:51
 tags: [Github Actions, DevOps, Nginx]
 categories: DevOps
+keywords: "DevOps, GitHub Actions, SSH, rsync"
 ---
 
 前几天写了个基于 rsync 进行文件同步的 Action -> [rsync-deploy-action](https://github.com/yeshan333/rsync-deploy-action)。目的有三个：

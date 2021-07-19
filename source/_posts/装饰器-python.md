@@ -4,6 +4,7 @@ date: 2019-01-03 18:39:32
 tags: Python
 categories: Python
 toc: true
+keywords: "decorator, python"
 ---
 
 # python装饰器回顾

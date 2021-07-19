@@ -7,7 +7,8 @@ mathjax: true
 top: false
 date: 2019-11-14 21:49:41
 tags: [Python,函数式编程]
-categories: 函数式编程 
+categories: 函数式编程
+keywords: "functional programming, python"
 ---
 
 >听说函数式编程很⑥，咱也不知道，咱也不晓得，还没实际用过。emmm。。。。，先mark下Python中和函数式编程有关的部分功能先，又开始水了，立个flag🚩：慢慢完善

@@ -9,6 +9,7 @@ declare:
 toc: true
 password:
 updated:
+keywords: "github, git, remote operation"
 ---
 
 # 如何将本地项目推送到Github

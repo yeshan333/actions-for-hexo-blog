@@ -6,6 +6,7 @@ categories:
 declare: false
 toc:
 updated:
+keywords: "note"
 ---
 
 # 辽宁一分钟

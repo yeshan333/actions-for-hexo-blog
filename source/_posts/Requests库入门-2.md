@@ -6,6 +6,7 @@ categories: Python
 declare: true
 updated:
 toc: true
+keywords: "request, http"
 ---
 
 # requests库入门实操

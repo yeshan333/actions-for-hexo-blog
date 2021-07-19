@@ -14,6 +14,7 @@ music:
 date: 2019-10-02 19:01:46
 tags: Python
 categories: Python
+keywords: "python buildin data structure, performance"
 ---
 
 # 生成一个列表的几种方式的性能对比
@@ -31,7 +32,7 @@ def test1():
     l = []
     for i in range(1000):
         l = l + [i]
-    
+
 
 # 迭代 + append
 def test2():
@@ -97,7 +98,7 @@ for i in range(10000,1000001,20000):
 
     x = {j:None for j in range(i)}
     d_time = t.timeit(number=1000)
-    
+
     lst_result.append(lst_time)
     d_result.append(d_time)
     print("%d,%10.3f,%10.3f" % (i, lst_time, d_time))

@@ -25,6 +25,7 @@ references:
     url: https://devblogs.microsoft.com/commandline/wslg-architecture/
   - title: WSLg - GitHub README
     url: https://github.com/microsoft/wslg
+keywords: "wslg, wsl, windows preview"
 ---
 
 2021 年 4 月 21 日，微软在 Developer Blogs 发布了 Windows 预览版 WSL（Windows Linux 子系统） 对 Linux GUI App 的支持的[公告🔗](https://devblogs.microsoft.com/commandline/the-initial-preview-of-gui-app-support-is-now-available-for-the-windows-subsystem-for-linux-2)，碰巧😀我最近重装了波电脑，系统换成了 Windows Insiders（Dev），正好可以感受波 Linux GUI App 的支持。btw，预览版的文件管理器支持访问 WSL 的文件了，6~ 的。

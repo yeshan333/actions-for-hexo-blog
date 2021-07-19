@@ -11,6 +11,7 @@ tags: [RSS Reader]
 categories:
   - [blog]
   - [RSS]
+keywords: "rss feed, web reader"
 ---
 
 之前一直用 App Store 上的一个 RSS 阅读器 RSS Reader Prime 订阅技术周刊和 dalao 的技术博客，不得不说挺好用的，奈何全线下架了，现在就平板上保留着这个 App，手机上没有（国区好用的 RSS 阅读器基本无了）。有时候又想着用手机读读技术文章（板子太大，不好拿），于是乎翻了下 GitHub [rss-reader topic](https://github.com/topics/rss-reader) 下的相关阅读器项目，挑了手基于 Web 和 GitHub Pages 的 RSS 阅读器（Web 才是真的“跨端”，2333~），水篇文章微微记录下。

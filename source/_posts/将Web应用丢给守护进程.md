@@ -9,6 +9,7 @@ date: 2020-06-21 14:26:36
 tags: 服务器进程管理
 categories: Linux
 thumbnail: https://tse4-mm.cn.bing.net/th/id/OIP.9uFp2lB4VhDn_e5sY749aQHaE2?pid=Api&rs=1
+keywords: "srpingboot, java, deployment, systemd"
 ---
 
 最近老是要把 Web App/Service 部署在个人的服务器上进行测试，发现自己不怎么熟悉「前提：不上 docker ，逃~」，特写此文章来纪念下🤔👀（之前部署的  Web App/Service 都是丢给 [Heroku](https://www.heroku.com/)、[Netlify](https://www.netlify.com/)、GitHub 这样的 PaaS 平台运行，写个配置文件「action、yaml、toml」就完事了。自己整的玩意儿丢在自己服务器上跑的并不算多，今天费点劲，了解点基础设施。根据冰山模型，了解下 FaaS 能更好的了解 [PaaS](https://shansan.top/knowledge-base/#/backend?id=iaas%e3%80%81paas%e3%80%81saas)）。

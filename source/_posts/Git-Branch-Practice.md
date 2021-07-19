@@ -15,6 +15,7 @@ tags: Git
 categories: Git
 updated:
 excerpt: Git Branch Practice
+keywords: "git, workflows"
 ---
 
 >最近在弄一个东西，基本的功能已经弄好了，现在想再扩展一起其他功能，但这样势必会改动原有代码，我又不想破坏原有的代码逻辑，方便以后查看。记得Git有个分支工作流可以很好的满足我的需求(๑•̀ㅂ•́)و✧。emmm，很久没发文了，record一下吧。(ノへ￣、)

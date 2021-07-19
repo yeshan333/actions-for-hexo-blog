@@ -6,6 +6,7 @@ categories: Python
 declare: true
 toc: true
 updated:
+keywords: "spider, python, mooc"
 ---
 
 定向爬虫:仅对输入URL进行爬取，不扩展爬取
@@ -54,7 +55,7 @@ def GetHTMLText(url):       #获取网页内容
 		r.raise_for_status()   #用于捕获异常
 		r.encoding = r.apparent_encoding
 		return r.text
-	except:	
+	except:
 	    return ""
 ```
 ## fillUnivList()
@@ -89,7 +90,7 @@ def GetHTMLText(url):       #获取网页内容
 		r.raise_for_status()   #用于捕获异常
 		r.encoding = r.apparent_encoding
 		return r.text
-	except:	
+	except:
 	    return ""
 
 
@@ -132,7 +133,7 @@ def GetHTMLText(url):       #获取网页内容
 		r.raise_for_status()   #用于捕获异常
 		r.encoding = r.apparent_encoding
 		return r.text
-	except:	
+	except:
 	    return ""
 
 

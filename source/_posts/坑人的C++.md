@@ -6,6 +6,7 @@ categories: CPP
 declare: true
 toc: true
 updated:
+keywords: "c++"
 ---
 # C++自定义命名空间
 使用关键字namespace
@@ -37,12 +38,12 @@ namespace print_font{
 
 using namespace print_myname;
 using namespace print_font;
- 
+
 int main()
 {
 	//print_myname::func();
 	func();
-	
+
 	//print_font::func_1();
 	func_1();
 	return 0;
@@ -80,8 +81,8 @@ namespace my_firstname
 	{
 	    void print_lastname()
 		{
-			cout<<"san"<<endl; 
-		}	
+			cout<<"san"<<endl;
+		}
 	}
 }
 
@@ -92,7 +93,7 @@ int main()
 {
 	//print_firstname();
 	//my_lastname::print_lastname();
-	
+
 	print_lastname();
 	return 0;
 }
@@ -109,7 +110,7 @@ int main()
 * `catch`:在想要处理问题的地方，通过异常处理程序捕获异常。catch关键字用于捕获异常。
 * `try`:try块中的代码标识将被激活的特定异常。他后面通常跟着一个或者多个catch块
 如果您想让 catch 块能够处理 try 块抛出的任何类型的异常，则必须在异常声明的括号内使用省略号`...`
-    
+
 ```
 try
 	{
@@ -145,12 +146,12 @@ int main()
 		cout<<temp<<endl;
 	}
 	/*由于我们抛出了一个类型为 const char* 的异常，
-	因此，当捕获该异常时，我们必须在 catch 块中使用 const char*。*/	
+	因此，当捕获该异常时，我们必须在 catch 块中使用 const char*。*/
 	catch(const char *msg)
 	{
 		cerr<<msg<<endl;
 	}
-	
+
 	return 0;
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: 我与vim的亲密接触(ˉ▽￣～) 
+title: 我与vim的亲密接触(ˉ▽￣～)
 toc: true
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
@@ -9,6 +9,7 @@ categories: Linux
 declare:
 password:
 updated:
+keywords: "linux, vim, editor"
 ---
 
 >emmm，闲来无事，打算了解下神奇vim（用来zhuangbi）。在终端操作很帅(ˉ▽￣～)~~！

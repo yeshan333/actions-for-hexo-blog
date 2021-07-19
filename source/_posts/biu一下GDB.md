@@ -8,6 +8,7 @@ categories: CPP
 declare:
 toc: true
 updated:
+keywords: "c++. gdb, compiler"
 ---
 
 # gcc常见编译选项

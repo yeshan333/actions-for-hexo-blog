@@ -6,7 +6,9 @@ categories: Python
 declare: true
 toc: true
 updated:
+keywords: "python, html, beautiful soup"
 ---
+
 ```python
 import requests
 from bs4 import BeautifulSoup #引入BeautifulSoup类
@@ -172,5 +174,5 @@ for sibling in soup.a.next_sibling:
 ![](https://i.imgur.com/bHQdzDW.png)
 
 <p align="right"><font color="red" size="3">bs4库将任何HTML输入都变成utf-8编码</font></p>
- 
+
 ---

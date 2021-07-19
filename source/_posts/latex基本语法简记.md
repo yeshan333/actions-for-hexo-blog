@@ -8,6 +8,7 @@ top: false
 date: 2019-06-18 15:05:57
 tags: Latex
 categories: math
+keywords: "latex, syntax, mathjax"
 ---
 
 > 备注：当前博客使用的 latex 渲染引擎有点问题，本篇文章更好的阅读体验：https://blog.csdn.net/qq_41022329/article/details/92798759

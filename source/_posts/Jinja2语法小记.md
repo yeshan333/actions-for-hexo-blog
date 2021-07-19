@@ -9,6 +9,7 @@ declare:
 toc:
 password:
 updated:
+keywords: "flask, python, jinja2"
 ---
 
 # jinja2模板语法小记
@@ -162,7 +163,7 @@ movies|length
     {% elif amount>1 %}
         We are qux.
     {% endif %}
-{% endmacro %} 
+{% endmacro %}
 ```
 
 就像从Python模块中导入函数一样，我们可以使用import导入宏

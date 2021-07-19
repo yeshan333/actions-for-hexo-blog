@@ -4,14 +4,14 @@ abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2019-01-22 17:09:40
 tags: [HTML, CSS]
-categories: 
+categories:
   - [HTML]
   - [CSS]
-
 declare:
 toc: true
 password:
 updated:
+keywords: "HTML, CSS"
 ---
 
 # [HTML](http://www.w3school.com.cn/html/index.asp)(超文本标记语言)
@@ -199,7 +199,7 @@ span标签和style属性结合使用时，可取代很多标签，效果很nice
                 <th>Time</th>
             </tr>
         </thead>
-        
+
         <tbody style="background-color: yellow;">
             <tr>
                 <td>Biology</td>
@@ -234,7 +234,7 @@ span标签和style属性结合使用时，可取代很多标签，效果很nice
                 <td>1:00 PM to 2:45 PM</td>
             </tr>
         </tbody>
-        
+
         <!-- tfoot一般放在tbody之前 -->
         <tfoot style="background-color: blue;">
             <tr>
@@ -482,7 +482,7 @@ a { border: dashed 3px red; }
     <title>test</title>
     <style type="text/css">
         .outer { border: 2px solid black; }
-        .inner { 
+        .inner {
             border: 2px dotted black;
             padding: 15px;
             margin: 15px;
@@ -497,7 +497,7 @@ a { border: dashed 3px red; }
             声称腾讯公司一名保安经过一层层技术面试进入了腾讯研究院，成为一名攻城狮（工程师）。<br/>
             这种事儿看起来相信很多人的第一反应都是恶搞，不过不久，腾讯老大马化腾亲自出面，核实了这一事件的真实性，并且称这是个“很励志的故事”。<br/>
         </div>
-    </div>  
+    </div>
 </body>
 </html>
 ```

@@ -5,6 +5,7 @@ tags: CPP
 categories: CPP
 declare: true
 toc: true
+keywords: "c++, OOP"
 ---
 
 # C++关键字

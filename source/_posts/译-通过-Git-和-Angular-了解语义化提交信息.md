@@ -7,6 +7,7 @@ date: 2020-06-04 22:06:59
 tags: [Git, 工程化, 译文]
 categories: Git
 thumbnail: https://img.vim-cn.com/d1/2602cfd9aba0a8ae85261ff2af4f0fccb6efa1.jpg
+keywords: "git, commit message, angular"
 ---
 
 受传统提交规范和 Angular 约定的启发，让我们来解释语义化提交术语，并演示提交信息的实际示例。

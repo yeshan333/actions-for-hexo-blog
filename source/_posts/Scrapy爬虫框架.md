@@ -6,6 +6,7 @@ categories: Scrapy
 declare: true
 toc: true
 updated:
+keywords: "python, scrapy"
 ---
 # 网络爬虫框架[scrapy](https://scrapy.org/)
 （配置型爬虫）
@@ -105,7 +106,7 @@ updated:
 
     scrapy genspider demo python123.io
     //生成了一个名为demo的spider
-    //在spider目录下增加代码文件demo.py（该文件也可以手工生成）    
+    //在spider目录下增加代码文件demo.py（该文件也可以手工生成）
 ![](https://i.imgur.com/d0pJFsx.gif)
 
 ** demo.py文件 **

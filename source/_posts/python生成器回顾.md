@@ -6,6 +6,7 @@ categories: Python
 declare: true
 toc: true
 updated:
+keywords: "python, python generator"
 ---
 # python生成器（generator）
 

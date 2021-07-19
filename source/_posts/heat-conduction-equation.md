@@ -14,6 +14,7 @@ headimg: https://cdn.jsdelivr.net/gh/ssmath/mypic/QQ%E6%88%AA%E5%9B%BE2021051620
 date: 2021-05-16 15:14:31
 tags: math
 categories: math
+keywords: "college, heat transfer, heat conduction equation"
 ---
 
 毕设工作即将结束之际，附上一份笔记到博客-数学物理方程-热传导方程.

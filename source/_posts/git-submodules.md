@@ -16,6 +16,7 @@ references:
     url: https://github.blog/2016-02-01-working-with-submodules/
   - title: 《Git版本控制管理》- 子模块最佳实践
     url: https://book.douban.com/subject/26341974/
+keywords: "git, git submodules, repo"
 ---
 
 之前一直想将一个 Git 仓库放到另一个 Git 仓库，有 Maven 多模块项目（Maven Multimodule Project）和 Gradle 多项目构建（Gradle Multiproject Build）那味儿。Git 这么骚，肯定也可以。“扫”了多个开源仓库，Get 到了 Git `submodule` 可以做这种操作，水篇文章记录波。

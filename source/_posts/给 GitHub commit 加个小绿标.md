@@ -7,6 +7,7 @@ mathjax: true
 date: 2020-06-26 19:11:12
 tags: [GPG, 加密, 隐私]
 categories: Git
+keywords: "github, gpg, PGP, signature"
 ---
 
 最近一波重装系统啥都没了，最常用的 Git 配置肯定得安排回来的。记得之前给 git 的 commit 加了个签名，回想下为什么要给 commit 做下签名？因为它能让 GitHub 的 commit 历史更帅？看下加签名之前是怎么样的：

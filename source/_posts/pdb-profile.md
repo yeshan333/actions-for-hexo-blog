@@ -8,6 +8,7 @@ top: false
 date: 2019-07-28 15:55:48
 tags: [debug, Python]
 categories: Python
+keywords: "profile, profiling, debug, python"
 ---
 
 # pdb
