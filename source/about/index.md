@@ -13,7 +13,7 @@ music:
 
 - 小 target 🚩：一个月至少一篇文章📌
 - 聊一聊我是谁
-  - 在校 kubi 大四学生，专业：「信息与计算科学」
+  - ~~在校 kubi 大四学生~~「毕业 she hui 人」，专业：「信息与计算科学」
   - 业余前端开发、不怎么业余研究后端开发『啥也不是🤨』
   - 目前在关注研究 Cloud Native、DevOps
   - Pythonista、Rustacean、Gopher
