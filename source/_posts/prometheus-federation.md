@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://cdn.jsdelivr.net/gh/yeshan333/blog_images@main/images/20210828215927.png # 824x280
+headimg: https://z3.ax1x.com/2021/08/29/hG9wK1.png # 824x280
 date: 2021-08-28 17:25:18
 categories: Monitoring
 tags: [Prometheus, Grafana, Federation, Docker, Monitoring]
@@ -20,7 +20,7 @@ tags: [Prometheus, Grafana, Federation, Docker, Monitoring]
 
 ## 前言
 
-本篇文章主要介绍了基于 Docker 搭建一个最小化的 Prometheus Federation 集群娱乐环境的相关操作。不是 Step By Step 的。
+本篇文章主要介绍了 Promethues Federation 集群化机制 & 基于 Docker 搭建一个最小化的 Prometheus Federation 集群娱乐环境的相关操作。不是 Step By Step 的。
 
 ![乱杀](https://cdn.jsdelivr.net/gh/yeshan333/blog_images@main/images/乱杀.gif)
 
