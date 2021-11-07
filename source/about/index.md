@@ -68,6 +68,8 @@ music:
 </iframe>
 -->
 
+[![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
+
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
 
 {% raw %}
