@@ -156,3 +156,6 @@ feed:
   icon: https://img.vim-cn.com/bb/db444be0b7fda59c69d5c64167f9668b0b66bd.png
   autodiscovery: true
   template:
+
+aplayer:
+  meting: true
