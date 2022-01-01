@@ -206,6 +206,12 @@
       screenshot: https://www.weizixiang.com/image/logo.jpg
       description:
         - 一个努力学技术的小白（中学生）
+    - title: LiZiWu
+      url: https://www.liziwu.net/
+      avatar: https://www.liziwu.net/Contents/static/avatar.jpg
+      screenshot: https://www.liziwu.net/Contents/static/avatar.jpg
+      description:
+        - 李自伍的个人技术博客 & 期待与你相逢
 
 - group: 失踪的dalao
   items:
