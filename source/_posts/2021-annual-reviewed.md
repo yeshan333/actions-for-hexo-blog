@@ -115,7 +115,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 21 年 12 月中，来了次十多公里的徒步，相当的放松，博客首次贴张 chou 照🤗：
 
 {% gallery %}
-![kubi](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@master/me1m.png)
+![kubi](https://s4.ax1x.com/2022/01/03/TbUfPJ.jpg)
 {% endgallery %}
 
 ### 游戏-Games
