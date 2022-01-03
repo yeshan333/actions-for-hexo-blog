@@ -44,7 +44,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 
 [![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
 
-十年之约（[www.foreverblog.cn](www.foreverblog.cn)），印象之中好像是 18 年的时候在 [Valine](https://valine.js.org/) 的交流群知道的？我记得我申请过一次，被 reject 掉了（太水了，😶‍🌫️），回头看看[归档页](https://shansan.top/archives/)，那时候写得文章挺水的，挺想删掉，但是我在 20 年初的时候给博客套了下 Git -> ⌈[actions-for-hexo-blog](https://github.com/yeshan333/actions-for-hexo-blog)⌋，博客的变更历史已经追踪起来了，不删了不删了，费劲😊，我还每年都到互联网档案馆（[Internet Archive](https://archive.org/)）做下 Snapshot，**多重手段保留回忆**，我被自己制裁了😢。
+十年之约 <[www.foreverblog.cn](https://www.foreverblog.cn)>，印象之中好像是 18 年的时候在 [Valine](https://valine.js.org/) 的交流群知道的？我记得我申请过一次，被 reject 掉了（太水了，😶‍🌫️），回头看看[归档页](https://shansan.top/archives/)，那时候写得文章挺水的，挺想删掉，但是我在 20 年初的时候给博客套了下 Git -> ⌈[actions-for-hexo-blog](https://github.com/yeshan333/actions-for-hexo-blog)⌋，博客的变更历史已经追踪起来了，不删了不删了，费劲😊，我还每年都到互联网档案馆（[Internet Archive](https://archive.org/)）做下 Snapshot，**多重手段保留回忆**，我被自己制裁了😢。
 
 十年，好像挺长啊，但它三年了，文章质量慢慢好起来了 <不过还是挺水，但我还能更“水”>，是时候了，Brother！
 
@@ -170,7 +170,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 
 - 21 年又关注了下 [Red Bull BC One](https://www.redbull.com/int-en/event-series/bc-one)，Respect 一下那些年耍过的街舞，21 年没有我特别喜欢的 Style，这应该是第二次在 World Final 有 Bgirl 了，不知道啥时候能出现中国区的 dalao🙃。
 
-- 21 年 10 月开始，我一个人开启了基本每周一场电影的模式（累计 10 场，人生目前累计 13 场？🏄），还挺有意思的，或许这就是传说中的成长了？相比之前，我有了更多的视角，我看懂了更多电影要描绘的故事，我个人的理解更多了。
+- 21 年 10 月开始，我一个人开启了基本每周一场电影的模式（累计 10 场，人生目前累计 13 场？🏄），还挺有意思的，或许这就是传说中的成长了？相比之前，我有了更多的视角，我看懂了更多电影要描绘的故事，外加一些经历和看到或者听到过的故事，我可以更多的对个人的理解进行描述了。
 
 {% gallery %}
 ![21 年的电影](https://s4.ax1x.com/2022/01/01/T5A3Hs.jpg)
