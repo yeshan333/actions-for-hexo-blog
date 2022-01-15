@@ -68,6 +68,8 @@ navbar:
         - name: notes
           icon: far fa-sticky-note
           url: https://shansan.top/knowledge-base/
+        - name: Monitor
+          url: https://stats.uptimerobot.com/OknEPcNEVr
     - name: 云原生
       icon: fas fa-cloud
       url: cloud-native/
