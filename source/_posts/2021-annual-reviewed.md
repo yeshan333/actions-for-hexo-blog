@@ -42,7 +42,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 
 写到这个我想起了最近一个月在看的斗破苍穹，就离谱。
 
-[![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
+[![十年之约](https://s4.ax1x.com/2022/01/16/7NNFYt.png)](https://www.foreverblog.cn/about.html)
 
 十年之约 <[www.foreverblog.cn](https://www.foreverblog.cn)>，印象之中好像是 18 年的时候在 [Valine](https://valine.js.org/) 的交流群知道的？我记得我申请过一次，被 reject 掉了（太水了，😶‍🌫️），回头看看[归档页](https://shansan.top/archives/)，那时候写得文章挺水的，挺想删掉，但是我在 20 年初的时候给博客套了下 Git -> ⌈[actions-for-hexo-blog](https://github.com/yeshan333/actions-for-hexo-blog)⌋，博客的变更历史已经追踪起来了，不删了不删了，费劲😊，我还每年都到互联网档案馆（[Internet Archive](https://archive.org/)）做下 Snapshot，**多重手段保留回忆**，我被自己制裁了😢。
 
@@ -65,7 +65,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 21 年折腾的新玩意好像不多，照旧耍着 Go、TypeScript、Kubernetes，“蜻蜓点水”般看了下 Prometheus。再想想看了啥技术相关的书，好像挺少有技术深度的，我看了很多和 DevOps、CloudNative 、工程化相关的书。打开自己本想专门用来 Reading 的“小平板子”，好像和上年没多大变化，电子书还是那几本，哈哈哈，吃灰了吃灰了~(*^_^*)：
 
 {% gallery %}
-![iPads 上的电子书](https://s4.ax1x.com/2021/12/31/T4aUhV.png)
+![iPads 上的电子书](https://s3.bmp.ovh/imgs/2022/01/49a8fa8966279726.png)
 {% endgallery %}
 
 如果说 21 年看过的印象最深刻的技术书是哪几本，那么应该就是[《Go 语言设计与实现》](https://draveness.me/golang/)和[《凤凰架构-构建可靠的大型分布式系统》](https://icyfenix.cn/)，《Go 语言设计与实现》作者的功底很强，膜了❤️，21 年我冒出了个想接触 Compile 技术的想法，就是因为这本书。
@@ -81,7 +81,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 离开学校前，微微整理了下那些年吹过的水，把 Speak 稍微整理了下，将之前的吹水站 [slide.shan333.cn](https://slides.shan333.cn) 迁移到了 React & Gastby 写的 [slides.shan333.cn](https://slides.shan333.cn) 上。
 
 {% gallery %}
-![那些年的 Slides](https://s4.ax1x.com/2022/01/01/T5AagU.jpg)
+![那些年的 Slides](https://s3.bmp.ovh/imgs/2022/01/2124060066153236.png)
 {% endgallery %}
 
 {% iframe https://slides.shan333.cn %}
@@ -89,7 +89,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 12 月份在 koukou 空间捞了手学校的照片，越来越好看了😲：
 
 {% gallery %}
-![学校风景](https://s4.ax1x.com/2021/12/31/T4wWOe.jpg)
+![学校风景](https://s3.bmp.ovh/imgs/2022/01/53711de03c44c65c.png)
 {% endgallery %}
 
 我还顺便拿抖音的剪映稍微理了个短视频，音视频技术 tql，真是“降维打击”，释放灵感：☁☁☁
@@ -132,7 +132,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 
 11 & 12 月有部分时间在和位 dalao 打，“真滴菜”：
 
-![Sniper Elite4](https://s4.ax1x.com/2022/01/01/T5yQHO.png)
+![Sniper Elite4](https://s3.bmp.ovh/imgs/2022/01/29f339be2d7a938f.png)
 
 ### 阅读-Reading
 
@@ -173,7 +173,7 @@ BTW，当初甩下的一个月至少一篇文章的 🚩，好像完成的还可
 - 21 年 10 月开始，我一个人开启了基本每周一场电影的模式（累计 10 场，人生目前累计 13 场？🏄），还挺有意思的，或许这就是传说中的成长了？相比之前，我有了更多的视角，我看懂了更多电影要描绘的故事，外加一些经历和看到或者听到过的故事，我可以更多的对个人的理解进行描述了。
 
 {% gallery %}
-![21 年的电影](https://s4.ax1x.com/2022/01/01/T5A3Hs.jpg)
+![21 年的电影](https://s3.bmp.ovh/imgs/2022/01/93b94a429cb2b4b4.jpg)
 {% endgallery %}
 
 - 2021年，听技术 Podcast（播客）没有那么多了，还是一如既往的关注着[捕蛇者说](https://pythonhunter.org/)，转战某推围观 dalao 了，深夜听喜马拉雅催眠。
