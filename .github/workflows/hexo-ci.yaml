@@ -51,18 +51,18 @@ jobs:
           hexo deploy
 
       # from https://github.com/yeshan333/rsync-deploy-action
-      - name: Push blog to tencentyun CVM
-        uses: yeshan333/rsync-deploy-action@v1.0.0
-        with:
-          ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
-          remote_server_ip: ${{ secrets.REMOTE_SERVER_IP }}
-          ssh_port: ${{ secrets.SSH_PORT }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source_path: ./.deploy_git/*
-          destination_path: ~/shan333.cn
-          rsync_args: --exclude="./.deploy_git/.git/*"
+      # - name: Push blog to tencentyun CVM
+      #   uses: yeshan333/rsync-deploy-action@v1.0.0
+      #   with:
+      #     ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
+      #     remote_server_ip: ${{ secrets.REMOTE_SERVER_IP }}
+      #     ssh_port: ${{ secrets.SSH_PORT }}
+      #     ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     source_path: ./.deploy_git/*
+      #     destination_path: ~/shan333.cn
+      #     rsync_args: --exclude="./.deploy_git/.git/*"
 
-      - name: Backup
+      - name: Release to Tecentyun Lighthouse Instance
         uses: yeshan333/rsync-deploy-action@v1.0.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
