@@ -10,15 +10,9 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: 文章头图 url 824x280
-thumbnail: 标题右边缩略图 url
-abstract: 'Welcome to my blog, enter password to read.'
-message: 'Welcome to my blog, enter password to read.'
 date: 2022-01-18 23:24:04
-tags:
-categories:
-keywords:
-password:
+tags: blog
+categories: blog
 ---
 
 其实没有谁都是容易的呀，笑容和善良的背后是什么？一片本身就浑浊的答案。
@@ -53,3 +47,5 @@ password:
 虽无言泪满面
 不要神的光环
 只要你的平凡
+
+<!-- more -->
