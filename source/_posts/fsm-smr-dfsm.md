@@ -165,3 +165,9 @@ FSM 很典型的一个应用就是用于编译器前端->词法分析器（Lexer
 ![复制状态机架构](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/Figure-1-Replicated-state-machine-architecture.png)
 
 每一个 Server 节点都会有一个状态机，这个状态机的输入来源为一份储存着命令序列的日志，对于相同的命令输入，每个节点状态机（确定有限自动机 DFA，Deterministic Finite Automata）的输出是确定的、相同的。
+
+## 参考
+
+- [复制状态机](https://knowledge-sharing.gitbooks.io/raft/content/chapter2.html)
+- [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine)
+- [使用 Golang 实现状态机](https://www.cnblogs.com/double12gzh/p/13621445.html)
