@@ -51,6 +51,12 @@ Tcp:
     0 resets sent
 ```
 
+**实践**：在性能测试场景，我们可能需要观察 TCP 连接的状态、连接数等，我们可能会需要如下命令配合 grep 等命令对数据库连接、Web Service 连接状态问题进行排查：
+
+```shell
+netstat -alnp
+```
+
 ## ss
 
 ss 的作用跟 netstat 很相似，但当服务器连接数非常多的时候，执行速度比 netstat [快很多](https://stackoverflow.com/a/11778337)，如果 `man netstat` 一下，netstat 的手册中也推荐使用 ss。
@@ -136,5 +142,19 @@ Address:        61.151.180.44#53
 Name:   shan333.cn
 Address: 111.230.58.139
 ```
+
+## telnet
+
+telnet 可用于判断 TCP 端口是否可通。
+
+```shell
+➜ telnet github.com 22
+Trying 20.205.243.166...
+Connected to github.com.
+Escape character is '^]'.
+SSH-2.0-babeld-4f04c79d
+```
+
+与 telnet 作用差不多的有 [netcat、nc](https://docs.oracle.com/cd/E56344_01/html/E54075/netcat-1.html)。
 
 
