@@ -134,7 +134,7 @@ curl 'http://localhost:9090/api/v1/query' \
 
 上述的函数的计算结果返回都为 instant vector。因此，我们可以得出这样的结论： range vector 作为这些以 “range vector” 为输入值的函数是有用的。
 
-除了上面的函数和 curls[^1]，还有更多关于 range vectors 的内容，我们将在另一篇博文中介绍。
+除了上面的函数和 curls[^1]，还有更多关于 range vectors 的内容，我们将在[另一篇博文](https://satyanash.net/software/2021/06/09/charting-range-vectors-prometheus.html)中介绍。
 
 ## 脚注
 
@@ -143,3 +143,6 @@ curl 'http://localhost:9090/api/v1/query' \
 [2] 单调递增 counter 的值永不减少；它要么增加要么保持不变。Prometheus 只允许一种 counter 减少的情况，即在目标重启期间。如果 counter 值低于之前记录的值，则 `rate` 和 `increase` 等 range vector 函数将假定目标重新启动并将整个值添加到它所知道的现有值。这也是为什么我们应该总是先 rate 后 sum，而不是先 sun 后 rate。[Rate then sum, never sum then rate](https://www.robustperception.io/rate-then-sum-never-sum-then-rate)
 
 [3] “有效（effectively）”是这里的关键词。`increase` 实际上也可以进行外推，因为所请求的持续时间可能没有在范围（range）的“开始”和“结束”处精确对齐的数据点。
+
+> 原文：https://satyanash.net/software/2021/01/04/understanding-prometheus-range-vectors.html
+> 作者：[Satyajeet Kanetkar](satyanash)
