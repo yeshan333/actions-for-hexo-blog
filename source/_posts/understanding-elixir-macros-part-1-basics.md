@@ -1,5 +1,5 @@
 ---
-title:  (译) Understanding Elixir Macros, Part 1 Basics
+title: (译) Understanding Elixir Macros, Part 1 Basics
 toc: true
 comments: true
 popular_posts: false
@@ -209,7 +209,7 @@ iex(7)> Code.eval_quoted(final_expr)
 
 ## Unquoting
 
-`unquote` 在这里出现了. 注意, 无论 quote 块 (`quote ... end`) 里有什么, 它都会变成 AST 片段. 这意味着我们不可以简单地将外部的变量注入到我们的 quote 里. 例如, 这样是不能达到效果的：
+`unquote` 在这里出现了. 注意, 无论 quote 块 (`quote ... end`) 里有什么, 它都会变成 AST 片段. 这意味着我们不可以简单地将外部的变量注入到我们的 quote 里. 例如, 这样是不能达到效果的:
 
 ```elixir
 iex(8)> quote do
@@ -258,7 +258,7 @@ iex(11)> Macro.to_string(final_expr)
 
 ## 例子: tracing expression
 
-理论结合实践, 一个简单例子, 我们将编写一个帮助我们调试代码的宏. 这个宏可以这样用：
+理论结合实践, 一个简单例子, 我们将编写一个帮助我们调试代码的宏. 这个宏可以这样用:
 
 ```elixir
 iex(1)> Tracer.trace(1 + 2)
@@ -310,7 +310,7 @@ end
 
 一旦我们拥有了字符串形式, 我们就可以生成并返回结果 AST 了, 这一步是在 `quote do … end` 结构中完成的. 它的结果是用来替代原始的 `Tracer.trace(…)` 调用的 quoted expression.
 
-让我们进一步观察这一部分：
+让我们进一步观察这一部分:
 
 如果你明白 `unquote` 的作用, 那么这个就很简单了. 实际上, 我们是在把 `expression_ast`（quoted `1+2`）代入到我们生成的片段（fragment）中, 将表达式的结果放入 `result` 变量. 然后我们使用某种格式来打印它们（借助Macro.to_string/1）, 最后返回结果.
 

@@ -19,7 +19,7 @@ keywords: "Elixir Macros"
 
 我们最需要重视的是展开阶段. 编译器在这个阶段调用了各种宏（以及其它代码生成结构）来生成最终的 AST.
 
-例如, 宏 `trace` 的典型用法是这样的：
+例如, 宏 `trace` 的典型用法是这样的:
 
 ```elixir
 defmodule MyModule do
@@ -37,7 +37,7 @@ end
 
 调用宏使得我们有机会修改代码的含义. 一个典型的宏会获取输入的 AST 并修改它, 在它周围添加一些代码.
 
-那就是我们使用宏 trace 所做的事情. 我们得到了一个 quoted expression（例如 `1+2`）, 然后返回了这个：
+那就是我们使用宏 trace 所做的事情. 我们得到了一个 quoted expression（例如 `1+2`）, 然后返回了这个:
 
 ```elixir
 result = 1 + 2
@@ -45,7 +45,7 @@ Tracer.print("1 + 2", result)
 result
 ```
 
-要在代码的任何地方调用宏（包括 shell 里）, 你都必须先调用 `require Tracer` 或 `import Tracer`. 为什么呢？因为宏有两个看似矛盾的性质：
+要在代码的任何地方调用宏（包括 shell 里）, 你都必须先调用 `require Tracer` 或 `import Tracer`. 为什么呢？因为宏有两个看似矛盾的性质:
 
 - 宏也是 Elixir 代码
 - 宏在在最终的字节码生成之前的展开阶段运行
@@ -57,7 +57,7 @@ Elixir 代码是如何在被生成之前运行的？它不能. 要调用一个�
 
 使用 `import` 也有相同效果, 只不过它还在词法上引入了所有的公共函数和宏, 使得我们可以用 `trace` 替代 `Tracer.trace`.
 
-由于宏也是函数, 而 Elixir 在调用函数时可以省略括号, 所以我们可以这样写：
+由于宏也是函数, 而 Elixir 在调用函数时可以省略括号, 所以我们可以这样写:
 
 ```elixir
 Tracer.trace 1+2
@@ -74,7 +74,7 @@ defmodule(MyModule, do:
 
 ## Hygiene
 
-在上一篇文章中我们提到, 宏默认是整洁（Hygiene）的. 意思就是宏引入的变量有其自己的私有作用域, 不会影响代码的其他部分. . 这就是我们能够在我们的 `trace` 宏中安全地引入 result 变量的原因：
+在上一篇文章中我们提到, 宏默认是整洁（Hygiene）的. 意思就是宏引入的变量有其自己的私有作用域, 不会影响代码的其他部分. . 这就是我们能够在我们的 `trace` 宏中安全地引入 result 变量的原因:
 
 ```elixir
 quote do
@@ -124,7 +124,7 @@ end
 
 如果你对 `GenServer` 很熟悉, 那么你知道一个 `call` 的结果必须是 `{:reply, response, state}` 的形式. 然而, 在上述代码中, 甚至没有提到 `state`. 那么我们是如何返回 `state` 的呢？这是因为 `defcall` 宏生成了一个隐藏的`state` 变量, 它之后将被 `reply` 宏明确使用.
 
-在上面两种情况中, 宏都必须创建一个不 hygienic 的变量, 而且必须在宏所引用的代码之外可见. 为达到这个目的, 可以使用 `var!` 结构. 下面是 `Plug`的 `get` 宏的简化版本：
+在上面两种情况中, 宏都必须创建一个不 hygienic 的变量, 而且必须在宏所引用的代码之外可见. 为达到这个目的, 可以使用 `var!` 结构. 下面是 `Plug`的 `get` 宏的简化版本:
 
 ```elixir
 defmacro get(route, body) do
@@ -142,7 +142,7 @@ end
 
 ## 宏参数
 
-你要记住, 宏本质上是在扩展阶段被导入的 Elixir 函数, 然后生成最终的 AST. 宏的特别之处在于它所接受的参数都是quoted 的. 这就是我们之所以能够调用：
+你要记住, 宏本质上是在扩展阶段被导入的 Elixir 函数, 然后生成最终的 AST. 宏的特别之处在于它所接受的参数都是quoted 的. 这就是我们之所以能够调用:
 
 ```elixir
 def my_fun do
@@ -193,14 +193,14 @@ iex(5)> quote do [1,2,3,4,5] end
 [1, 2, 3, 4, 5]
 ```
 
-对三元元组的引用（quoted）不会保留它的形状：
+对三元元组的引用（quoted）不会保留它的形状:
 
 ```elixir
 iex(6)> quote do {1,2,3} end
 {:{}, [], [1, 2, 3]}
 ```
 
-由于列表和二元元组在被引用时能保留结构, 所以关键词列表（[keywords list](https://hexdocs.pm/elixir/1.12/Keyword.html)）也可以：
+由于列表和二元元组在被引用时能保留结构, 所以关键词列表（[keywords list](https://hexdocs.pm/elixir/1.12/Keyword.html)）也可以:
 
 ```elixir
 iex(7)> quote do [a: 1, b: 2] end
@@ -275,7 +275,7 @@ defmodule MyRouter do
 end
 ```
 
-测试一下：
+测试一下:
 
 ```elixir
 MyRouter.match("GET", "/hello") |> IO.inspect
@@ -312,7 +312,7 @@ defmodule GenericCode do
 end
 ```
 
-因此, 使用 `use` 机制允许我们向调用者的上下文中注入一些代码. 就像是替代了这些：
+因此, 使用 `use` 机制允许我们向调用者的上下文中注入一些代码. 就像是替代了这些:
 
 ```elixir
 defmodule ClientCode do

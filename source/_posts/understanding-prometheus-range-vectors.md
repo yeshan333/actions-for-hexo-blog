@@ -1,5 +1,5 @@
 ---
-title: (译)理解 Prometheus 的范围向量 (Range Vector)
+title: (译) 理解 Prometheus 的范围向量 (Range Vector)
 toc: true
 comments: true
 popular_posts: false

@@ -1,5 +1,5 @@
 ---
-title: Understanding Elixir Macros, Part 3 - Getting into the AST
+title: (译) Understanding Elixir Macros, Part 3 - Getting into the AST
 toc: true
 comments: true
 popular_posts: false
@@ -17,7 +17,7 @@ keywords: "Elixir Macros"
 
 到目前为止, 你只看到了接受输入 AST 片段并将它们组合在一起的基础宏, 并在输入片段周围或之间添加了一些额外的样板代码. 由于我们不分析或解析输入的 AST, 这可能是最干净(或最不 hackiest)的宏编写风格, 这样的宏相当简单且容易理解.
 
-然而, 有时候我们需要解析输入的 AST 片段以获取某些特殊信息. 一个简单的例子是 `ExUnit` 的断言. 例如, 表达式`assert 1+1 == 2+2` 会出现这个错误：
+然而, 有时候我们需要解析输入的 AST 片段以获取某些特殊信息. 一个简单的例子是 `ExUnit` 的断言. 例如, 表达式`assert 1+1 == 2+2` 会出现这个错误:
 
 ```elixir
 Assertion with == failed
@@ -28,13 +28,13 @@ rhs:  2
 
 这个宏 `assert` 接收了整个表达式 `1+1 == 2+2`, 然后从中分出独立的表达式用来比较, 如果整个表达式返回 `false`, 则打印它们对应的结果. 所以, 宏的代码必须想办法将输入的 AST 分解为几个部分并分别计算子表达式.
 
-更多时候, 我们调用了更复杂的 AST 变换. 例如,  你可以借助 `ExActor` 这样写：
+更多时候, 我们调用了更复杂的 AST 变换. 例如,  你可以借助 `ExActor` 这样做:
 
 ```elixir
 defcast inc(x), state: state, do: new_state(state + x)
 ```
 
-它会被转换为大致如下的形式：
+它会被转换为大致如下的形
 
 ```elixir
 def inc(pid, x) do
@@ -48,7 +48,7 @@ end
 
 和 `assert` 一样, 宏 `defcast` 需要深入输入的 AST 片段, 并找出每个子片段（例如, 函数名, 每个参数）. 然后, `ExActor` 执行一个精巧的变换, 将各个部分重组成一个更加复杂的代码.
 
-今天, 我将想你展示构建这类宏的基础技术, 我也会在之后的文章中将变换做得更复杂. 但在此之前, 我要请你认真考虑一下：你的代码是否有有必要基于宏. 尽管宏十分强大, 但也有缺点.
+今天, 我将想你展示构建这类宏的基础技术, 我也会在之后的文章中将变换做得更复杂. 但在此之前, 我要请你认真考虑一下你的代码是否有有必要基于宏. 尽管宏十分强大, 但也有缺点.
 
 首先, 就像之前我们看到的那样, 比起那些普通的运行时抽象, 宏的代码会很快地变得非常多. 你可以依赖没有文档格式的AST 来快速完成许多嵌套的 quote/unquoted 调用, 以及奇怪的模式匹配.
 
@@ -71,7 +71,7 @@ iex(1)> quote do my_var end
 
 在这里, 第一个元素代表变量的名称；第二个元素是上下文关键字列表, 它包含了该 AST 片段的元数据（例如 imports 和 aliases）. 通常你不会对上下文数据感兴趣；第三个元素通常代表 quoted 发生的模块, 同时也用于确保 quoted 变量的 hygienic. 如果该元素为 `nil`, 则该标识符是不 hygienic 的.
 
-一个简单的表达式看起来包含了许多东西：
+一个简单的表达式看起来包含了许多东西:
 
 ```elixir
 iex(2)> quote do a+b end
@@ -79,7 +79,7 @@ iex(2)> quote do a+b end
  [{:a, [if_undefined: :apply], Elixir}, {:b, [if_undefined: :apply], Elixir}]}
 ```
 
-看起来可能很复杂, 但是如果我向你展示更高层次的模式, 就很容易理解了：
+看起来可能很复杂, 但是如果我向你展示更高层次的模式, 就很容易理解:
 
 ```elixir
 {:+, context, [ast_for_a, ast_for_b]}
@@ -87,7 +87,7 @@ iex(2)> quote do a+b end
 
 在我们的例子中, `ast_for_a` 和 `ast_fot_b` 遵循着你之前所看到的变量的形状（如 `{:a, [if_undefined: :apply], Elixir}`）. 一般, quoted 的参数可以是任意复杂的, 因为它们描述了每个参数的表达式. 事实上, AST 是一个简单 quoted expression 的深层结构, 就像我给你展示的那样.
 
-让我们看一个关于函数的调用例子：
+让我们看一个关于函数的调用例子:
 
 ```elixir
 iex(3)> quote do div(5,4) end
@@ -96,7 +96,7 @@ iex(3)> quote do div(5,4) end
 
 这类似于 quoted `+` 的操作, 我们知道 `+` 实际上是[一个函数](https://github.com/elixir-lang/elixir/blob/7e4fbe657dbf9c3e19e3d2bd6c17cc6d724b4710/lib/elixir/lib/kernel.ex#L1309). 事实上, 所有二进制运算符都会像函数调用一样被 quoted.
 
-最后, 让我们来看一个被 quoted 的函数定义：
+最后, 让我们来看一个被 quoted 的函数定义:
 
 ```elixir
 iex(4)> quote do def my_fun(arg1, arg2), do: :ok end
@@ -111,7 +111,7 @@ iex(4)> quote do def my_fun(arg1, arg2), do: :ok end
  ]}
 ```
 
-看起来有点吓人, 但可以只看重要的部分来简化它. 事实上, 这种深层结构相当于：
+看起来有点吓人, 但可以只看重要的部分来简化它. 事实上, 这种深层结构相当于:
 
 ```elixir
 {:def, context, [fun_call, [do: body]]}
@@ -125,7 +125,7 @@ iex(4)> quote do def my_fun(arg1, arg2), do: :ok end
 
 为了快速演示, 让我们编写一个简化版的 `assert` 宏. 这是一个有趣的宏, 因为它重新解释了比较操作符的含义. 通常, 当你写下 `a == b`时, 你会得到一个布尔结果. 但是, 当将此表达式给 `assert` 宏时, 如果表达式的计算结果为 `false`, 则会打印详细的输出.
 
-我将从简单的部分开始, 首先在宏里只支持 `==` 运算符. 可以知道, 我们调用 `assert expected == required` 时, 等同于调用 `assert(expect == required)`, 这意味着我们的宏接收到一个表示比较的引用片段. 让我们来探索这个比较的AST 结构：
+我将从简单的部分开始, 首先在宏里只支持 `==` 运算符. 可以知道, 我们调用 `assert expected == required` 时, 等同于调用 `assert(expect == required)`, 这意味着我们的宏接收到一个表示比较的引用片段. 让我们来探索这个比较的 AST 结果:
 
 ```elixir
 iex(1)> quote do 1 == 2 end
@@ -138,7 +138,7 @@ iex(2)> quote do a == b end
 
 所以我们的结构本质上是 `{:==, context, [quoted_lhs, quoted_rhs]}`. 如果你记住了前面章节中所演示的例子, 那么就不会感到意外, 因为我提到过二进制运算符是作为二个参数的函数被 quoted.
 
-知道了 AST 的形状, 实现这个宏就很简单了：
+知道了 AST 的形状, 实现这个宏就很简单:
 
 ```elixir
 defmodule Assertions do
@@ -166,7 +166,7 @@ end
 
 然后, 在 quoted 的代码中, 我们通过分别计算左边和右边重新解释 `==` 操作（第 4 行和第 5 行）, 然后是整个结果（第 7 行）. 最后, 如果结果为假, 我们打印详细信息（第 9-14 行）.
 
-来试一下：
+来试一下:
 
 ```elixir
 iex(1)> defmodule Assertions do ... end
@@ -182,7 +182,7 @@ false
 
 ## 将代码通用化
 
-将之前的代码用到其他的运算操作符并不困难：
+将之前的代码用到其他的运算操作符并不困难:
 
 ```elixir
 defmodule Assertions do
