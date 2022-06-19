@@ -172,7 +172,7 @@ my_macro arg1, arg2 do ... end
 my_macro(arg1, arg2, do: ...)
 ```
 
-这些只不过是 Elixir 中的语法糖. 解释器将 `do … end` 转换成了 `{:do, …}`.
+这些只不过是 Elixir 中的语法糖. 解释器将 `do ... end` 转换成了 `{:do, ...}`.
 
 现在, 我只提到了参数是被引用（quoted）的. 然而, 对于许多常量（原子, 数字, 字符串）, 引用（quoted）形式和输入值完全一样. 此外, 二元元组和列表会在被引用（quoted）时保持它们的结构. 这意味着 `quote(do: {a, b})` 将会返回一个二元元组, 它的两个值都是被引用（quoted）的.
 
@@ -226,7 +226,7 @@ defmacro get(route, body) do
 end
 ```
 
-记住, `do … end` 和 `do: …` 是一样的, 所以当我们调用 `get route do … end` 时, 我们实际上是在调用 `get(route, do: …)` 记住宏参数是 quoted 的, 但也要知道 quoted 的关键字列表保持它们的形状, 可以使用 `body[:do]`获取宏中引用的主体:
+记住, `do ... end` 和 `do: ...` 是一样的, 所以当我们调用 `get route do ... end` 时, 我们实际上是在调用 `get(route, do: ...)` 记住宏参数是 quoted 的, 但也要知道 quoted 的关键字列表保持它们的形状, 可以使用 `body[:do]`获取宏中引用的主体:
 
 ```elixir
 defmacro get(route, body) do
