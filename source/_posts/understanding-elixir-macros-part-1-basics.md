@@ -1,5 +1,5 @@
 ---
-title:  (译) understanding Elixir Macros, Part 1 Basics
+title:  (译) Understanding Elixir Macros, Part 1 Basics
 toc: true
 comments: true
 popular_posts: false
