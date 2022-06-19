@@ -11,6 +11,15 @@ categories: Elixir
 keywords: "Elixir Macros"
 ---
 
+> Elixir Macros 系列文章译文
+> - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
+> - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
+> - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
+> - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
+> 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
+
 这是 Elixir 中的宏系列的第二篇. 上一次我们讨论了编译过程和 Elixir AST, 最后讲了一个基本的宏的例子 trace. 今天, 我们会更详细地讲解宏的机制.
 
 可能有一些内容会和上一篇重复, 但我认为这对于理解运作原理和 AST 的生成很有帮助. 掌握了这些以后, 你对于自己的宏代码就更有信心了. 基础很重要, 因为随着更多地用到宏, 代码可能会由许多的 `quote/unquote` 结构组成.
@@ -362,3 +371,5 @@ end
 ## 附注
 
 - mixin: Mixin 即 Mix-in, 常被译为 “混入”, 是一种编程模式, 在 Python 等面向对象语言中, 通常它是实现了某种功能单元的类, 用于被其他子类继承, 将功能组合到子类中.
+
+> 原文: https://www.theerlangelist.com/article/macros_2

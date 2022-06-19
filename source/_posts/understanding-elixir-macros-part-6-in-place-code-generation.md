@@ -11,6 +11,15 @@ categories: Elixir
 keywords: "Elixir Macros"
 ---
 
+> Elixir Macros 系列文章译文
+> - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
+> - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
+> - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
+> - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
+> 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
+
 这是宏系列文章的最后一篇. 在开始之前, 我想提一下 Björn Rochel, 他已经将他的 [Apex](https://github.com/BjRo/apex) 库中的 `deftraceable` 宏改进了. 因为他发现系列文章中 `deftraceable` 的版本不能正确处理默认参数`（arg \ def_value)`, 于是实现了一个修复 [fix](https://github.com/BjRo/apex/blob/ca3cfbcf4473a4314d8dfa7f4bed610be652a03b/lib/apex/awesome_def.ex#L57-L59).
 
 这次, 让我们结束这个宏的故事. 今天的文章知识点可能是整个系列中涉及最广的, 我们将讨论原地代码生成的相关技术, 以及它可能对宏的影响.
@@ -528,3 +537,5 @@ end
 本系列绝不可能涵盖方方面面和所有的细节. 如果你想了解更多, [quote/2 special form](https://hexdocs.pm/elixir/Kernel.SpecialForms.html#quote/2) 的文档是一个不错的地方. 您还可以在 [Macro](https://hexdocs.pm/elixir/Macro.html) 和 [Code](https://hexdocs.pm/elixir/Code.html) 模块中找到一些有用的帮助程序.
 
 Happy meta-programming!
+
+> 原文: https://www.theerlangelist.com/article/macros_6

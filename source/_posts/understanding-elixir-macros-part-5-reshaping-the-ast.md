@@ -11,6 +11,15 @@ categories: Elixir
 keywords: "Elixir Macros"
 ---
 
+> Elixir Macros 系列文章译文
+> - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
+> - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
+> - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
+> - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
+> 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
+
 上次我介绍了一个基本版本的可追溯宏 `deftraceable`, 它允许我们编写可跟踪的函数. 这个宏的最终版本还有一些遗留的问题, 今天我们将解决其中一个 — 参数模式匹配.
 
 从今天的练习应该认识到, 我们必须仔细考虑关于宏可能接收到的输入的所有假设情况.
@@ -239,4 +248,6 @@ iex(line 5) Elixir.Test.div(5,0) = :error
 正如你所看到的那样, 可以进入 AST, 分解它, 并在其中散布一些自定义的注入代码, 这并不算很复杂. 缺点是, 编写的宏的代码变得越来越复杂, 并且更难分析.
 
 今天的话题到此结束. 下一次, 我将讨论原地代码生成技术.
+
+> 原文: https://www.theerlangelist.com/article/macros_5
 

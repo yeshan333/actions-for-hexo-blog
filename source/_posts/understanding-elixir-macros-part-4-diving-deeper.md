@@ -11,6 +11,15 @@ categories: Elixir
 keywords: "Elixir Macros"
 ---
 
+> Elixir Macros 系列文章译文
+> - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
+> - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
+> - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
+> - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
+> 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
+
 在前一篇文章中, 我向你展示了分析输入 AST 并对其进行处理的一些基本方法. 今天我们将研究一些更复杂的 AST 转换. 这将重提已经解释过的技术. 这样做的目的是为了表明深入研究 AST 并不是很难的, 尽管最终的结果代码很容易变得相当复杂, 而且有点黑科技（hacky).
 
 ## 追踪函数调用
@@ -307,4 +316,6 @@ iex(line 7) Test.my_fun(10,5) = 2.0
 ```
 
 这个练习的主要目的是说明可以从输入 AST 中推断出一些东西. 在这个例子中, 我们设法检测和处理函数 guards. 显然, 因为它依赖于 AST 的内部结构, 代码变得更加复杂了. 在这种情况下, 代码依旧比较简单, 但你将在后面的文章中看到我是如何解决 `deftraceable` 宏剩余的问题的, 事情可能很快变得杂乱起来了.
+
+> 原文: https://www.theerlangelist.com/article/macros_4
 

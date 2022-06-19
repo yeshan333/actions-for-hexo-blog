@@ -11,6 +11,15 @@ categories: Elixir
 keywords: "Elixir Macros"
 ---
 
+> Elixir Macros 系列文章译文
+> - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
+> - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
+> - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
+> - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
+> 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
+
 这是讨论宏 (Macros) 微系列文章的第一篇. 我原本计划在我即将出版的[《Elixir in Action》](https://book.douban.com/subject/25897187/)一书中讨论这个主题, 但最终决定不这么做, 因为这个主题不符合这本书的主题, 这本书更关注底层 VM 和 OTP 的关键部分.
 
 就我个人而言, 我觉得宏的主题非常有趣, 在本系列文章中, 我将试图解释它们是如何工作的, 提供一些关于如何编写宏的基本技巧和建议. 虽然我确信编写宏不是很难, 但与普通的 Elixir 代码相比, 它确实需要更高视角的关注. 因此, 我认为这了解 Elixir 编译器的一些内部细节是非常有帮助的. 了解事情在幕后是如何运行之后, 就可以更容易地理解元编程代码.
@@ -384,3 +393,5 @@ result
 
 - [codepoints](https://en.wikipedia.org/wiki/Code_point): 通常是一个数字, 用于表示 Unicode 字符.
 - [Terms](https://www.erlang.org/doc/reference_manual/data_types.html#terms): 任何数据类型中的一段数据都被称为 term.
+
+> 原文：https://www.theerlangelist.com/article/macros_1
