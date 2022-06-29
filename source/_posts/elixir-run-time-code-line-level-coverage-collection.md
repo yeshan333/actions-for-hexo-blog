@@ -480,7 +480,7 @@ iex(explore_ast_app@127.0.0.1)8> Enum.at(Map.get(result, :files), 3)
 
 随着 Elixir 微服务系统规模的不断扩大, 前一节所展现的覆盖率收集手段需要进一步的演进. 参考 [Prometheus Pull-Base](https://prometheus.io/docs/introduction/overview/#architecture) 的设计, 总体设计（Pull & Push 模式结合）如下:
 
-![coverage-arch](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/java_bytecode_tecs.jpg)
+![coverage-arch](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/architecture.jpg)
 
 我们基于 [ex_integration_coveralls](https://github.com/yeshan333/ex_integration_coveralls) 做拓展, 在 Elixir Application 启动后, 拉起一个 http worker 将代码覆盖率数据实时暴露出去, 由 Coverage Push Gateway 负责定时拉取覆盖率数据（Gateway 可以是一个 OTP Application, ）, 在集成/系统测试系统告知测试结束后, Gateway 将覆盖率 push 给 Cover Center（覆盖率中心）进行代码覆盖率展示.
 
