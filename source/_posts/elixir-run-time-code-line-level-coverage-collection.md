@@ -12,11 +12,12 @@ keywords: "elixir-run-time-code-line-level-coverage-collection"
 ---
 
 ## 1. 浅谈代码覆盖率
+
 作为 SET 和 SWE, 我们经常需要编写单元测试或集成测试用例来验证系统/应用的正确性, 但同时我们也常会质疑我们的测试是否充分了. 这时测试覆盖率是可以辅助用来衡量我们测试充分程度的一种手段, 增强发布成功率与信心, 同时给了我们更多可思考的视角. 值的注意的是代码覆盖率高不能说明代码质量高, 但是反过来看, 代码覆盖率低, 代码质量不会高到哪里去.
 
 大部分的编程语言都自带了单元测试覆盖率的收集能力, Elixir 也同样如此, 官方提供的 [mix 构建工具](https://hexdocs.pm/mix/1.13.4/Mix.Tasks.Test.html#module-coverage)自带了覆盖率的收集能力,  但目前只适用于离线（offline）系统, 对于运行时系统, 并不适用. 本文将会基于 Erlang 的 cover 模块, 给出一个 Elixir 运行时系统的解决方案. 既然 cover 是 Erlang 的内置模块, 但为什么它也同样适用于 Elixir, 我们将会在后续的环节中揭开它神秘的面纱. 在开始之前, 让我们先看下开源社区进行运行时系统代码覆盖率采集的两种主流方式（这里我们看下语言社区生态庞大的 Java 的字节码插桩方式）:
 
-![java_bytecode_tecs](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/java_bytecode_tecs.jpg)
+![java_bytecode_tecs](https://s1.ax1x.com/2022/07/10/jsDAxJ.jpg)
 
 接下来让我们关注一下本文的 Elixir 运行时覆盖率收集的核心 - cover 模块.
 
@@ -38,7 +39,7 @@ cover 是 Erlang 内置工具集（[tools set](https://www.erlang.org/doc/apps/t
 
 在进一步了解 cover 实现细节之前, 我们有必要先了解下 Elixir 源码编译后的产物 BEAM 文件的格式. Elixir （.ex 文件）编译后的产物与 Erlang （.erl 文件）一样, 都是一个二进制分块文件（binary chunked file）, 它被划分为了多个 section, 用于存储程序运行时用到的信息（如虚拟机操作指令）. Erlang/Elixir 中, 每一个模块都会有一个对应的 BEAM 文件. BEAM 文件大致的结构如下图:
 
-![BEAM FILE FORMAT](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/beamfile-format.jpg)
+![BEAM FILE FORMAT](https://s1.ax1x.com/2022/07/10/jsDua6.jpg)
 
 让我们来通过一个 Elixir mini demo 项目查看下 beam 文件大概内容:
 
@@ -206,7 +207,7 @@ iex(3)> result = :beam_lib.chunks(String.to_charlist(beam_file_path), [:abstract
 
 上述 AST 结构简单易读, 我们可以很简单的将其与模块编译前的源代码（`lib/explore_ast_app.ex`）对应起来, 虽然该 AST 结构是最终的 Erlang AST, 被 Erlang 编译器添加了部分额外的信息, 但不影响阅读:
 
-![ex_source_ast_code_mapper](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/ex_source_ast_code_mapper.jpg)
+![ex_source_ast_code_mapper](https://s1.ax1x.com/2022/07/10/jsDJsA.jpg)
 
 元组（tuple）中的第二个元素一般表示所处的源码行数. 你可以通过官方文档详细了解下 Erlang 的 [Abstract Format](https://www.erlang.org/doc/apps/erts/absform.html), 动手多观察几个 BEAM 文件的 Erlang AST 的结构, 便可了熟于心. 值得注意的是 Abstract Code 在 [OTP 20 之前](https://github.com/erlang/otp/pull/1367)是存放在 BEAM 文件的 Abst Chunk 中的.
 
@@ -218,7 +219,7 @@ iex(3)> result = :beam_lib.chunks(String.to_charlist(beam_file_path), [:abstract
 
 了解了 BEAM File Format（BEAM 文件格式）之后, 我们还有必要了解下 Elixir 代码的编译过程, 有助于我们更好的理解 cover. Elixir 源码的编译为 BEAM 文件的过程可能和你想象的不太一样, 不直接从 Elixir 的 AST, 经过编译器后端的处理后成为可执行的 BEAM Code, 中间还有一个过程, 如下图所示:
 
-![Elixir-Compilation](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/Elixir-Compilation.jpg)
+![Elixir-Compilation](https://s1.ax1x.com/2022/07/10/jsDoQJ.jpg)
 
 上图的过程可以描述为:
 - Step 1、Elixir 源代码会被自定义的词法分析器（[elixir_tokenizer](https://github.com/elixir-lang/elixir/blob/main/lib/elixir/src/elixir_tokenizer.erl)）和 [yacc](https://www.erlang.org/doc/man/yecc.html) 进行语法分析生成初始版的 Elixir AST, AST 以 Elixir Terms 的形式表示；如果你对 Elixir 的 AST 感兴趣, 可以关注下这个项目 [arjan/ast_ninja](https://github.com/arjan/ast_ninja).
@@ -230,7 +231,7 @@ iex(3)> result = :beam_lib.chunks(String.to_charlist(beam_file_path), [:abstract
 
 现在该来到正餐环节了, 让我们来看看 cover 是如何进行插桩和覆盖率收集的, 使用 cover 完成代码覆盖率收集, 必须要知道三把屠龙利剑:
 
-![swords](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/swords.jpg)
+![swords](https://s1.ax1x.com/2022/07/10/jsDaIf.jpg)
 
 - `cover:start`: 用于创建 cover 覆盖率收集进程, 它会完成存储覆盖率数据的相关 ets 表的创建, [cover.erl#L159](https://github.com/erlang/otp/blob/2f0a547f78363a2504405e82e3ab3ea35b9e6a88/lib/tools/src/cover.erl#L159) & [cover.erl#L632](https://github.com/erlang/otp/blob/2f0a547f78363a2504405e82e3ab3ea35b9e6a88/lib/tools/src/cover.erl#L632), 还可以启动远程（remote） Erlang 节点的 cover 进程.
 - `cover:compile_beam`: 进行插桩, cover 会读取 BEAM 文件的 abstract_code 的内容, 即 Erlang AST, 关键代码在 [cover.erl#L1541](https://github.com/erlang/otp/blob/2f0a547f78363a2504405e82e3ab3ea35b9e6a88/lib/tools/src/cover.erl#L1541), 然后对 Erlang AST From 进行 transform 和 munge, 它会调用 [bump_call](https://github.com/erlang/otp/blob/2f0a547f78363a2504405e82e3ab3ea35b9e6a88/lib/tools/src/cover.erl#L1938), 在每一个可执行行后插入如下 abstract_code:
@@ -472,7 +473,7 @@ iex(explore_ast_app@127.0.0.1)8> Enum.at(Map.get(result, :files), 3)
 
 基于 [post_cov_stats_to_ud_ci](https://github.com/yeshan333/ex_integration_coveralls/blob/39e24bc5c9e76a625cddfa4039d386db1429ba41/lib/ex_integration_coveralls.ex#L93) 接口，可以进一步对接内部或外部的类似于 [Codecov](https://about.codecov.io/) 的覆盖率系统.
 
-![coverage_system](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/coverage_system.jpg)
+![coverage_system](https://s1.ax1x.com/2022/07/10/jsDsMj.jpg)
 
 基于此, 我们可以实现在 Elixir Application 不停止运行的情况下, 配合大型（集成 & 系统）测试能力, 完成代码覆盖率的收集.
 
@@ -480,9 +481,10 @@ iex(explore_ast_app@127.0.0.1)8> Enum.at(Map.get(result, :files), 3)
 
 随着 Elixir 微服务系统规模的不断扩大, 前一节所展现的覆盖率收集手段需要进一步的演进. 参考 [Prometheus Pull-Base](https://prometheus.io/docs/introduction/overview/#architecture) 的设计, 总体设计（Pull & Push 模式结合）如下:
 
-![coverage-arch](https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/elixir-run-time-coverage/architecture.jpg)
+![coverage-arch](https://s1.ax1x.com/2022/07/10/jsDyss.jpg)
 
-我们基于 [ex_integration_coveralls](https://github.com/yeshan333/ex_integration_coveralls) 做拓展, 在 Elixir Application 启动后, 拉起一个 http worker 将代码覆盖率数据实时暴露出去, 由 Coverage Push Gateway 负责定时拉取覆盖率数据（Gateway 可以是一个 OTP Application, ）, 在集成/系统测试系统告知测试结束后, Gateway 将覆盖率 push 给 Cover Center（覆盖率中心）进行代码覆盖率展示.
+我们基于 [ex_integration_coveralls](https://github.com/yeshan333/ex_integration_coveralls) 做拓展, 在 Elixir Application 启动后, 拉起一个 http worker 将代码覆盖率数据实时暴露出去, 方便与异构系统的通信. 由 Coverage Push Gateway 负责定时拉取覆盖率数据（Gateway 可以是一个 OTP Application, 这让可以直接让
+`ex_integration_coveralls` 拉起 [GenServer Worker](https://github.com/yeshan333/ex_integration_coveralls/blob/main/lib/ex_integration_coveralls/cov_stats_worker.ex) 在分布式 OTP 系统进行交互集成）, 在集成/系统测试系统告知测试结束后, Gateway 将覆盖率 push 给 Cover Center（覆盖率中心）进行代码覆盖率展示.
 
 End（long way to go）.
 
@@ -495,3 +497,4 @@ End（long way to go）.
 - [excoveralls](https://github.com/parroty/excoveralls)
 - [BeamFile - A peek into the BEAM file](https://github.com/hrzndhrn/beam_file)
 - [https://github.com/KronicDeth/intellij-elixir#beam-files](https://github.com/KronicDeth/intellij-elixir#beam-files)
+
