@@ -7,4 +7,4 @@ keywords: "blog begin"
 
 # 新的开始，新的路线
 
-<fancybox>![logo](https://img.vim-cn.com/bb/db444be0b7fda59c69d5c64167f9668b0b66bd.png)</fancybox>
+<fancybox>![logo](https://s1.ax1x.com/2022/10/09/xJ7yMF.png)</fancybox>
