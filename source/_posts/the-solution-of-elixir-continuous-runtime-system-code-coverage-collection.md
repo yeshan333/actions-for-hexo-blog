@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://res.cloudinary.com/practicaldev/image/fetch/s--Q6M7xD6i--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/x1b2td0z0mg6hrq2ljy5.png
+headimg: https://s1.ax1x.com/2022/11/04/xO9340.png
 date: 2022-08-31 22:43:10
 tags:
   - Elixir
