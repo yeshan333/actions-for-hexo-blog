@@ -18,9 +18,9 @@ jobs:
 
       # from: https://github.com/actions/setup-node
       - name: Setup Node.js 12.x
-        uses: actions/setup-node@master
+        uses: actions/setup-node@main
         with:
-          node-version: "12.x"
+          node-version: "18.4.0"
 
       - name: Setup Hexo Blog Dependencies
         run: |
