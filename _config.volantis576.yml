@@ -24,7 +24,7 @@ cover:
       url: /archives/
     - name: 关于我
       icon:
-      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
+      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f0cf.svg
       url: about/
     - name: 友链
       icon: #
@@ -390,9 +390,10 @@ comments:
     imageUploader:
       # 以兰空图床为例，下列填写内容为：
       # url: https://xxxxxx/api/v1/upload
+      # https://7bu.top/api/upload
       # token: Bearer xxxxxxxxxxxxxx
       # resp: data.links.url
-      api: https://7bu.top/api/upload # 图床地址 
+      api: # 图床地址 
       token: # 图床验证
       resp:  # 图片地址返回值的字段
     pageview: false # 浏览量统计

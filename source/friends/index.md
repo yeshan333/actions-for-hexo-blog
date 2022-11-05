@@ -15,9 +15,7 @@ author: yeshan333
 
 <!-- more -->
 
-{% raw %}
-<a href="https://www.foreverblog.cn/"><img src="https://s4.ax1x.com/2022/01/16/7NNFYt.png" width="100%"></a>
-{% endraw %}
+[![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
 
 {% span center logo cyan, 友链🔗随缘添加哦 %}
 
