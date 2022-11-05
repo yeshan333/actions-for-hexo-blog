@@ -239,16 +239,16 @@ article:
 comments:
   title: <i class='fa-solid fa-comments'></i> 评论
   subtitle:
-  service: waline
+  service: artalk
   # 可选评论系统 #
 
   # artalk
   # https://artalk.js.org/
   # https://github.com/ArtalkJS/Artalk
   artalk:
-    js: https://yours-artalk-domain/dist/Artalk.js   # or https://unpkg.com/artalk@2.2.8/dist/Artalk.js
-    css: https://yours-artalk-domain/dist/Artalk.css # or https://unpkg.com/artalk@2.2.8/dist/Artalk.css
-    server: https://yours-artalk-domain    # 修改为自建的后端服务地址
+    js: https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.js
+    css: https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css
+    server: http://1.12.42.92:2333/api    # 修改为自建的后端服务地址
     path:  # 全局评论地址
     placeholder: # 评论占位
     # artalk 有三类图片：1.上传至服务端 2.上传至服务端后利用upgit上传至图床 3.前端上传至图床（本配置为此类）
@@ -621,7 +621,7 @@ sidebar:
 ############################### Site Footer ############################### > start
 site_footer:
   # layout of footer: [aplayer, social, license, info, copyright]
-  layout: [aplayer, social, license, info, copyright, beian]
+  layout: [aplayer, social, license, info, analytics, copyright, beian]
   social:
     - icon: fas fa-envelope
       url: mailto:1329441308@qq.com
@@ -635,12 +635,20 @@ site_footer:
       url: https://yeshan333.github.io/rss2.xml
   analytics: >
     <span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
-    <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   copyright: '[Copyright © 2018-2022 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
   beian: '[桂ICP备19000444号](https://beian.miit.gov.cn/)'
 ############################### Site Footer ############################### > end
+
+############################### Analytics ############################### > start
+analytics:
+  busuanzi: volantis-static/libs/busuanzi/js/busuanzi.pure.mini.js #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
+  leancloud: # 请使用自己的 id & key 以防止数据丢失
+    app_id: # u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI
+    app_key: # jfHtEKVE24j0IVCGHbvuFClp
+    custom_api_server: # 国际版一般不需要写，除非自定义了 API Server
+############################### Analytics ############################### > end
 
 ############################### Color Scheme ############################### > start
 # Accessibility: 背景色和前景色要有足够的对比度 https://web.dev/color-contrast/
