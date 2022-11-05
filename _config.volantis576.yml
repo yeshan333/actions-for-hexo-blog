@@ -1,3 +1,5 @@
+tencent_aegis_id: YrvKLIbY6p854Lqnb4
+
 pages:
   # 友链页面配置
   friends:
@@ -621,7 +623,7 @@ sidebar:
 ############################### Site Footer ############################### > start
 site_footer:
   # layout of footer: [aplayer, social, license, info, copyright]
-  layout: [aplayer, social, license, info, analytics, copyright, beian]
+  layout: [aplayer, social, license, info, copyright, beian]
   social:
     - icon: fas fa-envelope
       url: mailto:1329441308@qq.com
@@ -633,8 +635,6 @@ site_footer:
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     - icon: fas fa-rss
       url: https://yeshan333.github.io/rss2.xml
-  analytics: >
-    <span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
   copyright: '[Copyright © 2018-2022 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
@@ -771,6 +771,7 @@ rightmenus:
     - menus.link
     - hr
     - menus.darkMode
+    - hr
     - plugins.articlePage
     - music
   ############################
@@ -838,59 +839,13 @@ rightmenus:
   # 右键自定义菜单区域
   menus:
     link:
-      - {id: 'help', name: '常见问题', icon: 'fa-solid fa-question', link: 'https://volantis.js.org/faqs/', group: 'link'}
-      - {id: 'examples', name: '示例博客', icon: 'fa-solid fa-rss', link: 'https://volantis.js.org/examples/', group: 'link'}
-      - {id: 'contributors', name: '加入社区', icon: 'fa-solid fa-fan', link: 'https://volantis.js.org/contributors/', group: 'link'}
+      - {id: 'google_search', name: 'Google', icon: 'fa-solid fa-question', link: 'https://google.com', group: 'link'}
+      - {id: 'slides_share', name: 'Slides', icon: 'fab fa-slideshare', link: 'https://slides.shan333.cn', group: 'link'}
       - hr
-      - {id: 'source_docs', name: '本站源码', icon: 'fa-solid fa-code-branch', link: 'https://github.com/volantis-x/volantis-docs/', group: 'link'}
-      - {id: 'source_theme', name: '主题源码', icon: 'fa-solid fa-code-branch', link: 'https://github.com/volantis-x/hexo-theme-volantis/', group: 'link'}
+      - {id: 'github_yeshan333', name: 'GitHub', icon: 'fa-solid fa-code-branch', link: 'https://github.com/yeshan333', group: 'link'}
+      - {id: 'shan333_site', name: 'shan333.cn', icon: 'fa-solid fa-code-branch', link: 'https://shan333.cn', group: 'link'}
     darkMode:
       - {id: 'darkMode', name: '暗黑模式', icon: 'fa-solid fa-moon', event: 'volantis.dark.toggle()', group: 'darkMode'}
-###
-
-# 自定义右键菜单
-rightmenu:
-  enable: false
-  faicon: fa              # 公共图标类型 fa fal fa-solid fa-duotone
-  # hr: 分割线, music: 音乐控制器
-  layout: [home, hr, help, examples, contributors, hr, source_docs, source_theme, hr, print, darkmode, reading, music]
-  ### 可选功能项 ###
-  print:                  # 只有文章页才允许自定义打印
-    name: 打印页面
-    icon: fa fa-print
-  darkmode:        # 需开启 plugins.darkmodejs
-    name: 暗黑模式
-    icon: fa fa-moon
-  reading:
-    name: 阅读模式
-    icon: fa fa-book-open
-  customPicUrl:    # 右键的图片复制：只有 Chrome 支持，且只支持 PNG 格式的图片。
-    enable: false  # 如果使用了对象存储且开启了自适应 Webp，那么可以提供额外的链接用以替换图片的访问地址
-    old: #https://static.inkss.cn/img/article/
-    new: #https://cdn.jsdelivr.net/gh/inkss/inkss-cdn@master/img/article/
-  music:           # 当设定全局音乐播放器时，是否一直显示音乐控制菜单。false：仅当音乐播放时启用
-    alwaysShow: true
-  ### 自定义菜单 ###
-  help:
-    name: 常见问题
-    icon: fa fa-question
-    url: https://volantis.js.org/faqs/
-  examples:
-    name: 示例博客
-    icon: fa fa-rss
-    url: https://volantis.js.org/examples/
-  contributors:
-    name: 加入社区
-    icon: fa fa-fan fa-spin
-    url: https://volantis.js.org/contributors/
-  source_docs:
-    name: 本站源码
-    icon: fa fa-code-branch
-    url: https://github.com/volantis-x/volantis-docs/
-  source_theme:
-    name: 主题源码
-    icon: fa fa-code-branch
-    url: https://github.com/volantis-x/hexo-theme-volantis/
 ############################### Rightmenu ############################### > end
 
 ############################### Plugins ############################### > start
