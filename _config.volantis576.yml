@@ -425,21 +425,23 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+      avatar: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/blog.avatar.jpg
       shape: rectangle # circle, rectangle
       url: /about/
       title:
       subtitle:
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
-        - icon: fa-solid fa-rss
-          url: /atom.xml
-        - icon: fa-solid fa-envelope
-          url: mailto:me@xxx.com
+        - icon: fas fa-envelope
+          url: mailto:1329441308@qq.com
         - icon: fab fa-github
-          url: https://github.com/volantis-x/
-        - icon: fa-solid fa-headphones-alt
-          url: /
+          url: https://github.com/yeshan333?tab=repositories
+        - icon: fas fa-music
+          url: https://music.163.com/#/my/m/music/playlist?id=2617691792
+        - icon: fab fa-zhihu
+          url: https://www.zhihu.com/people/si-kong-ji-54/activities
+        - icon: fas fa-rss
+          url: https://yeshan333.github.io/rss2.xml
     # ---------------------------------------
     # toc widget (valid only in articles)
     toc:
@@ -466,7 +468,7 @@ sidebar:
       header:
         icon: fa-solid fa-folder-open
         title: 文章分类
-        url: /blog/categories/
+        url: /categories/
     # ---------------------------------------
     # tagcloud widget
     tagcloud:
@@ -475,7 +477,7 @@ sidebar:
       header:
         icon: fa-solid fa-tags
         title: 热门标签
-        url: /blog/tags/
+        url: /tags/
       min_font: 14
       max_font: 24
       color: true
@@ -488,8 +490,8 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       height: # Automatic height if not set
       images:
-        - https://s1.ax1x.com/2022/11/05/xOM0Vx.jpg
-        - https://s1.ax1x.com/2022/11/05/xOMBa6.jpg
+        - https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/qq_qrcode.jpg
+        - https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/wechat_qrcode.png
 
     # ---------------------------------------
     # webinfo widget
@@ -630,6 +632,9 @@ site_footer:
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     - icon: fas fa-rss
       url: https://yeshan333.github.io/rss2.xml
+  analytics: >
+    <span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
+    <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   copyright: '[Copyright © 2018-2022 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
