@@ -3,23 +3,23 @@ site_friends:
   description: # 分组描述
   items:
   - title: 雨帆
-    avatar: https://img.vim-cn.com/13/a200df1e771666c7b4982ca5293c505640242a.png #https://cat.yufan.me/asserts/spectre/images/avatar.jpg
-    screenshot: https://img.vim-cn.com/13/a200df1e771666c7b4982ca5293c505640242a.png
+    avatar: https://pic1.imgdb.cn/item/6367b24216f2c2beb19090d1.jpg
+    screenshot: https://pic1.imgdb.cn/item/6367b25916f2c2beb190f63e.jpg
     url: https://yufan.me/
     description:
       - Java
       - C#
   - title: xaoxuu
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+    avatar: https://pic1.imgdb.cn/item/6367b5f116f2c2beb19b4ef6.jpg
     url: https://xaoxuu.com
-    screenshot: https://7.dusays.com/2021/03/29/c8e319f62587d.png
+    screenshot: https://pic1.imgdb.cn/item/6367b5f116f2c2beb19b4ef6.jpg
     description:
       - volantis作者
       - IOS
   - title: Mashiro
     avatar: https://view.moezx.cc/images/2018/03/27/avatar.th.jpg
     url: https://2heng.xin/
-    screenshot: https://7.dusays.com/2021/03/29/0c42d2fd0434b.png
+    screenshot: https://view.moezx.cc/images/2018/03/27/avatar.th.jpg
     description:
       - Web前端
   - title: TRHX
@@ -30,38 +30,38 @@ site_friends:
       - 数据采集、逆向安全
   - title: 嗜血星空earth
     avatar: https://sxxkearth.github.io/img/avatar.svg
-    screenshot: https://7.dusays.com/2021/03/29/ff38fb2fbb1be.png
+    screenshot: https://sxxkearth.github.io/img/avatar.svg
     url: https://sxxkearth.github.io/
     description:
       - BIM学习者
   - title: Librarius's Blog
     avatar: https://gravatar.loli.net/avatar/f450e1597958dfb8b1eb52b4bb3d5c80?d=mp&v=1.3.6
-    screenshot: https://7.dusays.com/2021/03/29/f651bfddd4472.png
+    screenshot: https://gravatar.loli.net/avatar/f450e1597958dfb8b1eb52b4bb3d5c80?d=mp&v=1.3.6
     url: https://lloyar.github.io/
     description:
       - C#
       - HLSL
   - title: hojun
-    avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
-    screenshot: https://7.dusays.com/2021/03/29/a67abbe137836.png
+    avatar: https://pic1.imgdb.cn/item/6367b6ac16f2c2beb19c3f76.jpg
+    screenshot: https://pic1.imgdb.cn/item/6367b6ac16f2c2beb19c3f76.jpg
     url: https://www.hojun.cn/
     description:
       - Web开发
   - title: Rinvay.H
     avatar: https://gravatar.o0o.fun/avatar/0e17d3ec8d6fbbfce870d97b943ceef3?s=101&r=G&d=mm
-    screenshot: https://7.dusays.com/2021/03/29/f610a6826f6c5.png
+    screenshot: https://gravatar.o0o.fun/avatar/0e17d3ec8d6fbbfce870d97b943ceef3?s=101&r=G&d=mm
     url: https://www.rinvay.cc/
     description:
       - 运维大佬
   - title: 教书先生
     avatar: https://secure.gravatar.com/avatar/b00b9da424a3ce9d9930576a04a31377?s=100&r=G&d=https://ww1.sinaimg.cn/large/005BYqpgly1fqttrevsfnj30hs0hswfp.jpg
-    screenshot: https://7.dusays.com/2021/03/29/5d86b0f18e88d.png
+    screenshot: https://secure.gravatar.com/avatar/b00b9da424a3ce9d9930576a04a31377?s=100&r=G&d=https://ww1.sinaimg.cn/large/005BYqpgly1fqttrevsfnj30hs0hswfp.jpg
     url: http://blog.oioweb.cn
     description:
       - Web开发
   - title: Bert Liu's Blog
     avatar: https://gravatar.loli.net/avatar/94d4496e69d67ea9dcb4266a258ba29b?d=mp&v=1.3.4
-    screenshot: https://7.dusays.com/2021/03/29/98e60def6451f.png
+    screenshot: https://gravatar.loli.net/avatar/94d4496e69d67ea9dcb4266a258ba29b?d=mp&v=1.3.4
     url: https://liubo.design/
     description:
       - 室内设计
@@ -73,19 +73,13 @@ site_friends:
       - Web安全
   - title: Hoe's Notes
     avatar: https://cdn.v2ex.com/gravatar/dc1187890e4cc4ca1a41a83f4f7eb559?s=80&r=G
-    screenshot: https://7.dusays.com/2021/03/29/e63fd2bc20f3e.png
+    screenshot: https://cdn.v2ex.com/gravatar/dc1187890e4cc4ca1a41a83f4f7eb559?s=80&r=G
     url: https://www.hoehub.com
     description:
       - 后端开发
-  - title: 我爱吃土豆
-    avatar: https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20191028172335.png
-    screenshot: https://7.dusays.com/2021/03/29/d1c8eda092678.png
-    url: https://itudo.cn/
-    description:
-      - 一个爱吃土豆的程序员
   - title: 楓の街
     avatar: https://www.weingxing.cn/pic.jpg
-    screenshot: https://7.dusays.com/2021/03/29/99ce9ced3527a.png
+    screenshot:
     url: https://www.weingxing.cn/
     description:
       - 以有涯随无涯
@@ -97,13 +91,13 @@ site_friends:
       - Web前端
   - title: HONGWEI
     avatar: https://www.zhwei.cn/favicon.ico
-    screenshot: https://7.dusays.com/2021/03/29/c31e5dd49c019.png
+    screenshot:
     url: https://www.zhwei.cn/
     description:
       - 测试工程师
   - title: 辣椒の酱
     avatar: https://removeif.github.io/images/avatar.jpg
-    screenshot: https://7.dusays.com/2021/03/29/2d2158b8067ef.png
+    screenshot:
     url: https://removeif.github.io/
     description:
       - Java
@@ -115,7 +109,7 @@ site_friends:
       - 后端攻城狮
   - title: 炎忍
     avatar: https://s3.ax1x.com/2020/11/16/DEa9gA.png
-    screenshot: https://7.dusays.com/2021/03/29/669d58c10915f.png
+    screenshot: https://s3.ax1x.com/2020/11/16/DEa9gA.png
     url: https://blog.imyan.ren/
     description:
       - Kolin
@@ -131,6 +125,12 @@ site_friends:
     screenshot: https://www.liziwu.net/Contents/static/avatar.jpg
     description:
       - 李自伍的个人技术博客 & 期待与你相逢
+  - title: 悲伤的吉子树
+    avatar: https://pic1.imgdb.cn/item/6367b46a16f2c2beb197fc9e.jpg
+    screenshot: https://pic1.imgdb.cn/item/6367b46a16f2c2beb197fc9e.jpg
+    url: https://berserker287.github.io/
+    description:
+      - Springboot
 
 
 site_friends_not_found:
@@ -153,19 +153,13 @@ site_friends_not_found:
   - title: Don Lex
     avatar: https://donlex.cn/images/avatar.png
     url: https://donlex.cn/
-    screenshot: https://7.dusays.com/2021/03/29/f53eb7ea53ae5.png
+    screenshot: 
     description:
       - Java
       - Python
-  - title: 悲伤的吉子树
-    avatar: https://img.vim-cn.com/71/96b29464a6b5ee3df28ddae5b22efc9a9137b3.png
-    screenshot: https://7.dusays.com/2021/03/29/8ee828a702729.png
-    url: http://sasuke.club/
-    description:
-      - Springboot
   - title: 一去二三遥
-    avatar: https://img.vim-cn.com/9b/f49b155fb62df9c626d83cef17afb2d0ccbb29.png
-    screenshot: https://7.dusays.com/2021/03/29/7797dda15570f.png
+    avatar:
+    screenshot:
     url: https://www.moonster.life
     description:
       - Java
@@ -178,13 +172,13 @@ site_friends_not_found:
       - Python
   - title: 半叶子
     avatar: https://secure.gravatar.com/avatar/01ada174c6b4be500b4729e39f86bc64?s=64&r=G&d=
-    screenshot: https://7.dusays.com/2021/03/29/2ccab2f5e7841.png
+    screenshot:
     url: https://blog.mebyz.cn/
     description:
       - C
   - title: 果子酱
     avatar: https://cdn2.sublimerui.top/2021/01/03/5db7a51e823a6.ico
-    screenshot: https://7.dusays.com/2021/03/29/e4da1c0d500db.png
+    screenshot:
     url: https://cwxyr.me
     description:
       - Web
@@ -197,20 +191,20 @@ site_friends_not_found:
       - Java
   - title: 残梦
     avatar: https://cdn.jsdelivr.net/gh/2662419405/CDN@1.0/sh.jpg
-    screenshot: https://7.dusays.com/2021/03/29/aaf7b5c6c7232.png
+    screenshot:
     url: https://sunhang.top/
     description:
       - 前端、JS
   - title: 洛尘曦
     avatar: https://cdn.jsdelivr.net/gh/SGYZ0910/CDN@1.1.7/images/lcx.jpg
-    screenshot: https://7.dusays.com/2021/03/29/3958e56d56ba4.png
+    screenshot:
     url: https://www.sgyzyun.club/
     description:
       - Java
       - Python
   - title: 张雄
-    avatar: https://img.vim-cn.com/e0/aea27ce2dc27f3685d3fe662d1497a44cec231.jpg
-    screenshot: https://img.vim-cn.com/e0/aea27ce2dc27f3685d3fe662d1497a44cec231.jpg
+    avatar:
+    screenshot:
     url: https://www.zhangxiong.net/
     description:
       - 向阳生长，触碰流云
@@ -226,6 +220,12 @@ site_friends_not_found:
     screenshot: https://www.weizixiang.com/image/logo.jpg
     description:
       - 一个努力学技术的小白（中学生）
+  - title: 我爱吃土豆
+    avatar: https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20191028172335.png
+    screenshot: https://cdn.jsdelivr.net/gh/ssmath/mypic/img/20191028172335.png
+    url: https://itudo.cn/
+    description:
+      - 一个爱吃土豆的程序员
 
 cloud_native_community:
   title: 
@@ -233,7 +233,7 @@ cloud_native_community:
   items:
   - title: CNCF 云原生基金会
     avatar: https://s1.ax1x.com/2020/08/16/dVkDW8.png
-    screenshot: https://7.dusays.com/2021/03/10/6fc54e7e388f8.png
+    screenshot: https://s1.ax1x.com/2020/08/16/dVkDW8.png
     url: https://www.cncf.io/
     description:
   - title: 云原生技术社区

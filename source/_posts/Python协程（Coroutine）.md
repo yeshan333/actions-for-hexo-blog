@@ -58,7 +58,7 @@ if __name__ == "__main__":
     print('花费 {} s'.format(time.perf_counter() - start))
 ```
 
-![运行结果](https://img.vim-cn.com/e4/2864cd5a7adf8d63775b3069bf77fc25294742.png)
+![运行结果](https://s1.ax1x.com/2022/11/06/xjumWD.png)
 
 - 解释：
   - 1、asyncio.run(main())，程序进入main()函数，开启事件循环
@@ -101,8 +101,6 @@ if __name__ == "__main__":
     print('花费 {} s'.format(time.perf_counter() - start))
 ```
 
-
-
 # 异步接口同步实现
 
 ```Python
@@ -133,9 +131,9 @@ asyncio.run(main(['url_1', 'url_2'])) # 协程接口
 print("Cost {} s".format(time.perf_counter() - start))
 ```
 
-![](https://img.vim-cn.com/63/f34d5279d27f6419a9879c1629d043996b9b00.png)
+![运行结果](https://s1.ax1x.com/2022/11/06/xjuKQH.png)
 
-# 使用Task实现异步
+# 使用 Task 实现异步
 
 ```Python
 # 异步实现
@@ -163,11 +161,11 @@ asyncio.run(main(['url_1', 'url_2']))
 print("Cost {} s".format(time.perf_counter() - start))
 ```
 
-![](https://img.vim-cn.com/f4/64fc768078c4633df92c2a4b3b3dca468c4626.png)
+![运行结果](https://s1.ax1x.com/2022/11/06/xjuQOA.png)
 
 # 生产者消费者模型的协程版本
 
-[![](https://img.vim-cn.com/7f/3d047c4b22bdb566c53b8ca5608244bfdb4e4b.png)](https://zh.wikipedia.org/wiki/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98)
+[![wiki 百科 介绍](https://s1.ax1x.com/2022/11/06/xju1eI.png)](https://zh.wikipedia.org/wiki/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98)
 
 ```Python
 # 极客时间：Python核心技术与实战
@@ -217,7 +215,7 @@ if __name__ == "__main__":
     print("Cost {} s".format(time.perf_counter() - start))
 ```
 
-![](https://img.vim-cn.com/e6/944a0aa74ab8bab93396ab19c163c71f264ec1.gif)
+![运行结果](https://pic1.imgdb.cn/item/6367a0fc16f2c2beb16e6290.gif)
 
 ```
 # 输出结果

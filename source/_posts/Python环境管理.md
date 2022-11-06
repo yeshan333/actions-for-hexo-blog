@@ -1,5 +1,5 @@
 ---
-title: Python环境管理与项目依赖管理
+title: Python 环境管理与项目依赖管理
 toc: true
 comments: true
 popular_posts: true
@@ -60,7 +60,7 @@ pipenv install [package_name]
 pipenv run xxx.py
 ```
 
-![help](https://img.vim-cn.com/d0/174c52397492e29396bd3b35be1b842c560a5f.png)
+![help](https://s1.ax1x.com/2022/11/06/xjuEo6.png)
 
 # Poetry
 
@@ -82,7 +82,7 @@ poetry add [package_name]
 poetry build
 ```
 
-![help](https://img.vim-cn.com/19/0c0b38a2733929e1d9f5e29ed870b5f0ce7ac3.png )
+![help](https://s1.ax1x.com/2022/11/06/xjuke1.png)
 
 # 拓展
 

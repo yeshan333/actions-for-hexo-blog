@@ -23,7 +23,7 @@ keywords: "profile, profiling, debug, python"
 python -m pdb test.py
 ```
 
-![示例](https://img.vim-cn.com/a2/72fea3f756ee8ece77496b3dcec3c7e4d2cd4c.png)
+![示例](https://pic1.imgdb.cn/item/6367b13116f2c2beb18dfc6c.jpg)
 
 - 2、在需要被调试的代码中添加`import pdb`、`pdb.set_trace()`再运行代码进行调试
 
@@ -43,7 +43,7 @@ c = 3
 print(a + b + c)
 ```
 
-![示例](https://img.vim-cn.com/a3/4e2ecf7fbd04144c27887217a532fc913ecb3a.png)
+![示例](https://pic1.imgdb.cn/item/6367b14416f2c2beb18e1e14.jpg)
 
 ## 常用命令
 
@@ -59,7 +59,7 @@ print(a + b + c)
 |q|退出调试pdb|
 |help|帮助|
 
-![示例](https://img.vim-cn.com/91/21b5a0146465f972c69a42214d99164b11d3cb.png)
+![示例](https://pic1.imgdb.cn/item/6367b16216f2c2beb18e748f.jpg)
 
 # cProfile-性能分析
 
@@ -99,7 +99,7 @@ fib_seq(30)
 python -m cProfile test.py
 ```
 
-![示例](https://img.vim-cn.com/ed/1e64c45bda5d78d390323282cd6cd52b9ca7e1.png)
+![示例](https://pic1.imgdb.cn/item/6367b17716f2c2beb18eaeed.png)
 
 - ncalls：相应代码/函数被调用的次数
 - tottime：相应代码/函数执行所需时间（不包括它调用的其他代码/函数的时间）
@@ -107,5 +107,5 @@ python -m cProfile test.py
 - cumtime：对应代码/函数执行所需时间，包含它调用的其他代码/函数的时间
 - cumtime percall：cumtime和ncall相除的平均结果
 
-![示例](https://img.vim-cn.com/80/3c30f54c3a5e9e187e8c550ccbf1bb741ba790.png)
+![示例](https://pic1.imgdb.cn/item/6367b1cc16f2c2beb18f777a.jpg)
 

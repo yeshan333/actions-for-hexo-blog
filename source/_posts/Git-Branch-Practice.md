@@ -40,8 +40,8 @@ $ git push --tags # 推送所有标签到远程仓库
 
 # 操作~操作
 
-![https://img.vim-cn.com/00/950a7bad9cc5835194268fce6d40a444b7cfcc.png](https://img.vim-cn.com/00/950a7bad9cc5835194268fce6d40a444b7cfcc.png)
+![https://pic1.imgdb.cn/item/6367b0a916f2c2beb18cd5ac.png](https://pic1.imgdb.cn/item/6367b0a916f2c2beb18cd5ac.png)
 
 emmm，顺便试试tag
 
-![https://img.vim-cn.com/a4/26dbcd8ed54643c057193aa14d15ade7ef2358.png](https://img.vim-cn.com/a4/26dbcd8ed54643c057193aa14d15ade7ef2358.png)
+![https://pic1.imgdb.cn/item/6367b0c016f2c2beb18d16eb.jpg](https://pic1.imgdb.cn/item/6367b0c016f2c2beb18d16eb.jpg)

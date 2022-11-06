@@ -80,7 +80,7 @@ if __name__ == '__main__':
     app.run('127.0.0.1', port=5000, debug=True)
 ```
 
-![效果.png](https://img.vim-cn.com/03/9b18cb0cd65b8249a0e9069d4845e6d27744af.png)
+![效果.png](https://pic1.imgdb.cn/item/6367a11a16f2c2beb16e86ad.jpg)
 
 # Frontend-React
 
@@ -125,7 +125,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 OK，预览下效果，顺便调试（没啥可调试的/(ㄒoㄒ)/~~）。`npm start`。效果如下：
 
-![React App预览效果.png](https://img.vim-cn.com/e5/a82817a8d6d3d240674cef5c65e955b929aba1.png)
+![React App预览效果.png](https://pic1.imgdb.cn/item/6367a12b16f2c2beb16e99dd.jpg)
 
 没多大问题的话，是时候打包写好的React App给后端服务了。
 
@@ -156,7 +156,7 @@ mv build\\index.html ..\\templates\\ &&  mv build\\static ..\\static
 
 OK，我们试试。如下：
 
-![示范.gif](https://img.vim-cn.com/a1/be51d238380ead4e8c6d6b6fba6eb0bbe55c5e.gif)
+![示范.gif](https://pic1.imgdb.cn/item/6367a1c116f2c2beb16f6008.gif)
 
 Nice，没毛病。🎉🎉🎉。改下`app.py`:
 
@@ -173,7 +173,7 @@ if __name__ == '__main__':
     app.run('127.0.0.1', port=5000, debug=True)
 ```
 
-![效果.png](https://img.vim-cn.com/06/aa0b2dc80df8c8bfc021e57a93981fe07acc02.png)
+![效果.png](https://pic1.imgdb.cn/item/6367a1e216f2c2beb16fbeb6.png)
 
 **冇问题啊！收工！！！**
 

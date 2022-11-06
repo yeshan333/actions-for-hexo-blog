@@ -60,7 +60,7 @@ with Filemanager('test.txt', 'w') as f:
     f.write('Hello World')
 ```
 
-![运行结果](https://img.vim-cn.com/a0/ab04491fd66278800b3203d25393bf07ff993f.png)
+![运行结果](https://pic1.imgdb.cn/item/6367a21716f2c2beb17018d0.png)
 
 - 运行结果解析：
   - 1、with 语句调用__init__方法，初始化对象

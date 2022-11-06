@@ -455,7 +455,7 @@ sidebar:
         icon: fa-solid fa-list
         title: 本文目录
       list_number: false
-      min_depth: 2
+      min_depth: 1
       max_depth: 5
     # ---------------------------------------
     # music
@@ -566,16 +566,16 @@ sidebar:
             avatar: https://apod.nasa.gov/favicon.ico
             url: https://apod.nasa.gov/apod/astropix.html
           - name: Carbon
-            avatar: https://img.vim-cn.com/76/a8416146154b60cbaa432ad3cf3b919190e1d8
+            avatar: fas fa-images
             url: https://carbon.now.sh
           - name: 雨落无声
             avatar: https://s2.ax1x.com/2019/01/09/FL3ESf.png
             url: https://www.zhujiboke.com/
           - name: ShanSan-(腾讯云站点)
-            avatar: https://img.vim-cn.com/8f/e4fa12e70f63550b3779d901103c67cefabfca.jpg
+            avatar: fas fa-images
             url: https://shan333.cn
           - name: Whoer
-            avatar: https://img.vim-cn.com/1b/f5cfbccb67f161973528bed7d372173cb4fb8c
+            avatar: fas fa-images
             url: https://whoer.net/zh
           - name: cppreference
             avatar: https://s2.ax1x.com/2019/06/19/VXJMPx.jpg
@@ -606,12 +606,12 @@ sidebar:
           url: https://www.sqlsec.com/
         - name: 数据科学思维导图笔记
           url: https://woaielf.github.io/
-          avatar: https://img.vim-cn.com/e9/5fce67298509e2df8594df95e10e957bc3fc09.png
+          avatar: fas fa-images
         - name: Python术语对照表
           url: https://docs.python.org/zh-cn/3/glossary.html
-          avatar: https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif
+          avatar: fas fa-images
         - name: Python运行时服务
-          avatar: https://img.vim-cn.com/9e/e6cf0e86b514e0de34a5df49526df444a6b647.gif
+          avatar: fas fa-images
           url: https://docs.python.org/zh-cn/3/library/python.html
         - name: draw.io
           avatar: https://i.loli.net/2020/03/14/LyEWzxKN4BfvFMh.png
