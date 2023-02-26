@@ -10,6 +10,7 @@ music:
   server: netease
   type: playlist
   id: 7956225484
+  autoplay: true
 headimg: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/20220425.jpg
 thumbnail: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/33_zigulu.png
 abstract: 'Welcome to my blog, enter password to read.'
