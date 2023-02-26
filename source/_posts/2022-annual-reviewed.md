@@ -39,6 +39,10 @@ keywords: 20220425
 
 {% link yeshan333/ex_integration_coveralls::https://github.com/yeshan333/ex_integration_coveralls %}
 
+曾收到过一封 invitation，奈何感觉口语不行，没敢回：
+
+![elixir talk](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/invitation.jpg)
+
 ## 生活-Life
 
 ### Games
@@ -82,6 +86,8 @@ keywords: 20220425
 {% endgallery %}
 
 这里本应该会写更多的东西，每一段经历都应该被记录，或许才能更坦然的去面对它。
+
+<!-- 我真的真的尽力了，可是好无力 -->
 
 ## 未来-Future
 
