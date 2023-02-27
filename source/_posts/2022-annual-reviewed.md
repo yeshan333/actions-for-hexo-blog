@@ -1,8 +1,8 @@
 ---
-title: 2022 Summary
+title: 2022 | Summary
 toc: true
 comments: true
-popular_posts: false
+popular_posts: true
 mathjax: true
 pin: true
 music:
