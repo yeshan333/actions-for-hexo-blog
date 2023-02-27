@@ -63,7 +63,7 @@ navbar:
           url: https://github.com/yeshan333
         - name: slides
           icon: fab fa-slideshare
-          url: https://slide.shan333.cn
+          url: https://slides.shan333.cn
         - name: notes
           icon: far fa-sticky-note
           url: https://shansan.top/knowledge-base/

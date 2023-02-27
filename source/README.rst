@@ -15,7 +15,7 @@
    -  网络昵称：Cloudys、ShanSan
    -  个人邮箱：yeshan1329441308@gmail.com
    -  twitter：\ https://twitter.com/CloudysYe
-   -  曾写过的PPT：\ https://slide.shan333.cn/
+   -  曾写过的PPT：\ https://slides.shan333.cn/
 
 .. _Hexo: https://hexo.io/docs/
 .. _volantis@4.3.1: https://volantis.js.org/

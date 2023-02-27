@@ -144,7 +144,7 @@ keywords: "2020 annual reviewed"
 
 2020 年的开源技术社区参与程度还是不行，2021 年继续努力。2020 年末，有幸受赵老师邀请给上 Linux 课的学弟学妹做了次 Linux 相关的分享，特地回顾了下之前学到的东西，太多纰漏（“虽然我在吹水，而且我也没讲多少 Linux，对不住，哈哈哈，还白嫖了个小米手环~哈哈哈！”）。[Slides](https://slide.shan333.cn/slides/20201112/) 「Tip：下图可以拨动哦(*^_^*)」
 
-{% iframe https://slide.shan333.cn/slides/20201112/ %}
+{% iframe https://slides.shan333.cn/slides/20201112/ %}
 
 2021 年，坚持输出，希望个人博客更有味道，不只是技术文章，能有点生活味儿~！
 
