@@ -71,5 +71,5 @@ jobs:
           ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
           ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
           source_path: ./.deploy_git/*
-          destination_path: ~/shan333.cn
+          destination_path: /opt/1panel/apps/openresty/openresty/www/sites/shan333.cn/index
           rsync_args: --exclude="./.deploy_git/.git/*"
