@@ -75,7 +75,7 @@ jobs:
           chmod 755 -R .deploy_git
 
       # from https://github.com/yeshan333/rsync-deploy-action
-      - name: Release blog to tencentyun Lighthouse Instance
+      - name: Release blog to Tencentyun Lighthouse Instance
         uses: yeshan333/rsync-deploy-action@v1.1.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
@@ -86,7 +86,7 @@ jobs:
           destination_path: ~/shan333.cn
           rsync_args: --exclude="./.deploy_git/.git/*"
 
-      - name: Release to Tecentyun Lighthouse Instance
+      - name: Release blog to Tecentyun Lighthouse Instance (simin)
         uses: yeshan333/rsync-deploy-action@v1.1.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
@@ -94,5 +94,5 @@ jobs:
           ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
           ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
           source_path: ./.deploy_git/*
-          destination_path: /opt/1panel/apps/openresty/openresty/www/sites/shan333.cn/index
+          destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
           rsync_args: --exclude="./.deploy_git/.git/*"
