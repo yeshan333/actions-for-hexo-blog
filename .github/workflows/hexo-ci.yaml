@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  hexo_build_and_deploy_github_pages:
     runs-on: ubuntu-latest
 
     steps:
@@ -50,9 +50,25 @@ jobs:
           hexo clean
           hexo generate
           hexo deploy
+      - name: Upload artifact deploy_git folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: deploy_git
+          path: deploy_git
+
+  rsync_artifact_to_personal_cloud_machine:
+    needs: hexo_build_and_deploy_github_pages
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Download artifact deploy_git folder
+        uses: actions/download-artifact@v3
+        with:
+          name: deploy_git
 
       # from https://github.com/yeshan333/rsync-deploy-action
-      - name: Release blog to tencentyun Lighthouse Instance (Yvette)
+      - name: Release blog to tencentyun Lighthouse Instance
         uses: yeshan333/rsync-deploy-action@v1.0.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
