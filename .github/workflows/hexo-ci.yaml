@@ -67,10 +67,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: deploy_git
+          path: |
+            .deploy_git/
 
       # from https://github.com/yeshan333/rsync-deploy-action
       - name: Release blog to tencentyun Lighthouse Instance
-        uses: yeshan333/rsync-deploy-action@v1.0.0
+        uses: yeshan333/rsync-deploy-action@v1.1.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
           remote_server_ip: ${{ secrets.REMOTE_SERVER_IP }}
@@ -81,7 +83,7 @@ jobs:
           rsync_args: --exclude="./.deploy_git/.git/*"
 
       - name: Release to Tecentyun Lighthouse Instance
-        uses: yeshan333/rsync-deploy-action@v1.0.0
+        uses: yeshan333/rsync-deploy-action@v1.1.0
         with:
           ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
           remote_server_ip: ${{ secrets.REMOTE_BACKUP_SERVER_IP }}
