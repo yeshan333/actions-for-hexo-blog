@@ -69,6 +69,10 @@ jobs:
           name: deploy_git
           path: |
             .deploy_git/
+      
+      - name: change .deploy_git folder permission
+        run: |
+          chmod 755 -R .deploy_git
 
       # from https://github.com/yeshan333/rsync-deploy-action
       - name: Release blog to tencentyun Lighthouse Instance
