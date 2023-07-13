@@ -54,7 +54,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: deploy_git
-          path: deploy_git
+          path: |
+            deploy_git/
 
   rsync_artifact_to_personal_cloud_machine:
     needs: hexo_build_and_deploy_github_pages
