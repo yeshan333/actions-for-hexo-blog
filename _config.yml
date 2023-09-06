@@ -141,17 +141,22 @@ sitemap:
   tag: false
   category: false
 
+# https://github.com/hexojs/hexo-generator-feed
 feed:
   enable: true
-  type: rss2
-  path: rss2.xml
-  limit: 20
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 33
   hub:
-  content:
-  content_limit: 140
+  content: false
+  content_limit: 333
   content_limit_delim: ' '
   order_by: -date
-  icon: https://s1.ax1x.com/2022/10/09/xJ7yMF.png
+  icon: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/blog.avatar.jpg
   autodiscovery: true
   template:
 

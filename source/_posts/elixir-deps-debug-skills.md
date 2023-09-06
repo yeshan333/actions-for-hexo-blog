@@ -10,6 +10,7 @@ date: 2023-08-12 16:15:40
 tags: [Elixir, Deps, Mix]
 categories: Elixir
 keywords: "Elixir, Mix Deps, Debug"
+description: "Elixir 依赖 (deps) 调试的小技巧"
 ---
 
 许久未更博客，“微有所感”，小更一篇。
