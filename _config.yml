@@ -156,7 +156,7 @@ feed:
   content_limit: 333
   content_limit_delim: ' '
   order_by: -date
-  icon: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/blog.avatar.jpg
+  icon: https://ospy.shan333.cn/blog/blog.avatar.jpg
   autodiscovery: true
   template:
 

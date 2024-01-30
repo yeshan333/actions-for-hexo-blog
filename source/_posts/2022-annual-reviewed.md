@@ -11,8 +11,8 @@ music:
   type: playlist
   id: 7956225484
   autoplay: true
-headimg: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/20220425.jpg
-thumbnail: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/33_zigulu.png
+headimg: https://ospy.shan333.cn/blog_annual_reviewed/2022/20220425.jpg
+thumbnail: https://ospy.shan333.cn/blog_annual_reviewed/2022/33_zigulu.png
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'
 date: 2023-02-26 15:59:12
@@ -32,7 +32,7 @@ keywords: 20220425
 
 2022 年的 GitHub 小绿点，还阔以，挺养眼。不过有些是 RSS 定时器打的，2333，质量不得。
 
-![GitHub Commit](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/github.png)
+![GitHub Commit](https://ospy.shan333.cn/blog_annual_reviewed/2022/github.png)
 
 22 年 public 了两个 Elixir 和 Java 的项目，虽然有点水，但是感觉还不错，比上一年稍微好点了 (今年多了几个 PR，2333~)。
 
@@ -42,7 +42,7 @@ keywords: 20220425
 
 曾收到过一封 invitation，奈何感觉口语不行，没敢回：
 
-![elixir talk](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/invitation.jpg)
+![elixir talk](https://ospy.shan333.cn/blog_annual_reviewed/2022/invitation.jpg)
 
 ## 生活-Life
 
@@ -51,8 +51,8 @@ keywords: 20220425
 22 年稍微回归了下某王者，老躺平放松娱乐游戏了。值得纪念的是入手了 switch，开拓了玩耍范围。火焰纹章终于不用模拟器“白嫖”了，回顾了下经典的超级机器人大战。
 
 {% gallery stretch::2::one %}
-![switch](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/switch_games.jpg)
-![real switch](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/real_switch_pika.jpg)
+![switch](https://ospy.shan333.cn/blog_annual_reviewed/2022/switch_games.jpg)
+![real switch](https://ospy.shan333.cn/blog_annual_reviewed/2022/real_switch_pika.jpg)
 {% endgallery %}
 
 ### Sports
@@ -60,15 +60,15 @@ keywords: 20220425
 费体力的事 22 年也不能少。又徒了几次步 15 km+，爬了好几个山头 😀。22 年还完成了之前愣是没去学的自行车，学会了之后愣是从大学城穿越大街小巷硬骑回了住处附近。忽然觉得有点猛，haha：
 
 {% gallery stretch::2::one %}
-![bicycle](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/bicycle.jpg)
-![road](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/road.png)
+![bicycle](https://ospy.shan333.cn/blog_annual_reviewed/2022/bicycle.jpg)
+![road](https://ospy.shan333.cn/blog_annual_reviewed/2022/road.png)
 {% endgallery %}
 
 ### Reading
 
 貌似 22 年看的书稍微花了点，心里的波动不是特别大了，很多东西得经历下再回头看看才行。
 
-![books](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/books.png)
+![books](https://ospy.shan333.cn/blog_annual_reviewed/2022/books.png)
 
 技术类的下面看的几个都不错:
 
@@ -81,9 +81,9 @@ keywords: 20220425
 ### 2y
 
 {% gallery stretch::3::one %}
-![220425](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/20220425.jpg)
-![那些天](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/days.jpg)
-![rose](https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog_annual_reviewed/2022/rose.jpg)
+![220425](https://ospy.shan333.cn/blog_annual_reviewed/2022/20220425.jpg)
+![那些天](https://ospy.shan333.cn/blog_annual_reviewed/2022/days.jpg)
+![rose](https://ospy.shan333.cn/blog_annual_reviewed/2022/rose.jpg)
 {% endgallery %}
 
 这里本应该会写更多的东西，每一段经历都应该被记录，或许才能更坦然的去面对它。

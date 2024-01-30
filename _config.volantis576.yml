@@ -428,7 +428,7 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/blog.avatar.jpg
+      avatar: https://ospy.shan333.cn/blog/blog.avatar.jpg
       shape: rectangle # circle, rectangle
       url: /about/
       title:
@@ -493,8 +493,8 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       height: # Automatic height if not set
       images:
-        - https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/qq_qrcode.jpg
-        - https://guangzhoushan.oss-cn-guangzhou.aliyuncs.com/blog/wechat_qrcode.png
+        - https://ospy.shan333.cn/blog/qq_qrcode.jpg
+        - https://ospy.shan333.cn/blog/wechat_qrcode.png
 
     # ---------------------------------------
     # webinfo widget
