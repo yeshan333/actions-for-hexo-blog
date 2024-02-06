@@ -67,6 +67,9 @@ music:
 {% timenode 2022-11-05 volantis -> v5.7.6 升级, 切换自建评论系统: [artalk](https://artalk.js.org/) %}
 {% endtimenode %}
 
+{% timenode 2024-02-06 hexo -> v7.0.0 升级 %}
+{% endtimenode %}
+
 {% endtimeline %}
 
 <!-- # 听歌可以戳下面，猛戳，别客气o(*≧▽≦)ツ┏━┓
