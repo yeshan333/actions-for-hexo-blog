@@ -131,10 +131,17 @@ site_friends:
     url: https://berserker287.github.io/
     description:
       - Springboot
+  - title: 果子酱
+    avatar: https://cdn2.sublimerui.top/2021/11/23/avator.jpg
+    screenshot:
+    url: https://cak.moe/
+    description:
+      - Java
+      - Golang
 
 
 site_friends_not_found:
-  title: 
+  title:
   description: # 分组描述
   items:
   - title: 搅拌糖°
@@ -153,7 +160,7 @@ site_friends_not_found:
   - title: Don Lex
     avatar: https://donlex.cn/images/avatar.png
     url: https://donlex.cn/
-    screenshot: 
+    screenshot:
     description:
       - Java
       - Python
@@ -176,13 +183,6 @@ site_friends_not_found:
     url: https://blog.mebyz.cn/
     description:
       - C
-  - title: 果子酱
-    avatar: https://cdn2.sublimerui.top/2021/01/03/5db7a51e823a6.ico
-    screenshot:
-    url: https://cwxyr.me
-    description:
-      - Web
-      - 嵌入式
   - title: 云宝地
     avatar: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210115123907.jpg
     screenshot: https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210115123907.jpg
@@ -228,7 +228,7 @@ site_friends_not_found:
       - 一个爱吃土豆的程序员
 
 cloud_native_community:
-  title: 
+  title:
   description: # 分组描述
   items:
   - title: CNCF 云原生基金会
@@ -244,7 +244,7 @@ cloud_native_community:
      - 中国云原生技术社区
 
 cloud_native_blog:
-  title: 
+  title:
   description: # 分组描述
   items:
   - title: Jimmy Song
