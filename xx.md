@@ -1,23 +1,3 @@
----
-title: 乐理通识
-toc: true
-comments: true
-popular_posts: false
-mathjax: true
-pin: false
-music:
-  enable: false
-  server: netease
-  type: song
-  id: 26664345
-headimg: https://telegraph.shansan.top/file/00af1c1891710c0053943.png
-date: 2024-02-07 18:40:24
-tags: music
-categories: music
-keywords: "become-a-romantic-muscian"
----
-
-2023 年搞了台雅马哈 61 键的电子琴，顺手看了下啊 B 的上的课程 [《零基础自学音乐学乐理合集-第一季》](https://www.bilibili.com/video/BV12W411f7YF/?spm_id_from=333.999.0.0)，这里是部分笔记（给博客加点不一样的东西👀）。
 
 # 简谱各部分一览
 

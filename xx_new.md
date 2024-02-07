@@ -1,23 +1,3 @@
----
-title: 乐理通识
-toc: true
-comments: true
-popular_posts: false
-mathjax: true
-pin: false
-music:
-  enable: false
-  server: netease
-  type: song
-  id: 26664345
-headimg: https://telegraph.shansan.top/file/00af1c1891710c0053943.png
-date: 2024-02-07 18:40:24
-tags: music
-categories: music
-keywords: "become-a-romantic-muscian"
----
-
-2023 年搞了台雅马哈 61 键的电子琴，顺手看了下啊 B 的上的课程 [《零基础自学音乐学乐理合集-第一季》](https://www.bilibili.com/video/BV12W411f7YF/?spm_id_from=333.999.0.0)，这里是部分笔记（给博客加点不一样的东西👀）。
 
 # 简谱各部分一览
 
@@ -187,7 +167,7 @@ keywords: "become-a-romantic-muscian"
 
 ### 低音谱号-F，小字组的 F
 
-![image.png](https://telegraph.shansan.top/file/0d80f0e5047127aea8325.png)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/344188/1649175843321-101fb960-1f72-406d-8b39-f11a409f3e55.png#averageHue=%23f3f0f0&clientId=u5abc1a43-7b50-4&from=paste&height=506&id=u6f5db116&originHeight=632&originWidth=1564&originalType=binary&ratio=1&rotation=0&showTitle=false&size=149943&status=done&style=none&taskId=u246b2361-9134-4296-9068-00a7f95b16a&title=&width=1251.2)
 
 ![image.png](https://telegraph.shansan.top/file/9b9ac9604f9b785e8fcfd.png)
 
@@ -222,7 +202,7 @@ keywords: "become-a-romantic-muscian"
 
 ### 附点音符
 
-![image.png](https://telegraph.shansan.top/file/eda7de45e0f0ca1a2972d.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678287340458-2482baa3-f9d8-42f9-a0fd-eae4a69c1e4a.png#averageHue=%23f4f4f4&clientId=ud8c0a1b2-8c5a-4&from=paste&height=697&id=uec7c9e27&originHeight=871&originWidth=1379&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=230611&status=done&style=none&taskId=u35aa3ff6-b96a-48c5-a65f-8b5cce76c6b&title=&width=1103.2)
 
 ### 休止符
 
@@ -239,7 +219,7 @@ keywords: "become-a-romantic-muscian"
 
 ### 八分音符为一拍的组合法，会将可以组成一小节的音符连在一起
 
-![image.png](https://telegraph.shansan.top/file/ee6dd5e46f284bf45a097.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678289026162-03eee962-884d-4ff9-8fb0-a8b8eaeddabd.png#averageHue=%23e7e7e7&clientId=ud8c0a1b2-8c5a-4&from=paste&height=557&id=uf4b80895&originHeight=696&originWidth=1557&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=258402&status=done&style=none&taskId=uac1b1126-4796-4b55-8b32-551c10c0174&title=&width=1245.6)
 
 ## 调号
 
@@ -305,7 +285,7 @@ keywords: "become-a-romantic-muscian"
 
 ![image.png](https://telegraph.shansan.top/file/c1175e90f478421d9ecb0.png)
 
-![image.png](https://telegraph.shansan.top/file/bd580970d81d87c283371.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678604136278-e9f15b48-4fa8-43a5-9f2d-1504517e4cdd.png#averageHue=%23efefef&clientId=ufd89b554-8547-4&from=paste&height=358&id=u67206fdd&originHeight=448&originWidth=818&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=122785&status=done&style=none&taskId=u7683285f-fa24-41e5-9230-d1134bf0f79&title=&width=654.4)
 
 ![image.png](https://telegraph.shansan.top/file/ab592fa88ad27a01258b6.png)
 
@@ -350,11 +330,11 @@ keywords: "become-a-romantic-muscian"
 - 命名：根音与三音的距离 ，低音与三音的距离
 :::
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678607331172-37d254a0-7a67-4847-a35d-4a8445442788.png#averageHue=%23f2f1f1&clientId=ufd89b554-8547-4&from=paste&height=176&id=uc46e9d74&originHeight=441&originWidth=809&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=57804&status=done&style=none&taskId=u086ca99f-a23a-4dd3-b117-d09def30084&title=&width=322.20001220703125)![image.png](https://telegraph.shansan.top/file/e0ffe8612c0fd4f4a1109.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678607331172-37d254a0-7a67-4847-a35d-4a8445442788.png#averageHue=%23f2f1f1&clientId=ufd89b554-8547-4&from=paste&height=176&id=uc46e9d74&originHeight=441&originWidth=809&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=57804&status=done&style=none&taskId=u086ca99f-a23a-4dd3-b117-d09def30084&title=&width=322.20001220703125)![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678607150406-56a238ad-b8fc-4fe5-93d9-57947c0f1f42.png#averageHue=%23f2f2f1&clientId=ufd89b554-8547-4&from=paste&height=184&id=u25338822&originHeight=478&originWidth=863&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=82977&status=done&style=none&taskId=u2f9eaa11-dc3b-4bdd-9e7a-a3434777cef&title=&width=332.3999938964844)
 
 ---
 
-![image.png](https://telegraph.shansan.top/file/db3b1d325a06d44a147ea.png)
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/344188/1678607716713-7b8c1de2-3c37-452e-a11b-753cdfbe52b4.png#averageHue=%23f1f1f0&clientId=ufd89b554-8547-4&from=paste&height=168&id=u58494fd1&originHeight=455&originWidth=869&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=127875&status=done&style=none&taskId=ua9ec8ea6-7af3-4be6-b404-f554cc6419b&title=&width=321.20001220703125)
 
 ![image.png](https://telegraph.shansan.top/file/55115699f128d076e5717.png)
 
