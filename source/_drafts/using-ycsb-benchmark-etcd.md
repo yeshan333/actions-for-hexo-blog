@@ -49,7 +49,7 @@ go-ycsb 使用上可覆盖前两个阶段，对应如下:
 
 两个阶段都依赖到了一个负载控制的配置文件 `workloada`, 接下来让我们看看它.
 
-## workload 负载配置介绍
+### workload 负载配置介绍
 
 在开始进行性能测试之前，我们对 go-ycsb 的 workload 负载配置简单介绍一下，以 go-ycsb 代码仓库提供的 [workloads/workload_template](https://github.com/pingcap/go-ycsb/blob/master/workloads/workload_template) 文件为例子:
 
@@ -154,16 +154,53 @@ measurementtype=histogram
 #measurementtype=raw
 ```
 
-workload 负载文件支持的配置项以为 [pkg/prop/prop.go](https://github.com/pingcap/go-ycsb/blob/master/pkg/prop/prop.go) 声明的为准。
+workload 负载文件支持的配置项以 [pkg/prop/prop.go](https://github.com/pingcap/go-ycsb/blob/master/pkg/prop/prop.go) 声明的为准。
+
+知道了 go-ycsb 的 workload 怎么配置，接下来我们开始使用它模拟下 etcd 官方的基准测试场景吧。 [Benchmarking etcd v3](https://etcd.io/docs/v3.5/benchmarks/etcd-3-demo-benchmarks/)
+
+## etcd 基准性能测试
+
+我们需要先准备下测试环境，并获取 go-ycsb 负载工具。
 
 ## 环境准备
 
+etcd 直接使用 docker 起就好，这里我们使用 `docker-compose`, 编排文件如下：
+
+```yaml
+version: '3.0'
+
+services:
+  etcd:
+    image: 'bitnami/etcd:latest'
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+    ports:
+      - 2379:2379
+      - 2380:2380
+```
+
+go-ycsb 可以直接从项目的 [README](https://github.com/pingcap/go-ycsb?tab=readme-ov-file#getting-started) 获取下载方式，或者我们基于源码构建出来即可.
+
+```shell
+# 从源码构建，需要安装 Go
+git clone https://github.com/pingcap/go-ycsb.git
+cd go-ycsb
+make
+
+# give it a try
+./bin/go-ycsb  --help
+```
+
 ## 性能测试
 
-##
+好了，我们可以开始对 etcd 进行性能测试了，本地我们主要模拟 [Benchmarking etcd v3](https://etcd.io/docs/v3.5/benchmarks/etcd-3-demo-benchmarks/) 中的 reading one single key 场景.
 
+![etcd scene](https://telegraph.shansan.top/file/237d7295d2e4e0056f32f.png)
 
-查看 workload 配置文件可用配置字段
+go-ycsb 的 workload 配置如下:
+
+```ini
+```
 
 ## 参考
 
