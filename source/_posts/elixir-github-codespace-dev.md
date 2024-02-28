@@ -16,12 +16,12 @@ description:         "create elixir dev env with github codespaces"
 
 ## 前言
 
-使用 [Elixir](https://www.erlang-solutions.com/capabilities/elixir/?utm_source=Google&utm_medium=cpc&utm_campaign=Elixir_USCART&utm_content=&gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2SzBl8ExJxYuUq6FdtHQt5bSzORVL8RekWUtih8Ht6dzkIqlnaON6rhoCbv0QAvD_BwE) 开发点小玩意的时候，面对经常需要走外网下载依赖 (Elixir 的镜像站 [UPYUN](https://hex.pm/docs/mirrors) 使用有时候也经常抽风) 的时候，为了避免需要不断的进行网络代理配置，有想到之前经常使用 [GitHub Codespaces](https://github.com/features/codespaces) 来在浏览器里面通过云环境来写博客文章，也可以做点开发：  
+使用 [Elixir](https://www.erlang-solutions.com/capabilities/elixir/?utm_source=Google&utm_medium=cpc&utm_campaign=Elixir_USCART&utm_content=&gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2SzBl8ExJxYuUq6FdtHQt5bSzORVL8RekWUtih8Ht6dzkIqlnaON6rhoCbv0QAvD_BwE) 开发点小玩意的时候，面对经常需要走外网下载依赖 (Elixir 的镜像站 [UPYUN](https://hex.pm/docs/mirrors) 使用有时候也经常抽风) 的时候，为了避免需要不断的进行网络代理配置，有想到之前经常使用 [GitHub Codespaces](https://github.com/features/codespaces) 来在浏览器里面通过云环境来写博客文章，也可以做点开发：
 
 ![GitHub Codespaces](https://telegraph.shansan.top/file/62f2956f4dc3e543f75ca.png)
 
 > 第一次连接一般会看到:
-> 👋 Welcome to Codespaces! You are on our default image. 
+> 👋 Welcome to Codespaces! You are on our default image.
 >   - It includes runtimes and tools for Python, Node.js, Docker, and more. See the full list here: https://aka.ms/ghcs-default-image
 >   - Want to use a custom image instead? Learn more here: https://aka.ms/configure-codespace
 
@@ -30,7 +30,7 @@ description:         "create elixir dev env with github codespaces"
 > 📝 Edit away, run your app as usual, and we'll automatically make it available for you to access.
 
 
-使用 GitHub Codespaces 甚至也能直接提交代码到 GitHub 仓库之中。通过 vscode 插件 [GitHub Codespaces](https://code.visualstudio.com/docs/remote/codespaces)，能通过本地 IDE 连接云端的环境进行开发。GitHub 提供了免费使用的额度，足够白嫖了🐏。如果有将 vscode 的配置同步到 GitHub，也可以在一定程度复用本地 IDE 的配置。
+使用 GitHub Codespaces 甚至也能直接提交代码到 GitHub 仓库之中. 通过 vscode 插件 [GitHub Codespaces](https://code.visualstudio.com/docs/remote/codespaces)，能通过本地 IDE 连接云端的环境进行开发. GitHub 提供了免费使用的额度，足够白嫖了🐏. 如果有将 vscode 的配置同步到 GitHub，也可以在一定程度复用本地 IDE 的配置.
 
 通过 [https://github.com/codespaces/new](https://github.com/codespaces/new) 我们能配置 GitHub 使用的环境规格和部署地区:
 
@@ -57,7 +57,7 @@ Elixir 应用构建拉依赖经常需要走外网，但 GitHub 默认创建的 C
 }
 ```
 
-通过 image 字段，我们直接声明了 GitHub Codespaces 使用的 Docker 镜像，extensions 指定了要启用哪些 vscode 插件，postCreateCommand 制定了环境起来之后要跑的 shell 命令。甚至于也可以指定我们自己写的 Dockerfile 来启动 GitHub Codespaces 环境，可参考：[https://github.com/devcontainers/images/blob/main/src/go/.devcontainer/devcontainer.json](https://github.com/devcontainers/images/blob/main/src/go/.devcontainer/devcontainer.json)。
+通过 image 字段，我们直接声明了 GitHub Codespaces 使用的 Docker 镜像，extensions 指定了要启用哪些 vscode 插件，postCreateCommand 制定了环境起来之后要跑的 shell 命令. 甚至于也可以指定我们自己写的 Dockerfile 来启动 GitHub Codespaces 环境，可参考：[https://github.com/devcontainers/images/blob/main/src/go/.devcontainer/devcontainer.json](https://github.com/devcontainers/images/blob/main/src/go/.devcontainer/devcontainer.json).
 
 基于以上，我们可以通过 https://github.com/codespaces/new 指定海外节点进行 GitHub Codespaces 创建即刻.
 
