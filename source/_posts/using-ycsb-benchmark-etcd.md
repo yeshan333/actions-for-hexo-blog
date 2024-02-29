@@ -5,22 +5,13 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-keywords: SEO 关键词
-music:
-  enable: false
-  server: netease
-  type: song
-  id: 26664345
-headimg: 文章头图 url 824x280
-thumbnail: 标题右边缩略图 url
-description: RSS 描述
-abstract: Welcome to my blog, enter password to read.
-message: Welcome to my blog, enter password to read.
-date: 2024-02-28 14:16:51
-updated:
-tags:
-categories:
-password:
+keywords: "Go, etcd, YCSB, go-ycsb, benchmark"
+headimg: https://telegraph.shansan.top/file/f1430548714a9ae2ba18d.png
+description: "using go-ycsb to benchmark etcd."
+date: 2024-02-29 14:16:51
+updated: 2024-02-29 14:16:51
+tags: [Go, etcd, YCSB, go-ycsb, benchmark]
+categories: go-ycsb
 ---
 
 最近在对一些存储组件做性能测试，主要使用到了 YCSB，💧篇文章记录下。
@@ -200,7 +191,84 @@ make
 go-ycsb 的 workload 配置如下:
 
 ```ini
+# scene ref: https://etcd.io/docs/v3.5/benchmarks/etcd-3-demo-benchmarks/#reading-one-single-key
+# etcd 官方给的场景 reading one single key
+
+# 单条 key-value 数据
+recordcount=1
+
+# benchmark 总共的操作次数
+operationcount=20000
+workload=core
+
+; threadcount=1
+# 控制 OPS 为 2000
+; target=2000
+
+
+fieldcount=1
+fieldlength=200
+# 控制 etcd 的 key 大小在 256 字节
+keyprefix=__3MKdVjJjpfz0tzfHtL4ycTztGas4lWVLJIlVNT8HjtWf6Picj3WYC3KE76nVNkdnvCv1gMiMO7PZUUkmlBODEkJDZTVqtpQbqJ5pNUnz3oEuNoieOTpvrvAVTgJ7myi3Z0ns5Y3TYk05gzmmPINKsP3zcpN1hY5eITitMz8SSxNGv0KKHDKhH370U9QOLhMI4bsClkSbvCWgQ98LiLIhfZukqlFVZPp__
+
+readallfields=true
+writeallfields=true
+# 全部为读操作
+readproportion=1
+updateproportion=0
+scanproportion=0
+insertproportion=0
+
+dataintegrity=false
+# 顺序访问
+requestdistribution=sequential
 ```
+
+上述 workload 配置可在这个仓库中找到: [https://github.com/yeshan333/benchmark-etcd-with-go-ycsb](https://github.com/yeshan333/benchmark-etcd-with-go-ycsb).
+
+接下来使用 go-ycsb 准备压测数据:
+
+```shell
+./bin/go-ycsb load etcd -P workloads/etcd_offcial_workload
+```
+
+压测执行:
+
+```shell
+./bin/go-ycsb load etcd -P workloads/etcd_offcial_workload
+```
+
+执行结果大致如下:
+
+```shell
+-> % ./bin/go-ycsb run etcd -P workloads/etcd_offcial_workload
+Using request distribution 'sequential' a keyrange of [0 0]
+***************** properties *****************
+"command"="run"
+"scanproportion"="0"
+"dotransactions"="true"
+"operationcount"="20000"
+"keyprefix"="__3MKdVjJjpfz0tzfHtL4ycTztGas4lWVLJIlVNT8HjtWf6Picj3WYC3KE76nVNkdnvCv1gMiMO7PZUUkmlBODEkJDZTVqtpQbqJ5pNUnz3oEuNoieOTpvrvAVTgJ7myi3Z0ns5Y3TYk05gzmmPINKsP3zcpN1hY5eITitMz8SSxNGv0KKHDKhH370U9QOLhMI4bsClkSbvCWgQ98LiLIhfZukqlFVZPp__"
+";"="target=2000"
+"requestdistribution"="sequential"
+"workload"="core"
+"fieldlength"="200"
+"readproportion"="1"
+"recordcount"="1"
+"readallfields"="true"
+"insertproportion"="0"
+"fieldcount"="1"
+"writeallfields"="true"
+"dataintegrity"="false"
+"updateproportion"="0"
+**********************************************
+**********************************************
+Run finished, takes 9.134419329s
+READ   - Takes(s): 9.1, Count: 20000, OPS: 2190.0, Avg(us): 451, Min(us): 220, Max(us): 2453503, 50th(us): 322, 90th(us): 379, 95th(us): 396, 99th(us): 448, 99.9th(us): 1351, 99.99th(us): 1748
+TOTAL  - Takes(s): 9.1, Count: 20000, OPS: 2189.9, Avg(us): 451, Min(us): 220, Max(us): 2453503, 50th(us): 322, 90th(us): 379, 95th(us): 396, 99th(us): 448, 99.9th(us): 1351, 99.99th(us): 1748
+```
+
+可以同一场景下看到 90 分位的 RTT 与 etcd 官方的压测结果相差不大. 上述执行结果由 github actions 跑出来，具体执行过程可观看 [yeshan333/benchmark-etcd-with-go-ycsb/actions/runs/8091287653/job/22110155088](https://github.com/yeshan333/benchmark-etcd-with-go-ycsb/actions/runs/8091287653/job/22110155088).
 
 ## 参考
 
