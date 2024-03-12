@@ -34,7 +34,7 @@ description:         "create elixir dev env with github codespaces"
 
 通过 [https://github.com/codespaces/new](https://github.com/codespaces/new) 我们能配置 GitHub 使用的环境规格和部署地区:
 
-![select machine & zone](https://telegraph.shansan.top/file/9be59c0db63ef57e9e9b4.png)
+![select machine & zone](https://telegraph.shansan.top/file/bed2d8c2553369084c079.jpg)
 
 ## 加速 Elixir 开发环境
 
