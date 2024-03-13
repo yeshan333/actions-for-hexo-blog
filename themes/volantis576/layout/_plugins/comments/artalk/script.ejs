@@ -17,12 +17,13 @@
       path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
     }
 
-    volantis.artalk = new Artalk(Object.assign(<%- JSON.stringify(theme.comments.artalk) %>, {
+    volantis.artalk = Artalk.init({
       el: '#artalk_container',
       pageKey: path,
       pageTitle: document.title,
       placeholder: placeholder,
       useBackendConf: true,
+      server: '<%= theme.comments.artalk.server %>',
       site: '<%= config.title %>',
       darkMode: volantis.dark.mode === "dark",
       pvEl: '#artalk_visitors',
@@ -44,7 +45,8 @@
             .then((resp) => resp.<%= theme.comments.artalk.imageUploader?.resp %>)
       },
       <% } %>
-    }));
+
+    });
 
     Artalk.use(ctx => {
       ctx.on('list-loaded', () => {

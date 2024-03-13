@@ -70,6 +70,9 @@ music:
 {% timenode 2024-02-06 hexo -> v7.0.0 升级 %}
 {% endtimenode %}
 
+{% timenode 2024-03-14 volantis -> v2.6.3 升级 v2.8.3，API 不兼容，吐了🤮~ %}
+{% endtimenode %}
+
 {% endtimeline %}
 
 博客加入了十年之约项目嗷~相信时间的力量。

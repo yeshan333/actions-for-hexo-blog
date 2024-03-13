@@ -36,6 +36,10 @@ cover:
       icon:
       img: https://www.travellings.cn/assets/travelling-dark.png
       url: https://www.travellings.cn/go.html
+    - name: 十年之约虫洞
+      icon:
+      img: https://img.foreverblog.cn/wormhole_1.gif
+      url: https://www.foreverblog.cn/go.html
 ############################### Cover ############################### > end
 
 ############################### Navigation Bar ############################### > start
@@ -252,9 +256,9 @@ comments:
   # https://artalk.js.org/
   # https://github.com/ArtalkJS/Artalk
   artalk:
-    js: https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.js
-    css: https://cdn.bootcdn.net/ajax/libs/artalk/2.4.3/Artalk.css
-    server: https://artalk.shan333.cn/api  # 修改为自建的后端服务地址
+    js: https://cdn.bootcdn.net/ajax/libs/artalk/2.8.3/Artalk.js
+    css: https://cdn.bootcdn.net/ajax/libs/artalk/2.8.3/Artalk.css
+    server: https://artalk.shan333.cn  # 修改为自建的后端服务地址
     path:  # 全局评论地址
     placeholder: # 评论占位
     # artalk 有三类图片：1.上传至服务端 2.上传至服务端后利用upgit上传至图床 3.前端上传至图床（本配置为此类）
