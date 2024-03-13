@@ -1,5 +1,5 @@
 ---
-title: About
+title: About/关于我
 date: 2018-09-20 13:37:03
 declare: true
 comments: true
@@ -13,10 +13,10 @@ music:
 
 - 小 target 🚩：一个月至少一篇文章📌
 - 聊一聊我是谁
-  - ~~在校 kubi 大四学生~~「毕业 she hui 人」，专业：「信息与计算科学」
-  - 业余前端开发、不怎么业余研究后端开发『啥也不是🤨』
-  - 目前在关注研究 Cloud Native、DevOps
-  - Pythonista、Rustacean、Gopher
+  - ~~在校 kubi 大四学生~~「毕业 she fei~ 人」，专业：「信息与计算科学」
+  - 略懂乐理🎹~
+  - 目前在关注研究的技术领域 Cloud Native、DevOps、DevTest 『啥也不是🤨』
+  - Pythonista、Elixirist、Gopher、Rustacean
 
 ## 关于博客
 
@@ -72,10 +72,7 @@ music:
 
 {% endtimeline %}
 
-<!-- # 听歌可以戳下面，猛戳，别客气o(*≧▽≦)ツ┏━┓
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=450 src="//music.163.com/outchain/player?type=0&id=2506295921&auto=1&height=430">
-</iframe>
--->
+博客加入了十年之约项目嗷~相信时间的力量。
 
 [![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
 

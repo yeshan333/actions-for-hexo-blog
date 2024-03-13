@@ -32,6 +32,10 @@ cover:
       icon: #
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
       url: friends/
+    - name: 开往
+      icon:
+      img: https://www.travellings.cn/assets/travelling-dark.png
+      url: https://www.travellings.cn/go.html
 ############################### Cover ############################### > end
 
 ############################### Navigation Bar ############################### > start
@@ -635,7 +639,7 @@ site_footer:
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     - icon: fas fa-rss
       url: https://shansan.top/rss2.xml
-  copyright: '[Copyright © 2018-2022 ShanSan](https://shansan.top)'
+  copyright: '[Copyright © 2018-2024 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
   beian: '[桂ICP备19000444号](https://beian.miit.gov.cn/)'
