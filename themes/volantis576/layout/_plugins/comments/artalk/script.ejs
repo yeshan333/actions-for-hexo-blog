@@ -27,6 +27,9 @@
       site: '<%= config.title %>',
       darkMode: volantis.dark.mode === "dark",
       pvEl: '#artalk_visitors',
+      vote: true,
+      voteDown: true,
+      uaBadge: true,
 
       <% if(!!theme.comments.artalk.imageUploader?.api){ %>
       imgUploader: function(file) {
