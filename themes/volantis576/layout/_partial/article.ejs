@@ -120,7 +120,18 @@
         <div class='donate'>
           <div class='imgs'>
             <% (footer_widget.donate.images||[]).forEach(function(url){ %>
-              <img src='<%- url_for(url) %>'>
+              <div galleryflag="" itemscope="" itemtype="http://schema.org/ImageGallery" class="gallery " data-group="default">
+                <div class="fancybox">
+                  <a class="fancybox" pjax-fancybox="" itemscope="" itemtype="http://schema.org/ImageObject"
+                    itemprop="url" target="_blank" rel="noopener"
+                    href='<%- url_for(url) %>' data-fancybox="default"
+                    data-caption="support me"><img fancybox="" itemprop="contentUrl"
+                      src='<%- url_for(url) %>' class="lazyload loaded"
+                      srcset='<%- url_for(url) %>' alt="support me"
+                      data-ll-status="loaded">
+                  </a>
+                  <span class="image-caption">support me</span></div>
+              </div>
             <% }) %>
           </div>
         </div>

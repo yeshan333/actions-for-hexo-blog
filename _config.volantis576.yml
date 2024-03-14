@@ -149,13 +149,14 @@ article:
         content:
           - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
           - permalink
+          - '可以通过下方二维码支持下我哦~'
          # 自定义版权组件：精细到文章的版权声明
         custom: false # 开启后替代上方内容的版权显示
         customData:
           default: type1  # 默认授权声明
           #############################
           # 你可以在文章的 front-matter 覆盖默认版权声明
-          # 配置示例（均可选）： 
+          # 配置示例（均可选）：
           # copyright:
           #   type: type3           # 当前文章版权声明类型
           #   author: 张三          # 本文作者
@@ -164,16 +165,16 @@ article:
           #     url:                # 原文出处 - 链接
           #############################
           rules:
-            type1: 
+            type1:
               text: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a>
               desc: 署名-非商业性使用-相同方式共享 4.0 国际。
-            type2: 
+            type2:
               text: 禁止转载引用
               desc: 除非获得原作者的单独授权，任何第三方不得转载！
-            type3: 
+            type3:
               text: 原作许可协议
               desc: 本文转载自他站，转载或引用本文时，请遵守原作许可协议！
-            type4: 
+            type4:
               text: 来自互联网
               desc: 本文来自互联网，未知来源，侵权请联系删除。
             type5:
@@ -186,10 +187,11 @@ article:
       # ----------------
       # 打赏组件 (for layout: post)
       donate:
-        enable: false
+        enable: true
         images:
-          - https://s1.ax1x.com/2022/11/05/xOM0Vx.jpg
-          - https://s1.ax1x.com/2022/11/05/xOMBa6.jpg
+          - https://telegraph.shansan.top/file/08c3f69e9dcc5c02aa83d.jpg
+          - https://telegraph.shansan.top/file/c9a90a282a65d30470d31.jpg
+          - https://telegraph.shansan.top/file/3d141912f6a4eb2d7c0ab.jpg
 
     # meta library
     meta_library:
@@ -403,7 +405,7 @@ comments:
       # https://7bu.top/api/upload
       # token: Bearer xxxxxxxxxxxxxx
       # resp: data.links.url
-      api: # 图床地址 
+      api: # 图床地址
       token: # 图床验证
       resp:  # 图片地址返回值的字段
     pageview: false # 浏览量统计
@@ -548,7 +550,7 @@ sidebar:
       header:
         icon: fa-solid fa-clock WISTERIA
         title: 最近更新
-    
+
     wonderful_link:
         class: list
         display: [desktop, mobile] # [desktop, mobile]
@@ -714,7 +716,7 @@ color_scheme:
     list_hl: 'mix($color-theme, #000, 80)'
     # 辅助性文字
     meta: '#888'
-    
+
     # 版权卡片背景色
     copyright_bkg: '#f5f5f5'
   # ------------
@@ -790,7 +792,7 @@ rightmenus:
   # link: 跳转链接
   # event: 事件，当输入内容不为内置事件时，作 JavaScript 代码执行
   # group: 菜单项所处分组名称
-  # 注： 
+  # 注：
   # 1. link/event 二选一，同时出现时仅处理 link
   # 2. 内置事件列表： copyText, copyLink, copyPaste, copyAll, copyCut, copyImg, printMode, readMode
   # 3. 内置组列表：navigation, inputBox, seletctText, elementCheck, elementImage, articlePage
@@ -900,7 +902,7 @@ plugins:
 
   # 图片懒加载
   # https://www.npmjs.com/package/vanilla-lazyload
-  # tips: 
+  # tips:
   # 这里是主题自带的图片懒加载, 实现方案位于 /scripts/filters/z-lazyload ; srcset 属性的的优先级比 src 属性要高, 注意 srcset 存放了懒加载占位图,  src 存放了原图
   # 在支持 srcset 的浏览器或者 RSS 阅读器(还会有人使用老旧的阅读器?)上会优先读取 srcset 加载的图片(懒加载占位图), 对于 RSS 中图片丢失变成懒加载占位图的问题, 建议 自行使用脚本移除 srcset 属性 或 关闭图片懒加载 或 在 RSS 中插入 vanilla-lazyload
   lazyload:
@@ -1097,7 +1099,7 @@ plugins:
     css: volantis-static/libs/fcircle/fcircle.css
     js: volantis-static/libs/fcircle/fcircle.js
 
-  # 消息提示 
+  # 消息提示
   # izitoast@1.4.0
   message:
     enable: true
@@ -1150,3 +1152,80 @@ plugins:
     js: volantis-static/libs/swiper/swiper-bundle.min.js # https://unpkg.com/swiper@6/swiper-bundle.min.js
 
 ############################### Plugins ############################### > end
+
+############################### Custom css ############################### > start
+custom_css:
+  cursor:
+    enable: #true
+    text: volantis-static/media/cursor/text.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/text.png
+    pointer: volantis-static/media/cursor/pointer.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png
+    default: volantis-static/media/cursor/left_ptr.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png
+    not-allowed: volantis-static/media/cursor/circle.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/circle.png
+    zoom-out: volantis-static/media/cursor/zoom-out.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/zoom-out.png
+    zoom-in: volantis-static/media/cursor/zoom-in.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/zoom-in.png
+    grab: volantis-static/media/cursor/openhand.png # https://cdn.jsdelivr.net/gh/inkss/common@1/cursor/openhand.png
+  font_smoothing: true # font-smoothing for webkit
+  max_width: 1080px # Sum of body width and sidebar width (This limit will be exceeded when the device width is greater than 2000px, reaching 75% of the total width)
+  scrollbar:
+    size: 6px
+    border: 2px
+  navbar:
+    height: 64px
+    width: auto # auto, max
+    effect: [shadow, floatable, blur] # [shadow, floatable, blur]
+  sidebar:
+    effect: [shadow, floatable, blur] # [shadow, floatable, blur]
+  body:
+    effect: [shadow, floatable, blur] # [shadow, floatable, blur]
+    highlight:
+      language: true # show language of codeblock
+      grayscale: false # Enable grayscale effect
+    text_align: # left, right, justify, center
+      h1: left
+      h2: left
+      h3: left
+      h4: left
+      p: justify
+  gap:
+    h2: 48px # Spacing above H2 (only px unit)
+    h3: 24px # Spacing above H3 (only px unit)
+    h4: 16px # Spacing above H4 (only px unit)
+    p: 1em # Paragraph spacing between paragraphs
+    line_height: 1.6 # normal, 1.5, 1.75, 2 ...
+  border_radius:
+    card: 8px
+    codeblock: 4px
+    searchbar: 8px
+    button: 4px
+  fontsize:
+    root: 16px
+    h1: 1.5rem # 不推荐用在文章中
+    h2: 1.5rem
+    h3: 1.25rem
+    h4: 1.125rem
+    h5: 1rem
+    h6: 1rem
+    list: .9375rem
+    meta: .875rem
+    code: .8125rem
+    footnote: .78125rem
+  fontfamily:
+    logofont:
+      fontfamily: '"Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      name: 'Varela Round'
+      url: volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf
+      weight: normal
+      style: normal
+    bodyfont:
+      fontfamily: 'UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      name: 'UbuntuMono'
+      url: volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      weight: normal
+      style: normal
+    codefont:
+      fontfamily: 'Menlo, UbuntuMono, Monaco'
+      # name: 'Monaco'
+      # url: volantis-static/media/fonts/Monaco/Monaco.ttf # https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
+      # weight: normal
+      # style: normal
+############################### Custom css ############################### > end
