@@ -1,0 +1,258 @@
+{
+  "chezmoi": {
+    "arch": "amd64",
+    "args": [
+      "/snap/chezmoi/859/chezmoi",
+      "data"
+    ],
+    "cacheDir": "/home/yeshan333/.cache/chezmoi",
+    "command": "data",
+    "commandDir": "/home/yeshan333/workspace/github/actions-for-hexo-blog",
+    "config": {
+      "add": {
+        "encrypt": false,
+        "secrets": "warning",
+        "templateSymlinks": false
+      },
+      "age": {
+        "args": null,
+        "command": "age",
+        "identities": null,
+        "identity": "",
+        "passphrase": false,
+        "recipient": "",
+        "recipients": null,
+        "recipientsFile": "",
+        "recipientsFiles": null,
+        "suffix": ".age",
+        "symmetric": false,
+        "useBuiltin": false
+      },
+      "awsSecretsManager": {
+        "profile": "",
+        "region": ""
+      },
+      "azureKeyVault": {
+        "defaultVault": ""
+      },
+      "bitwarden": {
+        "command": "bw"
+      },
+      "bitwardenSecrets": {
+        "command": "bws"
+      },
+      "cacheDir": "/home/yeshan333/.cache/chezmoi",
+      "cd": {
+        "args": null,
+        "command": ""
+      },
+      "color": "auto",
+      "completion": {
+        "custom": false
+      },
+      "dashlane": {
+        "args": null,
+        "command": "dcli"
+      },
+      "data": {
+        "myValue": "Hello, world!"
+      },
+      "destDir": "/home/yeshan333",
+      "diff": {
+        "args": [
+          "--wait",
+          "--diff",
+          "{{ .Destination }}",
+          "{{ .Target }}"
+        ],
+        "command": "code",
+        "exclude": [],
+        "pager": "",
+        "reverse": false,
+        "scriptContents": true
+      },
+      "doppler": {
+        "args": null,
+        "command": "doppler",
+        "config": "",
+        "project": ""
+      },
+      "edit": {
+        "apply": false,
+        "args": [
+          "--wait"
+        ],
+        "command": "code",
+        "hardlink": true,
+        "minDuration": 1000000000,
+        "watch": false
+      },
+      "ejson": {
+        "key": "",
+        "keyDir": "/opt/ejson/keys"
+      },
+      "encryption": "",
+      "env": null,
+      "format": "json",
+      "git": {
+        "autoadd": false,
+        "autocommit": false,
+        "autopush": false,
+        "command": "git",
+        "commitMessageTemplate": "",
+        "commitMessageTemplateFile": ""
+      },
+      "gitHub": {
+        "refreshPeriod": 60000000000
+      },
+      "gopass": {
+        "command": "gopass"
+      },
+      "gpg": {
+        "args": null,
+        "command": "gpg",
+        "recipient": "",
+        "recipients": null,
+        "suffix": ".asc",
+        "symmetric": false
+      },
+      "hcpVaultSecrets": {
+        "applicationName": "",
+        "args": null,
+        "command": "vlt",
+        "organizationId": "",
+        "projectId": ""
+      },
+      "hooks": null,
+      "interpreters": {},
+      "keepassxc": {
+        "args": null,
+        "command": "keepassxc-cli",
+        "database": "",
+        "mode": "cache-password",
+        "prompt": true
+      },
+      "keeper": {
+        "args": null,
+        "command": "keeper"
+      },
+      "lastpass": {
+        "command": "lpass"
+      },
+      "merge": {
+        "args": [
+          "-c",
+          "cp {{ .Target }} {{ .Target }}.base && code --wait --merge {{ .Destination }} {{ .Target }} {{ .Target }}.base {{ .Source }}"
+        ],
+        "command": "bash"
+      },
+      "mode": "file",
+      "onepassword": {
+        "command": "op",
+        "mode": "account",
+        "prompt": true
+      },
+      "pager": "",
+      "pass": {
+        "command": "pass"
+      },
+      "passhole": {
+        "args": null,
+        "command": "ph",
+        "prompt": true
+      },
+      "persistentState": "",
+      "pinentry": {
+        "args": null,
+        "command": "",
+        "options": [
+          "allow-external-password-cache"
+        ]
+      },
+      "progress": "auto",
+      "rbw": {
+        "command": "rbw"
+      },
+      "safe": true,
+      "scriptEnv": null,
+      "scriptTempDir": "",
+      "secret": {
+        "args": null,
+        "command": ""
+      },
+      "sourceDir": "/home/yeshan333/.local/share/chezmoi",
+      "status": {
+        "exclude": [],
+        "pathStyle": "relative"
+      },
+      "template": {
+        "options": [
+          "missingkey=error"
+        ]
+      },
+      "textConv": null,
+      "umask": 18,
+      "update": {
+        "apply": true,
+        "args": null,
+        "command": "",
+        "recurseSubmodules": true
+      },
+      "useBuiltinAge": "auto",
+      "useBuiltinGit": "auto",
+      "vault": {
+        "command": "vault"
+      },
+      "verbose": false,
+      "verify": {
+        "exclude": []
+      },
+      "warnings": {
+        "configFileTemplateHasChanged": true
+      },
+      "workingTree": "/home/yeshan333/.local/share/chezmoi"
+    },
+    "configFile": "/home/yeshan333/.config/chezmoi/chezmoi.toml",
+    "executable": "/snap/chezmoi/859/chezmoi",
+    "fqdnHostname": "yeshandell.",
+    "gid": "1000",
+    "group": "yeshan333",
+    "homeDir": "/home/yeshan333",
+    "hostname": "yeshandell",
+    "kernel": {
+      "osrelease": "5.15.146.1-microsoft-standard-WSL2",
+      "ostype": "Linux",
+      "version": "#1 SMP Thu Jan 11 04:09:03 UTC 2024"
+    },
+    "os": "linux",
+    "osRelease": {
+      "bugReportURL": "https://bugs.launchpad.net/ubuntu/",
+      "homeURL": "https://www.ubuntu.com/",
+      "id": "ubuntu",
+      "idLike": "debian",
+      "name": "Ubuntu",
+      "prettyName": "Ubuntu 20.04.6 LTS",
+      "privacyPolicyURL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+      "supportURL": "https://help.ubuntu.com/",
+      "ubuntuCodename": "focal",
+      "version": "20.04.6 LTS (Focal Fossa)",
+      "versionCodename": "focal",
+      "versionID": "20.04"
+    },
+    "pathListSeparator": ":",
+    "pathSeparator": "/",
+    "sourceDir": "/home/yeshan333/.local/share/chezmoi",
+    "uid": "1000",
+    "username": "yeshan333",
+    "version": {
+      "builtBy": "goreleaser",
+      "commit": "f4904293d9e3d5297f481b0b1ec00981716fff39",
+      "date": "2024-03-17T18:42:28Z",
+      "version": "2.47.2"
+    },
+    "windowsVersion": {},
+    "workingTree": "/home/yeshan333/.local/share/chezmoi"
+  },
+  "custom_key": "custom_value",
+  "myValue": "Hello, world!"
+}
