@@ -40,6 +40,10 @@ cover:
       icon:
       img: https://img.foreverblog.cn/wormhole_1.gif
       url: https://www.foreverblog.cn/go.html
+    - name: 境内访问
+      icon:
+      img: https://telegraph.shansan.top/file/f9b8a67f6c7c6c2d647b4.jpg
+      url: https://shan333.cn
 ############################### Cover ############################### > end
 
 ############################### Navigation Bar ############################### > start
@@ -476,9 +480,9 @@ sidebar:
         - name: Python术语对照表
           url: https://docs.python.org/zh-cn/3/glossary.html
           avatar: fas fa-images
-        - name: Python运行时服务
+        - name: 开发内功修炼
           avatar: fas fa-images
-          url: https://docs.python.org/zh-cn/3/library/python.html
+          url: https://github.com/yanfeizhang/coder-kung-fu
         - name: draw.io
           avatar: https://i.loli.net/2020/03/14/LyEWzxKN4BfvFMh.png
           url: https://www.draw.io/
