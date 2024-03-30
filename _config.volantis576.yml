@@ -287,7 +287,7 @@ comments:
 sidebar:
   position: right # left right
   # 主页、分类、归档等独立页面
-  for_page: [blogger, webinfo, category, tagcloud, wonderful_link, qrcode, my_follow]
+  for_page: [blogger, webinfo, my_follow, category, tagcloud, wonderful_link, qrcode]
   # layout: docs/post 这类文章页面
   for_post: [toc]
   # 侧边栏组件库
@@ -413,14 +413,14 @@ sidebar:
 
     wonderful_link:
         class: list
-        display: [desktop, mobile] # [desktop, mobile]
+        display: [desktop, mobile]
         header:
           icon: fas fa-medal
           title: 精选链接
           url:
         rows:
           - name: Volantis
-            desc: Hexo博客主题
+            desc: Hexo 博客主题
             icon: fas fa-cube
             url: https://volantis.js.org/
           - name: 关于我 / 留言板
@@ -429,24 +429,19 @@ sidebar:
           - name: Collect
             icon: fab fa-delicious
             url: /Collect/
-          - name: shan_pic
-            icon: fas fa-images
-            url: https://img.shan333.cn
           - name: 每日天文一图
             avatar: https://apod.nasa.gov/favicon.ico
             url: https://apod.nasa.gov/apod/astropix.html
           - name: Carbon
-            avatar: fas fa-images
+            avatar: https://carbon.now.sh/static/brand/apple-touch-icon.png
+            desc: 美化代码图片
             url: https://carbon.now.sh
-          - name: 雨落无声
-            avatar: https://s2.ax1x.com/2019/01/09/FL3ESf.png
-            url: https://www.zhujiboke.com/
           - name: ShanSan-(腾讯云站点)
             avatar: fas fa-images
             url: https://shan333.cn
-          - name: Whoer
+          - name: 中科大测速网站
             avatar: fas fa-images
-            url: https://whoer.net/zh
+            url: https://test.ustc.edu.cn/
           - name: cppreference
             avatar: https://s2.ax1x.com/2019/06/19/VXJMPx.jpg
             url: https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5
@@ -470,23 +465,23 @@ sidebar:
         - name: Python Web入坑指南
           avatar: https://python-web-guide.readthedocs.io/zh/latest/_static/favicon.ico
           url: https://python-web-guide.readthedocs.io/zh/latest/
-        - name: 国光
-          avatar: https://i.loli.net/2020/03/14/DsAaP2hFqeuNOEo.png
-          desc: 跟着混 Web 安全
-          url: https://www.sqlsec.com/
-        - name: 数据科学思维导图笔记
-          url: https://woaielf.github.io/
-          avatar: fas fa-images
-        - name: Python术语对照表
-          url: https://docs.python.org/zh-cn/3/glossary.html
-          avatar: fas fa-images
+        - name: Go 语言高性能编程
+          url: https://geektutu.com/post/high-performance-go.html
+          avatar: https://geektutu.com/post/high-performance-go/high-performance-go.jpg
+        - name: Killer Elixir-Tips
+          url: https://github.com/blackode/elixir-tips
+          avatar: https://elixir-tips.blackode.in/assets/images/logo.png
         - name: 开发内功修炼
-          avatar: fas fa-images
+          avatar: https://github.com/yanfeizhang/coder-kung-fu/raw/main/imgs/book.png
           url: https://github.com/yanfeizhang/coder-kung-fu
         - name: draw.io
-          avatar: https://i.loli.net/2020/03/14/LyEWzxKN4BfvFMh.png
+          avatar: https://app.diagrams.net/favicon.ico
           url: https://www.draw.io/
-          desc: diagram
+          desc: 作图工具
+        - name: excalidraw
+          avatar: https://excalidraw.com/favicon-32x32.png
+          url: https://github.com/excalidraw/excalidraw
+          desc: 手绘风作图
 
 ############################### Sidebar ############################### > end
 
