@@ -14,7 +14,7 @@ keywords: "Elixir Macros"
 > Elixir Macros 系列文章译文
 > - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
 > - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
-> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/)
 > - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
 > - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
 > - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
@@ -162,7 +162,7 @@ end
 
 我们在这个 lambda 里做的实际上是一个模式匹配, 我们在寻找 `{fun_name, context, args}`. 如第三篇文章中所述那样, 这是表达式 `some_fun(arg1, arg2, ...)` 的 quoted 表现形式. 一旦我们遇到匹配此模式的节点, 我们只需要用新的（修饰过的）输入参数替换掉旧的. 在所有其它情况下, 我们简单地返回输入的 AST, 使得树的其余部分不变.
 
-这看着有点复杂了, 但它解决了我们的问题. 以下是追踪宏的最终版本:
+这看着有点复杂了, 但它解决了我们的问题. 以下是 deftraceable 宏的最终版本:
 
 ```elixir
 defmodule Tracer do
@@ -245,9 +245,9 @@ iex(4)> Test.div(5, 0)
 iex(line 5) Elixir.Test.div(5,0) = :error
 ```
 
-正如你所看到的那样, 可以进入 AST, 分解它, 并在其中散布一些自定义的注入代码, 这并不算很复杂. 缺点是, 编写的宏的代码变得越来越复杂, 并且更难分析.
+正如你所看到的那样, 可以进入 AST, 分解它, 并在其中散布一些自定义的注入代码, 这并不算很复杂. 缺点是, 编写的宏的代码会变得越来越复杂, 并且更难分析.
 
-今天的话题到此结束. 下一次, 我将讨论原地代码生成技术.
+今天的话题到此结束. 下一次, 我将讨论原地代码生成技术 [《(译) Understanding Elixir Macros, Part 6 - In-place Code Generation》](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/).
 
 > 原文: https://www.theerlangelist.com/article/macros_5
 

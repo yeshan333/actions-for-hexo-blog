@@ -14,7 +14,7 @@ keywords: "Elixir Macros"
 > Elixir Macros 系列文章译文
 > - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
 > - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
-> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/)
 > - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
 > - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
 > - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
@@ -42,11 +42,11 @@ Test.my_fun(6,2)
 
 这个例子当然是虚构的. 你不需要设计这样的宏, 因为 Erlang 已经有非常强大的[跟踪功能](https://www.erlang.org/doc/man/dbg.html), 而且有一个 [Elixir 包](https://github.com/fishcakez/dbg)可用. 然而, 这个例子很有趣, 因为它需要一些更深层次的 AST 转换技巧.
 
-在开始之前, 我要再提一次, 你应该仔细考虑你是否真的需要这样的结构. 例如 `deftraceable` 这样的宏引入了一个每个代码维护者都需要了解的东西. 看着代码, 它背后发生的事不是显而易见的. 如果每个人都设计这样的结构, 每个 Elixir 项目都会很快地变成自定义语言的大锅汤. 当代码主要依赖于复杂的宏时, 即使对于有经验的开发人员, 即使是有经验的开发人员也很难理解严重依赖于复杂宏的底层代码的流程.
+在开始之前, 我要再提一次, 你应该仔细考虑你是否真的需要这样的结构. 例如 `deftraceable` 这样的宏引入了一个每个代码维护者都需要了解的东西. 看着代码, 它背后发生的事不是显而易见的. 如果每个人都设计这样的结构, 每个 Elixir 项目都会很快地变成自定义语言的大锅汤. 当代码主要依赖于复杂的宏时, 即使对于有经验的开发人员, 即使是有经验的开发人员也很难理解严重依赖于复杂宏的底层代码的实际流程.
 
-但是在适合使用宏的情况下, 你不应该仅仅因为有人声称宏是不好的, 就不使用它. 例如, 如果在 Erlang 中没有跟踪功能, 我们就需要设计一些宏来帮助我们（实际上不需要类似上述的例子, 但那是另外一个话题）, 否则我们的代码就会有大量重复的模板代码.
+但是在适当使用宏的情况下, 你不应该仅仅因为有人声称宏是不好的, 就不使用它. 例如, 如果在 Erlang 中没有跟踪功能, 我们就需要设计一些宏来帮助我们（实际上不需要类似上述的例子, 但那是另外一个话题）, 否则我们的代码就会有大量重复的模板代码.
 
-在我看来, 模板代码太多是不好的, 因为代码中有了太多形式化的噪音, 因此更难阅读和理解. 宏有助于减少这些噪声, 但在使用宏之前, 请先考虑是否可以使用运行时结构（函数, 模块, 协议）来解决重复.
+在我看来, 模板代码太多是不好的, 因为代码中有了太多形式化的噪音, 因此更难阅读和理解. 宏有助于减少这些噪声, 但在使用宏之前, 请先考虑是否可以优先使用 Elixir 内置的运行时结构（函数, 模块, 协议）来解决重复代码.
 
 看完这个长长的免责声明, 让我们开始实现 `deftraceable`吧. 首先, 手动生成对应的代码.
 
@@ -80,9 +80,9 @@ end
 
 这个想法很简单. 我们从编译器环境中获取各种数据, 然后计算结果, 最后将所有内容打印到屏幕上.
 
-该代码依赖于 `__ENV__` 特殊形式, 可用于在最终 AST 中注入各种编译时信息(例如行号和文件). `__ENV__` 是一个结构体, 每当你在代码中使用它时, 它将在编译时扩展为适当的值.  因此, 只要在代码中写入 `__ENV__.file`.  文件生成的字节码将包含包含文件名的(二进制)字符串常量.
+该代码依赖于 `__ENV__` 特殊形式, 可用于在最终 AST 中注入各种编译时信息(例如行号和文件). `__ENV__` 是一个结构体, 每当你在代码中使用它时, 它将在编译时展开为适当的值. 因此, 只要在代码中写入 `__ENV__.file`. 文件生成的字节码将包含包含文件名的(二进制)字符串常量.
 
-现在我们需要动态构建这个代码. 让我们来看看大概的样子（outline）：
+现在我们需要动态构建这个代码. 让我们来看看大概的样子（outline）:
 
 ```elixir
 defmacro deftraceable(??) do
@@ -108,7 +108,7 @@ end
 
 这里我们在需要基于输入参数动态注入 AST 片段的地方放置问号（??）. 特别地, 我们必须从传递的参数中推导出函数名、参数名和函数体.
 
-现在, 当我们调用宏 `deftraceable my_fun(...) do ... end`, 宏接收两个参数 — 函数头（函数名和参数列表）和包含函数体的关键字列表. 这些都是被 quoted 的.
+现在, 当我们调用宏 `deftraceable my_fun(...) do ... end`, 宏接收两个参数 — 函数头（函数名和参数列表）和包含函数体的关键字列表. 这些都是被 quote 过的.
 
 我是如何知道的？其实我不知道. 我一般通过不断试错来获得的这些信息. 基本上, 我从定义一个宏开始：
 
@@ -189,7 +189,7 @@ iex(line 4) Test.my_fun(10,5) = 2.0   # trace output
 
 这似乎起作用了. 然而, 我应该立即指出, 这种实现存在一些问题:
 
-- 宏不能很好地处理守卫（guards）
+- 宏不能很好地处理带守卫（guards）的函数定义
 - 模式匹配参数并不总是有效的（例如, 当使用 _ 来匹配任何 term 时）
 - 在模块中直接动态生成代码时, 宏不起作用.
 
@@ -315,7 +315,7 @@ iex(4)> Test.my_fun(10, 5)
 iex(line 7) Test.my_fun(10,5) = 2.0
 ```
 
-这个练习的主要目的是说明可以从输入 AST 中推断出一些东西. 在这个例子中, 我们设法检测和处理函数 guards. 显然, 因为它依赖于 AST 的内部结构, 代码变得更加复杂了. 在这种情况下, 代码依旧比较简单, 但你将在后面的文章中看到我是如何解决 `deftraceable` 宏剩余的问题的, 事情可能很快变得杂乱起来了.
+这个练习的主要目的是说明可以从输入 AST 中推断出一些东西. 在这个例子中, 我们设法检测和处理带 guards 的函数. 显然, 因为它依赖于 AST 的内部结构, 代码变得更加复杂了. 在这种情况下, 代码依旧比较简单, 但你将在后面的文章 [《(译) Understanding Elixir Macros, Part 5 - Reshaping the AST》](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/) 中看到我是如何解决 `deftraceable` 宏剩余的问题的, 事情可能很快变得复杂起来了.
 
 > 原文: https://www.theerlangelist.com/article/macros_4
 

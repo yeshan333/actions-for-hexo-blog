@@ -8,21 +8,21 @@ pin: false
 date: 2022-06-18 14:13:45
 tags: Elixir-Macros
 categories: Elixir
-keywords: "Elixir Macros"
+keywords: "Elixir Macros, Elixir 宏基础"
 ---
 
 > Elixir Macros 系列文章译文
 > - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
 > - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
-> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/)
 > - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
 > - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
 > - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
 > 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
 
-这是讨论宏 (Macros) 微系列文章的第一篇. 我原本计划在我即将出版的[《Elixir in Action》](https://book.douban.com/subject/25897187/)一书中讨论这个主题, 但最终决定不这么做, 因为这个主题不符合这本书的主题, 这本书更关注底层 VM 和 OTP 的关键部分.
+这是讨论 Elixir 宏 (Macros) 系列文章的第一篇. 我原本计划在我即将出版的[《Elixir in Action》](https://book.douban.com/subject/25897187/)一书中讨论这个主题, 但最终决定不这么做, 因为这个主题不符合这本书的主题, 这本书更关注底层 VM 和 OTP 的关键部分.
 
-就我个人而言, 我觉得宏的主题非常有趣, 在本系列文章中, 我将试图解释它们是如何工作的, 提供一些关于如何编写宏的基本技巧和建议. 虽然我确信编写宏不是很难, 但与普通的 Elixir 代码相比, 它确实需要更高视角的关注. 因此, 我认为这了解 Elixir 编译器的一些内部细节是非常有帮助的. 了解事情在幕后是如何运行之后, 就可以更容易地理解元编程代码.
+就我个人而言, 我觉得宏的主题非常有趣, 在本系列文章中, 我将试图解释它们是如何工作的, 提供一些关于如何编写宏的基本技巧和建议. 虽然我确信编写宏不是很难, 但与普通的 Elixir 代码相比, 它确实需要更高视角的关注. 因此, 我认为这了解 Elixir 编译器的一些内部细节是非常有帮助的. 了解事情在幕后是如何运行之后, 就可以更容易地理解元编程代码.      
 
 这是篇中级水平的文章. 如果你很熟悉 Elixir 和 Erlang, 但对宏还感觉到困惑, 那么这些内容很适合你. 如果你刚开始接触 Elixir 和 Erlang, 那么最好从其它地方开始. 比如 [Getting started guide](https://elixir-lang.org/getting-started/introduction.html), 或者一些可靠的书.
 
@@ -42,7 +42,7 @@ match _ do
 end
 ```
 
-或者是来自 ExActor 的
+或者是来自 [ExActor](https://github.com/sasa1977/exactor) 的
 
 ```elixir
 defmodule SumServer do
@@ -54,7 +54,7 @@ end
 
 在以上两个例子中, 我们使用到了一些自定义的宏, 这些宏会在编译时 (compile time) 都转化成其它的代码. 调用 Plug 的 get 和 match 会创建一个函数, 而 ExActor 的 defcall 会生成两个函数和将参数正确从客户端进程传播给服务端进程的代码.
 
-Elixir 本身就非常多地用到了宏. 例如 defmodule, def, if, unless, 甚至 defmacro 都是宏. 这使得语言的核心能保持最小化, 日后对语言的扩展就会更加简单.
+Elixir 本身的实现上就非常多地用到了宏. 例如 defmodule, def, if, unless, 甚至 defmacro 都是宏. 这使得语言的核心能保持最小化, 日后对语言的扩展就会更加简单.
 
 鲜为人知的是, 宏可以让我们可以有动态 (on the fly) 生成函数的可能性:
 
@@ -82,13 +82,11 @@ Fsm.initial |> Fsm.pause |> Fsm.pause
 # ** (FunctionClauseError) no function clause matching in Fsm.pause/1
 ```
 
-在这里, 我们定义了一个 Fsm module, 同样的, 它在编译时会转换成响应的多子句函数 (multi-clause functions).
+在这里, 我们定义了一个 Fsm module, 同样的, 它在编译时会转换成对应的多子句函数 (multi-clause functions).
 
 类似的技术被 Elixir 用于生成 `String.Unicode` 模块. 本质上讲, 这个模块是通过读取 `UnicodeData.txt` 和`SpecialCasing.txt` 文件里对码位 (codepoints) 的描述来生成的. 基于文件中的数据, 各种函数 (例如 upcase, downcase) 会被生成.
 
-无论是宏还是代码生成, 我们都在编译的过程中对抽象语法树做了某些变换. 为了理解它是如何工作的, 你需要学习一点编译过程和AST的知识.
-
-无论是宏还是原地代码生成, 我们都在编译的过程中对抽象语法树 (AST) 做了某些变换. 为了理解它是如何工作的, 你需要学习一点编译过程和 AST 的知识.
+无论是宏还是代码生成, 我们都在编译的过程中对抽象语法树做了某些变换. 为了理解它是如何工作的, 你需要学习一点Elixir 编译过程和 AST 的知识.
 
 ## 编译过程 (Compilation process)
 
@@ -96,7 +94,7 @@ Fsm.initial |> Fsm.pause |> Fsm.pause
 
 输入的源代码被解析, 然后生成相应的抽象语法树 (AST1). AST1 会以嵌套的 Elixir Terms 的形式来表述你的代码. 然后进入展开阶段. 在这个阶段, 各种内置的和自定义的宏被转换成了最终版本. 一旦转换结束, Elixir 就可以生成最后的字节码, 即源程序的二进制表示.
 
-这只是对整个编译过程的概述. 例如, Elixir 编译器还会生成 Erlang AST, 然后依赖 Erlang 函数将其转换为字节码, 但是我们不需要知道细节. 不过, 我认为这幅图对于理解元编程代码是有帮助的.
+这只是对整个编译过程的概述. 例如, Elixir 编译器还会生成 Erlang AST, 然后依赖 Erlang 函数将其转换为字节码, 但是我们还不需要知道这部分细节. 不过, 我认为这幅图对于理解元编程代码是有帮助的.
 
 理解元编程魔法的关键点在于理解在展开阶段 (expansion phase) 发生了什么. 编译器会基于原始 Elixir 代码的 AST 展开为最终版本.
 
@@ -106,7 +104,7 @@ Fsm.initial |> Fsm.pause |> Fsm.pause
 
 ## 创建 AST 片段
 
-什么是 Elixir AST? 它是一个 Elixir Term, 一个深度嵌套的层次结构, 用于表述一个语法正确的 Elixir 代码. 为了说得更明白一些, 举个例子. 要生成某段代码的 AST, 可以使用 `quote`:
+什么是 Elixir AST? 它是一个 [Elixir Term](https://elixirforum.com/t/what-is-a-term/32686) (译注: Elixir 中的所有数据都可以看成是 term), 一个深度嵌套的层次结构, 用于表述一个语法正确的 Elixir 代码. 为了说得更明白一些, 举个例子. 要生成某段代码的 AST, 可以使用 `quote`:
 
 ```elixir
 iex(1)> quoted = quote do 1 + 2 end
@@ -115,7 +113,7 @@ iex(1)> quoted = quote do 1 + 2 end
 
 使用 `quote` 可以获取任意一个复杂的 Elixir 表达式对应的 AST 片段.
 
-在上面的例子中, 生成的 AST 片段用于描述一个简单的求和操作 (`1+2`). 这通常被称为 quoted expression.. 大多数时候你不需要去理解 quoted 结构的具体细节, 让我们来看一个简单的例子. 在这种情况下, AST 片段是一个包含如下元素的三元组 (triplet):
+在上面的例子中, 生成的 AST 片段用于描述一个简单的求和操作 (`1+2`). 这通常被称为 quoted expression. 大多数时候你不需要去理解 quoted 结构的具体细节, 让我们来看一个简单的例子. 在这种情况下, AST 片段是一个包含如下元素的三元组 (triplet):
 
 - 一个原子 (atom) 表示所要进行的操作 (`:+`)
 - 表达式上下文 (context, 例如 imports 和 aliases). 通常你并不需要理解这个数据
@@ -132,7 +130,7 @@ iex(2)> Code.eval_quoted(quoted)
 
 返回的元组中包含了表达式的结果, 以及一个列表, 其中包含了构成表达式的变量.
 
-但是, 在 AST 被求值前(通常由编译器完成), quoted expression 并没有进行语义上的验证. 例如, 当我们书写如下表达式时:
+但是, 在 AST 被求值前 (通常由编译器完成), quoted expression 并没有进行语义上的验证. 例如, 当我们书写如下表达式时:
 
 ```elixir
 iex(3)> a + b
@@ -151,7 +149,7 @@ iex(3)> quote do a + b end
 
 这个没有发生错误, 我们有了一个表达式 a+b 的 quoted 表现形式. 其意思是, 生成了一个描述该表达式 `a+b` 的 term, 不管表达式中的变量是否存在. 最终的代码并没有生成, 所以这里不会有错误抛出.
 
-如果把该表述插入到某些 a 和 b 是有效标识符的 AST 中, 刚才发生错误的代码 a+b, 才是正确的. 下面来试一下, 首先quote 一个求和 (sum)表达式:
+如果把该表述插入到某些 a 和 b 是有效标识符的 AST 中, 刚才发生错误的代码 a+b, 才是正确的. 下面来试一下, 首先 quote 一个求和 (sum)表达式:
 
 ```elixir
 iex(4)> sum_expr = quote do a + b end
@@ -194,7 +192,7 @@ iex(6)> final_expr = quote do
  ]}
 ```
 
-这里我们生成了一个由 `bind_expr` 和 `sum_expr` 构成的新的 quoted expression. 实际上, 我们生成了一个新的 AST 片段, 它结合了这两个表达式. 不要担心 `unquote` 的部分 - 我稍后会解释这一点.
+这里我们生成了一个由 `bind_expr` 和 `sum_expr` 构成的新的 quoted expression -> `final_expr`. 实际上, 我们生成了一个新的 AST 片段, 它结合了这两个表达式. 暂不要关心 `unquote` 的部分 - 我稍后会解释这一点.
 
 与此同时, 我们可以进行求值计算这个 AST 片段 (fragment):
 
@@ -214,7 +212,7 @@ iex(7)> Code.eval_quoted(final_expr)
 
 从这个绑定列表中我们可以看出, 该表达式绑定了两个变量 a 和 b, 对应的值分别为 1 和 2.
 
-这就是在 Elixir 中元编程方法的核心. 当我们进行元编程的时候, 我们实际上是把各种 AST 片段组合起来生成新的我们需要的 AST. 我们通常对输入 AST 的内容和结构不感兴趣, 相反, 我们使用 `quote` 生成和组合输入片段, 并生成经过修饰的代码.
+这就是在 Elixir 中元编程方法的核心. 当我们进行元编程的时候, 我们实际上是把各种 AST 片段组合起来生成新的我们需要的 AST. 我们通常对输入 AST 的内容和结构不感兴趣, 相反, 我们使用 `quote` 生成和组合输入片段, 并生成经过修饰后的代码.
 
 ## Unquoting
 
@@ -287,7 +285,7 @@ Tracer.print("1+2", mangled_result)
 mangled_result
 ```
 
-`mangled_result` 表示 Elixir 编译器会销毁所有在宏里引用的临时变量. 这也被称为宏清洗（macro hygiene）, 我们会在本系列之后的内容中讨论它（不在本文）.
+`mangled_result` 表示 Elixir 编译器会销毁所有在宏里引用的临时变量. 这也被称为宏清洗 (macro hygiene), 让宏保持干净, 不会影响到使用宏的代码, 我们会在本系列之后的内容中讨论它（不在本文）.
 
 该宏的定义是这样的:
 
@@ -311,9 +309,9 @@ end
 
 让我们来逐步分析这段代码.
 
-首先, 我们用 `defmacro`定义宏. 宏本质上是特殊形式的函数. 它的名字会被销毁, 并且只能在展开期调用它（尽管理论上你仍然可以在运行时调用）.
+首先, 我们用 `defmacro` 定义宏. 宏本质上是特殊形式的函数. 它的名字会被销毁, 并且只能在展开期调用它（尽管理论上你仍然可以在运行时调用）.
 
-我们的宏接收到了一个 quoted expression. 这一点非常重要 — 无论你发送了什么参数给一个宏, 它们都已经是 quoted的. 所以, 当我们调用 `Tracer.trace(1+2)`, 我们的宏（它是一个函数）不会接收到 3. 相反, `expression_ast` 的内容会是 `quote(do: 1+2)` 的结果.
+我们的宏接收到了一个 quoted expression. 这一点非常重要 — 无论你发送了什么参数给一个宏, 它们都已经是 quoted 的. 所以, 当我们调用 `Tracer.trace(1+2)`, 我们的宏（它是一个函数）不会接收到 3. 相反, `expression_ast` 的内容会是 `quote(do: 1+2)` 的结果.
 
 在第三行, 我们使用 `Macro.to_string/1` 来求出我们所收到的 AST 片段的字符串表达形式. 这是你在运行时不能够对一个普通函数做的事之一. 虽然我们能在运行时调用 `Macro.to_string/1`, 但问题在于我们没办法再访问 AST 了, 因此不能够知道某些表达式的字符串形式了.
 
@@ -321,9 +319,9 @@ end
 
 让我们进一步观察这一部分:
 
-如果你明白 `unquote` 的作用, 那么这个就很简单了. 实际上, 我们是在把 `expression_ast`（quoted `1+2`）代入到我们生成的片段（fragment）中, 将表达式的结果放入 `result` 变量. 然后我们使用某种格式来打印它们（借助Macro.to_string/1）, 最后返回结果.
+如果你明白 `unquote` 的作用, 那么这个就很简单了. 实际上, 我们是在把 `expression_ast`（quoted `1+2`）代入到我们生成的片段（fragment）中, 将表达式的结果放入 `result` 变量. 然后我们使用某种格式来打印它们（借助 Macro.to_string/1）, 最后返回结果.
 
-## 展开一个 AST
+### 展开一个 AST
 
 在 Shell 观察其是如何连接起来是很容易的. 启动 `iex` Shell, 复制粘贴上面定义的 Tracer 模块:
 
@@ -387,9 +385,9 @@ result
 
 这些说明了你对宏的调用已经展开成了别的东西. 这就是宏工作的原理. 尽管我们只是在 shell 中尝试, 但使用 `mix` 或`elixirc` 构建项目时也是一样的.
 
-我想这些内容对于第一篇来说已经够了. 你已经对编译过程和 AST 有所了解, 也看过了一个简单的宏的例子. 后续, 我们将更深入地讨论宏的一些机制.
+我想这些内容对于第一篇来说已经够了. 你已经对编译过程和 AST 有所了解, 也看过了一个简单的宏的例子. 在下一篇 [《(译) Understanding Elixir Macros, Part 2 - Micro Theory》](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/), 我们将更深入地讨论宏的一些机制.
 
-## 附注
+## 译注
 
 - [codepoints](https://en.wikipedia.org/wiki/Code_point): 通常是一个数字, 用于表示 Unicode 字符.
 - [Terms](https://www.erlang.org/doc/reference_manual/data_types.html#terms): 任何数据类型中的一段数据都被称为 term.

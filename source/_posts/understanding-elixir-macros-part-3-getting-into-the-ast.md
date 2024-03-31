@@ -14,7 +14,7 @@ keywords: "Elixir Macros"
 > Elixir Macros 系列文章译文
 > - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
 > - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
-> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/)
 > - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
 > - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
 > - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
@@ -26,7 +26,7 @@ keywords: "Elixir Macros"
 
 到目前为止, 你只看到了接受输入 AST 片段并将它们组合在一起的基础宏, 并在输入片段周围或之间添加了一些额外的样板代码. 由于我们不分析或解析输入的 AST, 这可能是最干净(或最不 hackiest)的宏编写风格, 这样的宏相当简单且容易理解.
 
-然而, 有时候我们需要解析输入的 AST 片段以获取某些特殊信息. 一个简单的例子是 `ExUnit` 的断言. 例如, 表达式`assert 1+1 == 2+2` 会出现这个错误:
+然而, 有时候我们需要解析输入的 AST 片段以获取某些特殊信息. 一个简单的例子是 `ExUnit` 的断言. 例如, 表达式 `assert 1+1 == 2+2` 会出现这个错误:
 
 ```elixir
 Assertion with == failed
@@ -55,17 +55,17 @@ def handle_cast({:inc, x}, state) do
 end
 ```
 
-和 `assert` 一样, 宏 `defcast` 需要深入输入的 AST 片段, 并找出每个子片段（例如, 函数名, 每个参数）. 然后, `ExActor` 执行一个精巧的变换, 将各个部分重组成一个更加复杂的代码.
+和 `assert` 一样, 宏 `defcast` 需要深入分析输入的 AST 片段, 并找出每个子片段（例如, 函数名, 每个参数）. 然后, `ExActor` 会执行一个精巧的变换, 将各个部分重组成一个更加复杂的代码.
 
-今天, 我将想你展示构建这类宏的基础技术, 我也会在之后的文章中将变换做得更复杂. 但在此之前, 我要请你认真考虑一下你的代码是否有有必要基于宏. 尽管宏十分强大, 但也有缺点.
+今天, 我将想你展示构建这类宏的基础技术, 我也会在之后的文章中会将变换做得更复杂. 但在此之前, 我要请你认真考虑一下你的代码是否有有必要基于宏. 尽管宏十分强大, 但也有缺点.
 
-首先, 就像之前我们看到的那样, 比起那些普通的运行时抽象, 宏的代码会很快地变得非常多. 你可以依赖没有文档格式的AST 来快速完成许多嵌套的 quote/unquoted 调用, 以及奇怪的模式匹配.
+首先, 就像之前我们看到的那样, 比起那些 "普通" 的运行时抽象 (函数, 模块, 协议), 宏的代码会很快地变得非常多. 你可以依赖 undocumented format (译注: 缺少文档解释, 寓意代码极其难以理解) 的 AST 来快速完成许多嵌套的 quote/unquoted 调用, 以及奇怪的模式匹配.
 
-此外, 宏的滥用可能使你的客户端代码极其难懂, 因为它将依赖于自定义的非标准习惯用法（例如 `ExActor` 的 `defcast`）. 这使得理解代码和了解底层究竟发生了什么变得更加困难.
+此外, 宏的滥用可能使你的客户端代码 (译注: 使用宏的代码) 极其难懂, 因为它将依赖于自定义的非标准习惯用法（例如 `ExActor` 的 `defcast`）. 这使得理解代码和了解底层究竟发生了什么变得更加困难.
 
 从好的方面来看, 宏在删除样板代码时非常有用(正如 `ExActor` 示例所展示的那样), 并且具有访问运行时不可用的信息的能力(正如您应该从 `assert` 示例中看到的那样).  最后, 由于宏在编译期间运行, 因此可以通过将计算转移到编译时来优化一些代码.
 
-因此, 肯定会有适合宏的情况, 您不应该害怕使用它们.  但是, 您不应该仅仅为了获得一些可爱的 dsl 式语法而选择宏.  在使用宏之前, 应该考虑是否可以依靠“标准”语言抽象（如函数、模块和协议）在运行时有效地解决问题.
+因此, 肯定会有适合宏的情景, 您不应该害怕使用它们. 但是, 您不应该仅仅为了获得一些可爱的 dsl 式语法而选择宏. 在使用宏之前, 应该考虑是否可以依靠“标准”语言抽象（如函数、模块和协议）在运行时有效地解决问题.
 
 ## 探索 AST 结构
 
@@ -78,7 +78,7 @@ iex(1)> quote do my_var end
 {:my_var, [if_undefined: :apply], Elixir}
 ```
 
-在这里, 第一个元素代表变量的名称；第二个元素是上下文关键字列表, 它包含了该 AST 片段的元数据（例如 imports 和 aliases）. 通常你不会对上下文数据感兴趣；第三个元素通常代表 quoted 发生的模块, 同时也用于确保 quoted 变量的 hygienic. 如果该元素为 `nil`, 则该标识符是不 hygienic 的.
+在这里, 第一个元素代表变量的名称；第二个元素是上下文 [Keyword 列表](https://hexdocs.pm/elixir/1.12/Keyword.html), 它包含了该 AST 片段的元数据（例如 imports 和 aliases）. 通常你不会对上下文数据感兴趣；第三个元素通常代表 quoted 发生的模块, 同时也用于确保 quoted 变量的 hygienic. 如果该元素为 `nil`, 则该标识符是不 hygienic 的.
 
 一个简单的表达式看起来包含了许多东西:
 
@@ -88,15 +88,15 @@ iex(2)> quote do a+b end
  [{:a, [if_undefined: :apply], Elixir}, {:b, [if_undefined: :apply], Elixir}]}
 ```
 
-看起来可能很复杂, 但是如果我向你展示更高层次的模式, 就很容易理解:
+看起来可能很复杂, 但是如果我向你展示更高层次的表达模式, 就很容易理解了:
 
 ```elixir
 {:+, context, [ast_for_a, ast_for_b]}
 ```
 
-在我们的例子中, `ast_for_a` 和 `ast_fot_b` 遵循着你之前所看到的变量的形状（如 `{:a, [if_undefined: :apply], Elixir}`）. 一般, quoted 的参数可以是任意复杂的, 因为它们描述了每个参数的表达式. 事实上, AST 是一个简单 quoted expression 的深层结构, 就像我给你展示的那样.
+在我们的例子中, `ast_for_a` 和 `ast_fot_b` 遵循着你之前所看到的变量的形状（如 `{:a, [if_undefined: :apply], Elixir}`）. 一般, quoted 的参数可以是任意复杂的, 因为它们描述了每个参数的表达式. 事实上, Elixir AST 是一个简单 quoted expression 的深层结构, 就像我给你展示的那样.
 
-让我们看一个关于函数的调用例子:
+让我们看一个关于函数调用的例子:
 
 ```elixir
 iex(3)> quote do div(5,4) end
@@ -132,9 +132,9 @@ iex(4)> quote do def my_fun(arg1, arg2), do: :ok end
 
 ## 写一个 assert 宏
 
-为了快速演示, 让我们编写一个简化版的 `assert` 宏. 这是一个有趣的宏, 因为它重新解释了比较操作符的含义. 通常, 当你写下 `a == b`时, 你会得到一个布尔结果. 但是, 当将此表达式给 `assert` 宏时, 如果表达式的计算结果为 `false`, 则会打印详细的输出.
+为了快速演示, 让我们编写一个简化版的 `assert` 宏. 这是一个有趣的宏, 因为它重新定义了比较操作符的含义. 通常, 当你写下 `a == b` 表达式时, 你会得到一个布尔结果. 但是, 当将此表达式给 `assert` 宏时, 如果表达式的计算结果为 `false`, 则会打印详细的输出.
 
-我将从简单的部分开始, 首先在宏里只支持 `==` 运算符. 可以知道, 我们调用 `assert expected == required` 时, 等同于调用 `assert(expect == required)`, 这意味着我们的宏接收到一个表示比较的引用片段. 让我们来探索这个比较的 AST 结果:
+我将从简单的部分开始, 首先在宏里只支持 `==` 运算符. 可以知道, 我们调用 `assert expected == required` 时, 等同于调用 `assert(expect == required)`, 这意味着我们的宏接收到一个表示比较的引用片段. 让我们来探索这个比较表达式的 AST 结果:
 
 ```elixir
 iex(1)> quote do 1 == 2 end
@@ -145,7 +145,7 @@ iex(2)> quote do a == b end
  [{:a, [if_undefined: :apply], Elixir}, {:b, [if_undefined: :apply], Elixir}]}
 ```
 
-所以我们的结构本质上是 `{:==, context, [quoted_lhs, quoted_rhs]}`. 如果你记住了前面章节中所演示的例子, 那么就不会感到意外, 因为我提到过二进制运算符是作为二个参数的函数被 quoted.
+所以我们的结构本质上是 `{:==, context, [quoted_lhs, quoted_rhs]}`. 如果你记住了前几个系列中所演示的例子, 那么就不会感到意外, 因为我提到过二进制运算符是作为 2 个参数的函数被 quoted 的.
 
 知道了 AST 的形状, 实现这个宏就很简单:
 
@@ -171,7 +171,7 @@ defmodule Assertions do
 end
 ```
 
-第一个有趣的事情发生在第 2 行. 注意我们是如何对输入表达式进行模式匹配的, 希望它符合某种结构. 这完全没问题, 因为宏是函数, 这意味着您可以依赖于模式匹配、guards（守卫）, 甚至有多子句宏. 在我们的例子中, 我们依靠模式匹配将比较表达式的每一边（被 quoted 的）带入相应的变量.
+第一个有趣的事情发生在第 2 行. 注意我们是如何对输入表达式进行模式匹配的, 希望它符合某种结构. 这完全没问题, 因为宏是函数, 这意味着您可以依赖于模式匹配、guards（守卫）, 甚至有多子句宏. 在我们的例子中, 我们依靠模式匹配将（被 quoted 的）比较表达式的每一边带入相应的变量.
 
 然后, 在 quoted 的代码中, 我们通过分别计算左边和右边重新解释 `==` 操作（第 4 行和第 5 行）, 然后是整个结果（第 7 行）. 最后, 如果结果为假, 我们打印详细信息（第 9-14 行）.
 
@@ -189,7 +189,7 @@ rhs: 4
 false
 ```
 
-## 将代码通用化
+### 将代码实现通用化
 
 将之前的代码用到其他的运算操作符并不困难:
 
@@ -222,9 +222,9 @@ end
 
 有趣的事情发生在第 9 行. 在这里我使用了 `unquote(operator)(left, right)` 来对操作符进行简单的泛型分派. 你可能认为我可以使用 `left unquote(operator) right` 来替代, 但它并不能运算. 原因是 `operator` 变量保存的是一个原子（如`:==`）. 因此, 这个天真的 quoted 会产生 `left :== right`, 这甚至不符合 Elixir 的语法规定.
 
-记住, 在 quoted 时, 我们不组装字符串, 而是组装 AST 片段. 所以, 当我们想生成一个二进制操作代码时, 我们需要注入一个正确的 AST, 它（如前所述）与双参数的函数调用相同. 因此, 我们可以简单地使用函数调用的方式 `unquote(operator)(left, right)`.
+记住, 在 quote 时, 我们不组装字符串, 而是组装 AST 片段. 所以, 当我们想生成一个二进制操作代码时, 我们需要注入一个正确的 AST, 它（如前所述）与双参数的函数调用相同. 因此, 我们可以简单地使用函数调用的方式 `unquote(operator)(left, right)`.
 
-这一点讲完了, 今天的这一章也该结束了. 它有点短, 但略微复杂些. 下一章, 我将深入 AST 解析的话题.
+这一点讲完了, 今天的这一章也该结束了. 它有点短, 但略微复杂些. 下一章 [《(译) Understanding Elixir Macros, Part 4 - Diving Deeper》](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/), 我将深入 AST 解析的话题.
 
 > 原文: https://www.theerlangelist.com/article/macros_3
 

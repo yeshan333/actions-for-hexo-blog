@@ -14,15 +14,15 @@ keywords: "Elixir Macros"
 > Elixir Macros 系列文章译文
 > - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
 > - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
-> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/)
 > - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
 > - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
 > - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
 > 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
 
-这是 Elixir 中的宏系列的第二篇. 上一次我们讨论了编译过程和 Elixir AST, 最后讲了一个基本的宏的例子 trace. 今天, 我们会更详细地讲解宏的机制.
+这是关于 Elixir 宏系列的第二篇. 上一次我们讨论了 Elixir 编译过程和 Elixir AST, 最后讲了一个基本的宏的例子 trace. 今天, 我们会更详细地讲解宏的机制.
 
-可能有一些内容会和上一篇重复, 但我认为这对于理解运作原理和 AST 的生成很有帮助. 掌握了这些以后, 你对于自己的宏代码就更有信心了. 基础很重要, 因为随着更多地用到宏, 代码可能会由许多的 `quote/unquote` 结构组成.
+可能有一些内容会和上一篇重复, 但我认为这对于理解运作原理和 AST 的生成很有帮助. 掌握了这些以后, 你对于自己编写的宏代码就更有信心了. 基础很重要, 因为随着更多地用到宏, 代码可能会由许多的 `quote/unquote` 结构组成.
 
 ## 调用一个宏
 
@@ -40,11 +40,11 @@ defmodule MyModule do
 end
 ```
 
-像之前所提到的那样, 编译器从一个类似于这段代码的 AST 开始. 这个 AST 之后会被扩展, 然后生成最后的代码. 因此, 在这段代码的展开阶段, Tracer.trace/1会被调用.
+像之前所提到的那样, 编译器从一个类似于这段代码的 AST 开始. 这个 AST 之后会被展开, 然后生成最后的代码. 因此, 在这段代码的展开阶段, Tracer.trace/1 会被调用.
 
-我们的宏接受了输入的 AST, 然后必须生成输出的 AST. 之后编译器会简单地用输出的 AST 替换掉对宏的调用. 这个过程是渐进的 — 一个宏可以返回调用其他宏(甚至它本身)的 AST. 编译器会再次扩展, 直到不可以扩展为止.
+我们的宏接受了输入的 AST, 然后必须生成输出对应的 AST 结构. 之后编译器会简单地用输出的 AST 替换掉对宏的调用. 这个过程是渐进的 — 一个宏可以返回调用其他宏 (甚至它本身) 的 AST. 编译器会再次展开, 直到不可以展开为止.
 
-调用宏使得我们有机会修改代码的含义. 一个典型的宏会获取输入的 AST 并修改它, 在它周围添加一些代码.
+调用宏使得我们有机会修改代码的含义. 一个典型的宏会获取输入的 AST 并修改它, 并在它周围添加一些代码.
 
 那就是我们使用宏 trace 所做的事情. 我们得到了一个 quoted expression（例如 `1+2`）, 然后返回了这个:
 
@@ -61,8 +61,7 @@ result
 
 Elixir 代码是如何在被生成之前运行的？它不能. 要调用一个宏, 其容器模块（宏的定义所在的模块）必须已经被编译.
 
-因此, 要运行 `Tracer` 模块中所定义的宏, 我们必须确认它已经被编译了. 也就是说, 我们必须向编译器提供一个关于我们所需求的模块的顺序. 当我们 `require` 了一个模块, 我们会让 `Elixir` 暂停当前模块的编译, 直到我们 `require`
-的模块编译好并载入到了编译器的运行时（编译器所在的 Erlang VM 实例）. 只有在 `Tracer` 模块完全编译好并对编译器可用的情况下, 我们才能调用 `trace` 宏.
+因此, 要运行 `Tracer` 模块中所定义的宏, 我们必须确认它已经被编译了. 也就是说, 我们必须向编译器提供一个关于我们所需求的模块的顺序. 当我们 `require` 了一个模块, 我们会让 `Elixir` 暂停当前模块的编译, 直到我们 `require` 的模块编译好并载入到了编译器的运行时（编译器所在的 Erlang VM 实例）. 只有在 `Tracer` 模块完全编译好并对编译器可用的情况下, 我们才能调用 `trace` 宏.
 
 使用 `import` 也有相同效果, 只不过它还在词法上引入了所有的公共函数和宏, 使得我们可以用 `trace` 替代 `Tracer.trace`.
 
@@ -83,7 +82,7 @@ defmodule(MyModule, do:
 
 ## Hygiene
 
-在上一篇文章中我们提到, 宏默认是整洁（Hygiene）的. 意思就是宏引入的变量有其自己的私有作用域, 不会影响代码的其他部分. . 这就是我们能够在我们的 `trace` 宏中安全地引入 result 变量的原因:
+在上一篇文章中我们提到, 宏默认是整洁（Hygiene）的. 意思就是宏引入的变量有其自己的私有作用域, 不会影响代码的其他部分. 这就是我们能够在我们的 `trace` 宏中安全地引入 result 变量的原因:
 
 ```elixir
 quote do
@@ -92,7 +91,7 @@ quote do
 end
 ```
 
-该变量不会干扰调用这个宏的代码. 在调用宏的地方, 可以随意的声明你自己的 `result` 变量, 它不会被 `tracer` 宏中的 `result` 变量隐藏.
+该变量不会干扰调用这个宏的代码. 在调用宏的地方, 可以随意的声明你自己的 `result` 变量, 它不会被 `tracer` 宏中的 `result` 变量隐藏覆盖.
 
 大多数时候 `hygiene` 是我们想要的效果, 但是也有例外. 有时候, 可能需要创建在调用者作用域内可用的变量. 下面我们通过 `Plug` 库的一个用例来演示, 我们如何使用 `Plug` 来制定路由:
 
@@ -117,9 +116,9 @@ defp do_match("POST", "/resource2", conn) do
 end
 ```
 
-注意: `Plug` 产生的真实代码是不同的, 这里为了演示对其进行了简化.
+注意: `Plug` 生成的真实代码是不同的, 这里为了演示对其进行了简化.
 
-这是一个例子, 宏引入了一个变量, 它必须不是 `hygienic` 的. 变量 `conn` 由 `get` 宏引入, 必须对调用者可见.
+这是一个例子, 宏引入了一个变量, 它必须不是 `hygienic` 的. 变量 `conn` 由 `get` 宏引入, 必须对调用者可见.![alt text](image-1.png)
 
 另一个例子是使用 ExActor 的. 看看下面的例子:
 
@@ -151,7 +150,7 @@ end
 
 ## 宏参数
 
-你要记住, 宏本质上是在扩展阶段被导入的 Elixir 函数, 然后生成最终的 AST. 宏的特别之处在于它所接受的参数都是quoted 的. 这就是我们之所以能够调用:
+你要记住, 宏本质上是在 AST 展开阶段被导入的 Elixir 函数, 然后生成最终的 AST. 宏的特别之处在于它所接受的参数都是 quoted 的. 这就是我们之所以能够调用的原因:
 
 ```elixir
 def my_fun do
@@ -167,7 +166,7 @@ def(my_fun, do: (...))
 
 注意我们如何调用 `def` 宏, 传递 `my_fun`, 即使这个变量不存在. 这完全没问题, 因为我们实际上传递的是 `quote(do: my_fun)` 的结果, 而引用（quote）不要求变量存在. 在内部, `def` 宏会接收到包含了 `:my_fun` 的引用形式. `def` 宏会使用这个信息来生成对应名称的函数.
 
-这里再提一下 `do...end` 块. 任何时候发送一个 `do...end` 块给一个宏, 都相当于发送一个带有 `:do` 键的关键词列表（keywords list）.
+这里再提一下 `do...end` 块. 任何时候发送一个 `do...end` 块给一个宏, 都相当于发送一个带有 `:do` 键的 [Keyword](https://hexdocs.pm/elixir/1.12/Keyword.html) 列表（Keywords list）.
 
 所以如下调用:
 
@@ -209,7 +208,7 @@ iex(6)> quote do {1,2,3} end
 {:{}, [], [1, 2, 3]}
 ```
 
-由于列表和二元元组在被引用时能保留结构, 所以关键词列表（[keywords list](https://hexdocs.pm/elixir/1.12/Keyword.html)）也可以:
+由于列表和二元元组在被引用时能保留结构, 所以关键词列表（[Keywords list](https://hexdocs.pm/elixir/1.12/Keyword.html)）也可以:
 
 ```elixir
 iex(7)> quote do [a: 1, b: 2] end
@@ -223,7 +222,7 @@ iex(8)> quote do [a: x, b: y] end
 
 ## 将它们放在一起
 
-为什么这些都很重要? 因为在宏代码中, 您可以很容易地从关键字列表中获取所需要的选项, 而不需要分析一些令人费解的AST. 之前, 我们留下了这个草图代码:
+为什么这些都很重要? 因为在宏代码中, 您可以很容易地从关键字列表 (Keyword list) 中获取所需要的选项, 而不需要分析一些令人费解的 AST. 之前, 我们留下了这个草图代码:
 
 ```elixir
 defmacro get(route, body) do
@@ -235,7 +234,7 @@ defmacro get(route, body) do
 end
 ```
 
-记住, `do ... end` 和 `do: ...` 是一样的, 所以当我们调用 `get route do ... end` 时, 我们实际上是在调用 `get(route, do: ...)` 记住宏参数是 quoted 的, 但也要知道 quoted 的关键字列表保持它们的形状, 可以使用 `body[:do]`获取宏中引用的主体:
+记住, `do ... end` 和 `do: ...` 是一样的, 所以当我们调用 `get route do ... end` 时, 我们实际上是在调用 `get(route, do: ...)` 记住宏参数是 quoted 的, 但也要知道 quoted 的关键字列表会保持它们的形状, 可以使用 `body[:do]`获取宏中引用的主体:
 
 ```elixir
 defmacro get(route, body) do
@@ -267,7 +266,7 @@ defmodule Plug.Router do
 end
 ```
 
-现在, 我们可以实现一个客户端模块:
+现在, 我们可以实现一个客户端 (译注: 使用宏的代码) 模块:
 
 ```elixir
 defmodule MyRouter do
@@ -352,7 +351,7 @@ defmodule Plug.Router do
 end
 ```
 
-这使得客户端代码非常精简:
+这使得客户端代码 (译注: 使用宏的代码) 非常精简:
 
 ```elixir
 defmodule MyRouter do
@@ -367,9 +366,23 @@ end
 
 那么我们得到了什么？各种样板代码汇集到了一个地方（`Plug.Router`). 不仅仅简化了客户端代码, 也让这个抽象正确闭合. 模块 `Plug.Router`确保了 `get` 宏所生成的任何东西都能适合使用 `match` 的通用代码. 在客户端中, 我们只要 `use`那个模块, 然后用它提供的宏来组合我们的 router.
 
-总结一下本章的内容. 许多细节没有提到, 但希望你对于宏是如何与 Elixir 编译器相结合的有了更好的理解. 在下一部分, 我们会更深入, 并开始探索如何分解输入的 AST.
+总结一下本章的内容. 还有许多细节没有提到, 但希望你对于宏是如何与 Elixir 编译器相结合工作的有了更好的理解. 在下一部分 [《Understanding Elixir Macros, Part 3 - Getting into the AST》](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/), 我们会更深入, 并开始探索如何分解输入的 AST.
+
 ## 附注
 
 - mixin: Mixin 即 Mix-in, 常被译为 “混入”, 是一种编程模式, 在 Python 等面向对象语言中, 通常它是实现了某种功能单元的类, 用于被其他子类继承, 将功能组合到子类中.
+
+```python
+# 例子
+class Mixin:
+    def mixin_method(self):
+        print("Mixin method called")
+
+class MyClass(Mixin):
+    pass
+
+obj = MyClass()
+obj.mixin_method()  # 输出: Mixin method called
+```
 
 > 原文: https://www.theerlangelist.com/article/macros_2

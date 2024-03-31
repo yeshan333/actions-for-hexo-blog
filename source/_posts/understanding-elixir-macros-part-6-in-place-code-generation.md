@@ -14,17 +14,17 @@ keywords: "Elixir Macros"
 > Elixir Macros 系列文章译文
 > - [1] [(译) Understanding Elixir Macros, Part 1 Basics](https://shan333.cn/2022/06/18/understanding-elixir-macros-part-1-basics/)
 > - [2] [(译) Understanding Elixir Macros, Part 2 - Micro Theory](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-2-macro-theory/)
-> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-gettingto-the-ast/)
+> - [3] [(译) Understanding Elixir Macros, Part 3 - Getting into the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-3-getting-into-the-ast/)
 > - [4] [(译) Understanding Elixir Macros, Part 4 - Diving Deeper](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-4-diving-deeper/)
 > - [5] [(译) Understanding Elixir Macros, Part 5 - Reshaping the AST](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-5-reshaping-the-ast/)
 > - [6] [(译) Understanding Elixir Macros, Part 6 - In-place Code Generation](https://shan333.cn/2022/06/19/understanding-elixir-macros-part-6-in-place-code-generation/)
 > 原文 [GitHub](https://github.com/sasa1977/erlangelist/blob/master/site/articles/macros_1.md) 仓库, 作者: Saša Jurić.
 
-这是宏系列文章的最后一篇. 在开始之前, 我想提一下 Björn Rochel, 他已经将他的 [Apex](https://github.com/BjRo/apex) 库中的 `deftraceable` 宏改进了. 因为他发现系列文章中 `deftraceable` 的版本不能正确处理默认参数`（arg \ def_value)`, 于是实现了一个修复 [fix](https://github.com/BjRo/apex/blob/ca3cfbcf4473a4314d8dfa7f4bed610be652a03b/lib/apex/awesome_def.ex#L57-L59).
+这是宏系列文章的最后一篇. 在开始之前, 我想提一下 Björn Rochel, 他已经将他的 [Apex](https://github.com/BjRo/apex) 库中的 `deftraceable` 宏改进了. 因为他发现系列文章中 `deftraceable` 的版本不能正确处理默认参数`（arg \ def_value)`, 于是做了一个修复 [bugfix](https://github.com/BjRo/apex/blob/ca3cfbcf4473a4314d8dfa7f4bed610be652a03b/lib/apex/awesome_def.ex#L57-L59).
 
 这次, 让我们结束这个宏的故事. 今天的文章知识点可能是整个系列中涉及最广的, 我们将讨论原地代码生成的相关技术, 以及它可能对宏的影响.
 
-## 在 module 中生成代码
+## 在模块 module 中生成代码
 
 正如我在第 1 章中提到的那样, 宏并不是 Elixir 中唯一的元编程机制. 我们也可以在模块中直接生成代码. 为了唤起你的记忆, 我们来看看下面的例子:
 
@@ -61,7 +61,7 @@ Fsm.initial |> Fsm.pause |> Fsm.pause
 
 ## 展开的顺序
 
-正如你所预料的那般, 模块级代码（不是任何函数的一部分的代码）在扩展阶段被执行. 有些令人意外的是, 这将发生在所有宏（除了 `def`）展开之后. 很容易去证明这一点：
+正如你所预料的那般, 模块级代码（不是任何函数的一部分的代码）在 Elixir 编译过程的展开阶段被执行. 有些令人意外的是, 这将发生在所有宏（除了 `def`）展开之后. 很容易去证明这一点：
 
 ```elixir
 iex(1)> defmodule MyMacro do
@@ -83,7 +83,7 @@ my_macro called
 module-level expression
 ```
 
-从输出看出, 即使代码中相应的 `IO.puts` 调用在宏调用之前, 但 `mymacro` 还是在 `IO.puts` 之前被调用了. 这证明编译器首先解析所有标准宏. 然后模块生成开始, 也是在这个阶段, 模块级代码以及对 `def` 的调用被执行.
+从输出看出, 即使代码中相应的 `IO.puts` 调用在宏调用之前, 但 `mymacro` 还是在 `IO.puts` 之前被调用了. 这证明编译器首先解析所有标准宏. 然后开始生成模块, 也是在这个阶段, 模块级代码以及对 `def` 的调用被执行.
 
 ## 模块级友好宏
 
@@ -113,7 +113,7 @@ iex(2)> defmodule Test do
     iex:13: Test (module)
 ```
 
-出现一个有点神秘, 而且不是非常有帮助的错误提示. 那么出了什么问题？如上一节所述, 在 in-place 模块执行开始之前, 将扩展宏. 对我们来说, 这意味着 `deftraceable` 被调用之前, `for` 语境甚至还没有执行.
+出现一个有点神秘, 而且不是非常有帮助的错误提示. 那么出了什么问题？如上一节所述, 在 in-place 本地模块执行开始之前, 将进行宏展开. 对我们来说, 这意味着 `deftraceable` 被调用之前, `for` 语境甚至还没有执行.
 
 因此, 即使它是从当前语境中调用, `deftraceable` 实际上将只被调用一次. 此外, 由于未对当前语境进行求值, 因此当我们的宏被调用时, 内部变量 `state`, `action` 和 `next_state` 都不存在.
 
@@ -198,7 +198,7 @@ defmacro get(route, body) do
 end
 ```
 
-即使这个宏在模块级上工作, 它并没有假设 AST 的结构, 只是在调用者的上下文中注入输入片段, 并散布一些样板代码. 当然, 我们希望 body 会有一个 `:do` 选项, 但我们并没有对 `body[:do]` AST的具体形状和结构作任何假定.
+即使这个宏在模块级上工作, 它并没有假设 AST 的结构, 只是在调用者的上下文中注入输入片段, 并散布一些样板代码. 当然, 我们希望 body 会有一个 `:do` 选项, 但我们并没有对 `body[:do]` AST 的具体形状和结构作任何假定.
 
 总结一下, 如果你的宏是在模块级别调用的, 这可能是通用的模式:
 
@@ -354,7 +354,7 @@ end
 def unquote(head) do ... end
 ```
 
-这个表达式将在调用者的上下文（客户端模块）中被调用, 它的任务是生成函数. 如在注释中提到的, 重要的是要理解`unquote(head)` 在这里引用的是存在于调用者上下文中的 head 变量. 我们不是从宏上下文注入一个变量, 而是一个存在于调用者上下文中的变量.
+这个表达式将在调用者的上下文（客户端模块）中被调用, 它的任务是生成函数. 如在注释中提到的, 重要的是要理解 `unquote(head)` 在这里引用的是存在于调用者上下文中的 head 变量. 我们不是从宏上下文注入一个变量, 而是一个存在于调用者上下文中的变量.
 
 但是, 我们不能使用简单的 `quote` 生成这样的表达式：
 
@@ -385,7 +385,7 @@ quote unquote: false do
 end
 ```
 
-使用 `unquote: false` 有效地阻止立即注入 AST, 并将 `unquote` 当作任意其它函数调用. 因此, 我们不能将某些东西注入到目标 AST. 这里 `bind_quoted` 派上了用场. 通过提供 `bind_quoted: bindings`, 我们可以禁用立即unquoting, 同时仍然绑定我们想要传递到调用者上下文的任何数据：
+使用 `unquote: false` 有效地阻止立即注入 AST, 并将 `unquote` 当作任意其它函数调用. 因此, 我们不能将某些东西注入到目标 AST. 这里 `bind_quoted` 派上了用场. 通过提供 `bind_quoted: bindings`, 我们可以禁用立即 unquoting, 同时仍然绑定我们想要传递到调用者上下文的任何数据：
 
 ```elixir
 quote bind_quoted: [
@@ -417,7 +417,7 @@ iex(2)> ast = quote do IO.inspect(unquote(data)) end
 {{:., [], [{:__aliases__, [alias: false], [:IO]}, :inspect]}, [], [{1, 2, 3}]}
 ```
 
-这似乎是有效的.  让我们试着 eval 看下的结果:
+这似乎是有效的.  让我们用 eval_quoted 看下结果:
 
 ```elixir
 iex(3)> Code.eval_quoted(ast)
