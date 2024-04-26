@@ -13,11 +13,13 @@ tags: [Erlang/OTP, vfox, vfox-plugin, vfox-erlang]
 categories: vfox
 ---
 
-vfox (version fox) 是一款跨平台、可拓展的通用版本管理器. 支持原生 Windows 以及 Unix-like 系统! 通过它, 可以快速安装和切换开发环境的软件版本. 最近给 vfox 水了几个插件, 其中就有管理多个 Erlang/OTP 版本的, 很喜欢他的插件管理机制. 之前也有使用过类似的 asdf 插件, 不过 asdf 之前的使用体验不怎么好, vfox 现在支持的插件已经非常之多了, 已经可以管理大多数语言的版本. 
+vfox (version fox) 是一款跨平台、可拓展的通用版本管理器. 支持原生 Windows 以及 Unix-like 系统! 通过它, 可以快速安装和切换开发环境的软件版本. 最近给 vfox 水了几个插件, 其中就有管理多个 Erlang/OTP 版本的, 很喜欢他的插件管理机制. 之前也有使用过类似的工具 [asdf](https://github.com/asdf-vm/asdf), 不过 asdf 之前的使用体验不怎么好 (木有拉踩的意思~, asdf 的生态是非常强大的), vfox 现在支持的插件已经非常之多了, 已经可以管理大多数常见主流语言的版本. 
 
 vfox 的版本管理工作流大体上是和 asdf 类似的, 不过性能要好一点 (5 倍左右), 毕竟 asdf 核心是 shell 写的. 官方文档也给出了一份基准测试, 参见 [《Comparison with asdf-vm》](https://vfox.lhan.me/misc/vs-asdf.html)：
 
 ![https://vfox.lhan.me/performence.png](https://vfox.lhan.me/performence.png)
+
+vfox 和 asdf 一样, 可以通过 `.tool-version` 配置文件设置全局和项目级使用到的版本, 这意味着如果你从 asdf 切换到 vfox, 相当的方便.
 
 ## vfox-erlang 的使用
 
