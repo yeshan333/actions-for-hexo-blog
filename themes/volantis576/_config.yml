@@ -1309,7 +1309,7 @@ seo:
 # https://ogp.me/
 # https://hexo.io/zh-cn/docs/helpers#open-graph
 open_graph:
-  image: volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png
+  image: https://ospy.shan333.cn/blog/blog.avatar.jpg
   twitter_card: summary # summary_large_image , summary
   #twitter_id:
   #twitter_site:
@@ -1329,9 +1329,9 @@ structured_data:
   data:
     person:
       sns:
-        - https://github.com/volantis-x
+        - https://github.com/yeshan333
     logo:
-      path: volantis-static/media/org.volantis/blog/favicon/android-chrome-192x192.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png
+      path: https://ospy.shan333.cn/blog/blog.avatar.jpg
       width: 192
       height: 192
 ############################### Structured Data ############################### > end
