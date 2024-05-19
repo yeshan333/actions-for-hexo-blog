@@ -178,3 +178,5 @@ sleep(1000)
 除了上述这些 etcd 内置的故障点, etcd 的官方仓库也提供了一份系统级的集成测试例子 -> [etcd local-tester](https://github.com/etcd-io/etcd/tree/main/tools/local-tester), 它模拟了 etcd 集群模式下的节点宕机测试. 
 
 好了, 本文的分享, 到此暂时结束啦 ღ( ´･ᴗ･` )~
+
+小广告插播: 最近维护了可以维护多个 etcd server、etcdctl、etcductl 版本的工具 [vfox-etcd](https://github.com/version-fox/vfox-etcd), 你也可以用它来在机器上安装多个包含 failpoint 的 etcd 版本进行混沌 (故障模拟) 测试哦~
