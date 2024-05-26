@@ -81,5 +81,12 @@ music:
 
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
 
-
+{% tabs link_to_yeshan333 %}
+<!-- tab 加个微信吧 -->
+![https://ospy.shan333.cn/blog/wechat_qrcode.png](https://ospy.shan333.cn/blog/wechat_qrcode.png)
+<!-- endtab -->
+<!-- tab 加个 QQ 吧 -->
+![https://ospy.shan333.cn/blog/qq_qrcode.jpg](https://ospy.shan333.cn/blog/qq_qrcode.jpg)
+<!-- endtab -->
+{% endtabs %}
 
