@@ -118,7 +118,7 @@ Eshell V14.2.2 (press Ctrl+G to abort, type help(). for help)
 
 If you can correctly wake up the REPL (Read-Eval-Print Loop) interactive command line, then the installation is fine. Next, start installing Elixir
 
-## 3、 通过 vfox-elixir 插件安装 Elixir
+## 3、Install Elixir via vfox-elixir plugin
 
 Before installing the specified Elixir version, make sure that the currently installed shell can find the toolchain related to the installed Erlang/OTP version.
 
