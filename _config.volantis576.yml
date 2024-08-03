@@ -472,6 +472,9 @@ sidebar:
         - name: 开发内功修炼
           avatar: https://github.com/yanfeizhang/coder-kung-fu/raw/main/imgs/book.png
           url: https://github.com/yanfeizhang/coder-kung-fu
+        - name: Go features by version
+          avatar: https://antonz.org/assets/favicon/favicon.ico
+          url: https://antonz.org/which-go/
         - name: draw.io
           avatar: https://app.diagrams.net/favicon.ico
           url: https://www.draw.io/
