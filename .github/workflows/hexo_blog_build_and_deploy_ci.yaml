@@ -76,16 +76,16 @@ jobs:
           chmod 755 -R .deploy_git
 
       # from https://github.com/yeshan333/rsync-deploy-action
-      - name: Release blog to Tecentyun Lighthouse Instance (simin)
-        uses: yeshan333/rsync-deploy-action@v1.1.0
-        with:
-          ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
-          remote_server_ip: ${{ secrets.REMOTE_BACKUP_SERVER_IP }}
-          ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
-          ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
-          source_path: ./.deploy_git/*
-          destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
-          rsync_args: --exclude="./.deploy_git/.git/*"
+      # - name: Release blog to Tecentyun Lighthouse Instance (simin)
+      #   uses: yeshan333/rsync-deploy-action@v1.1.0
+      #   with:
+      #     ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
+      #     remote_server_ip: ${{ secrets.REMOTE_BACKUP_SERVER_IP }}
+      #     ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
+      #     ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
+      #     source_path: ./.deploy_git/*
+      #     destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
+      #     rsync_args: --exclude="./.deploy_git/.git/*"
 
       # from https://github.com/yeshan333/rsync-deploy-action
       - name: Release blog to Tecentyun Lighthouse Instance (myself)
