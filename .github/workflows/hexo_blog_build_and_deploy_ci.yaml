@@ -54,6 +54,8 @@ jobs:
       - name: Upload artifact deploy_git folder
         uses: actions/upload-artifact@main
         with:
+          overwrite: true
+          include-hidden-files: true
           name: deploy_git
           path: |
             .deploy_git/
