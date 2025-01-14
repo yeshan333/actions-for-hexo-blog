@@ -127,6 +127,8 @@ emcc -g -v fib.c -o fib.html
 
 在 `run()` 函数处打一个断点, 然后在 `fib.c` 中 main 函数的两个 printf 中各打一个断点, 使用 F5 启动调试器即可开始调试. 演示 (GIF 加载可能稍久):
 
+[https://d473472.webp.li/debug_in_nodejs.gif](https://d473472.webp.li/debug_in_nodejs.gif)
+
 ![debug_in_nodejs.gif](https://d473472.webp.li/debug_in_nodejs.gif)
 
 ### 连接到浏览器进行调试
@@ -183,6 +185,8 @@ emcc -g -v fib.c -o fib.html
 
 演示 (GIF 加载可能稍久):
 
+[debug_in_chrome.gif](https://d473472.webp.li/debug_in_chrome.gif)
+
 ![debug_in_chrome.gif](https://d473472.webp.li/debug_in_chrome.gif)
 
 F5 启动调试后, 会有一个 chrome 浏览器调试窗口被拉起, 在 vscode 编译器可以观察到, 断点能正常执行. 于此同时, 我们也可以在浏览器开发者工具的 Debugger 中观察到断点的执行. 
@@ -197,6 +201,8 @@ emcc -g -v fib.c -o fib.html -gsource-map --source-map-base=http://localhost:300
 此后, 重新启动调试器, 我们也可以在浏览器的开发者工具中观察到随着调试的执行, 可以正确跳到被打断点的对应 C 代码行, 而不是对应的 wasm 文本表示格式中的代码行, 浏览器会自动读取 source-map 文件找到对应代码文件的位置.
 
 演示 (GIF 加载可能稍久):
+
+[debug_in_chrome_with_sourcemap.gif](https://d473472.webp.li/debug_in_chrome_with_sourcemap.gif)
 
 ![debug_in_chrome_with_sourcemap.gif](https://d473472.webp.li/debug_in_chrome_with_sourcemap.gif)
 
@@ -221,6 +227,8 @@ npx serve .
 ![debug_scope.png](https://d473472.webp.li/debug_scope.png)
 
 演示（Windows + 微信开发者工具预发布版 RC Build (1.06.2412031) + Wechat Lib:3.7.2, 2024.12.23 10:35:40）: (GIF 加载可能稍久)
+
+[debug_in_wechatdev.gif](https://d473472.webp.li/debug_in_wechatdev.gif)
 
 ![debug_in_wechatdev.gif](https://d473472.webp.li/debug_in_wechatdev.gif)
 
