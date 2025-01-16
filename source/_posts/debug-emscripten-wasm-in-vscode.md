@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio Code 与微信开发者工具中调试 emscripten 生成的 WASM 代码
+title: 在 Visual Studio Code 与微信开发者工具中调试使用 emscripten 基于 C 生成的 WASM 代码
 toc: true
 comments: true
 popular_posts: false
@@ -14,12 +14,11 @@ tags: [WebAssembly, WeChat, emscripten, vscode]
 categories: [WebAssembly]
 ---
 
-最近在尝试将一些 C/C++、Lua 项目挪到 Web 上跑, 接触到了 emscripten. 这里会介绍下在 vscode (Visual Studio Code) 中调试生成的 WASM (WebAssembly) 的一些方法.
+最近在尝试将一些 C/C++、Lua 项目挪到 Web 上跑, 接触到了 emscripten. 这里会介绍下在 Visual Studio Code 与微信开发者工具中调试使用 emscripten 基于 C 生成的 WASM 代码 (WebAssembly) 的一些方法.
 
 ## Emscripten 与 WebAssebmly
 
-> WebAssembly 是一种新的编码方式, 可以在现代的 Web 浏览器中运行——它是一种低级的类汇编语言, 具有紧凑的二进制格式, 可以接近原生的性能运行, 并为诸如 C/C++、C# 和 Rust 等语言提供编译目标, 
-> 以便它们可以在 Web 上运行. 它也被设计为可以与 JavaScript 共存, 允许两者一起工作.  --[来自 MDN](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
+> WebAssembly 是一种新的编码方式, 可以在现代的 Web 浏览器中运行——它是一种低级的类汇编语言, 具有紧凑的二进制格式, 可以接近原生的性能运行, 并为诸如 C/C++、C# 和 Rust 等语言提供编译目标, 以便它们可以在 Web 上运行. 它也被设计为可以与 JavaScript 共存, 允许两者一起工作.  --[来自 MDN](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
 
 [Emscripten](https://emscripten.org/) 基于大名鼎鼎的 [LLVM](https://llvm.org/) 提供了 C/C++ 生态下的编译工具链, 可以很方便的将 C/C++ 项目编译到 WASM, 然后放到 JS 环境 (Web、[微信小程序/游戏](https://developers.weixin.qq.com/minigame/dev/guide/performance/perf-webassembly.html)、nodejs 等) 执行. 
 有很多著名的 C/C++ 生态下的工具通过它移植到了现代浏览器 (chrome、firefox 等) 中执行.
@@ -127,7 +126,7 @@ emcc -g -v fib.c -o fib.html
 
 在 `run()` 函数处打一个断点, 然后在 `fib.c` 中 main 函数的两个 printf 中各打一个断点, 使用 F5 启动调试器即可开始调试. 演示 (GIF 加载可能稍久):
 
-[https://d473472.webp.li/debug_in_nodejs.gif](https://d473472.webp.li/debug_in_nodejs.gif)
+[https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_nodejs.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_nodejs.gif)
 
 ![debug_in_nodejs.gif](https://d473472.webp.li/debug_in_nodejs.gif)
 
@@ -179,13 +178,13 @@ emcc -g -v fib.c -o fib.html
 }
 ```
 
-我们延用之前打断点的位置: 在 `run()` 函数处打一个断点, 然后在 `fib.c` 中 main 函数的两个 printf 中各打一个断点. 启动配置好的调试配置. 
+我们延用之前打断点的位置: 在 `run()` 函数处打一个断点, 然后在 `fib.c` 中 main 函数的两个 printf 中各打一个断点. 启动配置好的调试配置.
 
 > 注: 编译命令仍然是: `emcc -g -v fib.c -o fib.html`
 
 演示 (GIF 加载可能稍久):
 
-[debug_in_chrome.gif](https://d473472.webp.li/debug_in_chrome.gif)
+[https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome.gif)
 
 ![debug_in_chrome.gif](https://d473472.webp.li/debug_in_chrome.gif)
 
@@ -202,7 +201,7 @@ emcc -g -v fib.c -o fib.html -gsource-map --source-map-base=http://localhost:300
 
 演示 (GIF 加载可能稍久):
 
-[debug_in_chrome_with_sourcemap.gif](https://d473472.webp.li/debug_in_chrome_with_sourcemap.gif)
+[https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome_with_sourcemap.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome_with_sourcemap.gif)
 
 ![debug_in_chrome_with_sourcemap.gif](https://d473472.webp.li/debug_in_chrome_with_sourcemap.gif)
 
@@ -228,7 +227,7 @@ npx serve .
 
 演示（Windows + 微信开发者工具预发布版 RC Build (1.06.2412031) + Wechat Lib:3.7.2, 2024.12.23 10:35:40）: (GIF 加载可能稍久)
 
-[debug_in_wechatdev.gif](https://d473472.webp.li/debug_in_wechatdev.gif)
+[https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_wechatdev.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_wechatdev.gif)
 
 ![debug_in_wechatdev.gif](https://d473472.webp.li/debug_in_wechatdev.gif)
 
