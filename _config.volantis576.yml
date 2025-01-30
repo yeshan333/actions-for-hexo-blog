@@ -504,7 +504,7 @@ site_footer:
     - icon: fa-solid fa-feather
       url: https://shansan.top/rss2.xml
 
-  copyright: '[Copyright © 2018-2024 ShanSan](https://shansan.top)'
+  copyright: '[Copyright © 2018-2025 ShanSan](https://shansan.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
   beian: '[桂ICP备19000444号](https://beian.miit.gov.cn/)'
