@@ -128,7 +128,7 @@ emcc -g -v fib.c -o fib.html
 
 [https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_nodejs.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_nodejs.gif)
 
-![debug_in_nodejs.gif](https://d473472.webp.li/debug_in_nodejs.gif)
+![debug_in_nodejs.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_nodejs.gif)
 
 ### 连接到浏览器进行调试
 
@@ -186,7 +186,7 @@ emcc -g -v fib.c -o fib.html
 
 [https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome.gif)
 
-![debug_in_chrome.gif](https://d473472.webp.li/debug_in_chrome.gif)
+![debug_in_chrome.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome.gif)
 
 F5 启动调试后, 会有一个 chrome 浏览器调试窗口被拉起, 在 vscode 编译器可以观察到, 断点能正常执行. 于此同时, 我们也可以在浏览器开发者工具的 Debugger 中观察到断点的执行. 
 
@@ -203,7 +203,7 @@ emcc -g -v fib.c -o fib.html -gsource-map --source-map-base=http://localhost:300
 
 [https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome_with_sourcemap.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome_with_sourcemap.gif)
 
-![debug_in_chrome_with_sourcemap.gif](https://d473472.webp.li/debug_in_chrome_with_sourcemap.gif)
+![debug_in_chrome_with_sourcemap.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_chrome_with_sourcemap.gif)
 
 ### 微信开发者工具中的调试
 
@@ -229,7 +229,7 @@ npx serve .
 
 [https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_wechatdev.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_wechatdev.gif)
 
-![debug_in_wechatdev.gif](https://d473472.webp.li/debug_in_wechatdev.gif)
+![debug_in_wechatdev.gif](https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/debug_in_wechatdev.gif)
 
 ### 注意
 
