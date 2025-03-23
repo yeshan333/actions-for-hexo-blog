@@ -31,7 +31,7 @@ password:
 
 ## vscode 安装 cline
 
-我们可以直接在 vscode 的插件市场中
+我们可以直接在 vscode 的插件市场中安装 cline.
 
 ### 使用 cline 完成编码任务
 
