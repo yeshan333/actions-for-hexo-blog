@@ -16,13 +16,13 @@ categories:
 - [MCP]
 ---
 
-最近 MCP 协议 (Model Context Protocol) 很火, 不少 AI 框架还有各种智能工具已经支持了 MCP 协议，插拔各种 MCP Server 来提升大模型的能力. 目前快速糊出来一个 agent 也越来越简单了。本篇文章将会介绍如何通过 [mcp-agent](https://github.com/lastmile-ai/mcp-agent) 这个完全基于 MCP 协议的应用框架来搭建一个用于网页总结的智能 agent 代理.
+最近 MCP 协议 (Model Context Protocol) 很火, 不少 AI 框架还有各种智能工具已经支持了 MCP 协议, 插拔各种 MCP Server 来提升大模型的能力. 目前快速糊出来一个 agent 也越来越简单了。本篇文章将会介绍如何通过 [mcp-agent](https://github.com/lastmile-ai/mcp-agent) 这个完全基于 MCP 协议的应用框架来搭建一个用于网页总结的智能 agent 代理.
 
-> 如果你还不了解 MCP 协议，那么 MCP 协议的官方文档值的你去读一读 -> [modelcontextprotocol](https://modelcontextprotocol.io/introduction).
+> 如果你还不了解 MCP 协议, 那么 MCP 协议的官方文档值的你去读一读 -> [modelcontextprotocol](https://modelcontextprotocol.io/introduction).
 
 ## 什么 mcp-agent
 
-[mcp-agent: https://github.com/lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) 是一个基于 MCP 协议简单的、可组合的框架，可用于快速构建智能代理 (agent).
+[mcp-agent: https://github.com/lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) 是一个基于 MCP 协议简单的、可组合的框架, 可用于快速构建智能代理 (agent).
 
 它支持了 Anthropic 在 2024 年末发表的 [《Building effective agents - 构建高效代理》](https://www.anthropic.com/engineering/building-effective-agents) 一文提到的所有用于构建高效 agent 代理的最佳实践、模式. 很值得拿 mcp-agent 来学习下相关模式.
 
@@ -32,9 +32,9 @@ categories:
 
 接下来我们将介绍如何使用 mcp-agent 构建一个用于网页总结的智能代理 (agent).
 
-模型我们选用[阿里云百炼平台](https://bailian.console.aliyun.com) DashScope 提供的通义千问系列, 支持下国产, 且 mcp-agent 提供的官方例子也没有国内相关模型服务商的例子，本篇文章也算是个补充.
+模型我们选用[阿里云百炼平台](https://bailian.console.aliyun.com) DashScope 提供的通义千问系列, 支持下国产, 且 mcp-agent 提供的官方例子也没有国内相关模型服务商的例子, 本篇文章也算是个补充.
 
-示例环境基于 Windows 和 Git Bash for Windows, 同时请确保安装了 Node.js 环境，我们需要使用到 npx 去管理 MCP Servers 来扩展智能代理的能力，免去部分通用代码的重复编写.
+示例环境基于 Windows 和 Git Bash for Windows, 同时请确保安装了 Node.js 环境, 我们需要使用到 npx 去管理 MCP Servers 来扩展智能代理的能力, 免去部分通用代码的重复编写.
 
 我们使用 uv 去管理这个项目相关的依赖和代码, 让我们先创建项目:
 
@@ -47,7 +47,7 @@ uv init
 uv add mcp_agent
 ```
 
-让后将网页总结智能代理实现代码写入一个 `main.py` 文件中，内容如下 (没错，你没看错，就这么点代码就够了):
+让后将网页总结智能代理实现代码写入一个 `main.py` 文件中, 内容如下 (没错, 你没看错, 就这么点代码就够了):
 
 ```python
 # Usage: uv run main.py
@@ -74,7 +74,7 @@ async def main(url):
         )
 
         async with finder_agent:
-            # 确保 MCP Server 初始化完成，可以被 LLM 使用
+            # 确保 MCP Server 初始化完成, 可以被 LLM 使用
             tools = await finder_agent.list_tools()
             logger.info("Tools available:", data=tools)
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     asyncio.run(main(args.url))
 ```
 
-接下来我们配置 agent 依赖的 MCP Server, 将配置写入 `mcp_agent.config.yaml` 文件中，内容如下:
+接下来我们配置 agent 依赖的 MCP Server, 将配置写入 `mcp_agent.config.yaml` 文件中, 内容如下:
 
 ```yml
 $schema: "https://github.com/lastmile-ai/mcp-agent/blob/main/schema/mcp-agent.config.schema.json"
@@ -127,7 +127,7 @@ openai:
   default_model: "qwen-turbo"
 ```
 
-然后我们还需要配置一下 API 密钥，让程序可以访问到阿里云百炼提供的大模型, API 密钥可以从这里获取: [https://bailian.console.aliyun.com/?apiKey=1](https://bailian.console.aliyun.com/?apiKey=1). 将密钥配置放到文件 `mcp_agent.secrets.yaml` 中即可:
+然后我们还需要配置一下 API 密钥, 让程序可以访问到阿里云百炼提供的大模型, API 密钥可以从这里获取: [https://bailian.console.aliyun.com/?apiKey=1](https://bailian.console.aliyun.com/?apiKey=1). 将密钥配置放到文件 `mcp_agent.secrets.yaml` 中即可:
 
 ```yml
 # mcp_agent.secrets.yaml
@@ -427,50 +427,50 @@ Chinese
 
 ---
 
-Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指令，从而最大化利用 Cline 的生产力。指南涵盖了自定义指令、`.clinerules` 文件以及高级提示技术等内容。
+Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指令, 从而最大化利用 Cline 的生产力。指南涵盖了自定义指令、`.clinerules` 文件以及高级提示技术等内容。
 
 **主要章节：**
 
 1. **自定义指令（⚙️）**
-   - 自定义指令类似于 Cline 的编程设置，它们定义了 Cline 的基本行为，并始终生效。
-   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为，例如编码风格、代码质量改进以及错误处理等。
+   - 自定义指令类似于 Cline 的编程设置, 它们定义了 Cline 的基本行为, 并始终生效。
+   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为, 例如编码风格、代码质量改进以及错误处理等。
 
 2. **`.clinerules` 文件（📋）**
-   - `.clinerules` 文件提供了项目特定的指令，这些指令会自动附加到用户的全局自定义指令中。
+   - `.clinerules` 文件提供了项目特定的指令, 这些指令会自动附加到用户的全局自定义指令中。
    - 它可以用于维护团队成员之间的项目标准、强制执行开发实践、管理文档要求以及定义项目特定的行为。
 
 3. **高级提示技术（🌟）**
-   - 高级提示技术部分提供了社区中最受欢迎的提示示例，包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
+   - 高级提示技术部分提供了社区中最受欢迎的提示示例, 包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
 
 **总结：**
-该指南通过详细的说明和示例，帮助用户更好地理解如何编写高效的提示和指令，从而提升与 Cline 的交互效率。
+该指南通过详细的说明和示例, 帮助用户更好地理解如何编写高效的提示和指令, 从而提升与 Cline 的交互效率。
 
-如果您需要更详细的信息，请告诉我！
+如果您需要更详细的信息, 请告诉我！
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_aggregator.finder - Shutting down all persistent connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - Disconnecting all persistent server connections...                                     
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - All persistent server connections signaled to disconnect.                              
 [INFO] 2025-03-23T18:45:13 mcp_agent.web_page_summary - MCPAgent cleanup
 {
 
-Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指令，从而最大化利用 Cline 的生产力。指南涵盖了自定义指令、`.clinerules` 文件以及高级提示技术等内容。
+Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指令, 从而最大化利用 Cline 的生产力。指南涵盖了自定义指令、`.clinerules` 文件以及高级提示技术等内容。
 
 **主要章节：**
 
 1. **自定义指令（⚙️）**
-   - 自定义指令类似于 Cline 的编程设置，它们定义了 Cline 的基本行为，并始终生效。
-   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为，例如编码风格、代码质量改进以及错误处理等。
+   - 自定义指令类似于 Cline 的编程设置, 它们定义了 Cline 的基本行为, 并始终生效。
+   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为, 例如编码风格、代码质量改进以及错误处理等。
 
 2. **`.clinerules` 文件（📋）**
-   - `.clinerules` 文件提供了项目特定的指令，这些指令会自动附加到用户的全局自定义指令中。
+   - `.clinerules` 文件提供了项目特定的指令, 这些指令会自动附加到用户的全局自定义指令中。
    - 它可以用于维护团队成员之间的项目标准、强制执行开发实践、管理文档要求以及定义项目特定的行为。
 
 3. **高级提示技术（🌟）**
-   - 高级提示技术部分提供了社区中最受欢迎的提示示例，包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
+   - 高级提示技术部分提供了社区中最受欢迎的提示示例, 包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
 
 **总结：**
-该指南通过详细的说明和示例，帮助用户更好地理解如何编写高效的提示和指令，从而提升与 Cline 的交互效率。
+该指南通过详细的说明和示例, 帮助用户更好地理解如何编写高效的提示和指令, 从而提升与 Cline 的交互效率。
 
-如果您需要更详细的信息，请告诉我！
+如果您需要更详细的信息, 请告诉我！
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_aggregator.finder - Shutting down all persistent connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - Disconnecting all persistent server connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - All persistent server connections signaled to disconnect.
@@ -480,38 +480,38 @@ Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指�
 **主要章节：**
 
 1. **自定义指令（⚙️）**
-   - 自定义指令类似于 Cline 的编程设置，它们定义了 Cline 的基本行为，并始终生效。
-   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为，例如编码风格、代码质量改进以及错误处理等。
+   - 自定义指令类似于 Cline 的编程设置, 它们定义了 Cline 的基本行为, 并始终生效。
+   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为, 例如编码风格、代码质量改进以及错误处理等。
 
 2. **`.clinerules` 文件（📋）**
-   - `.clinerules` 文件提供了项目特定的指令，这些指令会自动附加到用户的全局自定义指令中。
+   - `.clinerules` 文件提供了项目特定的指令, 这些指令会自动附加到用户的全局自定义指令中。
    - 它可以用于维护团队成员之间的项目标准、强制执行开发实践、管理文档要求以及定义项目特定的行为。
 
 3. **高级提示技术（🌟）**
-   - 高级提示技术部分提供了社区中最受欢迎的提示示例，包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
+   - 高级提示技术部分提供了社区中最受欢迎的提示示例, 包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
 
 **总结：**
-该指南通过详细的说明和示例，帮助用户更好地理解如何编写高效的提示和指令，从而提升与 Cline 的交互效率。
+该指南通过详细的说明和示例, 帮助用户更好地理解如何编写高效的提示和指令, 从而提升与 Cline 的交互效率。
 
-如果您需要更详细的信息，请告诉我！
+如果您需要更详细的信息, 请告诉我！
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_aggregator.finder - Shutting down all persistent connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - Disconnecting all persistent server connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - All persistent server connections signaled to disconnect.
 [INFO] 2025-03-23T18:45:13 mcp_agent.web_page_summary - MCPAgent cleanup
 {
-   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为，例如编码风格、代码质量改进以及错误处理等。
+   - 用户可以通过在 Cline 扩展设置中添加自定义指令来实现特定的行为, 例如编码风格、代码质量改进以及错误处理等。
 
 2. **`.clinerules` 文件（📋）**
-   - `.clinerules` 文件提供了项目特定的指令，这些指令会自动附加到用户的全局自定义指令中。
+   - `.clinerules` 文件提供了项目特定的指令, 这些指令会自动附加到用户的全局自定义指令中。
    - 它可以用于维护团队成员之间的项目标准、强制执行开发实践、管理文档要求以及定义项目特定的行为。
 
 3. **高级提示技术（🌟）**
-   - 高级提示技术部分提供了社区中最受欢迎的提示示例，包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
+   - 高级提示技术部分提供了社区中最受欢迎的提示示例, 包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
 
 **总结：**
-该指南通过详细的说明和示例，帮助用户更好地理解如何编写高效的提示和指令，从而提升与 Cline 的交互效率。
+该指南通过详细的说明和示例, 帮助用户更好地理解如何编写高效的提示和指令, 从而提升与 Cline 的交互效率。
 
-如果您需要更详细的信息，请告诉我！
+如果您需要更详细的信息, 请告诉我！
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_aggregator.finder - Shutting down all persistent connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - Disconnecting all persistent server connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - All persistent server connections signaled to disconnect.
@@ -519,12 +519,12 @@ Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指�
 {
 
 3. **高级提示技术（🌟）**
-   - 高级提示技术部分提供了社区中最受欢迎的提示示例，包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
+   - 高级提示技术部分提供了社区中最受欢迎的提示示例, 包括记忆检查、代码质量提示、代码组织、分析和规划、以及有思想的开发等。
 
 **总结：**
-该指南通过详细的说明和示例，帮助用户更好地理解如何编写高效的提示和指令，从而提升与 Cline 的交互效率。
+该指南通过详细的说明和示例, 帮助用户更好地理解如何编写高效的提示和指令, 从而提升与 Cline 的交互效率。
 
-如果您需要更详细的信息，请告诉我！
+如果您需要更详细的信息, 请告诉我！
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_aggregator.finder - Shutting down all persistent connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - Disconnecting all persistent server connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - All persistent server connections signaled to disconnect.
@@ -534,9 +534,9 @@ Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指�
     "progress_action": "Finished",
 
 **总结：**
-该指南通过详细的说明和示例，帮助用户更好地理解如何编写高效的提示和指令，从而提升与 Cline 的交互效率。
+该指南通过详细的说明和示例, 帮助用户更好地理解如何编写高效的提示和指令, 从而提升与 Cline 的交互效率。
 
-如果您需要更详细的信息，请告诉我！
+如果您需要更详细的信息, 请告诉我！
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_aggregator.finder - Shutting down all persistent connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - Disconnecting all persistent server connections...
 [INFO] 2025-03-23T18:45:13 mcp_agent.mcp.mcp_connection_manager - All persistent server connections signaled to disconnect.
@@ -568,10 +568,10 @@ Cline 提示工程指南旨在帮助用户编写有效的提示和自定义指�
 0:00:17 Finished        ━━━━━━━━━━━━━━━ finder (qwen-turbo)
 ```
 
-## 总结
+## 最后
 
-可以看到，现在我们可以通过很少的代码量就可以一个质量还可以的智能代理了，这个例子比较简单，真正用于实际工作中的智能代理是需要经过不少打磨的.
+可以看到, 现在我们可以通过很少的代码量, 就可以实现一个质量还可以的智能代理了, 这个例子比较简单, 真正用于实际工作中的智能代理是需要经过不少打磨的.
 
 本文的代码已经放到这个开源仓库中了 [https://github.com/yeshan333/webpage-summary-agent](https://github.com/yeshan333/webpage-summary-agent), 可以直接下载下来玩玩.
 
-MCP 协议和 mcp-agent 还处于一个比较早期的阶段，实际把玩过程中会遇到不少的问题，相信往后会越来越好，助你在 AI 新时代“玩的开心”~
+MCP 协议和 mcp-agent 还处于一个比较早期的阶段, 实际把玩过程中会遇到不少的问题, 相信往后会越来越好, 助你在 AI 新时代“玩的开心”~
