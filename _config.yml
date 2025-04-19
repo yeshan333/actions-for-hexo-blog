@@ -2,9 +2,9 @@
 favicon: https://s1.ax1x.com/2022/10/09/xJ7yMF.png
 
 import:
-  link:
+  head_begin:
     - <link rel='stylesheet' href='https://at.alicdn.com/t/c/font_4475507_e8kaw9xmult.css'>
-  script:
+  body_end:
     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" />
     - <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js" />
     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/attatkmouse.js" />
