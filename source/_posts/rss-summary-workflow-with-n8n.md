@@ -5,30 +5,30 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-keywords: "AI, N8N, n8n, 飞书， 多维表"
+keywords: "AI, N8N, n8n, 飞书， 多维表, RSS"
 headimg: https://ospy.shan333.cn/blog/n8n_blog_post/banner.jpg
 description: "使用 n8n 和飞书多维表打造自己的 RSS Feed 订阅管理 & AI 大模型阅读提炼工作流"
 date: 2025-07-12 23:52:37
 updated: 2025-07-13 15:52:37
-tags: ["AI", "n8n", "飞书多维表"]
+tags: ["AI", "n8n", "飞书多维表", "RSS"]
 categories: ["AI"]
 ---
 
-2025 年是 AI 应用大爆发的一. 最近工作内外, 都在通过一些可视化的低代码平台疯狂搞些工作流来玩. 试用了 coze、dify、n8n 等几个产品之后, [n8n](https://n8n.io/) 的单步调试体验、强大的三方插件深得我. 而且可以自部署 & 开源（超级高的 star 数量 10w+,  同时意味着社区不会差, 解决问题应该很方便）, 开源自部署版本相比于企业版阉割不算太多, 正好可以用上刚搞的火山引擎的 4C8G 服务器. 
+2025 年是 AI 应用大爆发的一年. 最近工作内外, 都在通过一些可视化的低代码平台疯狂搞些基于 AI 的工作流来玩. 试用了 coze、dify、n8n 等几个产品之后, [n8n](https://n8n.io/) 的单步调试体验、强大的三方插件深得我心. 而且可以自部署 & 开源（超级高的 star 数量 10w+, 同时意味着社区不会差, 解决问题应该很方便）, 开源自部署版本的功能相比于企业版阉割不算太多, 正好可以用上刚搞的火山引擎的 ECS 4C8G 服务器. 
 
-2024 年 4、5 月的时候曾经拿 [Elixir](https://elixir-lang.org/) 撸过一个用于定时跟踪、结合 AI 总结我的 RSS 订阅最新文章, 并将总结内容推送到我的个人 TG 频道的后台应用（我称之为 **rss_generic_i18n_bot**. AI 很可以很好的将我订阅的各种语言（中文、英文、日文等）博客/播客整理成精炼的中文, 方便消化, 母语相对于其他语言还是更容易进行信息吸收. 这个应用我一直用到了现. 由于代码基本全自己撸的, 现在仍然还有不少 BUG 残留o(╯□╰)o, 缝缝补补~:
+2024 年 4、5 月的时候曾经拿 [Elixir](https://elixir-lang.org/) 撸过一个用于定时跟踪、结合 AI 总结我的 RSS 订阅最新文章, 并将总结内容推送到我的个人 TG 频道的后台应用（我称之为 **rss_generic_i18n_bot**. AI 可以很好的将我订阅的各种语言（中文、英文、日文等）博客/播客整理成精炼的中文, 方便消化, 母语相对于其他语言还是更容易进行信息吸收的. 这个应用我一直用到了现在. 由于代码基本全自己撸的, 现在仍然还有不少 BUG 残留o(╯□╰)o, 缝缝补补~:
 
 ![rssbot-bug-track.jpg](https://ospy.shan333.cn/blog/n8n_blog_post/rssbot-bug-track.jpg)
 
-> Elixir 的生态一言难尽~刚开始操作的时候, 都没啥好用的 AI 基础. 
+> Elixir 的生态一言难尽~刚开始操作的时候, 都没啥好用的 AI 基础库.
 
-> 可能有小伙伴会有疑惑, 为啥不用诸如 [Folo](https://github.com/RSSNext/Folo)、Inoreader 这些强大的可以很方便处理 RSS 信息源的软. 原因是我本意上想尽可能的少打开一些软件, 就可以很方便的崛取我想要的信. 所以我将处理后的信息发送到了诸如 TG、钉钉这样经常打开的即时消息软件群组. 现在的 IM 消息展现能力也不差了, 搜索能力也自. 
+> 可能有小伙伴会有疑惑, 为啥不用诸如 [Folo](https://github.com/RSSNext/Folo)、Inoreader 这些强大的可以很方便处理 RSS 信息源的软件. 原因是我本意上想尽可能的少打开一些软件, 就可以很方便的崛取我想要的信息. 所以我将处理后的信息发送到了诸如 TG、钉钉这样经常打开的即时消息软件群组内. 现在的 IM 软件消息展现能力也不差了, 搜索能力也基本够用，不用自己搞一大堆功能了. 
 
-最近我使用了 n8n 编排了一个工作流出来, 去替代之前的这个后台应用 **rss_generic_i18n_bot*. 遂写篇文章记录一下过程, 也可以给使用 n8n 搭建工作流的小伙伴一点参. 
+最近我使用了 n8n 编排了一个工作流出来, 去替代之前的这个后台应用 **rss_generic_i18n_bot*. 遂写篇文章记录一下过程, 也可以给使用 n8n 搭建工作流的小伙伴一点参考. 
 
 ## 使用 docker 部署 n8n
 
-最先开始的部分肯定是先部署好 n8n 这个可视化工作流编排平. 这里给出我使用的 docker-compose 编排文件, 镜像走了 [m.daocloud.io](m.daocloud.io) 这个镜像源（国内访问不了 Dockerhub 了, 需要“奇技”）, 速度还可以:
+最先开始的部分肯定是先部署好 n8n 这个可视化工作流编排平台. 这里给出我使用的 docker-compose 编排文件, 镜像走了 [m.daocloud.io](m.daocloud.io) 这个镜像源（国内访问不了 Dockerhub 了, 需要“奇技”）, 速度还可以:
 
 ```yaml
 version: '3.8'
@@ -66,18 +66,18 @@ docker-compose up -d
 
 ![n8n-deployment.png](https://ospy.shan333.cn/blog/n8n_blog_post/n8n-deployment.png)
 
-我在 n8n 容器的前面套了一层反向代理, 方便我们挂 SSL/TLS 证书和套个防火墙监控我们的流量信. 
+我在 n8n 容器的前面套了一层反向代理, 方便我们挂 SSL/TLS 证书和套个防火墙监控我们的流量信息. 
 
-> 注意 n8n 开启了 origin 校验, 反向代理服务器可以通过 `proxy_set_header Origin http://127.0.0.1` 固定死 n8n Allow 允许的 Origin, 避免在 n8n 编辑面板经常遇到 WebSocket 的 [Connection Lost](https://community.n8n.io/t/connection-lost-you-have-a-connection-issue-or-the-server-is-down-n8n-should-reconnect-automatically-once-the-issue-is-resolved/80999) 导致保存不了工作流的问. 
+> 注意 n8n 开启了 origin 校验, 反向代理服务器可以通过 `proxy_set_header Origin http://127.0.0.1` 固定死 n8n Allow 允许的 Origin, 避免在 n8n 编辑面板经常遇到 WebSocket 的 [Connection Lost](https://community.n8n.io/t/connection-lost-you-have-a-connection-issue-or-the-server-is-down-n8n-should-reconnect-automatically-once-the-issue-is-resolved/80999) 导致保存不了工作流的问题. 
 
 
-如果没有云服务器的小伙伴也可以参考这篇文章 [《Cursor一键生成n8n工作流+永久免费「n8n云部署」白嫖与效率齐飞~》](https://mp.weixin.qq.com/s/E-WI4fY8cRzFN991_iDTIw) 使用 Claw Cloud 将 n8n 部署在海外, 只需要使用 GitHub 注册且 GitHub 已经注册过 180 天已上, 那么就可以每个月获得5美元赠送额. 基本够用. 可以说是免费使用 Claw Cloud 部署 n8n. 我有一部分需要访问海外服务（如果 Google Sheet）的工作流就用了. 部署很方便, Claw Cloud 内置的 App Store 市场就有快速部署的模. 
+如果没有云服务器的小伙伴也可以参考这篇文章 [《Cursor一键生成n8n工作流+永久免费「n8n云部署」白嫖与效率齐飞~》](https://mp.weixin.qq.com/s/E-WI4fY8cRzFN991_iDTIw) 使用 Claw Cloud 将 n8n 部署在海外, 只需要使用 GitHub 注册且 GitHub 已经注册过 180 天以上, 那么就可以每个月获得 5 美元赠送额. 基本够用. 可以说是免费使用 Claw Cloud 部署 n8n 了. 我有一部分需要访问海外服务（如果 Google Sheet）的工作流就用了这种部署方式. 部署很方便, Claw Cloud 内置的 App Store 市场就有快速部署的模板. 
 
-部署完成之后, 就可以进入管理页面, 编排我们的工作流, 接下来介绍如何使用 n8n 和飞书多维表打造自己的 RSS 订阅、AI 阅读整理工作. 
+部署完成之后, 就可以进入管理页面, 编排我们的工作流, 接下来介绍如何使用 n8n 和飞书多维表打造自己的 RSS 订阅、AI 阅读整理工作流. 
 
 ## 工作流的设计
 
-经常使用 RSS 管理自己的信息源的小伙伴可能知道, 订阅 RSS Feed 链接和阅读 RSS 源的文章是主要的两个高频动. 所以我这里主要拆分出了两个工作流来分别完成 **RSS 链接的订阅处理工作流**和**基于 AI 大模型 的 RSS 文章信息获取、整理和推送工作流*. 
+经常使用 RSS 管理自己的信息源的小伙伴可能知道, 订阅 RSS Feed 链接和阅读 RSS 源的文章是主要的两个高频动作. 所以我这里主要拆分出了两个工作流来分别完成这两项任务：**RSS 链接的订阅处理工作流**和**基于 AI 大模型 的 RSS 文章信息获取、整理和推送工作流*. 
 
 ### RSS 链接的订阅处理工作流
 
@@ -87,7 +87,7 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 
 - Webhook 会监听我们发送给飞书机器人的消息, 触发整个流程的执行；
 - AI Agent 节点可以处理我们发送给飞书机器人包含 RSS Feed 链接任意格式的消息, 自动抽取订阅链接, 给后续节点提取 RSS 订阅源信息存放到飞书多维表格使用；
-- 飞书多维表格：作为数据库, 去持久化存储我们所有订阅的订阅链接, 给另外一个工作流去使. 
+- 飞书多维表格：作为数据库, 去持久化存储我们所有订阅的订阅链接, 给另外一个工作流去使用. 
 
 在飞书管理订阅链接的效果如下图, 操作的多维表格如下:
 
@@ -96,7 +96,7 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 ![rss-feed-bitable.png](https://ospy.shan333.cn/blog/n8n_blog_post/rss-feed-bitable.png)
 {% endgallery %}
 
-左图是我们直接在飞书机器人聊天窗口，然机器人添加工作流，添加完成后，可以直接在右图的多维表看到对应的记录。
+左图是我们直接在飞书机器人聊天窗口，与应用机器人对话，触发 RSS 订阅管理工作流，触发完成后，可以直接在右图的多维表看到对应的订阅记录。
 
 #### 工作流编排文件分享 
 
@@ -418,11 +418,11 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 
 #### 工作流使用注意
 
-1. n8n 官方自带的节点不支持操作飞书的数据, 部署完成后需要先到 Settings -> community-nodes 安装社区的插件: [n8n-nodes-feishu-lite](https://community.n8n.io/t/custom-feishu-node/78169).
+1. n8n 官方自带的节点不支持操作飞书的数据, 部署完成后需要先到 `Settings -> community-nodes` 安装社区的插件: [n8n-nodes-feishu-lite](https://community.n8n.io/t/custom-feishu-node/78169).
 2. 要操作飞书的多维表格需要申请飞书的[开发者应用](https://open.feishu.cn/app), 给改应用分配对应的操作权限, 流程可以参考: [飞书服务端 API 调用流程概述](https://open.feishu.cn/document/server-docs/api-call-guide/calling-process/overview) 去获取 n8n-nodes-feishu-lite 插件使用的调用凭证 (Credentials).
-3. 飞书应用需要开通“机器人能力”, 并分配多维表的数据记录创建、读取权. 
-4. 被工作流操作的飞书多维表, 需要添加新创建的应用作为“文档应用”, 并赋予可以编辑的权. 
-5. 飞书应用管理后台添加 n8n Webhook 回调地址, 以便能处理飞书发送给应用机器人的消. 
+3. 飞书应用需要开通“机器人能力”, 并分配多维表的数据记录创建、读取权限. 
+4. 被工作流操作的飞书多维表, 需要添加新创建的应用作为“文档应用”, 并赋予可以编辑的权限. 
+5. 飞书应用管理后台添加 n8n Webhook 回调地址, 以便能处理飞书发送给应用机器人的消息. 
 
 ![bitable-acls](https://ospy.shan333.cn/blog/n8n_blog_post/bitable-acls.png)
 
@@ -430,11 +430,11 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 
 ![add-webhook-to-feishu.png](https://ospy.shan333.cn/blog/n8n_blog_post/add-webhook-to-feishu.png)
 
-接下来看看“基于 AI 大模型 的 RSS 文章信息获取、整理和推送工作流. 
+接下来看看“基于 AI 大模型 的 RSS 文章信息获取、整理提炼和推送工作流程. 
 
 ### 基于 AI 大模型 的 RSS 文章信息获取、整理和推送工作流
 
-RSS Feed 的订阅处理完成. 下图的工作流主要用于定时从我们的飞书多维表格中获取订阅的 RSS Feed 链. 然后逐一读取每一条订阅链接, 获取其最进 3 天发布的新文章内容, 通过 AI 大模型获取文章内容, 整理提炼后, 发送到即时消息软件（TG、飞书）群组内, 发送成功后会将已经发送过的链接记录到多维表中, 便于在发送前判断是否已经处理过这个新链. 
+RSS Feed 的订阅处理完成了. 下图的工作流主要用于定时从我们的飞书多维表格中获取订阅的 RSS Feed 链接. 然后逐一读取每一条订阅链接, 获取其最近 3 天发布的新文章内容, 通过 AI 大模型获取文章内容, 整理提炼后, 发送到即时消息软件（TG、飞书）群组内, 发送成功后会将已经发送过的链接记录到多维表中, 便于在发送前判断是否已经处理过这个新链接. 
 
 ![rss-summary-workflow.png](https://ospy.shan333.cn/blog/n8n_blog_post/rss-summary-workflow.png)
 
@@ -445,16 +445,16 @@ RSS Feed 的订阅处理完成. 下图的工作流主要用于定时从我们的
 ![bitable-ai-read-history.png](https://ospy.shan333.cn/blog/n8n_blog_post/bitable-ai-read-history.png)
 {% endgallery %}
 
-左图为定时发送到 TG 的 AI 提炼信息，右图为发送记录的多维表。
+左图为定时发送到 TG 的 AI 提炼信息，右图为发送记录的飞书多维表。
 
 #### 工作流使用注意
 
 1. 确保飞书节点使用的凭证已经在处理 **RSS 链接的订阅处理工作流** 时配置好, 权限要对；
-2. TG 的通知节点使用到了 bot, 在 TG 可以向 [https://t.me/BotFather](https://t.me/BotFather) 申请创建机器人, 在频道或群组发消息需要有对应的权. 
+2. TG 的通知节点使用到了 bot, 在 TG 可以向 [https://t.me/BotFather](https://t.me/BotFather) 申请创建机器人, 在频道或群组发消息需要有对应的权限. 
 
 #### 编排文件分享
 
-这里我们直接给出 n8n json 格式的工作流, 你可以直接复制粘贴到 n8n 的编排面板, 参考编排注意调试使用它：
+这里我们直接给出 n8n json 格式的工作流, 你可以直接复制粘贴到 n8n 的编排面板, 编排调试使用它：
 
 {% folding 点击我查看 %}
 
@@ -952,4 +952,4 @@ RSS Feed 的订阅处理完成. 下图的工作流主要用于定时从我们的
 
 ## 结语
 
-好啦~, 本次分享暂时结束 ღ( ´･ᴗ･` ), 期望看到的小伙伴能玩得更. 舒服~, 对于性能不敏感的场景, 搞下 n8n 也不. 
+好啦~, 本次分享暂时结束 ღ( ´･ᴗ･` ), 期望看到的小伙伴能玩得更花. 舒服~, 对于性能不敏感的场景, 搞下 n8n 也不错滴. 
