@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "AI, N8N, n8n, 飞书， 多维表"
-headimg: http://ospy.shan333.cn/blog/n8n_blog_post/banner.jpg
+headimg: https://ospy.shan333.cn/blog/n8n_blog_post/banner.jpg
 description: "使用 n8n 和飞书多维表打造自己的 RSS Feed 订阅管理 & AI 大模型阅读提炼工作流"
 date: 2025-07-12 23:52:37
 updated: 2025-07-13 15:52:37
@@ -18,7 +18,7 @@ categories: ["AI"]
 
 2024 年 4、5 月的时候曾经拿 [Elixir](https://elixir-lang.org/) 撸过一个用于定时跟踪、结合 AI 总结我的 RSS 订阅最新文章, 并将总结内容推送到我的个人 TG 频道的后台应用（我称之为 **rss_generic_i18n_bot**. AI 很可以很好的将我订阅的各种语言（中文、英文、日文等）博客/播客整理成精炼的中文, 方便消化, 母语相对于其他语言还是更容易进行信息吸收. 这个应用我一直用到了现. 由于代码基本全自己撸的, 现在仍然还有不少 BUG 残留o(╯□╰)o, 缝缝补补~:
 
-![rssbot-bug-track.jpg](http://ospy.shan333.cn/blog/n8n_blog_post/rssbot-bug-track.jpg)
+![rssbot-bug-track.jpg](https://ospy.shan333.cn/blog/n8n_blog_post/rssbot-bug-track.jpg)
 
 > Elixir 的生态一言难尽~刚开始操作的时候, 都没啥好用的 AI 基础. 
 
@@ -64,7 +64,7 @@ docker-compose up -d
 
 我将其部署在了火山引擎的 ECS 服务器上, 部署架构如下图:
 
-![n8n-deployment.png](http://ospy.shan333.cn/blog/n8n_blog_post/n8n-deployment.png)
+![n8n-deployment.png](https://ospy.shan333.cn/blog/n8n_blog_post/n8n-deployment.png)
 
 我在 n8n 容器的前面套了一层反向代理, 方便我们挂 SSL/TLS 证书和套个防火墙监控我们的流量信. 
 
@@ -83,7 +83,7 @@ docker-compose up -d
 
 RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从飞书等即时消息软件发送过来“带 RSS Feed 订阅链接”的消息, 将 RSS Feed 订阅链接存放到飞书的多维表格. 如下图：
 
-![rss-feed-workflow.png](http://ospy.shan333.cn/blog/n8n_blog_post/rss-feed-workflow.png)
+![rss-feed-workflow.png](https://ospy.shan333.cn/blog/n8n_blog_post/rss-feed-workflow.png)
 
 - Webhook 会监听我们发送给飞书机器人的消息, 触发整个流程的执行；
 - AI Agent 节点可以处理我们发送给飞书机器人包含 RSS Feed 链接任意格式的消息, 自动抽取订阅链接, 给后续节点提取 RSS 订阅源信息存放到飞书多维表格使用；
@@ -92,8 +92,8 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 在飞书管理订阅链接的效果如下图, 操作的多维表格如下:
 
 {% gallery::::one %}
-![add-rss-feed-with-bot.jpg](http://ospy.shan333.cn/blog/n8n_blog_post/add-rss-feed-with-bot.jpg)
-![rss-feed-bitable.png](http://ospy.shan333.cn/blog/n8n_blog_post/rss-feed-bitable.png)
+![add-rss-feed-with-bot.jpg](https://ospy.shan333.cn/blog/n8n_blog_post/add-rss-feed-with-bot.jpg)
+![rss-feed-bitable.png](https://ospy.shan333.cn/blog/n8n_blog_post/rss-feed-bitable.png)
 {% endgallery %}
 
 左图是我们直接在飞书机器人聊天窗口，然机器人添加工作流，添加完成后，可以直接在右图的多维表看到对应的记录。
@@ -424,11 +424,11 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 4. 被工作流操作的飞书多维表, 需要添加新创建的应用作为“文档应用”, 并赋予可以编辑的权. 
 5. 飞书应用管理后台添加 n8n Webhook 回调地址, 以便能处理飞书发送给应用机器人的消. 
 
-![bitable-acls](http://ospy.shan333.cn/blog/n8n_blog_post/bitable-acls.png)
+![bitable-acls](https://ospy.shan333.cn/blog/n8n_blog_post/bitable-acls.png)
 
-![add-feishu-app-to-bitable](http://ospy.shan333.cn/blog/n8n_blog_post/add-feishu-app-to-bitable.png)
+![add-feishu-app-to-bitable](https://ospy.shan333.cn/blog/n8n_blog_post/add-feishu-app-to-bitable.png)
 
-![add-webhook-to-feishu.png](http://ospy.shan333.cn/blog/n8n_blog_post/add-webhook-to-feishu.png)
+![add-webhook-to-feishu.png](https://ospy.shan333.cn/blog/n8n_blog_post/add-webhook-to-feishu.png)
 
 接下来看看“基于 AI 大模型 的 RSS 文章信息获取、整理和推送工作流. 
 
@@ -436,13 +436,13 @@ RSS 链接的订阅处理工作流, 主要负责基于 n8n 的 Webhook 接收从
 
 RSS Feed 的订阅处理完成. 下图的工作流主要用于定时从我们的飞书多维表格中获取订阅的 RSS Feed 链. 然后逐一读取每一条订阅链接, 获取其最进 3 天发布的新文章内容, 通过 AI 大模型获取文章内容, 整理提炼后, 发送到即时消息软件（TG、飞书）群组内, 发送成功后会将已经发送过的链接记录到多维表中, 便于在发送前判断是否已经处理过这个新链. 
 
-![rss-summary-workflow.png](http://ospy.shan333.cn/blog/n8n_blog_post/rss-summary-workflow.png)
+![rss-summary-workflow.png](https://ospy.shan333.cn/blog/n8n_blog_post/rss-summary-workflow.png)
 
 这个工作流会定时每小时执行一次, 获取 RSS 源新发布的信息, AI 整理提炼后发送到 TG 的效果与 AI 阅读提炼记录多维表结构如下：
 
 {% gallery::::one %}
-![tg-ai-filter-info.png](http://ospy.shan333.cn/blog/n8n_blog_post/tg-ai-filter-info.png)
-![bitable-ai-read-history.png](http://ospy.shan333.cn/blog/n8n_blog_post/bitable-ai-read-history.png)
+![tg-ai-filter-info.png](https://ospy.shan333.cn/blog/n8n_blog_post/tg-ai-filter-info.png)
+![bitable-ai-read-history.png](https://ospy.shan333.cn/blog/n8n_blog_post/bitable-ai-read-history.png)
 {% endgallery %}
 
 左图为定时发送到 TG 的 AI 提炼信息，右图为发送记录的多维表。
