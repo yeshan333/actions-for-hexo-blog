@@ -260,8 +260,8 @@ comments:
   # https://artalk.js.org/
   # https://github.com/ArtalkJS/Artalk
   artalk:
-    js: https://cdn.bootcdn.net/ajax/libs/artalk/2.8.7/Artalk.js
-    css: https://cdn.bootcdn.net/ajax/libs/artalk/2.8.7/Artalk.css
+    js: https://cdn.bootcdn.net/ajax/libs/artalk/2.9.1/Artalk.js
+    css: https://cdn.bootcdn.net/ajax/libs/artalk/2.9.1/Artalk.css
     server: https://artalk.shan333.cn/  # 修改为自建的后端服务地址
     path:  # 全局评论地址
     placeholder: # 评论占位
