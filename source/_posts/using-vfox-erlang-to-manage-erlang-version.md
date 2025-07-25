@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "Erlang/OTP, erlang, vfox, version fox, vfox-erlang"
-headimg: https://telegraph.shansan.top/file/ac02992ae1fb890558382.png
+cover: https://telegraph.shansan.top/file/ac02992ae1fb890558382.png
 description: "使用 vfox-erlang 安装管理多个 Erlang/OTP 版本"
 date: 2024-04-25 23:15:01
 tags: [Erlang/OTP, vfox, vfox-plugin, vfox-erlang]

@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-# headimg: 文章头图 url 824x280
+# cover: 文章头图 url 824x280
 # thumbnail: 标题右边缩略图 url
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'

@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://telegraph.shansan.top/file/bb4710073af02d3a1beca.png
+cover: https://telegraph.shansan.top/file/bb4710073af02d3a1beca.png
 description: "etcd 和 MongoDB 的混沌（故障）测试方法"
 date: 2024-05-18 15:02:09
 tags: ["Chaos Testing", "etcd", "MongoDB"]

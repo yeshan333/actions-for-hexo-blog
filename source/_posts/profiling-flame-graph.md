@@ -5,7 +5,7 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-headimg: https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/824280flame.png
+cover: https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/824280flame.png
 date: 2022-02-26 22:54:38
 tags: [Elixir, Go, React, Profiling, Flame Graphs]
 categories:

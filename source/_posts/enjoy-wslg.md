@@ -12,7 +12,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://z3.ax1x.com/2021/04/25/cz309s.png
+cover: https://z3.ax1x.com/2021/04/25/cz309s.png
 date: 2021-04-25 18:59:48
 tags: [Linux, WSL, GUI]
 categories: WSL

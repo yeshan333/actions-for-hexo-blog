@@ -113,7 +113,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: volantis576
+theme: stellar
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -144,23 +144,21 @@ sitemap:
   category: false
 
 # https://github.com/hexojs/hexo-generator-feed
-feed:
-  enable: true
-  type:
-    - atom
-    - rss2
-  path:
-    - atom.xml
-    - rss2.xml
-  limit: 33
-  hub:
-  content: false
-  content_limit: 333
-  content_limit_delim: ' '
-  order_by: -date
-  icon: https://ospy.shan333.cn/blog/blog.avatar.jpg
-  autodiscovery: true
-  template:
+# feed:
+#   enable: true
+#   type:
+#     - atom
+#     - rss2
+#   path: "atom.xml"
+#   limit: 33
+#   hub:
+#   content: false
+#   content_limit: 333
+#   content_limit_delim: ' '
+#   order_by: -date
+#   icon: https://ospy.shan333.cn/blog/blog.avatar.jpg
+#   autodiscovery: true
+#   template:
 
 aplayer:
   meting: true

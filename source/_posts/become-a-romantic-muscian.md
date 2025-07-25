@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://telegraph.shansan.top/file/00af1c1891710c0053943.png
+cover: https://telegraph.shansan.top/file/00af1c1891710c0053943.png
 date: 2024-02-07 18:40:24
 tags: music
 categories: music

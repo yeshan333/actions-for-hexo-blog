@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 254574
-headimg: https://ospy.shan333.cn/blog_annual_reviewed/2021/headimg.png
+cover: https://ospy.shan333.cn/blog_annual_reviewed/2021/headimg.png
 thumbnail: https://ospy.shan333.cn/blog_annual_reviewed/2021/thumbnail.png
 date: 2022-01-01 12:55:00
 tags: blog

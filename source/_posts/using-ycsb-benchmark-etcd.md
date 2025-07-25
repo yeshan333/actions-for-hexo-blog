@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "Go, etcd, YCSB, go-ycsb, benchmark"
-headimg: https://telegraph.shansan.top/file/f1430548714a9ae2ba18d.png
+cover: https://telegraph.shansan.top/file/f1430548714a9ae2ba18d.png
 description: "using go-ycsb to benchmark etcd."
 date: 2024-02-29 14:16:51
 updated: 2024-02-29 14:16:51

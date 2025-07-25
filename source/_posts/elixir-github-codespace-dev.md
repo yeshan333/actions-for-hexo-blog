@@ -10,7 +10,7 @@ popular_posts: false # 显示推荐文章
 mathjax: true        # 公式渲染
 pin: false           # 文章置顶
 keywords:            'Github Codespaces, Elixir'
-headimg: https://telegraph.shansan.top/file/bb853b1aec1b7cc6fb298.png
+cover: https://telegraph.shansan.top/file/bb853b1aec1b7cc6fb298.png
 description:         "create elixir dev env with github codespaces"
 ---
 

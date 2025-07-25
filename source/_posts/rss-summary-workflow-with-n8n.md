@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "AI, N8N, n8n, 飞书， 多维表, RSS"
-headimg: https://ospy.shan333.cn/blog/n8n_blog_post/banner.jpg
+cover: https://ospy.shan333.cn/blog/n8n_blog_post/banner.jpg
 description: "使用 n8n 和飞书多维表打造自己的 RSS Feed 订阅管理 & AI 大模型阅读提炼工作流"
 date: 2025-07-12 23:52:37
 updated: 2025-07-13 15:52:37

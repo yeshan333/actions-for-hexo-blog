@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://z3.ax1x.com/2021/08/29/hG9wK1.png # 824x280
+cover: https://z3.ax1x.com/2021/08/29/hG9wK1.png # 824x280
 date: 2021-08-28 17:25:18
 categories: Monitoring
 tags: [Prometheus, Grafana, Federation, Docker, Monitoring]

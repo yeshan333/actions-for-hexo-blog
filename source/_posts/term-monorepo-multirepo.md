@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 569213220
-headimg: https://cdn.jsdelivr.net/gh/ssmath/mypic/824280.png
+cover: https://cdn.jsdelivr.net/gh/ssmath/mypic/824280.png
 date: 2021-04-30 23:30:00
 tags: [项目管理, Monorepo]
 categories: Architecture

@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://z3.ax1x.com/2021/11/14/I6fgTP.jpg
+cover: https://z3.ax1x.com/2021/11/14/I6fgTP.jpg
 thumbnail: 标题右边缩略图 url
 date: 2021-11-14 10:21:37
 tags: blog

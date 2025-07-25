@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "WXT, WSL2, browser plugin"
-headimg: https://telegraph.shansan.top/file/298031f2826e13ca14330.png
+cover: https://telegraph.shansan.top/file/298031f2826e13ca14330.png
 description: "WXT 开发浏览器插件"
 date: 2024-03-15 07:47:53
 tags: ["extension", "WXT"]
