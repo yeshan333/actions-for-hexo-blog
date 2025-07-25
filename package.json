@@ -1,5 +1,5 @@
 {
-  "name": "hexo-site",
+  "name": "yeshan333-hexo-blog",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,31 +7,33 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "start": "hexo s"
+    "start": "hexo s",
+    "pretest": "hexo generate",
+    "test": "npx serve public"
   },
   "hexo": {
-    "version": "7.1.1"
+    "version": "7.3.0"
   },
   "dependencies": {
     "hexo": "^7.0.0",
+    "hexo-baidu-url-submit": "0.0.6",
+    "hexo-blog-encrypt": "^3.1.6",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
-    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
     "hexo-generator-json-content": "^4.2.3",
     "hexo-generator-search": "^2.4.1",
     "hexo-generator-seo-friendly-sitemap": "^0.2.1",
     "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.2.0",
-    "hexo-renderer-stylus": "^3.0.0",
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-related-popular-posts": "^5.0.1",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-tag-aplayer": "^3.0.4",
-    "hexo-baidu-url-submit": "0.0.6",
-    "hexo-blog-encrypt": "^3.1.6",
-    "hexo-deployer-git": "^3.0.0"
+    "hexo-tag-aplayer": "^3.0.4"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
