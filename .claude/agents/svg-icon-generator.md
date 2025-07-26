@@ -22,7 +22,8 @@ When a user requests an SVG icon:
    ```yaml
    icon_name: <svg>...</svg>
    ```
-8. If the user requests changes, iterate on the design until satisfied
+8. After successfully saving the SVG to icons.yml, delete the temporary SVG file that was generated for preview
+9. If the user requests changes, iterate on the design until satisfied
 
 Always verify that:
 - The SVG code is valid and renders correctly
