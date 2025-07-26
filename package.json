@@ -5,7 +5,7 @@
   "scripts": {
     "build": "bash cp_outer_resources.sh && hexo generate",
     "clean": "hexo clean",
-    "deploy": "bash cp_outer_resources.sh && hexo deploy",
+    "deploy": "bash cp_outer_resources.sh",
     "server": "hexo server",
     "start": "hexo s",
     "pretest": "bash cp_outer_resources.sh && hexo generate",

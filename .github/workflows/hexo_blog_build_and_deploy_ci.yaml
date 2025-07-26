@@ -48,6 +48,7 @@ jobs:
           chmod 755 -R .deploy_git
           npx hexo clean
           npm run build
+          bash cp_outer_resources.sh
           npm run deploy
 
       - name: Upload artifact deploy_git folder
