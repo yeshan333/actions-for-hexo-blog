@@ -189,7 +189,7 @@ fval
 
 ### 常用格式
 
-$$ min f(X)，这里X为n维变量 $$
+$$ \min f(X) $$，这里 $X$ 为 $n$ 维变量
 fminunc常用格式为:
    （1）x= fminunc（fun, X0）；
    （2）x= fminunc（fun, X0，options）；

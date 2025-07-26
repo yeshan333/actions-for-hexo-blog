@@ -75,7 +75,7 @@ keywords: "computer network, operating system, NIO, BIO"
 
 {% note red, 我们知道，操作系统多个进程/线程的开销维护还是蛮大的。对于高并发场景，如果一台机器要维护 1 万个连接（C10K问题），使用多线程/进程的方式处理，操作系统是无法承受的。如果维持 1 亿用户在线需要 10 万台服务器，成本那是相当的高。 %}
 
-{% note yellow, $ 服务端单机最大 TCP 连接数=客户端 IP 数×客户端端口数 $，对于 IPv4，客户端的 IP 数最多为 2 的 32 次方，客户端的端口数最多为 2 的 16 次方。这只是理论上限，每个 TCP 连接的建立会受制于操作系统内存等因素的影响。%}
+{% note yellow, 服务端单机最大 TCP 连接数 = 客户端 IP 数 × 客户端端口数，对于 IPv4，客户端的 IP 数最多为 $2^{32}$，客户端的端口数最多为 $2^{16}$。这只是理论上限，每个 TCP 连接的建立会受制于操作系统内存等因素的影响。%}
 
 #### epoll 模型
 
@@ -92,9 +92,3 @@ keywords: "computer network, operating system, NIO, BIO"
 - [如果这篇文章说不清epoll的本质，那就过来掐死我吧！](https://zhuanlan.zhihu.com/p/63179839)
 - [5种网络IO模型（有图，很清楚）](https://zhuanlan.zhihu.com/p/54580385)
 - [《Nginx高性能Web服务器详解》](https://book.douban.com/subject/25773187/)
-
-
-
-
-
-
