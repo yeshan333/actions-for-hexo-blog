@@ -6,3 +6,4 @@ node_modules/
 public/
 .vscode
 .deploy_git
+package-lock.json
