@@ -63,13 +63,13 @@ my_follow:
       desc: 手绘风作图
     - title: Volantis
       desc: Hexo 博客主题
-      icon: fas fa-cube
+      icon: sitemap
       url: https://volantis.js.org/
     - title: 关于我 / 留言板
-      icon: fas fa-comment-dots
+      icon: message_board
       url: /about/
     - title: Collect
-      icon: fab fa-delicious
+      icon: sitemap
       url: /Collect/
     - title: 每日天文一图
       icon: https://apod.nasa.gov/favicon.ico
@@ -79,17 +79,17 @@ my_follow:
       desc: 美化代码图片
       url: https://carbon.now.sh
     - title: ShanSan-(腾讯云站点)
-      icon: fas fa-images
+      icon: camera
       url: https://shan333.cn
     - title: 中科大测速网站
-      icon: fas fa-images
+      icon: lightning
       url: https://test.ustc.edu.cn/
     - title: cppreference
       icon: https://s2.ax1x.com/2019/06/19/VXJMPx.jpg
       url: https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5
     - title: 网站缩略图生成
-      icon: fas fa-camera
+      icon: camera
       url: thumbnail/
     - title: 让我帮你百度
-      icon: fas fa-search
+      icon: camera
       url: trytobaidu/
