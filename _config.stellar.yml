@@ -6,7 +6,6 @@ stellar:
   main_css: /css/main.css
   main_js: /js/main.js
 
-
 ######## head tags ########
 preconnect:
   # - https://gcore.jsdelivr.net
@@ -18,6 +17,9 @@ preconnect:
 canonical:
   originalHost: yeshan333.github.io
   officialHosts: # 官方主机列表，每行一个，例如 xaoxuu.vercel.app
+    - shansan.top
+    - shansan.cn
+    - yeshan333.github.io
     - localhost
 
 open_graph:
@@ -182,7 +184,7 @@ article:
   # 缩进两个文字宽度，适合文字类博客，可以在 front-matter/topic/wiki 中覆盖此参数
   indent: # true / false
   # 封面图宽高比
-  cover_ratio: 5
+  cover_ratio: 3.3
   # 文章内横幅宽高比
   banner_ratio: 2.5
   # 如果没有指定横幅，是否根据 tags 作为关键词搜索横幅图片？
@@ -596,7 +598,7 @@ plugins:
   # https://github.com/KaTeX/KaTeX
   # 使用 hexo-renderer-markdown-it-plus 作为公式渲染器：npm uninstall hexo-renderer-marked --save npm install hexo-renderer-markdown-it-plus --save
   katex:
-    enable: #true # hexo-renderer-markdown-it-plus 默认开启 katex，此选项仅用于引入样式
+    enable: true # hexo-renderer-markdown-it-plus 默认开启 katex，此选项仅用于引入样式
     inject: |
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
   
@@ -604,8 +606,8 @@ plugins:
   # 需在Markdown文件开头加入mathjax: true
   # 推荐使用Pandoc: npm uninstall hexo-renderer-marked --save & npm install hexo-renderer-pandoc --save
   mathjax:
-    v3: false # 若使用 v3，需將 js 設置為 https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
-    enable: # true # 可以在特定文章的 front-matter 中设置 mathjax: true 来开启，也可以在这里设置全局开启
+    # v3: true # 若使用 v3，需將 js 設置為 https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
+    enable: false # 可以在特定文章的 front-matter 中设置 mathjax: true 来开启，也可以在这里设置全局开启
     js: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
   # Mermaid - markdwon to flow chart, seq chart, class chart ...

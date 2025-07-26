@@ -15,8 +15,7 @@ music:
   server: netease    # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
   type: song         # song （单曲） album （专辑） playlist （歌单） search （搜索）
   id: 26664345       # 歌曲/专辑/歌单 ID
-headimg:             '文章头图 url 824x280'
-thumbnail:           '标题右边缩略图 url'
+cover:             '文章头图 url 824x280'
 description:         "RSS 描述"
 # 文章上锁
 abstract: 'Welcome to my blog, enter password to read.'

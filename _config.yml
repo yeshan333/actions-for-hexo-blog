@@ -1,19 +1,19 @@
 # 网站图标
 favicon: https://s1.ax1x.com/2022/10/09/xJ7yMF.png
 
-import:
-  head_begin:
-    - <link rel='stylesheet' href='https://at.alicdn.com/t/c/font_4475507_e8kaw9xmult.css'>
-    - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
-  body_end:
-    - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" />
-    - <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js" />
-    - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/attatkmouse.js" />
-    - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/clearbit.js" />
-    - <script async defer data-domain="shansan.top" src="https://plausible.io/js/plausible.js" />
-    - <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "pq8vb6qg7o");</script>
+# import:
+#   head_begin:
+#     - <link rel='stylesheet' href='https://at.alicdn.com/t/c/font_4475507_e8kaw9xmult.css'>
+#     - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
+#   body_end:
+#     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/piao.js" />
+#     - <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js" />
+#     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/attatkmouse.js" />
+#     - <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yeshan333/jsDelivrCDN/clearbit.js" />
+#     - <script async defer data-domain="shansan.top" src="https://plausible.io/js/plausible.js" />
+#     - <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "pq8vb6qg7o");</script>
 
-hexinjiazhiguan: true
+# hexinjiazhiguan: true
 
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
