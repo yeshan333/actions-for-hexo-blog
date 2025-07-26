@@ -25,13 +25,13 @@ open_graph:
   twitter_id: # for open_graph meta
 
 structured_data:
-  links: [] # your social links.
-
+  links:
+    - https://github.com/yeshan333
 
 ######## Sidebar ########
 # 左上角显示的 logo 区域，包含图标、大标题、副标题
 logo:
-  avatar: '[{config.avatar}](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+  avatar: '[https://ospy.shan333.cn/blog/blog.avatar.jpg](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
   title: ShanSan
   subtitle: 个人博客
 
@@ -44,26 +44,27 @@ menubar:
     # icon: 支持 svg/img 标签，可以定义在 icons.yml 文件中，也支持外部图片的 URL
     # title: ShanSan
     # url: 点击跳转到哪，支持相对路径和绝对路径
-    # - id: post
-    #   theme: '#1BCDFC'
-    #   icon: solar:documents-bold-duotone
-    #   title: ShanSan
-    #   url: /
-    # - id: wiki
-    #   theme: '#3DC550'
-    #   icon: solar:notebook-bookmark-bold-duotone
-    #   title: ShanSan
-    #   url: /wiki/
-    # - id: explore
-    #   theme: '#FA6400'
-    #   icon: solar:planet-bold-duotone
-    #   title: ShanSan
-    #   url: /explore/
-    # - id: social
-    #   theme: '#F44336'
-    #   icon: solar:chat-square-like-bold-duotone
-    #   title: ShanSan
-    #   url: /friends/
+    - id: blog
+      title: 博文
+      icon: #
+      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
+      url: /archives/
+    - id: about
+      title: 关于
+      icon:
+      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f0cf.svg
+      url: about/
+    - id: friends
+      title: 友链
+      icon: #
+      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
+      url: friends/
+    - id: bio
+      title: Bio
+      icon: #
+      img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4d6.svg
+      url: wiki/bio/
+
 
 
 ######## Main ########
@@ -72,15 +73,16 @@ site_tree:
   # -- 列表类页面 -- #
   # 主页配置
   home:
-    leftbar: welcome, recent
-    rightbar: tagcloud
+    leftbar: welcome, link_with_me, recent
+    rightbar:
   # 博客列表页配置
   index_blog:
     base_dir: blog # 只影响自动生成的页面路径
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     leftbar: welcome, recent
-    rightbar: tagcloud # for categories/tags/archives
+    rightbar: # for categories/tags/archives
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
+      关于我: /about/
       # '朋友文章': /friends/rss/
   # 博客专栏列表页配置
   index_topic:
@@ -191,13 +193,13 @@ article:
   category_color:
     '探索号': '#f44336'
   # 文章许可协议
-  license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  license: 'This article is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Please provide attribution when reproducing. <br/> 本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
   # 分享
-  share: # [wechat, weibo, email, link]
+  share: [wechat, weibo, email, link]
   # 相关文章，需要安装插件 (for layout: post)
   # npm i hexo-related-popular-posts
   related_posts:
-    enable: false
+    enable: true
     max_count: 5
 
 search:
@@ -310,10 +312,10 @@ comments:
   # Artalk
   # https://artalk.js.org/
   artalk:
-    css: https://unpkg.com/artalk@2.9/dist/Artalk.css
-    js: https://unpkg.com/artalk@2.9/dist/Artalk.js
-    server: https://artalk.shan333.cn
-    site: '' # 站点名称
+    css: https://unpkg.com/artalk@2.9.1/dist/Artalk.css
+    js: https://unpkg.com/artalk@2.9.1/dist/Artalk.js
+    server: https://artalk.shan333.cn/
+    site: 'ShanSan' # 站点名称
     darkMode: auto # 其它模式都有问题，慎用，否则后果自负
     fancybox: true # 是否为评论区启用 fancybox
     # artalk 有三类图片：1.上传至服务端 2.上传至服务端后利用upgit上传至图床 3.前端上传至图床（本配置为此类）
@@ -323,23 +325,29 @@ comments:
       # api: 'https://xxxxxx/api/v1/upload' # 图床上传地址
       # token: 'Bearer xxxxxxxxxxxxxx' # 图床验证
       # resp: 'data.links.url' # 图片地址返回值的字段
+      api: # 图床地址
+      token: # 图床验证
+      resp: # 图片地址返回值的字段
 
 
 ######## Footer ########
 footer:
   social:
-    # github:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/>'
-    #   url: /
-    # music:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/>'
-    #   url: /
-    # unsplash:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3616429.svg"/>'
-    #   url: /
-    # comments:
-    #   icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/>'
-    #   url: /about/#comments
+    email:
+      icon: fas fa-envelope
+      url: mailto:1329441308@qq.com
+    github:
+      icon: github
+      url: https://github.com/yeshan333?tab=repositories
+    music:
+      icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/>'
+      url: https://music.163.com/#/my/m/music/playlist?id=2617691792
+    zhihu:
+      icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/>'
+      url: https://www.zhihu.com/people/si-kong-ji-54/activities
+    rss:
+      icon: rss
+      url: https://shansan.top/rss2.xml
   sitemap:
     # - title: ShanSan
     #   items:
@@ -366,8 +374,11 @@ footer:
     #     - '[xxx](/)'
     #     - '[xxx](/)'
   content: | # 支持 Markdown 格式
+    [Copyright © 2018-2025 ShanSan](https://shansan.top)<br>[桂ICP备19000444号](https://beian.miit.gov.cn/)
     本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。
     本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   # 主题用户越多，开发者维护和更新的积极性就越高，如果您喜欢本主题，请在适当的位置显示主题信息和仓库链接以表支持。
 
 
@@ -607,7 +618,7 @@ plugins:
   #   B -->|option 2| C(Section C)
   # ```
   mermaid:
-    enable: # true # 可以在特定文章的 front-matter 中设置 mermaid: true 来开启，也可以在这里设置全局开启
+    enable: true # 可以在特定文章的 front-matter 中设置 mermaid: true 来开启，也可以在这里设置全局开启
     style_optimization: false # use custom style in stellar
     # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
     js: https://gcore.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js
@@ -655,9 +666,9 @@ style:
     image-s: 8px # 评论区图片圆角（部分评论支持）
   color:
     # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
-    theme: 'hsl(192 98% 55%)' # 主题色
-    accent: 'hsl(14 100% 57%)' # 强调色
-    link: 'hsl(207 90% 54%)' # 超链接颜色
+    theme: '#197b30' # 主题色 (从Volantis迁移)
+    accent: '#44D7B6' # 强调色 (从Volantis迁移)
+    link: '#2092ec' # 超链接颜色 (从Volantis迁移)
   animated_avatar:
     animate: auto # auto, always
     background: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp
@@ -681,7 +692,7 @@ style:
     next: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/arrow/064b95430caf4.svg
   error_page: https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/404/1c830bfcd517d.svg
   site: # 使用 background-image 后，blur 设置才有效
-    # background-image: url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.14/image/site-bg1@small.webp)
+    # background-image: url(https://cdn.jsdelivr.net/gh/ssmath/picgo-pic/img/20210310142425.png)
     blur-px: 100px
     blur-bg: var(--bg-a75)
     blur-sat: 300%

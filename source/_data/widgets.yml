@@ -1,25 +1,17 @@
-starter:
+link_with_me:
   layout: linklist
-  title: 入门向导
+  title: ''
   columns: 1
   items:
-    - icon: solar:notebook-bookmark-bold-duotone
-      title: 查阅 Hexo 文档
-      url: https://xaoxuu.com/wiki/stellar/#start
-    - icon: solar:notebook-bookmark-bold-duotone
-      title: 查阅 Stellar 文档
-      url: https://xaoxuu.com/wiki/stellar/#start
-    - icon: solar:code-file-bold-duotone
-      title: 查看 Stellar 源码
-      url: https://github.com/xaoxuu/hexo-theme-stellar
-    - icon: solar:medal-ribbons-star-bold-duotone
-      title: 探访 Stellar 社区
-      url: https://xaoxuu.com/wiki/stellar/examples.html
-    - icon: solar:planet-bold-duotone
-      title: 探索 Stellar 创意玩法
-      url: https://xaoxuu.com/wiki/stellar/articles.html
-    
-
+    - title: 开往
+      icon: https://www.travellings.cn/assets/travelling-dark.png
+      url: https://www.travellings.cn/go.html
+    - title: 十年之约虫洞
+      icon: https://img.foreverblog.cn/wormhole_1.gif
+      url: https://www.foreverblog.cn/go.html
+    - title: 境内访问
+      icon: https://telegraph.shansan.top/file/f9b8a67f6c7c6c2d647b4.jpg
+      url: https://shan333.cn
 
 sociallist:
   layout: linklist

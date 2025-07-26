@@ -144,12 +144,10 @@ sitemap:
   category: false
 
 # https://github.com/hexojs/hexo-generator-feed
-# feed:
-#   enable: true
-#   type:
-#     - atom
-#     - rss2
-#   path: "atom.xml"
+feed:
+  enable: true
+  type: rss2
+  path: "rss2.xml"
 #   limit: 33
 #   hub:
 #   content: false

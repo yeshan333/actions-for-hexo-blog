@@ -47,9 +47,9 @@ jobs:
           git config --global user.name "yeshan333"
           git clone git@github.com:yeshan333/yeshan333.github.io.git .deploy_git
           chmod 755 -R .deploy_git
-          hexo clean
-          hexo generate
-          hexo deploy
+          npx hexo clean
+          npm run build
+          npm run deploy
 
       - name: Upload artifact deploy_git folder
         uses: actions/upload-artifact@main

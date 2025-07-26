@@ -4,6 +4,7 @@ date: 2018-09-20 13:37:03
 declare: true
 comments: true
 toc: false
+menu_id: about
 music:
   enable: true      # true（文章内和文章列表都显示） internal（只在文章内显示）
   server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
@@ -22,7 +23,7 @@ music:
 
 博客的搭建和维护学了许多花里胡哨的东西😂，主要用来写写自己想写的东西（虽然现在大多是技术文章），emmm。。。有些话想到再说。
 
-<div class="timeline">
+{% timeline %}
 
 <!-- node 2018-09-19 博客诞生 -->
 - 1、其实具体日子我也不记得了，当初不熟悉 Git，Commit History 被我摧毁了很多次，难以追溯具体日期🤣🤦‍♂️
@@ -62,7 +63,7 @@ music:
 
 <!-- node 2024-07-23 volantis -> v2.8.3 升级 v2.8.7 -->
 
-</div>
+{% endtimeline %}
 
 博客加入了十年之约项目嗷~相信时间的力量。
 
@@ -70,12 +71,15 @@ music:
 
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
 
-<div class="tabs" id="link_to_yeshan333">
-<!-- tab 加个微信吧 -->
-![https://ospy.shan333.cn/blog/wechat_qrcode.png](https://ospy.shan333.cn/blog/wechat_qrcode.png)
-<!-- endtab -->
-<!-- tab 加个 QQ 吧 -->
-![https://ospy.shan333.cn/blog/qq_qrcode.jpg](https://ospy.shan333.cn/blog/qq_qrcode.jpg)
-<!-- endtab -->
-</div>
 
+{% tabs active:1 align:center %}
+
+<!-- tab 加个微信吧 -->
+
+![https://ospy.shan333.cn/blog/wechat_qrcode.png](https://ospy.shan333.cn/blog/wechat_qrcode.png)
+
+<!-- tab 加个QQ吧 -->
+
+![https://ospy.shan333.cn/blog/qq_qrcode.jpg](https://ospy.shan333.cn/blog/qq_qrcode.jpg)
+
+{% endtabs %}

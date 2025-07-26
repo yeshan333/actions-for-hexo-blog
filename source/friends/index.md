@@ -9,10 +9,6 @@ author: yeshan333
 
 {% friends friends %}
 
-## 失踪的 dalao 们
-
-{% friends friends %}
-
 <!-- more -->
 
 [![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)

@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "bash cp_outer_resources.sh && hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "bash cp_outer_resources.sh && hexo deploy",
     "server": "hexo server",
     "start": "hexo s",
-    "pretest": "hexo generate",
+    "pretest": "bash cp_outer_resources.sh && hexo generate",
     "test": "npx serve public"
   },
   "hexo": {
@@ -19,6 +19,7 @@
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-blog-encrypt": "^3.1.6",
     "hexo-deployer-git": "^4.0.0",
+    "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
