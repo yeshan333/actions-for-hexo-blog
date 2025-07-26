@@ -24,8 +24,7 @@ jobs:
 
       - name: Setup Hexo Blog Dependencies
         run: |
-          npm install hexo-cli -g
-          npm install
+          npm install --registry=https://registry.npmmirror.com
 
       - name: Add SSH private key to allow access to repository
         env:
