@@ -1,3 +1,5 @@
+# 如何自定义侧边栏，请参考：https://xaoxuu.com/wiki/stellar/widgets/#linklist
+
 link_with_me:
   layout: linklist
   title: ''
@@ -13,6 +15,12 @@ link_with_me:
       icon: https://telegraph.shansan.top/file/f9b8a67f6c7c6c2d647b4.jpg
       url: https://shan333.cn
 
+ghuser:
+  layout: ghuser
+  username: yeshan333 # your github login username
+  avatar: true # show avatar or not
+  menu: true # show menu or not
+
 sociallist:
   layout: linklist
   title: 社交
@@ -24,3 +32,64 @@ sociallist:
     - icon: solar:chat-line-bold-duotone
       title: 关于本站 & 留言板
       url: /about/
+
+my_follow:
+  layout: linklist
+  title: 我的关注
+  columns: 1
+  items:
+    - title: Python Web入坑指南
+      icon: https://python-web-guide.readthedocs.io/zh/latest/_static/favicon.ico
+      url: https://python-web-guide.readthedocs.io/zh/latest/
+    - title: Go 语言高性能编程
+      url: https://geektutu.com/post/high-performance-go.html
+      icon: https://geektutu.com/post/high-performance-go/high-performance-go.jpg
+    - title: Killer Elixir-Tips
+      url: https://github.com/blackode/elixir-tips
+      icon: https://elixir-tips.blackode.in/assets/images/logo.png
+    - title: 开发内功修炼
+      icon: https://github.com/yanfeizhang/coder-kung-fu/raw/main/imgs/book.png
+      url: https://github.com/yanfeizhang/coder-kung-fu
+    - title: Go features by version
+      icon: https://antonz.org/assets/favicon/favicon.ico
+      url: https://antonz.org/which-go/
+    - title: draw.io
+      icon: https://app.diagrams.net/favicon.ico
+      url: https://www.draw.io/
+      desc: 作图工具
+    - title: excalidraw
+      icon: https://excalidraw.com/favicon-32x32.png
+      url: https://github.com/excalidraw/excalidraw
+      desc: 手绘风作图
+    - title: Volantis
+      desc: Hexo 博客主题
+      icon: fas fa-cube
+      url: https://volantis.js.org/
+    - title: 关于我 / 留言板
+      icon: fas fa-comment-dots
+      url: /about/
+    - title: Collect
+      icon: fab fa-delicious
+      url: /Collect/
+    - title: 每日天文一图
+      icon: https://apod.nasa.gov/favicon.ico
+      url: https://apod.nasa.gov/apod/astropix.html
+    - title: Carbon
+      icon: https://carbon.now.sh/static/brand/apple-touch-icon.png
+      desc: 美化代码图片
+      url: https://carbon.now.sh
+    - title: ShanSan-(腾讯云站点)
+      icon: fas fa-images
+      url: https://shan333.cn
+    - title: 中科大测速网站
+      icon: fas fa-images
+      url: https://test.ustc.edu.cn/
+    - title: cppreference
+      icon: https://s2.ax1x.com/2019/06/19/VXJMPx.jpg
+      url: https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5
+    - title: 网站缩略图生成
+      icon: fas fa-camera
+      url: thumbnail/
+    - title: 让我帮你百度
+      icon: fas fa-search
+      url: trytobaidu/

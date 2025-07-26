@@ -74,7 +74,7 @@ site_tree:
   # 主页配置
   home:
     leftbar: welcome, link_with_me, recent
-    rightbar:
+    rightbar: ghuser, my_follow
   # 博客列表页配置
   index_blog:
     base_dir: blog # 只影响自动生成的页面路径
@@ -100,7 +100,7 @@ site_tree:
   post:
     menu_id: post # 未在 front-matter 中指定 menu_id 时，layout 为 post 的页面默认使用这里配置的 menu_id
     leftbar: related, recent # for pages using 'layout:post'
-    rightbar: ghrepo, toc
+    rightbar: ghuser, toc
   # 博客专栏文章内页配置
   topic:
     menu_id: post
@@ -108,7 +108,7 @@ site_tree:
   wiki:
     menu_id: wiki # 未在 front-matter 中指定 menu_id 时，layout 为 wiki 的页面默认使用这里配置的 menu_id
     leftbar: tree, related, recent # for wiki
-    rightbar: ghrepo, toc
+    rightbar: ghuser, toc
   # 笔记本列表页配置
   notebooks:
     base_dir: notebooks # 笔记本列表页的路径。以及未指定 base_dir 的笔记本的路径前缀。
@@ -334,16 +334,16 @@ comments:
 footer:
   social:
     email:
-      icon: fas fa-envelope
+      icon: email
       url: mailto:1329441308@qq.com
     github:
       icon: github
       url: https://github.com/yeshan333?tab=repositories
     music:
-      icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/>'
+      icon: spotify
       url: https://music.163.com/#/my/m/music/playlist?id=2617691792
     zhihu:
-      icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/>'
+      icon: zhihu
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     rss:
       icon: rss

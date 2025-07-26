@@ -82,7 +82,7 @@ etcd vfox plugin. You can the vfox-etcd to manage multiple etcd versions in Linu
 <!-- cell -->
 {% link https://github.com/version-fox/vfox-elixir vfox-elixir github %}
 <!-- cell -->
-Elixir vfox plugin. Use the vfox to manage multiple Elixir versions in Linux/Darwin.
+Elixir vfox plugin. Use the vfox to manage multiple Elixir versions in Linux/Darwin MacOS/Windows.
 {% endgrid %}
 
 {% grid %}
@@ -103,7 +103,7 @@ mongo vfox plugin. Use the vfox to manage multiple mongo server versions in Linu
 <!-- cell -->
 {% link https://github.com/yeshan333/vfox-lua.git vfox-lua github %}
 <!-- cell -->
-lua vfox plugin. Use the vfox to manage multiple lua versions in Linux/Darwin MacOS.
+lua vfox plugin. Use the vfox to manage multiple lua versions in Linux/Darwin MacOS/Windows.
 {% endgrid %}
 
 Apache Jmeter
