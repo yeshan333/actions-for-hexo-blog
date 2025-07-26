@@ -15,7 +15,7 @@
     "version": "7.3.0"
   },
   "dependencies": {
-    "hexo": "^7.0.0",
+    "hexo": "^7.3.0",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-blog-encrypt": "^3.1.6",
     "hexo-deployer-git": "^4.0.0",
@@ -31,7 +31,7 @@
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-related-popular-posts": "^5.0.1",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-markdown-it-plus": "^1.0.6",
+    "hexo-renderer-markdown": "^1.6.5",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
