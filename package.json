@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "bash cp_outer_resources.sh && hexo generate",
+    "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "bash cp_outer_resources.sh",
+    "deploy": "hexo deploy",
     "server": "hexo server",
     "start": "hexo s",
-    "pretest": "bash cp_outer_resources.sh && hexo generate",
+    "pretest": "hexo generate",
     "test": "npx serve public"
   },
   "hexo": {
