@@ -343,7 +343,7 @@ footer:
       icon: github
       url: https://github.com/yeshan333?tab=repositories
     music:
-      icon: spotify
+      icon: music
       url: https://music.163.com/#/my/m/music/playlist?id=2617691792
     zhihu:
       icon: zhihu
