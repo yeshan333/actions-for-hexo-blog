@@ -20,11 +20,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@main
         with:
-          node-version: "21.7.3"
+          node-version: "23.11.1"
 
       - name: Setup Hexo Blog Dependencies
         run: |
-          npm install --registry=https://registry.npmmirror.com
+          npm install
 
       - name: Add SSH private key to allow access to repository
         env:
