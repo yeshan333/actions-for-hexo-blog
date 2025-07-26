@@ -5,7 +5,7 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-headimg: https://pic.imgdb.cn/item/63823c2216f2c2beb1828864.png
+cover: https://pic.imgdb.cn/item/63823c2216f2c2beb1828864.png
 thumbnail: https://pic.imgdb.cn/item/63823c2216f2c2beb1828864.png
 date: 2022-11-26 23:10:46
 tags: Elixir

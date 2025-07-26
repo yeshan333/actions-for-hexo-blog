@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/mongodb-tls.png
+cover: https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/mongodb-tls.png
 description: "使用 mkcert 本地部署启动了 TLS/SSL 加密通讯的 MongoDB 副本集和分片集群"
 date: 2025-02-06 15:40:38
 updated:

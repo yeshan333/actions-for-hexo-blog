@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "vfox, elixir, erlang, vfox-erlang, vfox-elixir, vfox-plugin"
-headimg: https://telegraph.shansan.top/file/e47d436092cf177a103bc.png
+cover: https://telegraph.shansan.top/file/e47d436092cf177a103bc.png
 description: "通过 vfox 安装在 Windows 上管理多个 Erlang/OTP 和 Elixir 的版本"
 date: 2024-06-18 22:58:39
 tags: [Elixir, Erlang, vfox, Windows]

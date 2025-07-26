@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://cdn.jsdelivr.net/gh/ssmath/mypic/QQ%E6%88%AA%E5%9B%BE20210516204143.png
+cover: https://cdn.jsdelivr.net/gh/ssmath/mypic/QQ%E6%88%AA%E5%9B%BE20210516204143.png
 date: 2021-05-16 15:14:31
 tags: math
 categories: math

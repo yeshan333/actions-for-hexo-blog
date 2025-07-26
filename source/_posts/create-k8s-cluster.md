@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://z3.ax1x.com/2021/10/24/5fAWlQ.jpg
+cover: https://z3.ax1x.com/2021/10/24/5fAWlQ.jpg
 date: 2021-10-24 13:51:19
 tags: [Kubernetes, Kubeadm]
 categories: Kubernetes

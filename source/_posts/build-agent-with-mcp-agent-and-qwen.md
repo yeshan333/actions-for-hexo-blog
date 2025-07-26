@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "MCP、mcp-agent、通义千问"
-headimg: https://ospy.shan333.cn/blog/build-agent-with-mcp-agent-and-qwen.png
+cover: https://ospy.shan333.cn/blog/build-agent-with-mcp-agent-and-qwen.png
 description: "使用 mcp-agent 框架和百炼大模型构建基于 MCP 协议的网页总结智能代理 (agent)"
 date: 2025-03-23 17:49:46
 updated:

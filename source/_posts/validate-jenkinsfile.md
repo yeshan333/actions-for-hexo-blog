@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://telegraph.shansan.top/file/594ad9640f5732ee8263d.png
+cover: https://telegraph.shansan.top/file/594ad9640f5732ee8263d.png
 description: "使用 vscode 插件 vscode-jenkins-pipeline-linter-connector 和 LLMs 校验你的 Jenkinsfile"
 date: 2024-05-25 17:05:12
 tags: ["Jenkins", "Cloudflare", "Workers AI", "Langchain", "LLMs"]

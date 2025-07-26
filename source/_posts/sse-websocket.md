@@ -5,7 +5,7 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-headimg: https://s1.ax1x.com/2023/03/11/ppKuToT.jpg
+cover: https://s1.ax1x.com/2023/03/11/ppKuToT.jpg
 date: 2023-03-11 14:26:29
 tags: [Websocket, SSE, Python]
 categories: SSE

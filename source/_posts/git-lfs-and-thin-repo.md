@@ -5,7 +5,7 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-headimg:
+cover:
 date: 2021-12-26 16:26:23
 tags: Git
 categories: Git

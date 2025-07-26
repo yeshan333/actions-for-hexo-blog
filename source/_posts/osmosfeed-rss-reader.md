@@ -5,7 +5,7 @@ comments: true
 popular_posts: false
 mathjax: false
 pin: false
-headimg: https://cdn.jsdelivr.net/gh/ssmath/mypic/you%20really%20need%20rss.png
+cover: https://cdn.jsdelivr.net/gh/ssmath/mypic/you%20really%20need%20rss.png
 date: 2021-06-29 15:34:20
 tags: [RSS Reader]
 categories:

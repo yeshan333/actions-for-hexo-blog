@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "using-chezmoi-to-manage-dotfiles"
-headimg: https://telegraph.shansan.top/file/5210f8d9b0331fd1c4f58.png
+cover: https://telegraph.shansan.top/file/5210f8d9b0331fd1c4f58.png
 description: "使用 chezmoi & vscode, 管理你的 dotfiles"
 date: 2024-03-23 16:11:23
 updated:

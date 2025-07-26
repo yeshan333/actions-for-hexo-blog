@@ -1,0 +1,26 @@
+name: ShanSan
+title: ShanSan/Cloudys Bio
+subtitle: 'More geek fan, more love!'
+icon: https://cloudys-bio.netlify.app/_astro/blog.avatar.D2a0gdSt_lspOy.webp
+cover: https://cloudys-bio.netlify.app/_astro/blog.avatar.D2a0gdSt_lspOy.webp
+coverpage: true # 默认是 true
+description: 'More geek fan, more love! Less & More ~'
+repo: yeshan333/yeshan333
+search:
+  filter: /wiki/bio/
+  placeholder: 寻你所想...
+leftbar: 
+  - tree
+license: true
+share: true
+comment_title: '评论区供技术交流~'
+comments:
+  service: artalk
+base_dir: /wiki/bio/
+tree:
+  'OpenSource':
+    - index
+    - vibe_coding_projects
+  'Cat':
+    - mycat
+

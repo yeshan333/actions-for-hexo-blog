@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://ospy.shan333.cn/blog/agent-rsshub.jpg
+cover: https://ospy.shan333.cn/blog/agent-rsshub.jpg
 description: "使用 GitHub Copilot Agent 创建新的 RSSHub 路由"
 date: 2025-04-20 18:54:12
 updated:

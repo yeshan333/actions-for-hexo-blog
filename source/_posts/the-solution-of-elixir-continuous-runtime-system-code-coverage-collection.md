@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://s1.ax1x.com/2022/11/04/xO9340.png
+cover: https://s1.ax1x.com/2022/11/04/xO9340.png
 date: 2022-08-31 22:43:10
 tags:
   - Elixir

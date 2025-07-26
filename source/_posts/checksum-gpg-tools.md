@@ -5,7 +5,7 @@ comments: true
 popular_posts: false
 mathjax: true
 pin: false
-headimg: https://z3.ax1x.com/2021/07/11/W9bniR.png
+cover: https://z3.ax1x.com/2021/07/11/W9bniR.png
 date: 2021-07-10 18:23:57
 tags: [MD5, GPG]
 categories: Cryptography

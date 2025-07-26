@@ -11,7 +11,7 @@ music:
   type: playlist
   id: 7956225484
   autoplay: true
-headimg: https://ospy.shan333.cn/blog_annual_reviewed/2022/20220425.jpg
+cover: https://ospy.shan333.cn/blog_annual_reviewed/2022/20220425.jpg
 thumbnail: https://ospy.shan333.cn/blog_annual_reviewed/2022/33_zigulu.png
 abstract: 'Welcome to my blog, enter password to read.'
 message: 'Welcome to my blog, enter password to read.'

@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "Awesome Technology Weekly, 中文技术月/周/日刊总览"
-headimg: https://telegraph.shansan.top/file/5490d8cd92c071e62d84c.png
+cover: https://telegraph.shansan.top/file/5490d8cd92c071e62d84c.png
 description: "Awesome Technology Weekly Zh-Hans - 中文技术月/周/日刊一览, 文章每三小时刷新"
 date: 2024-03-04 11:14:47
 updated: 2024-03-04 11:14:47

@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "vscode, emscripten, emcc, emsdk, wasm, webassembly, DWARF, source map"
-headimg: https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/emcc_banner.png
+cover: https://pub-a8b9801c20ad491b964fc0e49c81cdb7.r2.dev/emcc_banner.png
 description: 在 Visual Studio Code 与微信开发者工具中调试 emscripten 生成的 WASM 代码
 date: 2025-01-08 00:30:39
 updated:

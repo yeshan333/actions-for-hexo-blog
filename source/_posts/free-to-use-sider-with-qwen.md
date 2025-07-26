@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://telegraph.shansan.top/file/d9c87ca70a7d46c9e9ce0.png
+cover: https://telegraph.shansan.top/file/d9c87ca70a7d46c9e9ce0.png
 description: "手把手教你如何在 Sider (ChatGPT Sidebar) 中免费使用通义千问"
 date: 2024-05-29 00:29:49
 updated:

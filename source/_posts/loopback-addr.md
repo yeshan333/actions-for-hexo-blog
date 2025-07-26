@@ -10,7 +10,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://cdn.jsdelivr.net/gh/yeshan333/blog_images@main/loopback_banner.png
+cover: https://cdn.jsdelivr.net/gh/yeshan333/blog_images@main/loopback_banner.png
 date: 2021-11-27 11:41:50
 tags: [Wireshark]
 categories: 计算机网络
