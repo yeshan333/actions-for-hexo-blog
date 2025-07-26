@@ -85,6 +85,7 @@ site_tree:
     rightbar: # for categories/tags/archives
     nav_tabs:  # 近期发布 分类 标签 专栏 归档 and ...
       关于我: /about/
+      投喂🍞: /wiki/bio/mycat/
       # '朋友文章': /friends/rss/
   # 博客专栏列表页配置
   index_topic:
@@ -195,7 +196,7 @@ article:
   category_color:
     '探索号': '#f44336'
   # 文章许可协议
-  license: 'This article is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Please provide attribution when reproducing. <br/> 本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  license: '[喂猫🍞](/wiki/bio/mycat/) <br/> This article is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Please provide attribution when reproducing. <br/> 本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
   # 分享
   share: [wechat, weibo, email, link]
   # 相关文章，需要安装插件 (for layout: post)
