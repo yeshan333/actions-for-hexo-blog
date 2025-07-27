@@ -12,6 +12,7 @@ cover:
 poster: '文章头图 url 824x280，文章封面，包含 topic/headline/caption/color 子配置	'
 banner:	'页面顶部横幅背景'
 mathjax: true        # 公式渲染
+mermaid: true
 
 keywords:            'SEO 关键词'
 description:         "RSS 描述"

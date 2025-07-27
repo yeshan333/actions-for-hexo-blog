@@ -164,4 +164,6 @@ feed:
 aplayer:
   meting: true
 
-  
+# https://github.com/webappdevelp/hexo-filter-mermaid-diagrams
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
