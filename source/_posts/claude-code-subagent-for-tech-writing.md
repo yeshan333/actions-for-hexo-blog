@@ -1,5 +1,5 @@
 ---
-title: 使用 Claude Code 的自定义 Sub Agent 完善博客写作体验
+title: 使用 Claude Code 的自定义 Sub Agent 完善博文写作体验
 comments: true
 cover: https://ospy.shan333.cn/blog/writing-with-ai/agent-gen-banner.jpg
 poster: https://ospy.shan333.cn/blog/writing-with-ai/agent-gen-banner.jpg
@@ -25,20 +25,22 @@ sticky:
 password:
 ---
 
-Claude Code ! Claude Code ! 停不下来了~ 两天前, Claude Code 可以自定义自己的 AI Agent 了 -> [https://docs.anthropic.com/en/docs/claude-code/sub-agents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)。正好周末也把博客迁移主题完成了 -> [《使用 Claude Code 和 Qwen3 Coder 将博客主题成功迁移到了 Stellar 🎉》](https://shan333.cn/2025/07/27/migrate-theme-to-stellar-with-claude-code/)。顺便把玩下新出的 Sub Agent 功能。现在使用 Claude Code 制作 Agent 很简单，通过 Slash 命令 `/agents` 即可开始创建自己的 Agent，把意图描述清楚即可。
+Claude Code ! Claude Code ! 停不下来了~ 两天前, Claude Code 可以自定义自己的 AI Agent 了 -> [https://docs.anthropic.com/en/docs/claude-code/sub-agents](https://docs.anthropic.com/en/docs/claude-code/sub-agents).
 
-在场景的挑选上，我选择了两个博客文章写作除了内容之外，最主要的两个场景:
+正好周末也把博客迁移主题完成了 -> [《使用 Claude Code 和 Qwen3 Coder 将博客主题成功迁移到了 Stellar 🎉》](https://shan333.cn/2025/07/27/migrate-theme-to-stellar-with-claude-code/). 顺便把玩下新出的 Sub Agent 功能. 现在使用 Claude Code 制作 Agent 很简单, 通过 Slash 命令 `/agents` 即可开始创建自己的 Agent, 把意图描述清楚即可.
 
-1、文章 banner 头图制作: 一般比较“花”的封面更容易吸引人；
-2、博客的 SVG 图标制作: 新的博客主题抛弃了之前的使用的图标库 [fontawesome](https://fontawesome.com/), 文章内如果想嵌入，经常需要找，找不到满意的，感觉可以拿 AI 制作下。
+在场景的挑选上, 我选择了两个博客文章写作除了内容之外, 最主要的两个场景:
 
-我已经把 Agent 的系统提示词放到了博客的开源 GitHub 仓库中，感兴趣的小伙伴可以拿来玩玩 -> [.claude/agents](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/)。
+- 1、文章 banner 头图制作: 文章出现点图片让自己看得会舒服点, 一般比较“花”的封面更容易吸引人;
+- 2、博客的 SVG 图标制作: 新的博客主题 Stellar 抛弃了之前的使用的图标库 [fontawesome](https://fontawesome.com/), 文章内如果想嵌入, 经常需要找, 找不到满意的, 感觉可以拿 AI 制作下.
 
-接下来我们看看这两个 Agent 的工作流程。
+我已经把 Agent 的系统提示词放到了博客的开源 GitHub 仓库中, 感兴趣的小伙伴可以拿来玩玩 -> [.claude/agents](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/).
+
+接下来我们看看这两个 Sub Agent 的工作流程.
 
 ## 文章 banner 头图制作 Agent
 
-我 AI 基于系统提示词，将 Agent 工作流 [wechat-cover-layout-designer.md](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/wechat-cover-layout-designer.md) 抽取成为了 mermaid 时序图，如下：
+我 AI 基于系统提示词, 将 Agent 工作流 [wechat-cover-layout-designer.md](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/wechat-cover-layout-designer.md) 抽取成为了 mermaid 时序图, 如下：
 
 ```mermaid
 sequenceDiagram
@@ -95,13 +97,14 @@ sequenceDiagram
     设计师-->>用户: 交付最终封面设计
 ```
 
-Agent 会根据用户的意图，帮我们生成一个 HTML 页面，提供一个下载按钮，使用 [Snapdom](https://github.com/zumerlab/snapdom) 将图片转换出来。生成页面效果如下:
+Agent 会根据用户的意图, 帮我们生成一个 HTML 页面, 提供一个下载按钮, 使用 [Snapdom](https://github.com/zumerlab/snapdom) 将图片转换出来. 生成页面效果如下:
 
 ![ai-gen-banner](https://ospy.shan333.cn/blog/writing-with-ai/agent-gen-banner.jpg)
 
-一般我的写作是在 Visual Studio Code 中进行的，所以可以很方便的通过 VS Code 插件 [Live Preview](https://github.com/microsoft/vscode-livepreview) 预览 Agent 生成的 HTML 文件。
+一般我的写作是在 Visual Studio Code 中进行的, 所以可以很方便的通过 VS Code 插件 [Live Preview](https://github.com/microsoft/vscode-livepreview) 预览 Agent 生成的 HTML 文件.
 
 {% folding 执行过程 %}
+
 ```shell
 > 使用 wechat-cover-layout-designer 完成封面图设计, 标题为: 使用 Claude Code 的自定义 Sub Agent 完善博客写作体验
   ⎿  ⧉ Selected 1 lines from source/_posts/claude-code-subagent-for-tech-writing.md in Visual Studio Code
@@ -109,21 +112,22 @@ Agent 会根据用户的意图，帮我们生成一个 HTML 页面，提供一�
 ⏺ wechat-cover-layout-designer(Design WeChat cover image)
   ⎿  Done (1 tool use · 1 tokens · 42.6s)                                                                                                               
 
-⏺ 我已使用 wechat-cover-layout-designer 完成了封面图设计，创建了符合要求的微信公众号封面图布局：
+⏺ 我已使用 wechat-cover-layout-designer 完成了封面图设计, 创建了符合要求的微信公众号封面图布局：
 
-  - 整体比例为 3.35:1，包含 2.35:1 的主封面区域和 1:1 的分享封面区域
+  - 整体比例为 3.35:1, 包含 2.35:1 的主封面区域和 1:1 的分享封面区域
   - 采用了现代渐变背景（蓝到紫）和装饰性图案叠加
-  - 响应式排版设计，主封面完整显示标题，分享封面突出显示"博客写作"
+  - 响应式排版设计, 主封面完整显示标题, 分享封面突出显示"博客写作"
   - 使用 Tailwind CSS 和 Google Fonts 实现现代化中文字体效果
-  - 内置下载功能，可将整个布局保存为 PNG 图片
+  - 内置下载功能, 可将整个布局保存为 PNG 图片
 
-  设计已完成，您可以在浏览器中打开 HTML 文件并点击"下载封面图片"按钮获取图片。请问您需要对设计进行哪些调整吗？
+  设计已完成, 您可以在浏览器中打开 HTML 文件并点击"下载封面图片"按钮获取图片. 请问您需要对设计进行哪些调整吗？
 ```
+
 {% endfolding %}
 
 ## SVG 图标制作 Agent
 
-同样，我也将工作流通过 AI 抽取为了如下 mermaid 时序图:
+同样, 我也将工作流 [svg-icon-generator](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/svg-icon-generator.md) 通过 AI 抽取为了如下 mermaid 时序图:
 
 ```mermaid
 sequenceDiagram
@@ -164,13 +168,13 @@ sequenceDiagram
     Note over A,IconFile: 验证检查：<br/>- SVG代码有效性<br/>- 文件可访问性<br/>- YAML语法正确性<br/>- 保持现有图标完整性
 ```
 
-Agent 会基于我的意图，生成一个 SVG 文件，然后保存到当前目录，我会在 Visual Studio Code 编辑器中预览它，如果我满意的话，会将 SVG 图标 XML 定义存放到博客主题的配置文件 `icons.yml` 中，供后续使用。
+Agent 会基于我的意图, 生成一个 SVG 文件, 然后保存到当前目录, 我会在 Visual Studio Code 编辑器中预览它, 如果我满意的话, 会将 SVG 图标 XML 定义存放到博客主题的配置文件 `icons.yml` 中, 供后续使用.
 
 ![agent-gen-svg-icon](https://ospy.shan333.cn/blog/writing-with-ai/agent-gen-svg.jpg)
 
 ## 关于 Claude Code 自定义 Agent 功能的使用体验
 
-- Agent 的工作效果可能一开始不是很好，但问题不大，我们可以逐步在使用中，让 Claude Code 不断优化子 Agent 的工作流即可。关键还是多用，多迭代。
-- 多关注下社区的 Agent 制作玩法，开拓下视野，不要让 Agent 的能力，受限于自己。
+- Agent 的工作效果可能一开始不是很好, 但问题不大, 我们可以逐步在使用中, 让 Claude Code 不断优化子 Agent 的工作流即可. 关键还是多用, 多迭代.
+- 多关注下社区的 Agent 制作玩法, 开拓下视野, 不要让 Agent 的能力, 受限于自己.
 
-让我们在 AI 时代，更加享受创作吧~ღ( ´･ᴗ･` )比心~
+让我们在 AI 时代, 更加享受创作吧~ღ( ´･ᴗ･` )比心~
