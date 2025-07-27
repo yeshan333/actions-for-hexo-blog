@@ -40,7 +40,7 @@ Claude Code ! Claude Code ! 停不下来了~ 两天前, Claude Code 可以自定
 
 ## 文章 banner 头图制作 Agent
 
-我 AI 基于系统提示词, 将 Agent 工作流 [wechat-cover-layout-designer.md](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/wechat-cover-layout-designer.md) 抽取成为了 mermaid 时序图, 如下：
+我使用 AI 基于系统提示词, 将 Agent 工作流 [wechat-cover-layout-designer.md](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/wechat-cover-layout-designer.md) 抽取成为了 mermaid 时序图, 如下：
 
 ```mermaid
 sequenceDiagram
@@ -127,7 +127,7 @@ Agent 会根据用户的意图, 帮我们生成一个 HTML 页面, 提供一个�
 
 ## SVG 图标制作 Agent
 
-同样, 我也将工作流 [svg-icon-generator](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/svg-icon-generator.md) 通过 AI 抽取为了如下 mermaid 时序图:
+同样, 我也将 SVG 图标制作 Agent 工作流 [svg-icon-generator](https://github.com/yeshan333/actions-for-hexo-blog/blob/main/.claude/agents/svg-icon-generator.md) 通过 AI 抽取为了如下 mermaid 时序图:
 
 ```mermaid
 sequenceDiagram
@@ -172,7 +172,7 @@ Agent 会基于我的意图, 生成一个 SVG 文件, 然后保存到当前目�
 
 ![agent-gen-svg-icon](https://ospy.shan333.cn/blog/writing-with-ai/agent-gen-svg.jpg)
 
-## 关于 Claude Code 自定义 Agent 功能的使用体验
+## 关于 Claude Code 自定义 Agent 功能的使用感想
 
 - Agent 的工作效果可能一开始不是很好, 但问题不大, 我们可以逐步在使用中, 让 Claude Code 不断优化子 Agent 的工作流即可. 关键还是多用, 多迭代.
 - 多关注下社区的 Agent 制作玩法, 开拓下视野, 不要让 Agent 的能力, 受限于自己.
