@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "start": "hexo s",
+    "start": "hexo clean && hexo s",
     "pretest": "hexo generate",
     "test": "npx serve public"
   },

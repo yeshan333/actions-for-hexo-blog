@@ -6,8 +6,9 @@ updated:             # 更新日期，一般不需要填写
 tags:
 categories:
 comments: true       # 评论功能
-sticky: false        # 置顶（数字越大越靠前）
+sticky:              # 置顶（数字越大越靠前）
 
+cover:
 poster: '文章头图 url 824x280，文章封面，包含 topic/headline/caption/color 子配置	'
 banner:	'页面顶部横幅背景'
 mathjax: true        # 公式渲染
