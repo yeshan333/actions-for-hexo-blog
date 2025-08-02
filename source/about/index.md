@@ -70,7 +70,7 @@ API 不兼容，吐了🤮，升级还是蛮难受的。
 <!-- node 2024-07-23 volantis -> v2.8.3 升级 v2.8.7 -->
 紧跟节奏，避免升级困难。
 
-<!-- node 2024-07-23 博客主题由 volantis 转换为 Stellar，感谢 Claude Code 帮忙迁移 -->
+<!-- node 2025-07-26 博客主题由 volantis 转换为 Stellar，感谢 Claude Code 帮忙迁移 -->
 更加简洁~作者是同一个人。
 
 {% endtimeline %}
