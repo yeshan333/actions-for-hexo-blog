@@ -25,7 +25,7 @@
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-json-content": "^4.2.3",
     "hexo-generator-search": "^2.4.1",
-    "hexo-generator-seo-friendly-sitemap": "^0.2.1",
+    "hexo-generator-seo-better-sitemap": "^0.1.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-related-popular-posts": "^5.0.1",
