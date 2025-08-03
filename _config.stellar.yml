@@ -6,6 +6,11 @@ stellar:
   main_css: /css/main.css
   main_js: /js/main.js
 
+inject:
+  script:
+    - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    - <script>LA.init({id:"3N0nbmMoWnI9Z6Po",ck:"3N0nbmMoWnI9Z6Po"})</script>
+
 ######## head tags ########
 preconnect:
   # - https://gcore.jsdelivr.net
