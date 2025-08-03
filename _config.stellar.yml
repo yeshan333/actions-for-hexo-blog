@@ -356,7 +356,7 @@ footer:
       url: https://www.zhihu.com/people/si-kong-ji-54/activities
     rss:
       icon: rss
-      url: https://shansan.top/rss2.xml
+      url: /rss2.xml
   sitemap:
     # - title: ShanSan
     #   items:
