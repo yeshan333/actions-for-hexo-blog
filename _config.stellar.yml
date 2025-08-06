@@ -8,9 +8,9 @@ stellar:
 
 inject:
   head: 
-    - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
+    # - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
   script:
-    - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
+    # - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     - <script>LA.init({id:"3N0nbmMoWnI9Z6Po",ck:"3N0nbmMoWnI9Z6Po"})</script>
 
@@ -84,7 +84,7 @@ site_tree:
   # 主页配置
   home:
     leftbar: welcome, link_with_me, recent
-    rightbar: ghuser, my_follow
+    rightbar: ghuser, my_follow, google_ads
   # 博客列表页配置
   index_blog:
     base_dir: blog # 只影响自动生成的页面路径

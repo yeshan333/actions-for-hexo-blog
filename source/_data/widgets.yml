@@ -93,3 +93,21 @@ my_follow:
     - title: 让我帮你百度
       icon: camera
       url: trytobaidu/
+
+
+google_ads:
+  layout: markdown
+  title: Ads
+  content: |
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214"
+     crossorigin="anonymous"></script>
+    <!-- 博客右侧 -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-7762707993867214"
+        data-ad-slot="1682113641"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
