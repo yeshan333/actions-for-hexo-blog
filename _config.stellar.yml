@@ -7,6 +7,8 @@ stellar:
   main_js: /js/main.js
 
 inject:
+  head: 
+    - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
   script:
     - <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7762707993867214" crossorigin="anonymous"></script>
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
