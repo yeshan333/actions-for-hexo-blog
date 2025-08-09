@@ -1,11 +1,11 @@
 ---
-title: 使用 iFLOW-CLI GitHub Action 给 GitHub 仓库生成幻灯片风格的文档站点
+title: Generate Slideshow-Style Documentation Sites for GitHub Repositories with iFLOW-CLI GitHub Action
 comments: true
 cover: https://ospy.shan333.cn/blog/iflow-cli-action/iflow-action-usage-demo.gif
 mathjax: true
 mermaid: true
 keywords: "iFLOW CLI, AI Agent, GitHub Actions"
-description: "使用 iFLOW-CLI GitHub Action 给 GitHub 仓库生成幻灯片风格的文档站点"
+description: "Generate slideshow-style documentation sites for GitHub repositories with iFLOW-CLI GitHub Action"
 music:
   enable: false
   server: netease
@@ -21,25 +21,25 @@ sticky:
 password:
 ---
 
-阿里的心流 [https://www.iflow.cn/](https://www.iflow.cn/) 团队最近开源了一款基于终端的 AI Agent 工具 [iFLOW CLI](https://github.com/iflow-ai/iflow-cli), 目前可以**免费**使用到强大的 Qwen3-Coder、Kimi K2 等模型。又是一款类似 Anthropics [Claude Code](https://github.com/anthropics/claude-code) 的产品。
+The iFLOW team from Alibaba [https://www.iflow.cn/](https://www.iflow.cn/) has recently open-sourced a terminal-based AI Agent tool [iFLOW CLI](https://github.com/iflow-ai/iflow-cli), which can currently be used **free of charge** with powerful models like Qwen3-Coder and Kimi K2. It's another product similar to Anthropic's [Claude Code](https://github.com/anthropics/claude-code).
 
-> iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。
+> iFlow CLI is a powerful AI assistant that runs directly in the terminal. It can seamlessly analyze code repositories, execute programming tasks, understand contextual requirements, and enhance your work efficiency through automated processing from simple file operations to complex workflows.
 
-既然是基于终端的 AI Agent 工具，那么就可以很好的利用 Github Action 来实现在文档内容更新之后, 自动生成幻灯片风格的文档站点。
+Since it's a terminal-based AI Agent tool, it can be well utilized with Github Actions to automatically generate slideshow-style documentation sites.
 
-趁着发布当日，立马基于 GitHub Copilot Agent、iFLOW CLI vibe coding 了一个 GitHub Actions 来方便在隔离的 GitHub Actions 环境中大规模使用。
+Taking advantage of the release day, I immediately vibe-coded a GitHub Actions based on GitHub Copilot Agent and iFLOW CLI to facilitate large-scale usage in isolated GitHub Actions environments.
 
-GitHub Actions [https://github.com/marketplace/actions/iflow-cli-action](https://github.com/marketplace/actions/iflow-cli-action) 已经发布到了 GitHub 的 Marketplace 市场。欢迎来玩~
+The GitHub Actions [https://github.com/marketplace/actions/iflow-cli-action](https://github.com/marketplace/actions/iflow-cli-action) has been published to GitHub's Marketplace. Feel free to try it out~
 
-这里我们介绍如何基于这个 GitHub Actions 来生成幻灯片风格的文档站点，最终的效果可以查看这个网站 [https://vibe-ideas.github.io/iflow-cli-action/#/](https://vibe-ideas.github.io/iflow-cli-action/#/), 预览效果如下：
+Here we'll introduce how to generate slideshow-style documentation sites based on this GitHub Actions. The final effect can be viewed at this website [https://vibe-ideas.github.io/iflow-cli-action/#/](https://vibe-ideas.github.io/iflow-cli-action/#/), with a preview as follows:
 
 ![iflow-action-usage-demo](https://ospy.shan333.cn/blog/iflow-cli-action/iflow-action-usage-demo.gif)
 
-接下来我们看看如何使用这个 GitHub Actions.
+Next, let's see how to use this GitHub Actions.
 
-## 使用 iFLOW CLI GitHub Action
+## Using iFLOW CLI GitHub Action
 
-如果想要使用这个 iFLOW CLI GitHub Action, 你需要在 GitHub 中创建一个代码库 [https://github.com/new](https://github.com/new), 然后在代码库中创建一个 `.github/workflows` 目录，在 `.github/workflows` 目录下创建一个 `iflow-cli-action.yml` 文件使用 iFLOW CLI GitHub Action:
+To use this iFLOW CLI GitHub Action, you need to create a repository on GitHub [https://github.com/new](https://github.com/new), then create a `.github/workflows` directory in the repository, and create an `iflow-cli-action.yml` file in the `.github/workflows` directory to use the iFLOW CLI GitHub Action:
 
 ```shell
 git clone https://github.com/yourname/your-repo.git
@@ -49,7 +49,7 @@ mkdir -p .github/workflows
 touch .github/workflows/iflow-cli-action.yml
 ```
 
-iflow-cli-action.yml 文件内容如下：
+The content of the iflow-cli-action.yml file is as follows:
 
 ```yaml
 name: iFlow CLI Example
@@ -71,17 +71,17 @@ jobs:
           extra_args: "--debug"
 ```
 
-`prompt` 即提示词，指导 AI Agent 完成你的目标🎯.
+`prompt` is the prompt that guides the AI Agent to complete your goal🎯.
 
-`secrets.IFLOW_API_KEY` 是 iFLOW CLI 的 API 接口访问密钥，你可以在 iFLOW CLI 官网 [https://www.iflow.cn/](https://www.iflow.cn/) 注册一个账号，然后通过这个链接可以获取到密钥 [https://iflow.cn/?open=setting](https://iflow.cn/?open=setting).
+`secrets.IFLOW_API_KEY` is the API access key for iFLOW CLI. You can register an account on the iFLOW CLI official website [https://www.iflow.cn/](https://www.iflow.cn/), and then obtain the key through this link [https://iflow.cn/?open=setting](https://iflow.cn/?open=setting).
 
-我们将密钥保存到 GitHub 仓库的 Secrets 中，避免密钥泄露。Settings -> Secrets and variables -> Actions -> New repository secret, Secrets 名为 `IFLOW_API_KEY`:
+We save the key to the GitHub repository's Secrets to avoid key leakage. Settings -> Secrets and variables -> Actions -> New repository secret, with the secret name `IFLOW_API_KEY`:
 
 ![iflow-cli-action-settings-1.jpg](https://ospy.shan333.cn/blog/iflow-cli-action/iflow-cli-action-settings-1.jpg)
 
 ![iflow-cli-action-settings-2.jpg](https://ospy.shan333.cn/blog/iflow-cli-action/iflow-cli-action-settings-2.jpg)
 
-以上配置完成后，将工作流文件提交到 GitHub 仓库中就可以正常使用这个 GitHub Actions 了：
+After completing the above configuration, commit the workflow file to the GitHub repository to use this GitHub Actions normally:
 
 ```shell
 git add .
@@ -89,15 +89,15 @@ git commit -m "add iflow-cli-action.yml"
 git push
 ```
 
-推送之后，一般可以在代码仓库的 Actions 中看到运行过程和结果，效果如下 [https://github.com/vibe-ideas/iflow-cli-action/actions/runs/16844856504](https://github.com/vibe-ideas/iflow-cli-action/actions/runs/16844856504):
+After pushing, you can generally see the execution process and results in the repository's Actions. The effect is as follows [https://github.com/vibe-ideas/iflow-cli-action/actions/runs/16844856504](https://github.com/vibe-ideas/iflow-cli-action/actions/runs/16844856504):
 
 ![iflow-cli-action-settings-2.jpg](https://ospy.shan333.cn/blog/iflow-cli-action/iflow-cli-action-running-result.png)
 
-接下来我们再看看如何基于 iFLOW CLI GitHub Action 生成前文提到的幻灯片风格的文档站点。
+Next, let's see how to generate the aforementioned slideshow-style documentation site based on the iFLOW CLI GitHub Action.
 
-## 基于 iFLOW CLI GitHub Action 生成幻灯片风格的文档站点
+## Generating Slideshow-Style Documentation Sites with iFLOW CLI GitHub Action
 
-相信通过前文，你已经知道如何使用 iFLOW CLI GitHub Action. 这里我们直接给出 GitHub Actions 的配置文件，方便大家参考，这个编排文件也放到了一个 GitHub 公开仓库中 []():
+Assuming you already know how to use the iFLOW CLI GitHub Action through the previous text. Here we directly provide the GitHub Actions configuration file for reference. This orchestration file is also placed in a public GitHub repository []():
 
 ```yaml
 name: Build and Deploy Homepage
@@ -252,8 +252,8 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-这里 iFLOW CLI 将会基于代码仓库的 README 和 [reveal.js](https://revealjs.com/) 生成幻灯片风格的文档站点，然后通过 GitHub Pages 发布到网络上。这里的效果可以访问这个网站看到 👀 [https://version-fox.github.io/vfox-erlang/#/](https://version-fox.github.io/vfox-erlang/#/)
+Here, iFLOW CLI will generate a slideshow-style documentation site based on the repository's README and [reveal.js](https://revealjs.com/), and then publish it to the web through GitHub Pages. The effect can be seen at this website 👀 [https://version-fox.github.io/vfox-erlang/#/](https://version-fox.github.io/vfox-erlang/#/)
 
-## 结语
+## Conclusion
 
-期待你能基于 iFLOW CLI Action, 玩出更多的花样~
+I look forward to seeing what more creative things you can do with the iFLOW CLI Action~
