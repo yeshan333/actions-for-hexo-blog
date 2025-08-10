@@ -31,7 +31,7 @@ Kubenetes 官方文档给出了 Kubeadm 起 k8s 集群的几点要求，在这�
 
 - [x] A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.[我们用的 Ubuntu 20.04，那肯定符合 Debian 系的].
 - [x] 2 GB or more of RAM per machine (any less will leave little room for your apps).[4G, 我们很 OK, 但感觉后面会拉跨].
-- [x] 2 CPUs or more. [正好一台 2个 CPU, nice].
+- [x] 2 CPUs or more. [正好一台 2 个 CPU, nice].
 - [x] Full network connectivity between all machines in the cluster (public or private network is fine).[两台轻量级应用服务器都有公网 IP，那必须互通啊].
 - [x] Unique hostname, MAC address, and product_uuid for every node.[这里得微微 check 一下两台服务器，`cat /sys/class/net/eth0/address` 看下 MAC 地址，`sudo cat /sys/class/dmi/id/product_uuid` 看下 product_uuid, `hostname` 看下主机名，emmm, correct！]
 - [x] Certain ports are open on your machines. [这里得到阿里云轻量级服务器 & 腾讯云的轻量级应用服务器的防火墙开放下相关 TCP 端口]。
@@ -56,7 +56,7 @@ Kubenetes 官方文档给出了 Kubeadm 起 k8s 集群的几点要求，在这�
 
 {% endgallery %}
 
-- [x] Swap disabled. You MUST disable swap in order for the kubelet to work properly. [为了让 kubelet 起来，要把 Swap 分区关闭，使用 `free -mh` 看下 Swap 是否在使用， `swapoff -a` [关闭 Swap 分区](https://askubuntu.com/questions/214805/how-do-i-disable-swap)].
+- [x] Swap disabled. You MUST disable swap in order for the kubelet to work properly. [为了让 kubelet 起来，要把 Swap 分区关闭，使用 `free -mh` 看下 Swap 是否在使用，`swapoff -a` [关闭 Swap 分区](https://askubuntu.com/questions/214805/how-do-i-disable-swap)].
 
 参考：https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
@@ -124,12 +124,12 @@ sudo add-apt-repository "deb http://mirrors.aliyun.com/kubernetes/apt kubernetes
 apt-get update
 ```
 
-上面执行没有问题的话，就可以开始安装 kubelet kubeadm kubectl了：
+上面执行没有问题的话，就可以开始安装 kubelet kubeadm kubectl 了：
 
 ```shell
 sudo apt-get install -y kubelet kubeadm kubectl
 
-# 查看安装的版本, apt install apt-show-versions
+# 查看安装的版本，apt install apt-show-versions
 apt-show-versions kubectl kubelet kubeadm
 # 让 kubelet 开机启动
 sudo systemctl start kubelet
@@ -137,7 +137,7 @@ sudo systemctl enable kubelet
 ```
 
 - kubeadm: 引导启动 Kubernate 集群的命令行工具。
-- kubelet: 在群集中的所有计算机上运行的组件, 并用来执行如启动 Pods 和 Containers 等操作。
+- kubelet: 在群集中的所有计算机上运行的组件，并用来执行如启动 Pods 和 Containers 等操作。
 - kubectl: 用于操作运行中的集群的命令行工具。
 
 ## 初始化集群
@@ -230,4 +230,4 @@ vm-8-4-ubuntu             Ready    <none>                 8m9s   v1.22.2
 
 - [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 - [使用 Kubeadm 部署](http://icyfenix.cn/appendix/deployment-env-setup/setup-kubernetes/setup-kubeadm.html)
-- [解决阿里云ECS下kubeadm部署k8s无法指定公网IP](https://www.cnblogs.com/life-of-coding/p/11879067.html)
+- [解决阿里云 ECS 下 kubeadm 部署 k8s 无法指定公网 IP](https://www.cnblogs.com/life-of-coding/p/11879067.html)
