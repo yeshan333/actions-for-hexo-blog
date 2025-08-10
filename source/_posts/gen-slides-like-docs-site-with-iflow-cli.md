@@ -1,5 +1,5 @@
 ---
-title: 使用 iFLOW-CLI GitHub Action 给 GitHub 仓库生成幻灯片风格的文档站点
+title: 使用 iFLOW-CLI GitHub Action 和 Qwen3-Coder 给 GitHub 仓库生成幻灯片风格的文档站点
 comments: true
 cover: https://ospy.shan333.cn/blog/iflow-cli-action/iflow-action-usage-demo.gif
 mathjax: true
@@ -71,7 +71,7 @@ jobs:
           extra_args: "--debug"
 ```
 
-`prompt` 即提示词，指导 AI Agent 完成你的目标🎯.
+`prompt` 即提示词，指导 AI Agent 完成你的目标🎯. 模型我们选用了 Qwen3-Coder.
 
 `secrets.IFLOW_API_KEY` 是 iFLOW CLI 的 API 接口访问密钥，你可以在 iFLOW CLI 官网 [https://www.iflow.cn/](https://www.iflow.cn/) 注册一个账号，然后通过这个链接可以获取到密钥 [https://iflow.cn/?open=setting](https://iflow.cn/?open=setting).
 
