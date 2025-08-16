@@ -5,8 +5,8 @@ poster: "文章头图 url 824x280, 文章封面, 包含 topic/headline/caption/c
 banner: 页面顶部横幅背景
 mathjax: true
 mermaid: true
-keywords: SEO 关键词
-description: RSS 描述
+keywords: "iFLOW CLI, Claude Code Action, iflow-cli-action, Qwen3-Coder, Kimi K2, Productivity, DevOps"
+description: "使用 iflow-cli-action 在 GitHub 与 Qwen3-Coder、Kimi K2 一起快速提升你的生产力"
 music:
   enable: false
   server: netease
@@ -17,9 +17,22 @@ message: Welcome to my blog, enter password to read.
 date: 2025-08-16 22:04:15
 updated:
 tags:
+  - GitHub Actions
+  - AI Development
+  - Automation
+  - iFLOW CLI
+  - Issue Management
+  - Pull Request Review
+  - Qwen3-Coder
+  - Kimi K2
+  - Productivity
+  - DevOps
 categories:
+  - Technology
+  - AI
+  - GitHub
 sticky:
-cover:
+cover: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/pr-review.jpg
 password:
 ---
 
