@@ -1,8 +1,8 @@
 ---
 title: 使用 iflow-cli-action 在 GitHub 与 Qwen3-Coder、Kimi K2 一起快速提升你的生产力
 comments: true
-poster: "文章头图 url 824x280, 文章封面, 包含 topic/headline/caption/color 子配置\t"
-banner: 页面顶部横幅背景
+poster: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
+banner: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
 mathjax: true
 mermaid: true
 keywords: "iFLOW CLI, Claude Code Action, iflow-cli-action, Qwen3-Coder, Kimi K2, Productivity, DevOps"
@@ -32,7 +32,7 @@ categories:
   - AI
   - GitHub
 sticky:
-cover: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/pr-review.jpg
+cover: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
 password:
 ---
 
