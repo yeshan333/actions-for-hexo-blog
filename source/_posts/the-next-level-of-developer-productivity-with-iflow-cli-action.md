@@ -1,8 +1,8 @@
 ---
 title: 使用 iflow-cli-action 在 GitHub 与 Qwen3-Coder、Kimi K2 一起快速提升你的生产力
 comments: true
-poster: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
-banner: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
+poster: https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
+banner: https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
 mathjax: true
 mermaid: true
 keywords: "iFLOW CLI, Claude Code Action, iflow-cli-action, Qwen3-Coder, Kimi K2, Productivity, DevOps"
@@ -32,7 +32,7 @@ categories:
   - AI
   - GitHub
 sticky:
-cover: https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
+cover: https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-cli-actions-demo-workflow-banner.jpg
 password:
 ---
 
@@ -423,7 +423,7 @@ jobs:
 
 如果是一些存量的 issue, 可以直接在 issue 中评论 `@iflow-cli /triage` 触发自动分类。效果如下, 可以看到 issue 被 GitHub Actions 的 robot 机器人打上了标签 [https://github.com/vibe-ideas/iflow-cli-action/issues/14](https://github.com/vibe-ideas/iflow-cli-action/issues/14):
 
-![issue triage](https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/issue-auto-triage.png)
+![issue triage](https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/issue-auto-triage.png)
 
 ## 让 iFLOW CLI 成为 GitHub issues 杀手
 
@@ -645,7 +645,7 @@ sequenceDiagram
 
 [https://github.com/vibe-ideas/iflow-cli-action/issues/14](https://github.com/vibe-ideas/iflow-cli-action/issues/14)
 
-![issue killer](https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/issue-killer.jpg)
+![issue killer](https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/issue-killer.jpg)
 
 可以看到 iFLOW CLI 会在执行前大概告知我们执行计划, 然后执行成功后, 会自动在 Issue 中评论引导我们创建 Pull Request.
 
@@ -676,7 +676,7 @@ sequenceDiagram
 
 你可以在这个代码评审中看到实际效果: [https://github.com/vibe-ideas/iflow-cli-action/pull/15](https://github.com/vibe-ideas/iflow-cli-action/pull/15)
 
-![pr review](https://fastly.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/pr-review.jpg)
+![pr review](https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/pr-review.jpg)
 
 {% folding "GitHub Actions 工作流定义" %}
 ```yaml
