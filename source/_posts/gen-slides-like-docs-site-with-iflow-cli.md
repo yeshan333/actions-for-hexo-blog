@@ -21,7 +21,7 @@ sticky:
 password:
 ---
 
-阿里的心流 [https://www.iflow.cn/](https://www.iflow.cn/) 团队最近开源了一款基于终端的 AI Agent 工具 [iFLOW CLI](https://github.com/iflow-ai/iflow-cli), 目前可以**免费**使用到强大的 Qwen3-Coder、Kimi K2 等模型。又是一款类似 Anthropics [Claude Code](https://github.com/anthropics/claude-code) 的产品。
+阿里的心流 [https://www.iflow.cn/](https://www.iflow.cn/) 团队最近发布了一款基于终端的 AI Agent 工具 [iFLOW CLI](https://github.com/iflow-ai/iflow-cli), 目前可以**免费**使用到强大的 Qwen3-Coder、Kimi K2 等模型。又是一款类似 Anthropics [Claude Code](https://github.com/anthropics/claude-code) 的产品。
 
 > iFlow CLI 是一款直接在终端中运行的强大 AI 助手。它能够无缝分析代码仓库、执行编程任务、理解上下文需求，通过自动化处理从简单的文件操作到复杂的工作流程，全面提升您的工作效率。
 
