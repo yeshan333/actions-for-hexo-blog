@@ -56,6 +56,8 @@ iflow-cli-action 对 iFLOW CLI 进行了封装, 基于 GitHub Actions 提供的�
 
 在这里, 我们直接给出一个示例的工作流编排文件, 它会使用 iflow-cli-action 去创建一个 PPT 幻灯片风格的文档网站, 并发布出来, 如下：
 
+![demo](https://ospy.shan333.cn/blog/iflow-cli-action/iflow-action-usage-demo.gif)
+
 {% folding "工作流定义" %}
 ```yaml
 name: Build and Deploy Homepage
@@ -227,79 +229,7 @@ jobs:
 
 这个工作流的执行机制如下：
 
-```mermaid
-sequenceDiagram
-    participant User as 用户
-    participant GH as GitHub
-    participant Runner1 as Ubuntu Runner (build)
-    participant Runner2 as Ubuntu Runner (deploy)
-    participant iFlow as iFlow CLI Action
-    participant Pages as GitHub Pages
-
-    Note over GH: 触发条件检查
-    alt 定时触发 (每日 02:00 UTC)
-        GH->>GH: 检查 cron 表达式
-    else 手动触发
-        User->>GH: workflow_dispatch
-    else 推送到 main 分支
-        User->>GH: 推送代码 (README.md/README_zh.md)
-        GH->>GH: 检查文件路径匹配
-    end
-
-    Note over GH: 权限和并发控制
-    GH->>GH: 设置 GITHUB_TOKEN 权限<br/>(contents: read, pages: write)
-    GH->>GH: 检查并发组 "pages"<br/>(取消进行中的运行)
-
-    Note over GH,Runner1: Build Job 开始
-    GH->>Runner1: 分配 ubuntu-latest 运行器
-    Runner1->>Runner1: 设置环境变量<br/>GITHUB_PAGES=true
-
-    Note over Runner1: Step 1: 检出代码
-    Runner1->>GH: actions/checkout@v4
-    GH-->>Runner1: 返回仓库代码
-
-    Note over Runner1: Step 2: 配置 Pages
-    Runner1->>Runner1: actions/configure-pages@v4
-    Runner1->>Runner1: 配置 GitHub Pages 设置
-
-    Note over Runner1: Step 3: 创建目录
-    Runner1->>Runner1: mkdir -p _site
-
-    Note over Runner1: Step 4: 生成首页
-    Runner1->>iFlow: vibe-ideas/iflow-cli-action@main
-    Note over iFlow: 处理提示词
-    iFlow->>iFlow: 读取 README.md
-    iFlow->>iFlow: 使用 Qwen3-Coder 模型
-    iFlow->>iFlow: 生成 Reveal.js 幻灯片
-    iFlow-->>Runner1: 生成 _site/index.html
-
-    Note over Runner1: Step 5: 验证生成结果
-    Runner1->>Runner1: 检查 _site/index.html 是否存在
-    Runner1->>Runner1: 验证 reveal.js 内容
-    Runner1->>Runner1: 列出 _site/ 目录内容
-
-    Note over Runner1: Step 6: 上传构建产物
-    Runner1->>GH: actions/upload-pages-artifact@v3
-    Runner1->>GH: 上传 _site/ 目录
-    GH-->>Runner1: 确认上传成功
-
-    Note over GH: Build Job 完成
-
-    Note over GH,Runner2: Deploy Job 开始 (依赖 build)
-    GH->>Runner2: 分配 ubuntu-latest 运行器
-    Runner2->>Runner2: 设置 github-pages 环境
-
-    Note over Runner2: Step 1: 部署到 GitHub Pages
-    Runner2->>GH: actions/deploy-pages@v4
-    GH->>Pages: 部署页面内容
-    Pages-->>GH: 返回部署 URL
-    GH-->>Runner2: 设置输出变量 page_url
-
-    Note over GH: Deploy Job 完成
-
-    Note over User,Pages: 工作流完成
-    Pages->>User: 网站可访问<br/>(通过 GitHub Pages URL)
-```
+![iflow-action-usage-demo.svg](https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-action-usage-demo.svg)
 
 它会监听代码仓库的 push 事件, 查看 README.md 文件是否发生变化, 如果发生变化则让 iFLOW CLI 利用 Qwen3-COder 模型, 基于 Reveal.js 技术生成幻灯片, 并部署到 GitHub Pages.你可以通过这个网站直接查阅到对应的效果 [https://vibe-ideas.github.io/iflow-cli-action/#/](https://vibe-ideas.github.io/iflow-cli-action/#/).
 
