@@ -1073,4 +1073,6 @@ jobs:
 
 ## 结语
 
-iFLOW CLI 目前的 Agent 能力算是不错的了, 你可以随意修改上述工作流中的 prompt, 让它更贴合你的使用场景。祝你玩得开心(*^▽^*)~.
+iFLOW CLI 目前的 Agent 能力算是不错的了, 你可以随意修改上述工作流中的 prompt, 让它更贴合你的使用场景。如果 iFLOW CLI 不够打，可以结合 Claude Code 一起使用。让 iflow-cli-action 完成简单，中等任务。让 claude-code-action 完成复杂任务。
+
+祝你玩得开心(*^▽^*)~.
