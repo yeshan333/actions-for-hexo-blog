@@ -231,7 +231,7 @@ jobs:
 
 ![iflow-action-usage-demo.svg](https://gcore.jsdelivr.net/gh/yeshan333/jsDelivrCDN@main/iflow-action-usage-demo.svg)
 
-它会监听代码仓库的 push 事件, 查看 README.md 文件是否发生变化, 如果发生变化则让 iFLOW CLI 利用 Qwen3-COder 模型, 基于 Reveal.js 技术生成幻灯片, 并部署到 GitHub Pages.你可以通过这个网站直接查阅到对应的效果 [https://vibe-ideas.github.io/iflow-cli-action/#/](https://vibe-ideas.github.io/iflow-cli-action/#/).
+它会监听代码仓库的 push 事件, 查看 README.md 文件是否发生变化, 如果发生变化则让 iFLOW CLI 利用 Qwen3-COder 模型, 基于 Reveal.js 技术生成幻灯片, 并部署到 GitHub Pages.你可以通过这个网站直接查阅到对应的效果 [https://iflow-ai.github.io/iflow-cli-action/#/](https://iflow-ai.github.io/iflow-cli-action/#/).
 
 自动化工作流使用到的 IFLOW_API_KEY 密钥需要到心流官方获取 [https://iflow.cn/?open=setting](https://iflow.cn/?open=setting).我们需要将密钥保存到 GitHub 仓库的 Secrets 中, 避免密钥泄露.Settings -> Secrets and variables -> Actions -> New repository secret, Secrets 名为 `IFLOW_API_KEY`:
 

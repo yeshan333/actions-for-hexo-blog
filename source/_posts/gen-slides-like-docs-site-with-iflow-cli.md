@@ -31,7 +31,7 @@ password:
 
 GitHub Actions [https://github.com/marketplace/actions/iflow-cli-action](https://github.com/marketplace/actions/iflow-cli-action) 已经发布到了 GitHub 的 Marketplace 市场。欢迎来玩~
 
-这里我们介绍如何基于这个 GitHub Actions 来生成幻灯片风格的文档站点，最终的效果可以查看这个网站 [https://vibe-ideas.github.io/iflow-cli-action/#/](https://vibe-ideas.github.io/iflow-cli-action/#/), 预览效果如下：
+这里我们介绍如何基于这个 GitHub Actions 来生成幻灯片风格的文档站点，最终的效果可以查看这个网站 [https://iflow-ai.github.io/iflow-cli-action/#/](https://iflow-ai.github.io/iflow-cli-action/#/), 预览效果如下：
 
 ![iflow-action-usage-demo](https://ospy.shan333.cn/blog/iflow-cli-action/iflow-action-usage-demo.gif)
 
