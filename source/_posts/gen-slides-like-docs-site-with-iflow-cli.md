@@ -97,7 +97,7 @@ git push
 
 ## 基于 iFLOW CLI GitHub Action 生成幻灯片风格的文档站点
 
-相信通过前文，你已经知道如何使用 iFLOW CLI GitHub Action. 这里我们直接给出 GitHub Actions 的配置文件，方便大家参考，这个编排文件也放到了一个 GitHub 公开仓库中 []():
+相信通过前文，你已经知道如何使用 iFLOW CLI GitHub Action. 这里我们直接给出 GitHub Actions 的配置文件，方便大家参考，这个编排文件也放到了一个 GitHub 公开仓库中 [.github/workflows/deploy_home_page.yaml](https://github.com/version-fox/vfox-erlang/blob/main/.github/workflows/deploy_home_page.yaml):
 
 ```yaml
 name: Build and Deploy Homepage
