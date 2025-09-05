@@ -7,7 +7,13 @@ author: yeshan333
 
 ## 朋友们
 
-{% friends friends %}
+<!-- {% friends friends %} -->
+
+{% sites friends %}
+
+{% folding 失踪的dalao们 %}
+{% sites deprecated_friend %}
+{% endfolding %}
 
 <!-- more -->
 
