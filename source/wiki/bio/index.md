@@ -11,6 +11,17 @@ toc: true
 <center>
 {% emoji blobcat party height:1em %}{% emoji blobcat party height:2em %}{% emoji blobcat party height:3em %}{% emoji blobcat party height:2em %}{% emoji blobcat party height:1em %}</center>
 
+## AI
+
+{% grid %}
+<!-- cell -->
+{% link https://github.com/iflow-ai/iflow-cli-action iflow-cli-action github %}
+<!-- cell -->
+Automate software development tasks within your GitHub repositories with iFlow CLI. [https://github.com/iflow-ai/iflow-cli](https://github.com/iflow-ai/iflow-cli).
+
+view in: [https://iflow-ai.github.io/iflow-cli-action/](https://iflow-ai.github.io/iflow-cli-action/)
+{% endgrid %}
+
 ## CodeCoverage
 
 {% grid %}
@@ -64,7 +75,16 @@ Landy is a free React landing page template designed for developers and startups
 <!-- cell -->
 {% link https://github.com/yeshan333/vscode-jenkins-pipeline-linter-connector jenkins-pipeline-linter-connector github %}
 <!-- cell -->
-Validate declarative Jenkinsfile syntax in Visual Studio Code.
+Validate declarative Jenkinsfile syntax in Visual Studio Code with Cloudflare AI.
+{% endgrid %}
+
+{% quot Browser %}
+
+{% grid %}
+<!-- cell -->
+{% link https://github.com/vibe-ideas/your-new-tab your-new-tab github %}
+<!-- cell -->
+A customizable browser extension that replaces your new tab page with a beautiful, functional interface.
 {% endgrid %}
 
 {% quot vfox (version-fox) %}
