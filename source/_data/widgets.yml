@@ -46,7 +46,7 @@ my_follow:
       icon: https://geektutu.com/post/high-performance-go/high-performance-go.jpg
     - title: Killer Elixir-Tips
       url: https://github.com/blackode/elixir-tips
-      icon: https://elixir-tips.blackode.in/assets/images/logo.png
+      icon: elixir
     - title: 开发内功修炼
       icon: https://github.com/yanfeizhang/coder-kung-fu/raw/main/imgs/book.png
       url: https://github.com/yanfeizhang/coder-kung-fu

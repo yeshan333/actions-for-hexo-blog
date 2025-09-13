@@ -34,15 +34,6 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
-    "hexo-theme-stellar": "^1.33.1"
-  },
-  "devDependencies": {
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.1.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "hexo-theme-stellar": "git+https://github.com/xaoxuu/hexo-theme-stellar.git#main"
   }
 }

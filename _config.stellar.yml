@@ -363,6 +363,7 @@ footer:
     - title: AI
       items:
         - '[Claude Code](https://www.anthropic.com/claude-code)'
+        - '[iFLOW CLI](https://platform.iflow.cn/cli/quickstart)'
         - '[iFLOW CLI Action](https://github.com/vibe-ideas/iflow-cli-action)'
         - '[中文技术周刊一览](https://awesome-tech-weekly-zh.netlify.app/)'
     # - title: ShanSan

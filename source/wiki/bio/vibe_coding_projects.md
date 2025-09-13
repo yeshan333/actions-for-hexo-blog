@@ -18,5 +18,7 @@ The following projects were basically completed with the AI Agent (eg: Claude Co
 {% box child:tabs color:blue %}
 [ai-solutions](https://github.com/yeshan333/ai-solutions)
 {% endbox %}
+{% box child:tabs color:yello %}
+[landy-astro-template](https://github.com/vibe-ideas/landy-astro-template)
+{% endbox %}
 {% endgrid %}
-

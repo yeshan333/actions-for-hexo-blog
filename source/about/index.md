@@ -77,7 +77,7 @@ API 不兼容，吐了🤮，升级还是蛮难受的。
 
 博客加入了十年之约项目嗷~相信时间的力量。
 
-[![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
+[![十年之约](https://foreverblog.cn/assets/logo/logo_en_default.png)](https://www.foreverblog.cn/about.html)
 
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
 

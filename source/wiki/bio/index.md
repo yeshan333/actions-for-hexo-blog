@@ -28,7 +28,8 @@ view in: [https://iflow-ai.github.io/iflow-cli-action/](https://iflow-ai.github.
 <!-- cell -->
 {% link https://github.com/yeshan333/ex_integration_coveralls ex_intergration_coveralls github %}
 <!-- cell -->
-A library for run-time system code line-level coverage analysis on Erlang/OTP & Elixir ecosystem.
+A library for run-time system code line-level coverage analysis on Erlang/OTP & Elixir ecosystem. 
+And the system solution: [The solution of Elixir continuous runtime system code coverage collection](https://github.com/yeshan333/explore_ast_app/blob/main/examples/README.md)
 {% endgrid %}
 
 ## Parser
