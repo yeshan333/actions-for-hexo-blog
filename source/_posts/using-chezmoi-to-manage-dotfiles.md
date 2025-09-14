@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "using-chezmoi-to-manage-dotfiles"
-cover: https://telegraph.shansan.top/file/5210f8d9b0331fd1c4f58.png
+cover: https://blog-cloudflare-imgbed.pages.dev/file/5210f8d9b0331fd1c4f58.png
 description: "使用 chezmoi & vscode, 管理你的 dotfiles"
 date: 2024-03-23 16:11:23
 updated:
@@ -44,7 +44,7 @@ git remote add origin <your-git-repo>
 
 官方文档也给出了使用 chezmoi 管理 dotfile 的工作流大概是怎么样的, 这里稍作解释:
 
-![chezmoi workflow](https://telegraph.shansan.top/file/30d56011e0062dfbbb1ab.png)
+![chezmoi workflow](https://blog-cloudflare-imgbed.pages.dev/file/30d56011e0062dfbbb1ab.png)
 
 我们以 `.bashrc` 文件的管理为例子:
 

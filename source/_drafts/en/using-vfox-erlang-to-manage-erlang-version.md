@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "Erlang/OTP, erlang, vfox, version fox, vfox-erlang"
-headimg: https://telegraph.shansan.top/file/ac02992ae1fb890558382.png
+headimg: https://blog-cloudflare-imgbed.pages.dev/file/ac02992ae1fb890558382.png
 description: "使用 vfox-erlang 安装管理多个 Erlang/OTP 版本"
 date: 2024-04-25 23:15:01
 tags: [Erlang/OTP, vfox, vfox-plugin, vfox-erlang]
@@ -93,12 +93,12 @@ When you see something like Install erlang@xxx success! information. It mean the
 vfox use erlang@26.2.2
 ```
 
-![vfox use demo](https://telegraph.shansan.top/file/29090c88952e670c3448d.png)
+![vfox use demo](https://blog-cloudflare-imgbed.pages.dev/file/29090c88952e670c3448d.png)
 
 vfox provides three perspectives of version management: current shell session level, project level, global level, through a `.tool-versions` can flexibly assign different Erlang/OTP versions to different project directories, More information can be found in the official documentation: [vfox-Switch runtime](https://vfox.lhan.me/guides/quick-start.html#_5-switch-runtime)..
 
 The usage examples in this article are mainly based on Linux systems, but the user documentation of vfox-erlang also gives the user guide install-in-darwin-macos-13 under MacOS Darwin, and provides continuous integration testing under Linux and MacOS for reference: vfox-erlang E2E testing. [vfox-erlang E2E testing](https://github.com/version-fox/vfox-erlang/blob/main/.github/workflows/e2e_test.yaml).
 
-![e2e testing](https://telegraph.shansan.top/file/d599dfa1042f22ce7c94f.png)
+![e2e testing](https://blog-cloudflare-imgbed.pages.dev/file/d599dfa1042f22ce7c94f.png)
 
 Happy and funny~

@@ -10,7 +10,7 @@ popular_posts: false # 显示推荐文章
 mathjax: true        # 公式渲染
 pin: false           # 文章置顶
 keywords:            'Github Codespaces, Elixir'
-cover: https://telegraph.shansan.top/file/bb853b1aec1b7cc6fb298.png
+cover: https://blog-cloudflare-imgbed.pages.dev/file/bb853b1aec1b7cc6fb298.png
 description:         "create elixir dev env with github codespaces"
 ---
 
@@ -18,7 +18,7 @@ description:         "create elixir dev env with github codespaces"
 
 使用 [Elixir](https://www.erlang-solutions.com/capabilities/elixir/?utm_source=Google&utm_medium=cpc&utm_campaign=Elixir_USCART&utm_content=&gad_source=1&gclid=CjwKCAiAlcyuBhBnEiwAOGZ2SzBl8ExJxYuUq6FdtHQt5bSzORVL8RekWUtih8Ht6dzkIqlnaON6rhoCbv0QAvD_BwE) 开发点小玩意的时候，面对经常需要走外网下载依赖 (Elixir 的镜像站 [UPYUN](https://hex.pm/docs/mirrors) 使用有时候也经常抽风) 的时候，为了避免需要不断的进行网络代理配置，有想到之前经常使用 [GitHub Codespaces](https://github.com/features/codespaces) 来在浏览器里面通过云环境来写博客文章，也可以做点开发：
 
-![GitHub Codespaces](https://telegraph.shansan.top/file/62f2956f4dc3e543f75ca.png)
+![GitHub Codespaces](https://blog-cloudflare-imgbed.pages.dev/file/62f2956f4dc3e543f75ca.png)
 
 > 第一次连接一般会看到:
 > 👋 Welcome to Codespaces! You are on our default image.
@@ -34,7 +34,7 @@ description:         "create elixir dev env with github codespaces"
 
 通过 [https://github.com/codespaces/new](https://github.com/codespaces/new) 我们能配置 GitHub 使用的环境规格和部署地区:
 
-![select machine & zone](https://telegraph.shansan.top/file/bed2d8c2553369084c079.jpg)
+![select machine & zone](https://blog-cloudflare-imgbed.pages.dev/file/bed2d8c2553369084c079.jpg)
 
 ## 加速 Elixir 开发环境
 

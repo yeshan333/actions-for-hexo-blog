@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-cover: https://telegraph.shansan.top/file/d9c87ca70a7d46c9e9ce0.png
+cover: https://blog-cloudflare-imgbed.pages.dev/file/d9c87ca70a7d46c9e9ce0.png
 description: "手把手教你如何在 Sider (ChatGPT Sidebar) 中免费使用通义千问"
 date: 2024-05-29 00:29:49
 updated:
@@ -49,7 +49,7 @@ categories:
 
 最近阿里云的灵积模型服务开放 API 出了 OpenAI 的兼容模式接口 -> [OpenAI接口兼容](https://help.aliyun.com/zh/dashscope/developer-reference/compatibility-of-openai-with-dashscope/?spm=a2c4g.11186623.0.0.5ded5b78He8YAy), 这意味着我们使用这个兼容接口作为 Sider 插件的配置即可使用通义千问。如下图，我们有三个配置需要填写：
 
-![settings](https://telegraph.shansan.top/file/347edb0faac6d22aec6b4.png)
+![settings](https://blog-cloudflare-imgbed.pages.dev/file/347edb0faac6d22aec6b4.png)
 
 - 1、API Key 从阿里云的模型服务灵积控制台获取 -> [获取 API Key](https://help.aliyun.com/zh/dashscope/opening-service?spm=a2c4g.11186623.0.0.4262fa70VPao9L)
 - 2、url 填写：[https://dashscope.aliyuncs.com/compatible-mode](https://dashscope.aliyuncs.com/compatible-mode)
@@ -57,4 +57,4 @@ categories:
 
 配置完成之后，就可以直接使用它啦~
 
-![demo](https://telegraph.shansan.top/file/d5e6ebefdc52698262021.png)
+![demo](https://blog-cloudflare-imgbed.pages.dev/file/d5e6ebefdc52698262021.png)

@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-headimg: https://telegraph.shansan.top/file/594ad9640f5732ee8263d.png
+headimg: https://blog-cloudflare-imgbed.pages.dev/file/594ad9640f5732ee8263d.png
 description: "使用 vscode 插件 vscode-jenkins-pipeline-linter-connector 和 LLMs 校验你的 Jenkinsfile"
 date: 2024-05-25 17:05:12
 tags: ["Jenkins", "Cloudflare", "Workers AI", "Langchain", "LLMs"]
@@ -69,13 +69,13 @@ The plugin is now available in the Visual Studio Code Store and Open VSX Registr
 
 Now you should be able to search for it in the plugin search, use `yeshan333.jenkins-pipeline-linter-connector-fork` to search for installations:
 
-![search extendsion](https://telegraph.shansan.top/file/ca35ab00c512683aff15a.png)
+![search extendsion](https://blog-cloudflare-imgbed.pages.dev/file/ca35ab00c512683aff15a.png)
 
 ## Configure the plugin
 
 There are a few [example configurations](https://github.com/yeshan333/vscode-jenkins-pipeline-linter-connector#example-settings) already given in the plugin documentation, just fill in your vscode user configuration json file:
 
-![settings](https://telegraph.shansan.top/file/09b95699e28b2bafe3149.png)
+![settings](https://blog-cloudflare-imgbed.pages.dev/file/09b95699e28b2bafe3149.png)
 
 ```json
 {
@@ -87,7 +87,7 @@ There are a few [example configurations](https://github.com/yeshan333/vscode-jen
 
 Replace the url and user password with your own Jenkins. Of course, you can also configure it directly in the plugin configuration:
 
-![settings](https://telegraph.shansan.top/file/0ddecbae6772b5d22432b.png)
+![settings](https://blog-cloudflare-imgbed.pages.dev/file/0ddecbae6772b5d22432b.png)
 
 Once configured, you can use `Validate Jenkins` in the Command Pallette to enable the Jenkinsfile validation:
 
@@ -116,7 +116,7 @@ By default, the plugin uses the text generation model provided by the Cloudflare
 
 **Step 1**: You need to follow the documentation provided by Cloudflare to obtain the API access key -> [Get started with the Workers AI REST API](https://developers.cloudflare.com/workers-ai/get-started/rest-api/), and fill in the obtained API Token in the configuration `"jenkins.pipeline.linter.connector.llm.apiKey"`.
 
-![GET API Token and ACCOUND_ID](https://telegraph.shansan.top/file/3856642f14eb9c17411bc.png)
+![GET API Token and ACCOUND_ID](https://blog-cloudflare-imgbed.pages.dev/file/3856642f14eb9c17411bc.png)
 
 **Step 2**: In the previous step, you will also get an Account ID when applying, this ACCOUNT ID is used to assemble the configuration "jenkins.pipeline.linter.connector.llm.baseUrl" , replace the `<CF_ACCOUNT_ID>` of `"https://api.cloudflare.com/client/v4/accounts/<CF_ACCOUNT_ID>/ai/v1"` with your Account ID.
 
@@ -124,4 +124,4 @@ Configuring `jenkins.pipeline.linter.connector.llm.modelName` is optional, and y
 
 After the above configuration is completed, the Jenkinsfile verification will be trigger with `Validate Jenkins` in the vscode Command Pallette, and the review opinions will be asked to the large model at the same time, which will have the following effect:
 
-![review with LLMs](https://telegraph.shansan.top/file/9052330caafc891b5e282.png)
+![review with LLMs](https://blog-cloudflare-imgbed.pages.dev/file/9052330caafc891b5e282.png)

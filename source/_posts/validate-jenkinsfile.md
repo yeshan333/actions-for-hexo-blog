@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-cover: https://telegraph.shansan.top/file/594ad9640f5732ee8263d.png
+cover: https://blog-cloudflare-imgbed.pages.dev/file/594ad9640f5732ee8263d.png
 description: "使用 vscode 插件 vscode-jenkins-pipeline-linter-connector 和 LLMs 校验你的 Jenkinsfile"
 date: 2024-05-25 17:05:12
 tags: ["Jenkins", "Cloudflare", "Workers AI", "Langchain", "LLMs"]
@@ -68,13 +68,13 @@ WorkflowScript: 6: unexpected char: 0xB8 @ line 6, column 36.
 
 现在你应该能在插件搜索里搜索到它, 使用 `yeshan333.jenkins-pipeline-linter-connector-fork` 去搜索安装即可:
 
-![search extendsion](https://telegraph.shansan.top/file/ca35ab00c512683aff15a.png)
+![search extendsion](https://blog-cloudflare-imgbed.pages.dev/file/ca35ab00c512683aff15a.png)
 
 ## 配置插件
 
 插件的文档里已经给出了几个示例配置, 将配置填入你的 vscode 用户配置 json 文件中即可:
 
-![settings](https://telegraph.shansan.top/file/09b95699e28b2bafe3149.png)
+![settings](https://blog-cloudflare-imgbed.pages.dev/file/09b95699e28b2bafe3149.png)
 
 ```json
 {
@@ -86,7 +86,7 @@ WorkflowScript: 6: unexpected char: 0xB8 @ line 6, column 36.
 
 将 url、用户密码替换成你自己的 Jenkins 即可. 当然你也可以在插件配置处直接进行配置:
 
-![settings](https://telegraph.shansan.top/file/0ddecbae6772b5d22432b.png)
+![settings](https://blog-cloudflare-imgbed.pages.dev/file/0ddecbae6772b5d22432b.png)
 
 配置完成之后直接通过命令面板 (Command Pallette) 使用 `Validate Jenkins` 即可开启 Jenkinsfile 校验: 
 
@@ -115,7 +115,7 @@ WorkflowScript: 6: unexpected char: 0xB8 @ line 6, column 36.
 
 **Step 1**: 你需要先按照 Cloudflare 提供的文档去获取 API 访问的密钥 -> [Get started with the Workers AI REST API](https://developers.cloudflare.com/workers-ai/get-started/rest-api/), 将获取到的 API Token 填入配置 `"jenkins.pipeline.linter.connector.llm.apiKey"` 中. 
 
-![GET API Token and ACCOUND_ID](https://telegraph.shansan.top/file/3856642f14eb9c17411bc.png)
+![GET API Token and ACCOUND_ID](https://blog-cloudflare-imgbed.pages.dev/file/3856642f14eb9c17411bc.png)
 
 **Step 2**: 在上一步, 你在申请的时候也会拿到一个 Account ID, 这个 ACCOUNT ID 用于组装配置 `"jenkins.pipeline.linter.connector.llm.baseUrl"`, 将 `"https://api.cloudflare.com/client/v4/accounts/<CF_ACCOUNT_ID>/ai/v1"` 的 `<CF_ACCOUNT_ID>` 替换为你的 Account ID 即可
 
@@ -123,4 +123,4 @@ WorkflowScript: 6: unexpected char: 0xB8 @ line 6, column 36.
 
 将上述配置配置完成之后, 通过 vscode 命令面板 (Command Pallette) 使用 `Validate Jenkins` 开启 Jenkinsfile 校验的同时也会同时向大模型询问评审意见, 大致效果如下: 
 
-![review with LLMs](https://telegraph.shansan.top/file/9052330caafc891b5e282.png)
+![review with LLMs](https://blog-cloudflare-imgbed.pages.dev/file/9052330caafc891b5e282.png)

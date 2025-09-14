@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "Go, etcd, YCSB, go-ycsb, benchmark"
-cover: https://telegraph.shansan.top/file/f1430548714a9ae2ba18d.png
+cover: https://blog-cloudflare-imgbed.pages.dev/file/f1430548714a9ae2ba18d.png
 description: "using go-ycsb to benchmark etcd."
 date: 2024-02-29 14:16:51
 updated: 2024-02-29 14:16:51
@@ -186,7 +186,7 @@ make
 
 好了，我们可以开始对 etcd 进行性能测试了，本地我们主要模拟 [Benchmarking etcd v3](https://etcd.io/docs/v3.5/benchmarks/etcd-3-demo-benchmarks/) 中的 reading one single key 场景.
 
-![etcd scene](https://telegraph.shansan.top/file/237d7295d2e4e0056f32f.png)
+![etcd scene](https://blog-cloudflare-imgbed.pages.dev/file/237d7295d2e4e0056f32f.png)
 
 go-ycsb 的 workload 配置如下:
 

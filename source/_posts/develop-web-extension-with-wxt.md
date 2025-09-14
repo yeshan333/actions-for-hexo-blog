@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "WXT, WSL2, browser plugin"
-cover: https://telegraph.shansan.top/file/298031f2826e13ca14330.png
+cover: https://blog-cloudflare-imgbed.pages.dev/file/298031f2826e13ca14330.png
 description: "WXT 开发浏览器插件"
 date: 2024-03-15 07:47:53
 tags: ["extension", "WXT"]
@@ -31,7 +31,7 @@ npm install --registry=https://registry.npmmirror.com
 npm run dev
 ```
 
-![https://telegraph.shansan.top/file/a989ed6d1aee8952789c0.png](https://telegraph.shansan.top/file/a989ed6d1aee8952789c0.png)
+![https://blog-cloudflare-imgbed.pages.dev/file/a989ed6d1aee8952789c0.png](https://blog-cloudflare-imgbed.pages.dev/file/a989ed6d1aee8952789c0.png)
 
 ## QAQ - WSL2 下开发遇到的问题
 
@@ -47,11 +47,11 @@ WARN  Cannot open browser when using WSL. Load ".output/chrome-mv3" as an unpack
 
 没办法了，如果还想继续用 wsl 做开发，只能手动加载插件了，在 windows 上打开 chrome 后，地址栏输入 `chrome://extensions/` 转到插件管理页 (记得开启开发者模式) -> 加载已解压的扩展程序:
 
-![https://telegraph.shansan.top/file/6b2718aa149d6feabb5e5.png](https://telegraph.shansan.top/file/6b2718aa149d6feabb5e5.png)
+![https://blog-cloudflare-imgbed.pages.dev/file/6b2718aa149d6feabb5e5.png](https://blog-cloudflare-imgbed.pages.dev/file/6b2718aa149d6feabb5e5.png)
 
 我们要加载的插件目录是在 wsl 中的（即: `.output/chrome-mv3/`），好在 Window 和 wsl2 的文件文件系统是打通的，可以相互访问，我们可以使用 [wslutils](https://github.com/wslutilities/wslu) 提供的工具获取在 Windows 下可以访问的路径
 
-![https://telegraph.shansan.top/file/b5543ca9568f1fae401b3.png](https://telegraph.shansan.top/file/b5543ca9568f1fae401b3.png)
+![https://blog-cloudflare-imgbed.pages.dev/file/b5543ca9568f1fae401b3.png](https://blog-cloudflare-imgbed.pages.dev/file/b5543ca9568f1fae401b3.png)
 
 ```shell
 # 获取 windows 文件管理器可以访问的地址
@@ -59,6 +59,6 @@ WARN  Cannot open browser when using WSL. Load ".output/chrome-mv3" as an unpack
 \\wsl.localhost\Ubuntu-20.04\home\yeshan333\workspace\github\yeshan-bowser-extensoin\.output\chrome-mv3
 ```
 
-![https://telegraph.shansan.top/file/67564121734cef6527d83.png](https://telegraph.shansan.top/file/67564121734cef6527d83.png)
+![https://blog-cloudflare-imgbed.pages.dev/file/67564121734cef6527d83.png](https://blog-cloudflare-imgbed.pages.dev/file/67564121734cef6527d83.png)
 
 Done ~, 搞定咯，可以愉快码代码了~
