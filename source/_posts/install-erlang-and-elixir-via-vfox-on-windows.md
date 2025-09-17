@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "vfox, elixir, erlang, vfox-erlang, vfox-elixir, vfox-plugin"
-cover: https://blog-cloudflare-imgbed.pages.dev/file/e47d436092cf177a103bc.png
+cover: https://gallery.shansan.top/file/e47d436092cf177a103bc.png
 description: "通过 vfox 安装在 Windows 上管理多个 Erlang/OTP 和 Elixir 的版本"
 date: 2024-06-18 22:58:39
 tags: [Elixir, Erlang, vfox, Windows]
@@ -17,7 +17,7 @@ categories: [vfox]
 
 最近 [vfox-erlang](https://github.com/version-fox/vfox-erlang) 和 [vfox-elixir](https://github.com/version-fox/vfox-elixir) 插件的最新版本已经支持了在 Windows 平台下安装管理多个 Erlang/OTP 和 Elixir 的版本. 且已经通过了 [End to End](https://en.wikipedia.org/wiki/System_testing) 测试 -> [Testing](https://github.com/version-fox/vfox-elixir/actions/runs/9566734284).
 
-![E2E testing](https://blog-cloudflare-imgbed.pages.dev/file/bb7f655d91fc39e97c57c.png)
+![E2E testing](https://gallery.shansan.top/file/bb7f655d91fc39e97c57c.png)
 
 本篇文章将会以 Windows 10 操作系统为例, 教你如何在 Windows 平台安装和管理多个 Erlang/OTP 和 Elixir 版本. 
 

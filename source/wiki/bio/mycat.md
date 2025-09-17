@@ -18,11 +18,11 @@ title: Feed My Cat
 <!-- cell -->
 **WeChat**
 {% box child:codeblock color:green %}
-![WeChat](https://blog-cloudflare-imgbed.pages.dev/file/3d141912f6a4eb2d7c0ab.jpg)
+![WeChat](https://gallery.shansan.top/file/3d141912f6a4eb2d7c0ab.jpg)
 {% endbox %}
 <!-- cell -->
 **Alipay**
 {% box child:codeblock color:red %}
-![Alipay](https://blog-cloudflare-imgbed.pages.dev/file/08c3f69e9dcc5c02aa83d.jpg)
+![Alipay](https://gallery.shansan.top/file/08c3f69e9dcc5c02aa83d.jpg)
 {% endbox %}
 {% endgrid %}

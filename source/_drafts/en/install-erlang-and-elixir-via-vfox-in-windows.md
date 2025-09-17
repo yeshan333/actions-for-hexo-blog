@@ -6,7 +6,7 @@ popular_posts: false
 mathjax: true
 pin: false
 keywords: "vfox, elixir, erlang, vfox-erlang, vfox-elixir, vfox-plugin"
-headimg: https://blog-cloudflare-imgbed.pages.dev/file/e47d436092cf177a103bc.png
+headimg: https://gallery.shansan.top/file/e47d436092cf177a103bc.png
 description: "通过 vfox 安装在 Windows 上管理多个 Erlang/OTP 和 Elixir 的版本"
 date: 2024-06-18 22:58:39
 tags: [Elixir, Erlang, vfox, Windows]
@@ -17,7 +17,7 @@ About a month ago, I wrote an article on how to use the cross-platform version m
 
 Recently, the latest version of the [vfox-erlang](https://github.com/version-fox/vfox-erlang) and [vfox-elixir](https://github.com/version-fox/vfox-elixir) plugins has supported the installation and management of multiple version of Erlang/OTP and Elixir under Windows platforms. and has passed the [End to End test](https://en.wikipedia.org/wiki/System_testing) -> [Testing](https://github.com/version-fox/vfox-elixir/actions/runs/9566734284).
 
-![E2E testing](https://blog-cloudflare-imgbed.pages.dev/file/bb7f655d91fc39e97c57c.png)
+![E2E testing](https://gallery.shansan.top/file/bb7f655d91fc39e97c57c.png)
 
 This article will use the Windows 10 operation system as an example to teach you how to install and manage multiple Erlang/OTP and Elixir version on Windows platforms.
 

@@ -40,7 +40,7 @@ cover:
       url: https://www.foreverblog.cn/go.html
     - name: 境内访问
       icon:
-      img: https://blog-cloudflare-imgbed.pages.dev/file/f9b8a67f6c7c6c2d647b4.jpg
+      img: https://gallery.shansan.top/file/f9b8a67f6c7c6c2d647b4.jpg
       url: https://shan333.cn
 ############################### Cover ############################### > end
 
@@ -191,9 +191,9 @@ article:
       donate:
         enable: true
         images:
-          - https://blog-cloudflare-imgbed.pages.dev/file/08c3f69e9dcc5c02aa83d.jpg
-          - https://blog-cloudflare-imgbed.pages.dev/file/c9a90a282a65d30470d31.jpg
-          - https://blog-cloudflare-imgbed.pages.dev/file/3d141912f6a4eb2d7c0ab.jpg
+          - https://gallery.shansan.top/file/08c3f69e9dcc5c02aa83d.jpg
+          - https://gallery.shansan.top/file/c9a90a282a65d30470d31.jpg
+          - https://gallery.shansan.top/file/3d141912f6a4eb2d7c0ab.jpg
 
     # meta library
     meta_library:

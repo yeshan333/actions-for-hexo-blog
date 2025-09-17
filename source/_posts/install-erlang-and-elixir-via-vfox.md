@@ -11,7 +11,7 @@ music:
   server: netease
   type: song
   id: 26664345
-cover: https://blog-cloudflare-imgbed.pages.dev/file/82ff2d010a3c8d2fb3973.png
+cover: https://gallery.shansan.top/file/82ff2d010a3c8d2fb3973.png
 description: "通过 vfox 安装管理多版本 Erlang 和 Elixir"
 date: 2024-04-27 15:36:31
 tags: [Elixir, Erlang, vfox]

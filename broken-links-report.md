@@ -102,7 +102,7 @@
    - 考虑使用其他评论系统如Giscus或Utterances
 
 2. **图片托管服务**
-   - 将Imgur图片迁移到 `blog-cloudflare-imgbed.pages.dev`（测试可用）
+   - 将Imgur图片迁移到 `gallery.shansan.top`（测试可用）
    - 考虑使用GitHub仓库或Cloudflare R2存储
 
 3. **关键工具链接**
@@ -147,7 +147,7 @@ serverURL: https://utteranc.es        # ✅ Utterances评论系统
 ![image](https://i.imgur.com/xxx.png)  # ❌ 超时
 
 # 建议替换
-![image](https://blog-cloudflare-imgbed.pages.dev/file/xxx.png)  # ✅ 可用
+![image](https://gallery.shansan.top/file/xxx.png)  # ✅ 可用
 ```
 
 ## 🏁 总结
