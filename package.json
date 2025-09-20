@@ -12,10 +12,10 @@
     "test": "npx serve public"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.0.0"
   },
   "dependencies": {
-    "hexo": "^7.3.0",
+    "hexo": "^8.0.0",
     "hexo-blog-encrypt-plus": "^0.0.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
@@ -24,16 +24,16 @@
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-json-content": "^4.2.3",
-    "hexo-generator-search": "^2.4.1",
+    "hexo-generator-search": "^2.4.3",
     "hexo-generator-seo-better-sitemap": "^0.1.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-related-popular-posts": "^5.0.1",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-markdown": "^1.6.5",
-    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
-    "hexo-theme-stellar": "git+https://github.com/xaoxuu/hexo-theme-stellar.git#main"
+    "hexo-theme-stellar": "github:xaoxuu/hexo-theme-stellar#main"
   }
 }

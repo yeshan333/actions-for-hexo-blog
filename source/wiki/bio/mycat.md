@@ -7,12 +7,11 @@ title: Feed My Cat
 {% quot If you like my articles or projects, you can choose to feed them to my cat (Bread🍞) icon:hashtag %}
 
 {% swiper effect:cards %}
-![](https://ospy.shan333.cn/cat/IMG_3156.HEIC.jpg)
-![](https://ospy.shan333.cn/cat/IMG_3758.HEIC.jpg)
-![](https://ospy.shan333.cn/cat/IMG_3780.HEIC.jpg)
-![](https://ospy.shan333.cn/cat/IMG_3786.HEIC.jpg)
+![](https://gallery.shansan.top/file/1758344085761_image.png)
+![](https://gallery.shansan.top/file/1758344096645_image.png)
+![](https://gallery.shansan.top/file/1758344131779_image.png)
+![](https://gallery.shansan.top/file/1758344131779_image.png)
 {% endswiper %}
-
 
 {% grid %}
 <!-- cell -->
