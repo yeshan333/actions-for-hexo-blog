@@ -214,7 +214,7 @@ article:
     max_count: 5
 
 search:
-  service: algolia_search # local_search, algolia_search, todo...
+  service: local_search # local_search, algolia_search, todo...
   local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
     field: all # post, page, all
     path: /search.json # 搜索文件存放位置
