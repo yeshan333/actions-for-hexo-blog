@@ -10,6 +10,8 @@ title: Feed My Cat
 ![1](https://gallery.shansan.top/file/1758344085761_image.png)
 ![2](https://gallery.shansan.top/file/1758344096645_image.png)
 ![3](https://gallery.shansan.top/file/1758344131779_image.png)
+![4](https://gallery.shansan.top/file/1758559820162_image.png)
+![5](https://gallery.shansan.top/file/1758559959188_image.png)
 {% endgallery %}
 
 {% tabs active:1 align:center %}
