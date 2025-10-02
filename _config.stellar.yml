@@ -366,6 +366,9 @@ footer:
         - '[iFLOW CLI](https://platform.iflow.cn/cli/quickstart)'
         - '[iFLOW CLI Action](https://github.com/vibe-ideas/iflow-cli-action)'
         - '[中文技术周刊一览](https://awesome-tech-weekly-zh.netlify.app/)'
+    - title: blog
+      items:
+        - '[Sean Goedecke](https://www.seangoedecke.com/popular/)'
     # - title: ShanSan
     #   items:
     #     - '[xxx](/)'
