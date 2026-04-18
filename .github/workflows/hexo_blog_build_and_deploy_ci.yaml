@@ -59,43 +59,43 @@ jobs:
           path: |
             .deploy_git/
 
-  rsync_artifact_to_personal_cloud_machine:
-    needs: hexo_build_and_deploy_github_pages
-    runs-on: ubuntu-latest
+  # rsync_artifact_to_personal_cloud_machine:
+  #   needs: hexo_build_and_deploy_github_pages
+  #   runs-on: ubuntu-latest
 
-    steps:
+  #   steps:
 
-      - name: Download artifact deploy_git folder
-        uses: actions/download-artifact@main
-        with:
-          name: deploy_git
-          path: |
-            .deploy_git/
+  #     - name: Download artifact deploy_git folder
+  #       uses: actions/download-artifact@main
+  #       with:
+  #         name: deploy_git
+  #         path: |
+  #           .deploy_git/
       
-      - name: change .deploy_git folder permission
-        run: |
-          chmod 755 -R .deploy_git
+  #     - name: change .deploy_git folder permission
+  #       run: |
+  #         chmod 755 -R .deploy_git
 
-      # from https://github.com/yeshan333/rsync-deploy-action
-      # - name: Release blog to Tecentyun Lighthouse Instance (simin)
-      #   uses: yeshan333/rsync-deploy-action@v1.1.0
-      #   with:
-      #     ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
-      #     remote_server_ip: ${{ secrets.REMOTE_BACKUP_SERVER_IP }}
-      #     ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
-      #     ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
-      #     source_path: ./.deploy_git/*
-      #     destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
-      #     rsync_args: --exclude="./.deploy_git/.git/*"
+  #     # from https://github.com/yeshan333/rsync-deploy-action
+  #     # - name: Release blog to Tecentyun Lighthouse Instance (simin)
+  #     #   uses: yeshan333/rsync-deploy-action@v1.1.0
+  #     #   with:
+  #     #     ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
+  #     #     remote_server_ip: ${{ secrets.REMOTE_BACKUP_SERVER_IP }}
+  #     #     ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
+  #     #     ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
+  #     #     source_path: ./.deploy_git/*
+  #     #     destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
+  #     #     rsync_args: --exclude="./.deploy_git/.git/*"
 
-      # from https://github.com/yeshan333/rsync-deploy-action
-      - name: Release blog to Tecentyun Lighthouse Instance (myself)
-        uses: yeshan333/rsync-deploy-action@v1.1.0
-        with:
-          ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
-          remote_server_ip: ${{ secrets.REMOTE_SERVER_IP }}
-          ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
-          ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
-          source_path: ./.deploy_git/*
-          destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
-          rsync_args: --exclude="./.deploy_git/.git/*"
+  #     # from https://github.com/yeshan333/rsync-deploy-action
+  #     - name: Release blog to Tecentyun Lighthouse Instance (myself)
+  #       uses: yeshan333/rsync-deploy-action@v1.1.0
+  #       with:
+  #         ssh_login_username: ${{ secrets.SSH_LOGIN_USERNAME }}
+  #         remote_server_ip: ${{ secrets.REMOTE_SERVER_IP }}
+  #         ssh_port: ${{ secrets.BACKUP_SSH_PORT }}
+  #         ssh_private_key: ${{ secrets.SSH_BACKUP_PRIVATE_KEY }}
+  #         source_path: ./.deploy_git/*
+  #         destination_path: ${{ secrets.REMOTE_RSYNC_TARGET_PATH }}
+  #         rsync_args: --exclude="./.deploy_git/.git/*"
