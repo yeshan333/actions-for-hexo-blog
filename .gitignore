@@ -7,3 +7,6 @@ public/
 .vscode
 .deploy_git
 package-lock.json
+.qoder
+.baoyu-skills
+macos-tools

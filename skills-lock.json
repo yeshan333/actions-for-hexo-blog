@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "baoyu-article-illustrator": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "586e004901c596c3ce2630cd9aed0c0c31967d44529969fde2cab3dd643aae10"
+    },
+    "baoyu-cover-image": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "a464fe0b0b247dda3e954ddb4a6ab3906da456849594efa739c9d4341e6c5e3c"
+    },
+    "baoyu-image-cards": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "d0be0d2f6d7c43c40a295e05313e1995c7aad4282eb98b7a738eaf433a474146"
+    },
+    "baoyu-image-gen": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "5d4ebeb9b7d6c616d7a4cb0a7c00074c427da53fb63df7b22fa61a0f6f28ced6"
+    },
+    "baoyu-infographic": {
+      "source": "jimliu/baoyu-skills",
+      "sourceType": "github",
+      "computedHash": "e950450bea0352dc67aa4c3070c48a5d905d8942f110b8fe3be699eef2f9ef69"
+    }
+  }
+}

@@ -5,6 +5,7 @@ mathjax: true
 mermaid: true
 keywords: "MacOS,常用软件"
 description: "我的 MacOS 常用软件清单"
+cover: https://gallery.shansan.top/file/1776521560205_image.png
 music:
   enable: false
   server: netease
