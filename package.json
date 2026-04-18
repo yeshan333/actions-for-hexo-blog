@@ -12,16 +12,16 @@
     "test": "npx serve public"
   },
   "hexo": {
-    "version": "8.0.0"
+    "version": "8.1.1"
   },
   "dependencies": {
-    "hexo": "^8.0.0",
+    "hexo": "^8.1.1",
     "hexo-blog-encrypt-plus": "^0.0.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
-    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-feed": "^4.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-json-content": "^4.2.3",
     "hexo-generator-search": "^2.4.3",
