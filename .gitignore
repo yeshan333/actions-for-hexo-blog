@@ -10,3 +10,4 @@ package-lock.json
 .qoder
 macos-tools
 .env
+weekly-digest-output
