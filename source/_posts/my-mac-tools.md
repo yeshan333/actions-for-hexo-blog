@@ -38,7 +38,7 @@ password:
 ![snap.png](https://gallery.shansan.top/file/1759380807585_image.png) 
 <!-- cell -->
 {% button Snap https://apps.apple.com/us/app/snap/id418073146 icon:solar:planet-bold-duotone %}
-实现类似 win + 数字键快速切换软件的效果
+实现类似 win + 数字键快速切换软件的效果，由于很久没维护了，用 Rust 重写了一个: [https://github.com/yeshan333/snap-rs](https://github.com/yeshan333/snap-rs)
 {% endgrid %}
 
 {% grid %}
@@ -54,7 +54,7 @@ password:
 ![Menuist.png](https://gallery.shansan.top/file/1759384345870_image.png)
 <!-- cell -->
 {% button Menuist https://github.com/jaywcjlove/rightmenu-master icon:solar:planet-bold-duotone %}
-主要是用到右键自定义菜单功能
+主要是用到右键自定义菜单功能, 2026 年，AI 太猛了，写一个，不需要那么多功能：[https://github.com/yeshan333/r-menu](https://github.com/yeshan333/r-menu)
 {% endgrid %}
 
 {% grid %}
