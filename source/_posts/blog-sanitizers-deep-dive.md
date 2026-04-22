@@ -9,9 +9,23 @@ date: 2026-04-22 16:10:00
 tags:
   - C/C++
   - Sanitizer
+  - AddressSanitizer
+  - ThreadSanitizer
+  - MemorySanitizer
+  - HWAddressSanitizer
+  - UndefinedBehaviorSanitizer
+  - ARM MTE
   - 内存安全
-categories: C/C++
-keywords: "Sanitizer, ASan, TSan, MSan, HWASan, MTE, 内存安全"
+  - 编译插桩
+  - Shadow Memory
+  - 动态检测
+  - LLVM
+  - Android 安全
+categories:
+  - C/C++
+  - 系统编程
+  - 安全技术
+keywords: "Sanitizer, ASan, TSan, MSan, HWASan, UBSan, LSan, GWP-ASan, ARM MTE, 内存安全, 编译插桩, Shadow Memory, 动态检测, LLVM, Android, Use-After-Free, 数据竞争, 缓冲区溢出"
 cover: https://blog-cloudflare-imgbed.pages.dev/file/1776845490541_01-project-overview.png
 ---
 
