@@ -5,6 +5,7 @@ comments: true
 popular_posts: false
 mathjax: false
 pin: false
+ai_generated: true
 date: 2026-04-22 16:10:00
 tags:
   - C/C++
