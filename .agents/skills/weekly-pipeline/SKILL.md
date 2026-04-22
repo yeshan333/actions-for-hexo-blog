@@ -63,7 +63,7 @@ bun run .agents/skills/cfbed-uploader/scripts/upload.ts <图片路径>
 
 ## Step 4: 更新博客文档
 
-将上传后的图片 URL 追加到 `source/_posts/Software-Testing-Weekly-Visual-Interpretation.md` 文件末尾。
+将上传后的图片 URL 插入到 `source/_posts/Software-Testing-Weekly-Visual-Interpretation.md` 文件的**最新一期位置**——即紧跟在 frontmatter（`---` 结束）之后，位于当前最新一期（通常是上一期）之前。最新的一期永远出现在文章顶部，旧期逐次往下排。
 
 ### 文档格式
 
@@ -85,7 +85,7 @@ bun run .agents/skills/cfbed-uploader/scripts/upload.ts <图片路径>
 
 格式要点：
 
-- 新的一期内容追加在文件**末尾**，与上一期之间空一行
+- 新的一期内容插入在 frontmatter 之后、上一期之前（**最新一期在最顶部**），与上一期之间空一行
 - 第一张图片的 alt 文本用 `banner`，其余用 `image`
 - `{% gallery layout:flow %}` 和 `{% endgallery %}` 标签必须各占一行
 - 期号从周刊 URL 或页面内容中提取（如 `#308`、`#309`）
