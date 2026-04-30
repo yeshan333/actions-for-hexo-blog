@@ -53,6 +53,7 @@ skip_render:
   - "thumbnail/**/*"
   - "trytobaidu/**/*"
   - "resume_1/**/*"
+  - "llms.txt"
 
 # Writing
 new_post_name: :title.md # File name of new posts

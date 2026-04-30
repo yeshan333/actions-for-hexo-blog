@@ -1,0 +1,72 @@
+# ShanSan's Blog
+
+> ShanSan（yeshan333）的个人技术博客，分享云原生（Cloud Native）、DevOps / DevTest、AI Coding、混沌测试、Erlang/Elixir、Go、Python 等领域的实践经验、踩坑记录与工具推荐。博客基于 Hexo 搭建，主题为 Stellar，部署在 GitHub Pages，主域名为 https://shansan.top ，备用域名为 https://shan333.cn 。
+
+博主自我介绍：信息与计算科学专业毕业，目前关注 Cloud Native、DevOps、DevTest 方向，是 Pythonista / Elixirist / Gopher，业余略懂乐理 🎹。博客自 2018 年诞生以来已持续维护多年，加入了「十年之约」项目。
+
+阅读建议：
+- 文章语言以**中文（zh-CN）**为主，少量英文。
+- 永久链接格式为 `/:year/:month/:day/:title/`。
+- 全站 RSS：https://shansan.top/rss2.xml
+- 站点地图：https://shansan.top/sitemap.xml
+
+## 站点入口
+
+- [博客首页](https://shansan.top/): 最新文章列表，按时间倒序。
+- [关于我 / About](https://shansan.top/about/): 博主介绍、博客演进时间线、联系方式。
+- [归档 Archives](https://shansan.top/archives/): 全部文章按年月归档。
+- [分类 Categories](https://shansan.top/categories/): 按分类浏览文章。
+- [标签 Tags](https://shansan.top/tags/): 按标签浏览文章。
+- [友链 Friends](https://shansan.top/friends/): 博主的朋友们。
+- [Cloud Native 专题](https://shansan.top/cloud-native/): 云原生相关聚合页。
+
+## 精选文章 / Featured Posts
+
+### AI Coding & AI 工作流
+
+- [使用 iflow-cli-action 在 GitHub 与 Qwen3-Coder、Kimi K2 一起快速提升你的生产力](https://shansan.top/2025/08/16/the-next-level-of-developer-productivity-with-iflow-cli-action/): 介绍 iFlow CLI Action 在 GitHub Actions 中结合 Qwen3-Coder、Kimi K2 模型提升 DevOps 生产力的实践。
+- [使用 iFLOW-CLI GitHub Action 和 Qwen3-Coder 给 GitHub 仓库生成幻灯片风格的文档站点](https://shansan.top/2025/08/09/gen-slides-like-docs-site-with-iflow-cli/): 用 AI Agent 自动为 GitHub 仓库生成 Slidev 风格的文档站点。
+- [使用 Claude Code 和 Qwen3 Coder 将博客主题成功迁移到了 Stellar 🎉](https://shansan.top/2025/07/27/migrate-theme-to-stellar-with-claude-code/): Claude Code + Qwen3 Coder 协助将 Hexo 博客主题从 Volantis 迁移到 Stellar 的全过程。
+- [使用 Claude Code 的自定义 Sub Agent 完善博文写作体验](https://shansan.top/2025/07/27/claude-code-subagent-for-tech-writing/): 利用 Claude Code Sub Agent 自动生成博客文章 Banner，优化写作体验。
+- [使用 n8n 和飞书多维表打造自己的 RSS Feed 订阅管理 & AI 大模型阅读提炼工作流](https://shansan.top/2025/07/12/rss-summary-workflow-with-n8n/): 基于 n8n + 飞书多维表 + LLM 搭建 RSS 自动总结工作流。
+- [手把手教你如何在 Sider (ChatGPT Sidebar) 中免费使用通义千问](https://shansan.top/2024/05/29/free-to-use-sider-with-qwen/): 在浏览器侧边栏 AI 助手 Sider 中接入通义千问免费使用。
+- [使用 vscode 插件 vscode-jenkins-pipeline-linter-connector 和 LLMs 大模型校验你的 Jenkinsfile](https://shansan.top/2024/05/25/validate-jenkinsfile/): 用 LLM + LangChain + Cloudflare Workers AI 校验 Jenkinsfile。
+
+### 云原生 & 分布式系统
+
+- [使用 Kubeadm 搭建个公网 k8s 集群（单控制平面集群）](https://shansan.top/2021/10/24/create-k8s-cluster/): Kubeadm 搭建公网 Kubernetes 单控制面集群完整教程。
+- [使用 go-ycsb 对 etcd 进行基准 (benchmark) 性能测试](https://shansan.top/2024/02/29/using-ycsb-benchmark-etcd/): YCSB 工具对 etcd 进行基准压测的实操记录。
+- [etcd 和 MongoDB 的混沌（故障）测试方法](https://shansan.top/2024/05/18/etcd-and-mongodb-chaos-testing/): etcd 和 MongoDB 中基于 failpoint 的混沌测试方法论。
+
+### Erlang / Elixir
+
+- [通过 vfox 安装管理多版本 Erlang 和 Elixir](https://shansan.top/2024/04/27/install-erlang-and-elixir-via-vfox/): 用 vfox 多版本管理工具安装与切换 Erlang/Elixir 版本。
+- [在 Windows 上通过 vfox 安装管理多版本 Erlang 和 Elixir](https://shansan.top/install-erlang-and-elixir-via-vfox-on-windows/): vfox 在 Windows 平台的 Erlang/Elixir 安装实践。
+- [使用 vfox-erlang 管理多版本 Erlang](https://shansan.top/using-vfox-erlang-to-manage-erlang-version/): vfox-erlang 插件的使用与原理。
+- [使用 GitHub Codespaces 加速 Elixir 开发环境工作速度](https://shansan.top/2024/02/19/elixir-github-codespace-dev/): 在云开发环境 GitHub Codespaces 中搭建 Elixir 开发环境。
+
+### 开发者工具 & 工程实践
+
+- [我的 MacOS 常用软件清单](https://shansan.top/2025/09/28/my-mac-tools/): 博主日常使用的 macOS 软件与工具盘点。
+- [使用 chezmoi & vscode, 管理你的 dotfiles](https://shansan.top/2024/03/23/using-chezmoi-to-manage-dotfiles/): 用 chezmoi 跨设备同步、管理 dotfiles 配置。
+- [使用 WXT 开发浏览器插件（上手使用篇）](https://shansan.top/2024/03/15/develop-web-extension-with-wxt/): 下一代浏览器扩展开发框架 WXT 上手实践。
+- [Awesome Technology Weekly Zh-Hans - 中文技术月/周/日刊一览](https://shansan.top/2024/03/04/awesome-tech-weekly-zh/): 博主维护的中文技术周/月/日刊聚合项目介绍。
+
+### 系统底层 & 安全
+
+- [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/): 系统梳理 ASan、TSan、MSan、HWASan、UBSan 与 ARM MTE 等内存安全检测技术演进。
+
+## 连载专栏 / Series
+
+- [【连载】Software Testing Weekly 图文解读 with VLM](https://shansan.top/2026/04/19/Software-Testing-Weekly-Visual-Interpretation/): 持续更新的 Software Testing Weekly 视觉化图文解读系列，使用 VLM 多模态模型辅助生成解读图。
+
+## 兴趣杂记 / Misc
+
+- [乐理通识](https://shansan.top/2024/02/07/become-a-romantic-muscian/): 业余学习钢琴与乐理时的笔记整理。
+- [致敬 2018 / 2022 年度回顾](https://shansan.top/2022-annual-reviewed/): 历年的年度总结类文章，记录博主的成长足迹。
+
+## Optional
+
+- [GitHub: yeshan333](https://github.com/yeshan333): 博主的 GitHub 主页，可见博客源码仓库 [actions-for-hexo-blog](https://github.com/yeshan333/actions-for-hexo-blog) 与各类开源项目。
+- [Awesome Technology Weekly Zh-Hans 项目](https://github.com/yeshan333/awesome-tech-weekly-zh): 博主维护的中文技术周刊聚合项目。
+- [备用域名 shan333.cn](https://shan333.cn): 与主站内容一致的备用站点。
