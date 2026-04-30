@@ -22,6 +22,31 @@ categories: ["Weekly"]
 password:
 ---
 
+## Software Testing Weekly #310
+
+> 原文: https://softwaretestingweekly.com/issues/310
+
+{% gallery layout:flow %}
+![banner](https://blog-cloudflare-imgbed.pages.dev/file/1777525111760_overview.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525117551_01-six-year-quality-reflection.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525127892_02-mental-model-modern-testing.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525130421_03-cognitive-automation.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525137655_04-where-i-fit-in-ai-era.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525146797_05-waterfall-strikes-back.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525159406_06-evaluating-conversations.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525160123_07-apis-predictable-ai-isnt.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525170250_08-handle-failing-tests-known-bug.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525174187_09-trivago-flaky-or-bug.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525180259_10-optimizing-wrong-part.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525188934_11-ui-as-contract.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525196240_12-playwright-screencast.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525196279_13-karpathy-autoresearch-coverage.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525204429_14-playwright-fixtures.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525212115_15-type-safe-sql-playwright.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525214890_16-cypress-tests-slower.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1777525221710_videos-roundup.png)
+{% endgallery %}
+
 ## Software Testing Weekly #309
 
 > 原文: https://softwaretestingweekly.com/issues/309
