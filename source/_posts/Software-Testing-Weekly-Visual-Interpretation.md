@@ -27,23 +27,23 @@ password:
 > 原文: https://softwaretestingweekly.com/issues/309
 
 {% gallery layout:flow %}
-![banner](https://blog-cloudflare-imgbed.pages.dev/file/1776863916542_overview.png)
+![banner](https://blog-cloudflare-imgbed.pages.dev/file/1776876035746_overview.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776863958133_01-20-years-qa-ai-shift.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776863962607_02-quality-isnt-testing-problem.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776863971163_03-test-strategy-ai-features.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776863985412_04-testing-systems-thinking.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776863994012_05-custard-slice.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864007860_06-showpad-ai-testing-agents.png)
-![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864021745_07-chaos-mutant.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1776876197106_07-chaos-mutant.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864032062_08-valuable-feedback-fast.png)
-![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864039601_09-layered-test-framework.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1776876250864_09-layered-test-framework.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864052996_10-you-write-too-many-tests.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864057312_11-playwright-pom.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864077652_12-playprom.png)
-![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864085040_13-playwright-a11y-beyond-axe.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1776876305521_13-playwright-a11y-beyond-axe.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864096679_14-playwright-mcp-vision-devtools.png)
-![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864100887_15-utml-markup-language.png)
-![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864109983_16-staff-engineers-path.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1776876352477_15-utml-markup-language.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1776876404081_16-staff-engineers-path.png)
 ![image](https://blog-cloudflare-imgbed.pages.dev/file/1776864121665_videos-roundup.png)
 {% endgallery %}
 
