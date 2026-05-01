@@ -2,6 +2,7 @@
 title: 【Draft】cluacov 的分支覆盖率统计：从行级近似到指令级精确
 toc: true
 comments: true
+sticky: 11
 popular_posts: true
 mathjax: false
 top: false
