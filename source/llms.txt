@@ -54,6 +54,7 @@
 
 ### 系统底层 & 安全
 
+- [cluacov 的分支覆盖率统计：从行级近似到指令级精确](https://shansan.top/2026/05/02/cluacov-branch-coverage/): 深入剖析 cluacov 的两套分支覆盖率方案——基于行级调试钩子的近似实现与基于指令级计数钩子的精确实现，涵盖 Lua 字节码、调试钩子、Proto 元数据生命周期与 GC 安全设计。
 - [Sanitizer 全景：从编译插桩到硬件标签的内存安全检测演进](https://shansan.top/2026/04/22/blog-sanitizers-deep-dive/): 系统梳理 ASan、TSan、MSan、HWASan、UBSan 与 ARM MTE 等内存安全检测技术演进。
 
 ## 连载专栏 / Series
