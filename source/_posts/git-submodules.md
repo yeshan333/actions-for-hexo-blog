@@ -10,12 +10,9 @@ date: 2021-03-10 15:51:15
 tags: Git
 categories: Git
 references:
-  - title: Git Tools - Submodules
-    url: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-  - title: Working with submodules
-    url: https://github.blog/2016-02-01-working-with-submodules/
-  - title: 《Git版本控制管理》- 子模块最佳实践
-    url: https://book.douban.com/subject/26341974/
+  - '[Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)'
+  - '[Working with submodules](https://github.blog/2016-02-01-working-with-submodules/)'
+  - '[《Git版本控制管理》- 子模块最佳实践](https://book.douban.com/subject/26341974/)'
 keywords: "git, git submodules, repo"
 ---
 

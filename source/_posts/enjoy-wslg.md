@@ -17,14 +17,10 @@ date: 2021-04-25 18:59:48
 tags: [Linux, WSL, GUI]
 categories: WSL
 references:
-  - title: The Windows Subsystem for Linux BUILD 2020 Summary
-    url: https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/#wsl-gui
-  - title: The Initial Preview of GUI app support is now available for the Windows Subsystem for Linux
-    url: https://devblogs.microsoft.com/commandline/the-initial-preview-of-gui-app-support-is-now-available-for-the-windows-subsystem-for-linux-2/
-  - title: WSLg Architecture
-    url: https://devblogs.microsoft.com/commandline/wslg-architecture/
-  - title: WSLg - GitHub README
-    url: https://github.com/microsoft/wslg
+  - '[The Windows Subsystem for Linux BUILD 2020 Summary](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/#wsl-gui)'
+  - '[The Initial Preview of GUI app support is now available for the Windows Subsystem for Linux](https://devblogs.microsoft.com/commandline/the-initial-preview-of-gui-app-support-is-now-available-for-the-windows-subsystem-for-linux-2/)'
+  - '[WSLg Architecture](https://devblogs.microsoft.com/commandline/wslg-architecture/)'
+  - '[WSLg - GitHub README](https://github.com/microsoft/wslg)'
 keywords: "wslg, wsl, windows preview"
 ---
 

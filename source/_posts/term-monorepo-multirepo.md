@@ -15,16 +15,11 @@ date: 2021-04-30 23:30:00
 tags: [项目管理, Monorepo]
 categories: Architecture
 references:
-  - title: How to end Microservice pain and embrace the Monorepo
-    url: https://www.fourtheorem.com/blog/monorepo
-  - title: Monorepo-Wikipedia,
-    url: https://en.wikipedia.org/wiki/Monorepo
-  - title: 11 Great Tools for a Monorepo in 2021
-    url: https://blog.bitsrc.io/11-tools-to-build-a-monorepo-in-2021-7ce904821cc2
-  - title: Monorepo vs Polyrepo
-    url: https://earthly.dev/blog/monorepo-vs-polyrepo/
-  - title: Dealing With The Polyrepo Concept
-    url: https://isacikgoz.me/2019/01/21/polyrepo/
+  - '[How to end Microservice pain and embrace the Monorepo](https://www.fourtheorem.com/blog/monorepo)'
+  - '[Monorepo - Wikipedia](https://en.wikipedia.org/wiki/Monorepo)'
+  - '[11 Great Tools for a Monorepo in 2021](https://blog.bitsrc.io/11-tools-to-build-a-monorepo-in-2021-7ce904821cc2)'
+  - '[Monorepo vs Polyrepo](https://earthly.dev/blog/monorepo-vs-polyrepo/)'
+  - '[Dealing With The Polyrepo Concept](https://isacikgoz.me/2019/01/21/polyrepo/)'
 keywords: "monorepo, polyrepo"
 ---
 

@@ -10,16 +10,11 @@ date: 2021-07-10 18:23:57
 tags: [MD5, GPG]
 categories: Cryptography
 references:
-  - title: GnuPG
-    url: https://gnupg.org/
-  - title: What is Ownertrust? Trust-levels explained
-    url: https://gpgtools.tenderapp.com/kb/faq/what-is-ownertrust-trust-levels-explained
-  - title: 开源软件源码编译指南
-    url: https://www.kawabangga.com/posts/4373
-  - title: Validating other keys on your public keyring
-    url: https://www.gnupg.org/gph/en/manual/x334.html
-  - title: commit signature verification - GitHub
-    url: https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification
+  - '[GnuPG](https://gnupg.org/)'
+  - '[What is Ownertrust? Trust-levels explained](https://gpgtools.tenderapp.com/kb/faq/what-is-ownertrust-trust-levels-explained)'
+  - '[开源软件源码编译指南](https://www.kawabangga.com/posts/4373)'
+  - '[Validating other keys on your public keyring](https://www.gnupg.org/gph/en/manual/x334.html)'
+  - '[commit signature verification - GitHub](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification)'
 keywords: "gpg, md5, checksums"
 ---
 
