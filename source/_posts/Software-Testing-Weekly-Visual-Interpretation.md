@@ -22,6 +22,30 @@ categories: ["Weekly"]
 password:
 ---
 
+## Software Testing Weekly #311
+
+> 原文: https://softwaretestingweekly.com/issues/311
+
+{% gallery layout:flow %}
+![banner](https://blog-cloudflare-imgbed.pages.dev/file/1778342768868_overview.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342774354_01-bug-triage.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342788546_02-qa-meets-ai.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342792345_03-quality-engineering-not-testing.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342816027_04-ai-replace-testers.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342824308_05-testing-ai-wrong.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342827951_06-ai-agents-test-scaffold.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342832011_07-flaky-tests-truce.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342853666_08-thin-specs-fat-models.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342859088_09-first-testing-principles.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342868710_10-ci-suite-slower.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342874125_11-api-spector.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342883785_12-playwright-api-logging.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342899507_13-mcp-servers-testing.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342898413_14-claude-maestro-mcp.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342905464_15-vibe-testing-playwright-mcp.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778342922514_videos-roundup.png)
+{% endgallery %}
+
 ## Software Testing Weekly #310
 
 > 原文: https://softwaretestingweekly.com/issues/310
