@@ -22,6 +22,29 @@ categories: ["Weekly"]
 password:
 ---
 
+## Software Testing Weekly #312
+
+> 原文: https://softwaretestingweekly.com/issues/312
+
+{% gallery layout:flow %}
+![banner](https://blog-cloudflare-imgbed.pages.dev/file/1778412840481_overview.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778412885827_01-30-years-engineering-productivity.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778412911661_02-junior-engineers-ai-skills.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778412929047_03-shift-left-did-not-fix-it.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778412947918_04-testing-first-principles.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778412967246_05-human-in-the-loop.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778412995736_06-maintain-ai-coding.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413012003_07-claude-code-for-qa.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413038421_08-performance-testing-mistakes.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413058024_09-testing-llm-products.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413074722_10-selenium-to-playwright.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413093666_11-playwright-framework-ai.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413118117_12-cypress-json-architecture.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413141742_13-playwright-slack-reporter.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413170397_14-appium-e2e-guide.png)
+![image](https://blog-cloudflare-imgbed.pages.dev/file/1778413192874_briefs-roundup.png)
+{% endgallery %}
+
 ## Software Testing Weekly #311
 
 > 原文: https://softwaretestingweekly.com/issues/311
