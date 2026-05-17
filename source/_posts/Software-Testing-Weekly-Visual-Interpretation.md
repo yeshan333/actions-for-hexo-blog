@@ -1,6 +1,6 @@
 ---
 title: 【连载】Software Testing Weekly 图文解读 with VLM
-sticky: 10
+sticky: 2
 comments: true
 cover: https://gallery.shansan.top/file/1776532387133_image.png
 banner: https://gallery.shansan.top/file/1776532387133_image.png

@@ -47,6 +47,7 @@
 
 ### 开发者工具 & 工程实践
 
+- [Your New Tab — 用一个新标签页统一所有 AI 搜索引擎](https://shansan.top/2026/05/17/your-new-tab-ai-search-hub-promo/): 介绍开源浏览器扩展 Your New Tab — AI Search Hub，将新标签页变成 AI 搜索总入口，一个搜索框接入所有 AI 引擎。
 - [我的 MacOS 常用软件清单](https://shansan.top/2025/09/28/my-mac-tools/): 博主日常使用的 macOS 软件与工具盘点。
 - [使用 chezmoi & vscode, 管理你的 dotfiles](https://shansan.top/2024/03/23/using-chezmoi-to-manage-dotfiles/): 用 chezmoi 跨设备同步、管理 dotfiles 配置。
 - [使用 WXT 开发浏览器插件（上手使用篇）](https://shansan.top/2024/03/15/develop-web-extension-with-wxt/): 下一代浏览器扩展开发框架 WXT 上手实践。

@@ -25,6 +25,12 @@
       "source": "jimliu/baoyu-skills",
       "sourceType": "github",
       "computedHash": "e950450bea0352dc67aa4c3070c48a5d905d8942f110b8fe3be699eef2f9ef69"
+    },
+    "hyperframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes/SKILL.md",
+      "computedHash": "f726a7478c7a3133e763c9af5f8ade12bc65dbdf32f09a854696ebabc68433a5"
     }
   }
 }
