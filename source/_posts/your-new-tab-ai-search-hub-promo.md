@@ -49,13 +49,9 @@ thumbnail: https://raw.githubusercontent.com/vibe-ideas/your-new-tab/main/assets
 
 - 可以在一个搜索框里切换不同的 AI 搜索服务
 - 内置了一些常见服务，也可以自己添加新的
-- 自定义服务只需要填 URL 模板，私有网关也能加进去
+- 自定义服务只需要在扩展弹窗里填 URL 模板，私有网关也能加进去
 - 会保留本地搜索历史，方向键可以快速翻出来再问一次
 - 数据都存在浏览器本地，不做代理，也没有遥测
-
-自定义配置大概长这样：
-
-![配置面板 — 自由添加和管理搜索引擎](https://blog-cloudflare-imgbed.pages.dev/file/1779011614460_popup-search-providers.png)
 
 这几个点不花哨，但对我来说还挺实用的。比如同一个问题先丢给 Grok Search，觉得结果不够，再换 Google AI Search、Metaso 或 X Search 对照一下。以前要来回开页面，现在基本在新标签页里就能完成。
 
